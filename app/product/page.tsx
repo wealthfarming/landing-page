@@ -14,7 +14,7 @@ export default function ProductPage() {
                 <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 text-center py-2 line-clamp-2">Sản phẩm & Dịch vụ tài chính phi tập trung Wealth Farming</h1>
                 <p className="text-lg text-gray-600 mb-8 w-9/12 md:w-6/12 text-center">Từ chứng chỉ quỹ NFT mang lại thu nhập thụ động suốt đời, chiến lược đầu tư Review Indexes đỉnh cao, cho đến dịch vụ vay vốn phi tập trung (DeFi Lending) ứng dụng công nghệ AI tự động định giá và quản lý rủi ro, hệ sinh thái Wealth Farming của BeQ Holdings đáp ứng trọn vẹn từng mục tiêu đầu tư cá nhân – an toàn, minh bạch và hiệu quả tối ưu.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-4 justify-center px-16 max-w-[1200px]">
-                    <ProductInfoCard title={"NFT NEC"} description={"Tạo dòng tiền ổn định, lợi nhuận ổn định trên 5%/tháng, biến chi tiêu hàng ngày thành thu nhập thụ động vĩnh viễn"} buttonText={"XEM CHI TIẾT"} />
+                    <ProductInfoCard title={"NFT NEC"} description={"Tạo dòng tiền ổn định, lợi nhuận ổn định trên 5%/tháng, biến chi tiêu hàng ngày thành thu nhập thụ động vĩnh viễn"} buttonText={"XEM CHI TIẾT"} button_color="bg-[var(--color-primary)]"/>
                     <ProductInfoCard title={"NFT BEQ Indexes Review Index"} description={"Tận dụng sức mạnh giao dịch Review Indexes, lợi nhuận vượt trội tới 6.8% mỗi quý, thanh khoản cao 24/7!"} buttonText={"ĐANG CẬP NHẬT"} />
                     <ProductInfoCard title={"BEQ Web3 Wallet"} description={"Quản lý tài sản số toàn diện, tích hợp giao dịch, staking, lending chỉ trong một ví duy nhất!"} buttonText={"ĐANG CẬP NHẬT"} />
                 </div>

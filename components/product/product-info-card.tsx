@@ -7,9 +7,11 @@ interface ProductInfoCardProps {
     title: string;
     description: string;
     buttonText: string;
+    button_color?: string;
+    button_icon?: React.ReactNode;
 }
 
-const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, buttonText }) => {
+const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, buttonText , button_color , button_icon}) => {
     return (
         <div className="flex flex-col items-start justify-between border border-gray-200 p-5 h-[400px] w-full md:w-[calc(33% - 8px)] hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
             <div>
@@ -20,9 +22,9 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
             </div>
             <Button
                 variant="outline"
-                className="bg-background hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end"
+                className={" hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end " + (button_color ? button_color : " bg-base")}
             >
-                <CursorClick size={32} />
+                {button_icon ? button_icon : <CursorClick size={32} />}
                 <p>{buttonText}</p>
             </Button>
         </div>

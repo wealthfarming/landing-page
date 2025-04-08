@@ -49,13 +49,13 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                         <a href="/eco" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_eco')}</a>
                         <a href="/invest" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_investBank')}</a>
                     </nav>
-                    <Button variant="outline" className="bg-background hover:bg-gray-100 rounded-none w-[185px] h-[40px] transition-transform duration-300 ease-in-out hover:scale-105">
+                    <Button variant="outline" className="bg-background hover:bg-gray-100 rounded-none w-[185px] h-[40px] transition-transform duration-300 ease-in-out ">
                         <ChatCenteredDots size={24} />
                         <p>
                             {t('header_contactUs')}
                         </p>
                     </Button>
-                    <Button variant="outline" className="hover:bg-gray-100 rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out hover:scale-105">
+                    <Button variant="outline" className="bg-[var(--color-primary)] rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out ">
                         <CursorClick size={24} />
                         <p>
                             {t('header_investNow')}
