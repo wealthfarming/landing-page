@@ -44,6 +44,70 @@
 }
 
 :root {
+  /* Text Colors */
+  --text-bold: #1A1A1A;
+  /* was --chữ-đậm */
+  --text-medium: #4D4D4D;
+  /* was --chữ-vừa */
+  --text-light: #808080;
+  /* was --chữ-nhạt */
+  --text-mute: #B3B3B3;
+  /* was --chữ-mờ */
+
+  /* Background Colors */
+  --canvas-bg: #F6F8FD;
+  /* was --nền-canvas */
+  --canvas-bg: #FFFFFF;
+  /* was --nền-1 */
+
+  /* Primary Colors */
+  --primary: #E8B561;
+  /* was --1st-chính */
+  --primary-border: #FDEA9B;
+  /* was --1st-viền */
+  --primary-bg: #003048;
+  /* was --1st-nền */
+
+  /* Info Colors */
+  --primary-info: #0553FA;
+  /* was --info-chính */
+  --info-border: #9BBAFD;
+  /* was --info-viền */
+  --info-bg: #E6EEFE;
+  /* was --info-nền */
+
+  /* Error Colors */
+  --primary-error: #FA0505;
+  /* was --lỗi-chính */
+  --error-border: #FC9A9A;
+  /* was --lỗi-viền */
+  --error-bg: #FFE8E8;
+  /* was --lỗi-nền */
+
+  /* Success Colors */
+  --primary-success: #20CB70;
+  /* was --ổn-chính */
+  --success-border: #A7F1CA;
+  /* was --ổn-viền */
+  --success-bg: #E9FCF2;
+  /* was --ổn-nền */
+
+  /* Warning Colors */
+  --primary-warning: #F5B324;
+  /* was --cảnh-báo-chính */
+  --warning-border: #FADD9E;
+  /* was --cảnh-báo-viền */
+  --warning-bg: #FEF7E7;
+  /* was --cảnh-báo-nền */
+
+  /* Other Colors */
+  --primary-other: #EBEBEB;
+  /* was --khác-viền */
+  --other-border: #FFFFFF;
+  /* was --khác-trắng */
+  --other-bg: #1A1A1A;
+  /* was --khác-đen */
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -119,4 +183,157 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.h1 {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 42px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+.h2 {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 31px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+.h3 {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 24px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+.body-large {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-weight: 400; 
+  font-size: 18px; 
+  letter-spacing: 0em; 
+  line-height: 1.7em; 
+}
+
+.body {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-weight: 400; 
+  font-size: 15px; 
+  letter-spacing: 0em; 
+  line-height: 1.8em; 
+}
+
+.small {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-weight: 400; 
+  font-size: 13px; 
+  letter-spacing: 0.01em; 
+  line-height: 1.5em; 
+}
+
+.nav {
+  color: var(--text-bold); 
+  font-family: "IBM Plex Sans"; 
+  font-weight: 500; 
+  font-size: 11px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+.button {
+  color: var(--text-bold); 
+  font-family: "IBM Plex Mono"; 
+  font-weight: 500; 
+  font-size: 12px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+/* Text color */
+.text-bold {
+  color: var(--text-bold);
+}
+.text-medium {
+  color: var(--text-medium); 
+}
+.text-light {
+  color: var(--text-light); 
+}
+.text-mute {
+  color: var(--text-mute); 
+}
+
+/* Background */
+.canvas-bg {
+  background-color: var(--canvas-bg); 
+}
+.canvas-bg-1 {
+  background-color: #FFFFFF; 
+}
+
+/* Info */
+.text-info {
+  color: var(--primary-info); 
+}
+.border-info {
+  border-color: var(--info-border); 
+}
+.bg-info {
+  background-color: var(--info-bg); 
+}
+
+/* Error */
+.text-error {
+  color: var(--primary-error); 
+}
+.border-error {
+  border-color: var(--error-border); 
+}
+.bg-error {
+  background-color: var(--error-bg); 
+}
+
+/* Success */
+.text-success {
+  color: var(--primary-success); 
+}
+.border-success {
+  border-color: var(--success-border); 
+}
+.bg-success {
+  background-color: var(--success-bg); 
+}
+
+/* Warning */
+.text-warning {
+  color: var(--primary-warning); 
+}
+.border-warning {
+  border-color: var(--warning-border); 
+}
+.bg-warning {
+  background-color: var(--warning-bg);
+}
+
+/* Other */
+.text-other {
+  color: var(--primary-other); 
+}
+.border-other {
+  border-color: var(--other-border); 
+}
+.bg-other {
+  background-color: var(--other-bg); 
 }
