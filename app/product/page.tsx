@@ -2,8 +2,6 @@
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import ProductInfoCard from "@/components/product/product-info-card";
-import { Button } from "@/components/ui/button";
-import { CursorClick } from "@phosphor-icons/react";
 import Image from "next/image";
 
 export default function ProductPage() {

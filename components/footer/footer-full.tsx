@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { Separator } from "../ui/separator";
 export default function FooterFull({ active }: { active?: string }) {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <footer className="fixed bottom-0 flex-col w-full bg-gray-800 text-white pt-8 z-10 ">
             <div className="flex flex-row w-full justify-between px-16 py-12 gap-[100px]">
