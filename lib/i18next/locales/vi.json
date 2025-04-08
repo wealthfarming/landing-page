@@ -1,5 +1,21 @@
 {
   "currentLanguage": "Ngôn ngữ hiện tại",
   "currentLanguage_en": "Tiếng Anh",
-  "currentLanguage_vi": "Tiếng Việt"
+  "currentLanguage_vi": "Tiếng Việt",
+
+  "header_introduct": "Giới thiệu",
+  "header_product": "Sản phẩm",
+  "header_eco": "Hệ sinh thái",
+  "header_investBank": "Ngân hàng đầu tư",
+  "header_contactUs": "Liên hệ chúng tôi",
+  "header_investNow": "Đầu tư ngay",
+
+  "footer_description": "Wealth Farming – Hệ sinh thái tài chính thuộc BeQ Group Foundation (UK), được cấp phép hợp pháp bởi chính phủ Vương quốc Anh (Số đăng ký 14478063, cấp ngày 11/11/2022). Hoạt động theo các mã ngành 58190, 64205, 64301, 66300, với mức bảo lãnh tài chính được phê duyệt lên đến 30 triệu GBP",
+  "footer_page": "Trang",
+  "footer_introduct": "Giới thiệu",
+  "footer_product": "Sản phẩm",
+  "footer_eco": "Hệ sinh thái",
+  "footer_invest": "Ngân hàng đầu tư",
+  "footer_contact": "Liên hệ",
+  "footer_contact_decsription": "Mọi thắc mắc xin liên hệ:"
 }
