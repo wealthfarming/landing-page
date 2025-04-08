@@ -1,5 +1,21 @@
 {
   "currentLanguage": "Current Language",
   "currentLanguage_en": "English",
-  "currentLanguage_vi": "Vietnamese"
+  "currentLanguage_vi": "Vietnamese",
+
+  "header_introduct": "Introduction",
+  "header_product": "Product",
+  "header_eco": "Ecosystem",
+  "header_investBank": "Investment Bank",
+  "header_contactUs": "Contact Us",
+  "header_investNow": "Invest Now",
+
+  "footer_description": "Wealth Farming – The financial ecosystem of BeQ Group Foundation (UK), legally licensed by the government of the United Kingdom (Registration number 14478063, granted on 11/11/2022). Operating under industries 58190, 64205, 64301, 66300, with an approved financial guarantee of up to 30 million GBP.",
+  "footer_page": "Page",
+  "footer_introduct": "Introduction",
+  "footer_product": "Product",
+  "footer_eco": "Ecosystem",
+  "footer_invest": "Investment Bank",
+  "footer_contact": "Contact Us",
+  "footer_contact_decsription" : "For any inquiries, please contact:"
 }
