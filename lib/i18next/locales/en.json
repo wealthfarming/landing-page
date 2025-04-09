@@ -24,5 +24,18 @@
   "footer_eco": "Ecosystem",
   "footer_invest": "Investment Bank",
   "footer_contact": "Contact Us",
-  "footer_contact_decsription" : "For any inquiries, please contact:"
+  "footer_contact_decsription" : "For any inquiries, please contact:",
+
+  "annual_report": "Annual report",
+  "nft_report": "NFT asset allocation report",
+  "wealth_farming_information_disclosure": "Wealth Farming Information Disclosure",
+  "beq_noification": "Notification from BeQ Holdings",
+  "fund_management_report": "Report on the fund management situation",
+  "investment_nft_catalog": "Investment NFT product catalog",
+  "for_new_investors": "For new investors",
+  "regulations_rules_wf": "Regulations & Rules of Wealth Farming",
+  "new_articles": "New articles",
+  "articles": "Articles",
+  "importing_content": "Importing Content",
+  "investment_bank": "Investment Bank"
 }
