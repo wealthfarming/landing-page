@@ -2,7 +2,6 @@
 import EcoCard from "@/components/ecosystem/eco-card";
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
-import ProductInfoCard from "@/components/product/product-info-card";
 import Image from "next/image";
 
 type ContentItem = string;
