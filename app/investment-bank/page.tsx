@@ -21,28 +21,28 @@ export default function InvestmentBank() {
       <div className="flex flex-col md:flex-row md:gap-[10px] gap-[40px] md:p-[40px] p-[20px] pb-[40px] xl:w-[1200px] w-full">
         <div className="gap-[40px] md:w-[336px] md:min-w-[336px] min-w-full w-[100%]">
 
-          <div className="h-[51px] bg-[var(--primary)] py-[12px] px-[16px]">
+          <div className="h-[51px] bg-[var(--primary)] py-[12px] px-[16px] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('annual_report')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('nft_report')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('wealth_farming_information_disclosure')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('beq_noification')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('fund_management_report')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('investment_nft_catalog')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('for_new_investors')}</p>
           </div>
-          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)]">
+          <div className="h-[51px] py-[12px] px-[16px] bg-[var(--canvas-bg)] hover:bg-[#C5C6CA] cursor-pointer transition-colors">
             <p>{t('regulations_rules_wf')}</p>
           </div>
 
@@ -55,13 +55,13 @@ export default function InvestmentBank() {
           </div>
           <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
             <div className="flex-col gap-[10px] items-center">
-              <p>{t('articles')}</p>
+              <p className="hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
               <p className="text-light">March 28, 2025</p>
             </div>
           </div>
           <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
             <div className="flex-col gap-[10px] items-center">
-              <p>{t('importing_content')}</p>
+              <p className="hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
               <p className="text-light">March 28, 2025</p>
             </div>
           </div>
