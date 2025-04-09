@@ -1,6 +1,4 @@
 "use client"
-import Image from "next/image";
-import { Button } from "../ui/button";
 import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import ButtonPrimary from "../custom-button/button-primary";
 import ButtonOutLine from "../custom-button/button-outline";
