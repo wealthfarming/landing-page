@@ -1,6 +1,6 @@
 'use client';
 import { t } from "i18next";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 
@@ -8,8 +8,14 @@ export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
     const [selected, setSelected] = useState("ai_system");
     const { isDesktop, isTablet, isMobile } = useInterface();
 
+    useEffect(() => {
+        if (isTablet) {
+            setSelected("ai_system");
+        }
+    }, [isTablet]);
+
     return (
-        <div className={`${isDesktop ? 'flex h-[404px]' : 'flex flex-col'} gap-[8px]`}>
+        <div className={`${isDesktop ? 'flex h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
             {tabs.map(tab => (
                 <div
                     key={tab.id}
@@ -19,9 +25,13 @@ export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
             ${selected === tab.id ? 'basis-[28%]' : ''}
             p-[20px] flex flex-col justify-between border-[1px]
             ${selected === tab.id ? 'bg-[var(--primary-gradient)]' : 'bg-[var(--base-bg)]'}
-            ` : ""}
+            ` : `
+            transition-all duration-300 ease-in-out w-full gap-[8px]
+            p-[20px] flex flex-col justify-between border-[1px]
+            ${selected === tab.id && isTablet ? 'bg-[var(--primary-gradient)] h-[255px]' : 'bg-[var(--base-bg)]'}
+            `}
              `}
-                    onMouseEnter={() => setSelected(tab.id)}
+                    onMouseEnter={isDesktop ? () => setSelected(tab.id) : undefined}
                 >
                     <div>
                         <Image src={`/images/home-section-5/${tab.icon}`} alt="" width={45} height={45} />
@@ -33,7 +43,7 @@ export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
                     <div
                         className={`
           transition-all duration-300 ease-in-out overflow-hidden
-          ${selected === tab.id ? '' : 'hidden'}
+          ${selected === tab.id || !isDesktop ? '' : 'hidden'}
         `}
                     >
                         {t(tab.content)}
@@ -78,7 +88,8 @@ export default function HomeSection5() {
             content: 'Hệ sinh thái BeQ là một hạ tầng tài chính phi tập trung toàn diện – kết hợp smart contract minh bạch, AI đánh giá tài sản, stablecoin bảo chứng thật, và NFT có dòng tiền – vận hành như một ngân hàng số nhưng không cần trung gian.'
         },
     ];
-    const { isDesktop, isTablet, isMobile } = useInterface();
+    const { isDesktop } = useInterface();
+
     return (
         <div className="p-[40px] pt-[80px]">
             <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
