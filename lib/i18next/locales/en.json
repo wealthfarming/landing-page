@@ -3,6 +3,24 @@
   "currentLanguage_en": "English",
   "currentLanguage_vi": "Vietnamese",
 
+  "home_section_1_title":"Wealth Farming – Smart investment solution with superior profitability",
+  "home_section_1_description": "When decentralized finance meets artificial intelligence, combined with a team of practical fund managers and experts with over 20 years of R&D experience in financial products for Euronext,... a breakthrough investment opportunity emerges.",
+  "home_section_2_title": "Growth +300% in 2 years, preparing for listing!",
+  "home_section_2_description": "NFT Review Index – exclusive digital asset from the top-notch strategy, built by the former R&D Director of Euronext. Outperforming all indices for over 2 years. Own it now before the public launch!",
+  "home_section_3_title": "Join the world's leading decentralized financial ecosystem, combining Fintech, AI & Blockchain to create an unprecedented financial revolution!",
+  "home_section_3_description": "The problem is... no one tells you the simplest way to get started.",
+  "home_section_3_slide_1": "Do you believe that financial freedom is no longer a distant dream – but something you can reach with just one decision?",
+  "home_section_3_slide_2": "If there was an opportunity to double your assets in a few months while still controlling the risks – would you seize it or miss out?",
+  "home_section_3_slide_3": "What would you do if every penny spent each month turned into a passive, safe, and sustainable income?",
+  "home_section_3_slide_4": "Would you like to retire with a steady cash flow every month – even when you're no longer working?",
+  "home_section_3_slide_5": "If you could invest today for your child to study anywhere in the world – would you start?",
+  "home_section_3_slide_6": "Is the money that is 'lying still' losing value every day? Why not let it work for you?",
+  "home_section_4_title": "Every financial goal deserves a unique roadmap – and we are here to accompany you.",
+  "home_section_4_description": "Wealth Farming is not just a smart financial ecosystem – it is a personalized strategic platform that optimizes cash flow, multiplies assets, and flexibly adapts to all economic cycles, creating a competitive advantage for investors in both the short and long term.",
+  
+  "countdown_timer_button": "OWN IT NOW",
+  "free_support": "FREE CONSULTATION",
+
   "header_introduct": "Introduction",
   "header_product": "Product",
   "header_eco": "Ecosystem",
@@ -17,5 +35,18 @@
   "footer_eco": "Ecosystem",
   "footer_invest": "Investment Bank",
   "footer_contact": "Contact Us",
-  "footer_contact_decsription" : "For any inquiries, please contact:"
+  "footer_contact_decsription" : "For any inquiries, please contact:",
+
+  "annual_report": "Annual report",
+  "nft_report": "NFT asset allocation report",
+  "wealth_farming_information_disclosure": "Wealth Farming Information Disclosure",
+  "beq_noification": "Notification from BeQ Holdings",
+  "fund_management_report": "Report on the fund management situation",
+  "investment_nft_catalog": "Investment NFT product catalog",
+  "for_new_investors": "For new investors",
+  "regulations_rules_wf": "Regulations & Rules of Wealth Farming",
+  "new_articles": "New articles",
+  "articles": "Articles",
+  "importing_content": "Importing Content",
+  "investment_bank": "Investment Bank"
 }
