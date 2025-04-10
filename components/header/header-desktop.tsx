@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
 import {
@@ -47,10 +48,18 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                 <Image src={isScrolled ? 'images/img/logo_full_dark.svg' : 'images/img/logo-full.svg'} alt="Logo" width={150} height={120} className="mr-2" />
                 <div className={"flex space-x-4 h-[40px] w-10/12 items-center" + (isScrolled ? " justify-end" : " justify-between")}>
                     <nav className={" space-x-4 items-center transition duration-300 ease-in-out opacity-100 text-sm hidden md:flex" + (isScrolled ? "  " : " mr-4")}>
-                        <a href="/" className={" hover:text-blue-500 " + (isScrolled ? "" : " text-white")}>{t('header_introduct')}</a>
-                        <a href="/product" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_product')}</a>
-                        <a href="/ecosystem" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_eco')}</a>
-                        <a href="/investment-bank" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_investBank')}</a>
+                        <Link href="/" passHref>
+                            <a className={" hover:text-blue-500 " + (isScrolled ? "" : " text-white")}>{t('header_introduct')}</a>
+                        </Link>
+                        <Link href="/product" passHref>
+                            <a className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_product')}</a>
+                        </Link>
+                        <Link href="/ecosystem" passHref>
+                            <a className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_eco')}</a>
+                        </Link>
+                        <Link href="/investment-bank" passHref>
+                            <a className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_investBank')}</a>
+                        </Link>
                     </nav>
                     <div className="flex flex-row gap-4 items-center justify-items-start transition duration-300 ease-in-out opacity-100 text-sm z-[1001]">
                         <Button variant="outline" className="bg-background hover:bg-gray-100 button border-none rounded-none w-[185px] h-[40px] transition-transform duration-300 ease-in-out ">
