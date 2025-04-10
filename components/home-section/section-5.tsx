@@ -4,7 +4,14 @@ import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 
-export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
+type Tab = {
+    id: string;
+    label: string;
+    icon: string;
+    content: string;
+};
+
+export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     const [selected, setSelected] = useState("ai_system");
     const { isDesktop, isTablet, isMobile } = useInterface();
 
@@ -42,14 +49,12 @@ export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
                         <Image src={`/images/home-section-5/${tab.icon}`} alt="" width={45} height={45} />
 
                         <p className="pt-[8px] no-anim h4">{t(tab.label)}</p>
-
                     </div>
-
                     <div
                         className={`
-          transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
-          ${selected === tab.id || !isDesktop ? '' : 'hidden'}
-        `}
+                    transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
+                    ${selected === tab.id || !isDesktop ? '' : 'hidden'}
+                    `}
                     >
                         <p>
                             {t(tab.content)}

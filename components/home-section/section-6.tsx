@@ -5,7 +5,14 @@ import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { Plus } from 'phosphor-react';
 
-export function HomeSection6Tab({ tabs }: { tabs: any[] }) {
+type Tab = {
+    id: string;
+    label: string;
+    img: string;
+    content: string;
+};
+
+export function HomeSection6Tab({ tabs }: { tabs: Tab[] }) {
     const [selected, setSelected] = useState<string | null>(null);
     const { isDesktop, isTablet } = useInterface();
 
