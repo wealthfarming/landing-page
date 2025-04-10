@@ -1,6 +1,8 @@
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import HomeSection1 from "@/components/home-section/section-1";
 import HomeSection2 from "@/components/home-section/section-2";
+import HomeSection3 from "@/components/home-section/section-3";
+import HomeSection4 from "@/components/home-section/section-4";
 import Image from "next/image";
 import HomeSection5 from "@/components/home-section/section-5"
 import HomeSection6 from "@/components/home-section/section-6"
@@ -9,12 +11,14 @@ import HomeSection7 from "@/components/home-section/section-7"
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
-      
+
       <HeaderDesktopFull changeAt={300} />
-      <main className="flex flex-col body gap-[32px] row-start-2 justify-center items-center sm:items-start w-full relative">
+      <main className="flex flex-col body row-start-2 justify-center items-center sm:items-start w-full relative">
         <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={80} className="absolute w-full -z-10 top-[-400px] object-cover hidden lg:block" />
         <HomeSection1 />
         <HomeSection2 />
+        <HomeSection3 />
+        <HomeSection4 />
         <HomeSection5 />
         <HomeSection6 />
         <HomeSection7 />
