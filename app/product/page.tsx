@@ -10,7 +10,6 @@ export default function ProductPage() {
             <HeaderDesktopFull changeAt={300} />
             <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={80} className="absolute w-full -z-10 top-[-400px] object-cover" />
             <div className="w-full flex-grow flex flex-col items-center justify-start bg-background lg:mt-80 lg:pt-14 mt-18 mb-[375px] sm:mt-18 md:mt-0 sm:py-18 md:py-18 relative z-30">
-
                 <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 text-center py-2 line-clamp-2">Sản phẩm & Dịch vụ tài chính phi tập trung Wealth Farming</h1>
                 <p className="text-lg text-gray-600 mb-8 w-9/12 md:w-6/12 text-center">Từ chứng chỉ quỹ NFT mang lại thu nhập thụ động suốt đời, chiến lược đầu tư Review Indexes đỉnh cao, cho đến dịch vụ vay vốn phi tập trung (DeFi Lending) ứng dụng công nghệ AI tự động định giá và quản lý rủi ro, hệ sinh thái Wealth Farming của BeQ Holdings đáp ứng trọn vẹn từng mục tiêu đầu tư cá nhân – an toàn, minh bạch và hiệu quả tối ưu.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-4 justify-center px-16 max-w-[1200px]">
@@ -20,7 +19,6 @@ export default function ProductPage() {
                 </div>
             </div>
             <FooterFull active={'product'} />
-
         </div>
     );
 }
