@@ -120,10 +120,6 @@ export default function InvestmentBank() {
         </div>
       </div>
       <FooterFull active={'invest'} />
-
-
-
     </div >
-
   );
 }
