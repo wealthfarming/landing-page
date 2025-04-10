@@ -15,8 +15,8 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
     return (
         <div className="flex flex-col items-start justify-between border border-gray-200 p-5 h-[400px] w-full md:w-[calc(33% - 8px)] hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
             <div>
-                <h1 className='text-3xl mb-[10px]'>{title}</h1>
-                <p className="break-normal text-base">
+                <h1 className='h3 mb-[10px]'>{title}</h1>
+                <p className="break-normal body text-base">
                     {description}
                 </p>
             </div>
