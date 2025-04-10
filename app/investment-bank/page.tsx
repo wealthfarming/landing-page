@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 
 export default function InvestmentBank() {
-  const { isDesktop } = useInterface();
+  const { isDesktop} = useInterface();
   const { t } = useTranslation();
   const [selected, setSelected] = useState("nft_report");
 
