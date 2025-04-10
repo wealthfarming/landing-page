@@ -9,13 +9,15 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { ChatCenteredDots, CursorClick, GlobeSimple } from "@phosphor-icons/react";
+import { ChatCenteredDots, CursorClick, GlobeSimple, List } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { useInterface } from '@/components/context/interface-context';
 
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const { t, i18n } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
+    const { isDesktop } = useInterface();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -80,6 +82,24 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                     </div>
 
 
+                    {/* Language Select */}
+                    {!isScrolled && isDesktop && (
+                        <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
+                            <SelectTrigger className="!h-[40px] flex flex-row items-center justify-between rounded-none bg-background w-[80px]">
+                                <GlobeSimple size={24} />
+                                <SelectValue placeholder={changeLanguage} />
+                            </SelectTrigger>
+                            <SelectContent className="rounded-none z-[1001]">
+                                <SelectItem value="en">{t('currentLanguage_en')}</SelectItem>
+                                <SelectItem value="vi">{t('currentLanguage_vi')}</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    )}
+                    {!isDesktop &&
+                        <div className=" flex p-0 m-0 items-center justify-center border rounded-[6px] w-[40px] h-[40px]">
+                            <List width={35} height={35}/>
+                        </div>
+                    }
                 </div>
             </div>
         </header>

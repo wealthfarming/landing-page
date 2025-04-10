@@ -22,7 +22,6 @@ export default function ProductPage() {
                 </div>
             </div>
             <FooterFull active={'product'} />
-
         </div>
     );
 }
