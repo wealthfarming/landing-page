@@ -63,6 +63,8 @@
   /* Primary Colors */
   --primary: #E8B561;
   /* was --1st-chính */
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
   --primary-border: #FDEA9B;
   /* was --1st-viền */
   --primary-bg: #003048;
@@ -209,6 +211,15 @@
   font-family: "Inter Display"; 
   font-weight: 500; 
   font-size: 24px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+.h6 {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-style: normal;
+  font-weight: 700; 
+  font-size: 16px; 
   letter-spacing: 0em; 
   line-height: 1.4em; 
 }
