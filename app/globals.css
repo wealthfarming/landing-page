@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "Inter Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Inter Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf") format("ttf");
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -63,8 +95,12 @@
   /* Primary Colors */
   --primary: #E8B561;
   /* was --1st-chính */
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
   --primary-border: #FDEA9B;
   /* was --1st-viền */
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
   --primary-bg: #003048;
   /* was --1st-nền */
 
@@ -108,6 +144,15 @@
   --other-bg: #1A1A1A;
   /* was --khác-đen */
 
+  --font-geist-sans: "IBM Plex Sans", sans-serif;
+  --font-geist-mono: "IBM Plex Mono", monospace;
+  --font-geist-serif: "DM Serif Text", serif;
+  --font-geist-display: "Inter Display", sans-serif;
+  --font-geist-heading: "Inter Display", sans-serif;
+  --font-geist-body: "Inter Display", sans-serif;
+  --font-geist-code: "IBM Plex Mono", monospace;
+  --font-geist-nav: "IBM Plex Sans", sans-serif;
+  --font-geist-button: "IBM Plex Mono", monospace;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -185,32 +230,125 @@
   }
 }
 
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
+.font-geist-serif {
+  font-family: var(--font-geist-serif);
+}
+.font-geist-display {
+  font-family: var(--font-geist-display);
+}
+.font-geist-heading {
+  font-family: var(--font-geist-heading);
+}
+.font-geist-body {
+  font-family: var(--font-geist-body);
+}
+.font-geist-code {
+  font-family: var(--font-geist-code);
+}
+.font-geist-nav {
+  font-family: var(--font-geist-nav);
+}
+.font-geist-button {
+  font-family: var(--font-geist-button);
+}
+
+.bigTitle {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 50px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
 
 .h1 {
   color: var(--text-bold); 
-  font-family: "Inter Display"; 
+  font-family:var(--font-geist-display);
+  font-style: bold;
   font-weight: 500; 
   font-size: 42px; 
   letter-spacing: 0em; 
   line-height: 1.4em; 
 }
 
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h1 {
+    font-size: 29px;
+  }
+}
+
 .h2 {
   color: var(--text-bold); 
-  font-family: "Inter Display"; 
+  font-family: var(--font-geist-display);
+  font-style: bold;
   font-weight: 500; 
   font-size: 31px; 
   letter-spacing: 0em; 
   line-height: 1.2em; 
 }
 
+@media (max-width: 809px) {
+  .h2 {
+    font-size: 26px;
+  }
+}
+
+
 .h3 {
   color: var(--text-bold); 
-  font-family: "Inter Display"; 
+  font-family: var(--font-geist-display);
+  font-style: bold;
   font-weight: 500; 
   font-size: 24px; 
   letter-spacing: 0em; 
   line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h3 {
+    font-size: 20px;
+  }
+}
+
+.h4 {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: normal;
+  font-weight: 500; 
+  font-size: 20px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h4 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h4 {
+    font-size: 18px;
+  }
 }
 .h6 {
   color: var(--text-bold); 
@@ -224,7 +362,7 @@
 
 .body-large {
   color: var(--text-bold); 
-  font-family: "Inter Display"; 
+  font-family: var(--font-geist-display);
   font-weight: 400; 
   font-size: 18px; 
   letter-spacing: 0em; 
@@ -233,7 +371,7 @@
 
 .body {
   color: var(--text-bold); 
-  font-family: "Inter Display"; 
+  font-family: var(--font-geist-display);
   font-weight: 400; 
   font-size: 15px; 
   letter-spacing: 0em; 
@@ -242,7 +380,7 @@
 
 .small {
   color: var(--text-bold); 
-  font-family: "Inter Display"; 
+  font-family: var(--font-geist-display);
   font-weight: 400; 
   font-size: 13px; 
   letter-spacing: 0.01em; 
@@ -251,7 +389,7 @@
 
 .nav {
   color: var(--text-bold); 
-  font-family: "IBM Plex Sans"; 
+  font-family: var(--font-geist-sans); 
   font-weight: 500; 
   font-size: 11px; 
   letter-spacing: 0em; 
@@ -260,7 +398,7 @@
 
 .button {
   color: var(--text-bold); 
-  font-family: "IBM Plex Mono"; 
+  font-family: var(--font-geist-mono); 
   font-weight: 500; 
   font-size: 12px; 
   letter-spacing: 0em; 
@@ -342,4 +480,23 @@
 }
 .bg-other {
   background-color: var(--other-bg); 
+}
+
+.custom-box-shadow {
+  box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+  -webkit-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+  -moz-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+}
+
+@keyframes floatDiagonal {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.animate-diagonal {
+  animation: floatDiagonal 0.6s ease-in-out infinite;
 }

@@ -9,13 +9,15 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { ChatCenteredDots, CursorClick, GlobeSimple } from "@phosphor-icons/react";
+import { ChatCenteredDots, CursorClick, GlobeSimple, List } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { useInterface } from '@/components/context/interface-context';
 
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const { t, i18n } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
+    const { isDesktop } = useInterface();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,25 +40,26 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     };
     return (
         <header
-            className={`w-full ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 transition-all duration-300 ease-in-out fixed h-[80px] top-0`}
+            className={`w-full ${isScrolled ? 'canvas-bg-1' : 'bg-transparent'} shadow-md transition-all duration-300 ease-in-out fixed h-[72px] top-0`}
+            style={{ zIndex: 1000 }}
         >
             <div className="px-16 py-4 flex justify-between items-center transition-all duration-300 ease-in-out">
-                <Image src={isScrolled ? 'images/img/logo_full_dark.svg' : 'images/img/logo-full.svg'} alt="Logo" width={100} height={120} className="mr-2" />
+                <Image src={isScrolled ? 'images/img/logo_full_dark.svg' : 'images/img/logo-full.svg'} alt="Logo" width={150} height={120} className="mr-2" />
                 <div className={"flex space-x-4 h-[40px] w-10/12 items-center" + (isScrolled ? " justify-end" : " justify-between")}>
                     <nav className={" space-x-4 items-center transition duration-300 ease-in-out opacity-100 text-sm hidden md:flex" + (isScrolled ? "  " : " mr-4")}>
-                        <a href="/intro" className={" hover:text-blue-500 " + (isScrolled ? "" : " text-white")}>{t('header_introduct')}</a>
+                        <a href="/" className={" hover:text-blue-500 " + (isScrolled ? "" : " text-white")}>{t('header_introduct')}</a>
                         <a href="/product" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_product')}</a>
-                        <a href="/eco" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_eco')}</a>
+                        <a href="/ecosystem" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_eco')}</a>
                         <a href="/investment-bank" className={" hover:text-blue-500" + (isScrolled ? "" : " text-white")}>{t('header_investBank')}</a>
                     </nav>
-                    <div className="flex flex-row gap-4 items-center justify-items-start transition duration-300 ease-in-out opacity-100 text-sm">
-                        <Button variant="outline" className="bg-background hover:bg-gray-100 border-none rounded-none w-[185px] h-[40px] transition-transform duration-300 ease-in-out ">
+                    <div className="flex flex-row gap-4 items-center justify-items-start transition duration-300 ease-in-out opacity-100 text-sm z-[1001]">
+                        <Button variant="outline" className="bg-background hover:bg-gray-100 button border-none rounded-none w-[185px] h-[40px] transition-transform duration-300 ease-in-out ">
                             <ChatCenteredDots size={24} />
                             <p>
                                 {t('header_contactUs')}
                             </p>
                         </Button>
-                        <Button variant="outline" className="bg-[var(--color-primary)] border-none rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out ">
+                        <Button variant="outline" className="bg-[var(--color-primary)] border-none button rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out ">
                             <CursorClick size={24} />
                             <p>
                                 {t('header_investNow')}
@@ -70,7 +73,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                                     <GlobeSimple size={24} />
                                     <SelectValue placeholder={changeLanguage} />
                                 </SelectTrigger>
-                                <SelectContent className="rounded-none">
+                                <SelectContent className="rounded-none z-[1001]">
                                     <SelectItem value="en">{t('currentLanguage_en')}</SelectItem>
                                     <SelectItem value="vi">{t('currentLanguage_vi')}</SelectItem>
                                 </SelectContent>
@@ -79,6 +82,24 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                     </div>
 
 
+                    {/* Language Select */}
+                    {!isScrolled && isDesktop && (
+                        <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
+                            <SelectTrigger className="!h-[40px] flex flex-row items-center justify-between rounded-none bg-background w-[80px]">
+                                <GlobeSimple size={24} />
+                                <SelectValue placeholder={changeLanguage} />
+                            </SelectTrigger>
+                            <SelectContent className="rounded-none z-[1001]">
+                                <SelectItem value="en">{t('currentLanguage_en')}</SelectItem>
+                                <SelectItem value="vi">{t('currentLanguage_vi')}</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    )}
+                    {!isDesktop &&
+                        <div className=" flex p-0 m-0 items-center justify-center border rounded-[6px] w-[40px] h-[40px]">
+                            <List width={35} height={35}/>
+                        </div>
+                    }
                 </div>
             </div>
         </header>

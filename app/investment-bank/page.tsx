@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 
 export default function InvestmentBank() {
-  const { isDesktop, isTablet, isMobile } = useInterface();
+  const { isDesktop, isMobile } = useInterface();
   const { t } = useTranslation();
   const [selected, setSelected] = useState("nft_report");
 
@@ -24,106 +24,106 @@ export default function InvestmentBank() {
 
   return (
     <div>
-      <HeaderDesktopFull changeAt={1} />
-      <Image src="/images/img/product_base.jpg" alt="Product Banner" width={260} height={260} className={`w-full h-[260px] -z-10 ${!isDesktop ? "pt-[80px]" : ""}`} />
-      <div className="flex w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
-        <p className="h1">
-          {t('investment_bank')}
-        </p>
+      <HeaderDesktopFull changeAt={190} />
+      <Image src="/images/img/product_base.jpg" alt="Product Banner" width={260} height={260} className={`w-full h-[260px] -z-10 ${!isDesktop ? "pt-[80px]" : ""} brightness-40`} />
+      <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
+        <div className="w-[1200px] max-w-[1200px]">
+          <p className="h1">
+            {t('investment_bank')}
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:gap-[10px] gap-[40px] md:p-[40px] p-[20px] pb-[40px] xl:w-[1200px] w-full">
-        <div className="gap-[40px] md:w-[336px] md:min-w-[336px] min-w-full w-[100%]">
-          {tabs.map((tab) => (
-            <div
-              key={tab.id}
-              className={`h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
-                ? 'bg-[var(--primary)]'
-                : 'bg-[var(--canvas-bg)] hover:bg-[#C5C6CA]'
-                }`}
-              onClick={() => setSelected(tab.id)}
-            >
-              <p>{t(tab.label)}</p>
-            </div>
-          ))}
+      <div className="flex w-full justify-center p-[40px] pb-[40px]">
+        <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] `}>
+          <div className="gap-[40px] flex-col items-center w-[336px] min-w-[336px] ">
+            {tabs.map((tab) => (
+              <div
+                key={tab.id}
+                className={`h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
+                  ? 'bg-[var(--primary)]'
+                  : 'bg-[var(--canvas-bg)] hover:bg-[#C5C6CA]'
+                  }`}
+                onClick={() => setSelected(tab.id)}
+              >
+                <p className="text-[15px]">{t(tab.label)}</p>
+              </div>
+            ))}
 
-        </div>
-        <div className="w-full">
-          <div className="h-[34px] border-b border-[var(--primary-other)] ">
-            <div className="h-[22px] text-error font-bold">
-              <p>{t('new_articles')}</p>
-            </div>
           </div>
-
-          {selected == 'annual_report' &&
-            <div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                  <p className="text-light">March 28, 2025</p>
-                </div>
-              </div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
-                  <p className="text-light">March 28, 2025</p>
-                </div>
+          <div className="w-full">
+            <div className="h-[34px] border-b border-[var(--primary-other)] ">
+              <div className="h-[22px] text-error font-bold">
+                <p>{t('new_articles')}</p>
               </div>
             </div>
-          }
 
-          {selected == 'nft_report' &&
-            <div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                  <p className="text-light">March 28, 2025</p>
+            {selected == 'annual_report' &&
+              <div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
+                    <p className="text-light ">March 28, 2025</p>
+                  </div>
+                </div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          }
+            }
 
-          {selected == 'wealth_farming_information_disclosure' &&
-            <div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">Styling Elements</p>
-                  <p className="text-light">March 28, 2025</p>
+            {selected == 'nft_report' &&
+              <div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
+                  </div>
                 </div>
               </div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
-                  <p className="text-light">March 28, 2025</p>
-                </div>
-              </div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">Best Practices</p>
-                  <p className="text-light">March 28, 2025</p>
-                </div>
-              </div>
-            </div>
-          }
+            }
 
-          {selected == 'beq_noification' &&
-            <div>
-              <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                <div className="flex-col gap-[10px] items-center">
-                  <p className="hover:text-[#f1c204] cursor-pointer transition-colors">What's New</p>
-                  <p className="text-light">March 28, 2025</p>
+            {selected == 'wealth_farming_information_disclosure' &&
+              <div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">Styling Elements</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
+                  </div>
+                </div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] flex hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
+                  </div>
+                </div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">Best Practices</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          }
+            }
 
+            {selected == 'beq_noification' &&
+              <div>
+                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                  <div className="flex-col gap-[10px] justify-center">
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">What's New</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
+                  </div>
+                </div>
+              </div>
+            }
+
+          </div>
         </div>
       </div>
       <FooterFull active={'invest'} />
-
-
-
     </div >
-
   );
 }
