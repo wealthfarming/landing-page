@@ -38,7 +38,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     };
     return (
         <header
-            className={`w-full ${isScrolled ? 'lg:canvas-bg-1' : 'lg:bg-transparent'} shadow-md transition-all duration-300 ease-in-out fixed h-[72px] top-0`}
+            className={`w-full ${isScrolled ? 'canvas-bg-1' : 'bg-transparent'} shadow-md transition-all duration-300 ease-in-out fixed h-[72px] top-0`}
             style={{ zIndex: 1000 }}
         >
             <div className="px-16 py-4 flex justify-between items-center transition-all duration-300 ease-in-out">
