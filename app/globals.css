@@ -415,3 +415,9 @@
 .bg-other {
   background-color: var(--other-bg); 
 }
+
+.custom-box-shadow {
+  box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+  -webkit-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+  -moz-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+}
