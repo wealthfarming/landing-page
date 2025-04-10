@@ -7,6 +7,9 @@ import Image from "next/image";
 import HomeSection5 from "@/components/home-section/section-5"
 import HomeSection6 from "@/components/home-section/section-6"
 import HomeSection7 from "@/components/home-section/section-7"
+import Section5 from "@/components/home/section5";
+import Section6 from "@/components/home/section6";
+import FooterFull from "@/components/footer/footer-full";
 
 export default function Home() {
   return (
@@ -20,9 +23,12 @@ export default function Home() {
         <HomeSection3 />
         <HomeSection4 />
         <HomeSection5 />
+        <Section5 />
+        <Section6 />
         <HomeSection6 />
         <HomeSection7 />
       </main>
+      <FooterFull active={'product'} />
     </div>
   );
 }
