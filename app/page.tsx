@@ -27,8 +27,8 @@ export default function Home() {
         <Section6 />
         <HomeSection6 />
         <HomeSection7 />
+        <FooterFull active={'product'} />
       </main>
-      <FooterFull active={'product'} />
     </div>
   );
 }
