@@ -30,20 +30,19 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     return (
         <div className={`${isDesktop ? 'w-[1200px] flex flex-[0_0_auto] h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
             {tabs.map(tab => (
-                <div className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
+                <div key={tab.id} className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
                     <div
-                        key={tab.id}
                         className={`
-        ${isDesktop ? `
-            p-[20px] h-full  transition-all duration-300 ease-in-out
-            flex flex-col justify-between border-[1px]
-            ${selected === tab.id ? 'bg-[var(--primary)]' : 'bg-[var(--base-bg)]'}
-            ` : `
-            p-[20px] transition-all duration-300 ease-in-out w-full gap-[8px]
-            flex flex-col justify-between border-[1px]
-            ${selected === tab.id && isTablet ? 'bg-[var(--primary)] h-[255px]' : 'bg-[var(--base-bg)]'}
-            `}
-             `}
+                            ${isDesktop ? `
+                                p-[20px] h-full  transition-all duration-300 ease-in-out
+                                flex flex-col justify-between border-[1px]
+                                ${selected === tab.id ? 'bg-[var(--primary)]' : 'bg-[var(--base-bg)]'}
+                                ` : `
+                                p-[20px] transition-all duration-300 ease-in-out w-full gap-[8px]
+                                flex flex-col justify-between border-[1px]
+                                ${selected === tab.id && isTablet ? 'bg-[var(--primary)] h-[255px]' : 'bg-[var(--base-bg)]'}
+                                `}
+                            `}
                         onMouseEnter={isDesktop ? () => setSelected(tab.id) : undefined}
                     >
                         <div>
@@ -52,9 +51,9 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
                         </div>
                         <div
                             className={`
-          transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
-          ${selected === tab.id || !isDesktop ? '' : 'hidden'}
-        `}
+                                transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
+                                ${selected === tab.id || !isDesktop ? '' : 'hidden'}
+                            `}
                         >
                             <p>
                                 {t(tab.content)}
