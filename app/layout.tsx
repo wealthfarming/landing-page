@@ -16,9 +16,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Landing page - Wealth Farming",
-  icons: {
-
-  },
 };
 
 export default function RootLayout({
