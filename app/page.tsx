@@ -17,7 +17,7 @@ export default function Home() {
 
       <HeaderDesktopFull changeAt={300} />
       <main className="flex flex-col body row-start-2 justify-center items-center sm:items-start w-full relative">
-        <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={80} className="absolute w-full -z-10 top-[-400px] object-cover hidden lg:block" />
+        <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="absolute w-full h-[260px] -z-10 top-[-20px] object-cover hidden lg:block" />
         <HomeSection1 />
         <HomeSection2 />
         <HomeSection3 />
