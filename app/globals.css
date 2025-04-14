@@ -332,7 +332,7 @@
 
 .button {
   color: var(--text-bold); 
-  font-family: var(--font-geist-mono); 
+  font-family: "IBM Plex Mono", monospace; 
   font-weight: 500; 
   font-size: 12px; 
   letter-spacing: 0em; 
@@ -420,4 +420,18 @@
   box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
   -webkit-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
   -moz-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+}
+
+.carousel_desktop {
+  transform: perspective(800px) scale(0.8) rotateY(15deg) !important ;
+}
+.fadeIn {
+  animation: fadeIn 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
