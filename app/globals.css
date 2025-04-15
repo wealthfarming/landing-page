@@ -153,6 +153,7 @@
   --font-geist-code: "IBM Plex Mono", monospace;
   --font-geist-nav: "IBM Plex Sans", sans-serif;
   --font-geist-button: "IBM Plex Mono", monospace;
+  --font-geist-raleway: "Raleway", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -256,6 +257,9 @@
 }
 .font-geist-button {
   font-family: var(--font-geist-button);
+}
+.font-geist-raleway {
+  font-family: var(--font-geist-raleway);
 }
 
 .bigTitle {
