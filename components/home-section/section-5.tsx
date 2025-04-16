@@ -22,9 +22,8 @@ export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
     return (
         <div className={`${isDesktop ? 'w-[1200px] flex flex-[0_0_auto] h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
             {tabs.map(tab => (
-                <div className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
+                <div key={tab.id} className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
                     <div
-                        key={tab.id}
                         className={`
         ${isDesktop ? `
             p-[20px] h-full  transition-all duration-300 ease-in-out
