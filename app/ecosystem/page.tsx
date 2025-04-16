@@ -1,4 +1,5 @@
 "use client";
+import { useInterface } from "@/components/context/interface-context";
 import EcoCard from "@/components/ecosystem/eco-card";
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
@@ -52,27 +53,36 @@ const ecoData: Section[] = [
 ];
 
 export default function EcoPage() {
+
+  const { isDesktop, isTablet, isMobile } = useInterface();
   return (
     <div className="">
       <HeaderDesktopFull changeAt={300} />
-      <Image
-        src="/images/img/product_base.jpg"
-        alt="Product Banner"
-        width={735}
-        height={80}
-        className="absolute w-full -z-10 top-[-400px] object-cover"
-      />
-      <div className="w-full flex-grow flex flex-col items-center justify-start bg-background xl:p-10 lg:mt-50 mt-30 md:mt-40 sm:mt-18 sm:py-18 md:py-18 relative z-30 xl:gap-3 lg:gap-5 gap-5">
-        <h1 className="text-[34px] font-normal w-full px-3 text-center xl:pt-10 md:pt-5 xl:px-[108px] xl:text-[50px] lg:px-5 lg:text-[44px]">
-          Wealth Farming – Hệ sinh thái đầu tư và quản lý tài sản số toàn diện
-        </h1>
-        <p className="xl:text-lg text-base w-full px-5 text-center xl:px-[200px] lg:px-60 lg:text-2xl text-[var(--text-medium)]">
-          Hệ sinh thái đầu tư và quản lý tài sản số phi tập trung tiên phong ứng dụng công nghệ Blockchain, Web3 và AI, được BeQ Holdings phát triển đặc biệt để giúp nhà đầu tư trên toàn thế giới dễ dàng tạo dựng nguồn thu nhập thụ động bền vững, gia tăng giá trị tài sản minh bạch và an toàn, cùng khả năng thanh khoản 24/7 vượt trội với lợi nhuận tối ưu.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 flex-wrap gap-4 justify-center w-full">
-          {ecoData.map((section, index) => (
-            <EcoCard key={index} section={section} />
-          ))}
+      {isDesktop && (
+        <Image
+          src="/images/img/product_base.jpg"
+          alt="Product Banner"
+          width={735}
+          height={80}
+          className="absolute w-full -z-10 top-[-400px] object-cover"
+        />
+      )}
+
+      <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? 'mt-56' : isTablet ? 'mt-12' : 'mt-18'} relative z-30`}>
+        <div className={`max-w-[1200px] flex flex-col ${isDesktop? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'}`}>
+          <div className={`flex flex-col gap-6`}>
+            <h1 className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'} font-semibold w-full text-center`}>
+              Wealth Farming – Hệ sinh thái đầu tư và quản lý tài sản số toàn diện
+            </h1>
+            <p className={` ${isDesktop ? 'text-xl px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'} font-medium w-full text-center text-[var(--text-medium)]`}>
+              Hệ sinh thái đầu tư và quản lý tài sản số phi tập trung tiên phong ứng dụng công nghệ Blockchain, Web3 và AI, được BeQ Holdings phát triển đặc biệt để giúp nhà đầu tư trên toàn thế giới dễ dàng tạo dựng nguồn thu nhập thụ động bền vững, gia tăng giá trị tài sản minh bạch và an toàn, cùng khả năng thanh khoản 24/7 vượt trội với lợi nhuận tối ưu.
+            </p>
+          </div>
+          <div className={`${isDesktop ? 'grid-cols-2 gap-[40px_60px] mb-20' : isTablet ? 'grid-cols-2 gap-[40px_60px] mb-20' : 'grid-cols-1 gap-10 mb-10'} grid flex-wrap justify-center w-full`}>
+            {ecoData.map((section, index) => (
+              <EcoCard key={index} section={section} />
+            ))}
+          </div>
         </div>
       </div>
       <FooterFull active={"product"} />
