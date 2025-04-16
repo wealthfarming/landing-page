@@ -4,7 +4,15 @@ import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 
-export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
+type Tab = {
+    id: string;
+    label: string;
+    icon: string;
+    icon_selected: string;
+    content: string;
+};
+
+export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     const [selected, setSelected] = useState("ai_system");
     const { isDesktop, isTablet, isMobile } = useInterface();
 
@@ -25,37 +33,33 @@ export function HomeSection5Tab({ tabs }: { tabs: any[] }) {
                 <div key={tab.id} className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
                     <div
                         className={`
-        ${isDesktop ? `
-            p-[20px] h-full  transition-all duration-300 ease-in-out
-            flex flex-col justify-between border-[1px]
-            ${selected === tab.id ? 'bg-[var(--primary)]' : 'bg-[var(--base-bg)]'}
-            ` : `
-            p-[20px] transition-all duration-300 ease-in-out w-full gap-[8px]
-            flex flex-col justify-between border-[1px]
-            ${selected === tab.id && isTablet ? 'bg-[var(--primary)] h-[255px]' : 'bg-[var(--base-bg)]'}
-            `}
-             `}
+                            ${isDesktop ? `
+                                p-[20px] h-full  transition-all duration-300 ease-in-out
+                                flex flex-col justify-between border-[1px]
+                                ${selected === tab.id ? 'bg-[var(--primary)]' : 'bg-[var(--base-bg)]'}
+                                ` : `
+                                p-[20px] transition-all duration-300 ease-in-out w-full gap-[8px]
+                                flex flex-col justify-between border-[1px]
+                                ${selected === tab.id && isTablet ? 'bg-[var(--primary)] h-[255px]' : 'bg-[var(--base-bg)]'}
+                                `}
+                            `}
                         onMouseEnter={isDesktop ? () => setSelected(tab.id) : undefined}
                     >
                         <div>
                             <Image src={`/images/home-section-5/${selected === tab.id ? tab.icon_selected : tab.icon}`} alt="" width={45} height={45} />
-
                             <p className="pt-[8px] no-anim h4">{t(tab.label)}</p>
-
                         </div>
-
                         <div
                             className={`
-          transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
-          ${selected === tab.id || !isDesktop ? '' : 'hidden'}
-        `}
+                                transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
+                                ${selected === tab.id || !isDesktop ? '' : 'hidden'}
+                            `}
                         >
                             <p>
                                 {t(tab.content)}
                             </p>
                             <div className={`border-[1px] rounded-[100px] border-[var(--primary-gradient)] w-[20px] min-w-[20px] h-[20px] mt-auto flex items-center justify-center animate-pulse ${selected === tab.id ? '' : 'hidden'}`}>
                                 <div className="rounded-[100px] bg-[var(--primary-border)]  w-[12px] h-[12px]">
-
                                 </div>
                             </div>
                         </div>

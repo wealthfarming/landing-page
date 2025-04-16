@@ -56,7 +56,6 @@ export default function Home() {
         <FadeInSection>
           <HomeSection7 />
         </FadeInSection>
-
         <FooterFull active={'product'} />
       </main>
     </div>

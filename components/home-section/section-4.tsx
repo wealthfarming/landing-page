@@ -3,8 +3,10 @@ import Image from 'next/image'
 import { Button } from '../ui/button'
 import { useTranslation } from 'react-i18next';
 import { ChatCenteredDots } from '@phosphor-icons/react';
+import { useInterface } from '../context/interface-context';
 export default function HomeSection4() {
     const { t } = useTranslation();
+    const {isDesktop, isTablet, isMobile} = useInterface();
     return (
         <div className="w-full body-large">
             <div className='w-full h-[300px] relative overflow-hidden flex items-center justify-center'>
@@ -54,11 +56,13 @@ export default function HomeSection4() {
                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
                     style={{ opacity: 0.1 }}
                 />
-                <h1 className='h2 w-9/12 lg:w-1/2 text-center font-[900] text-white'>
+                <div className={`${isDesktop ? 'w-[1180px] text-[30px] font-semibold' : 'w-1/2'}  text-center`} style={{
+                    lineHeight: isDesktop ? '33.6px' : isTablet ? "" : "",
+                }}>
                     {t('home_section_4_description')}
-                </h1>
+                </div>
                 <div className='flex flex-col items-center justify-center w-full p-5 mt-12 relative'>
-                    <Button className="h-[60px] w-[300px] button !text-[15px]  rounded-none">
+                    <Button className="h-[50px] w-[180px] button !text-[12px] rounded-[4px]">
                         <ChatCenteredDots size={32} className="size-5" />
                         <p>{t('free_support')}</p>
                     </Button>
