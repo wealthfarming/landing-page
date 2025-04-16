@@ -35,6 +35,13 @@
   src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -95,8 +102,12 @@
   /* Primary Colors */
   --primary: #E8B561;
   /* was --1st-chính */
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
   --primary-border: #FDEA9B;
   /* was --1st-viền */
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
   --primary-bg: #003048;
   /* was --1st-nền */
 
@@ -149,6 +160,7 @@
   --font-geist-code: "IBM Plex Mono", monospace;
   --font-geist-nav: "IBM Plex Sans", sans-serif;
   --font-geist-button: "IBM Plex Mono", monospace;
+  --font-geist-raleway: "Raleway", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -253,6 +265,9 @@
 .font-geist-button {
   font-family: var(--font-geist-button);
 }
+.font-geist-raleway {
+  font-family: var(--font-geist-raleway);
+}
 
 .bigTitle {
   color: var(--text-bold); 
@@ -274,6 +289,18 @@
   line-height: 1.4em; 
 }
 
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h1 {
+    font-size: 29px;
+  }
+}
+
 .h2 {
   color: var(--text-bold); 
   font-family: var(--font-geist-display);
@@ -284,12 +311,62 @@
   line-height: 1.2em; 
 }
 
+@media (max-width: 809px) {
+  .h2 {
+    font-size: 26px;
+  }
+}
+
+
 .h3 {
   color: var(--text-bold); 
   font-family: var(--font-geist-display);
   font-style: bold;
   font-weight: 500; 
   font-size: 24px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h3 {
+    font-size: 20px;
+  }
+}
+
+.h4 {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: normal;
+  font-weight: 500; 
+  font-size: 20px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h4 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h4 {
+    font-size: 18px;
+  }
+}
+.h6 {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-style: normal;
+  font-weight: 700; 
+  font-size: 16px; 
   letter-spacing: 0em; 
   line-height: 1.4em; 
 }
@@ -331,7 +408,7 @@
 }
 
 .button {
-  color: var(--text-bold); 
+  color: var(--text-bold);
   font-family: "IBM Plex Mono", monospace; 
   font-weight: 500; 
   font-size: 12px; 
@@ -434,4 +511,16 @@
   to {
     opacity: 1;
   }
+}
+@keyframes floatDiagonal {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.animate-diagonal {
+  animation: floatDiagonal 0.6s ease-in-out infinite;
 }

@@ -8,7 +8,6 @@ export default function HomeSection1() {
     const { t } = useTranslation();
     return (
         <div className="w-full flex-grow flex flex-col items-center justify-start bg-background lg:mt-80 lg:pt-14 mt-18 sm:mt-18 md:mt-0 sm:py-18 md:py-18 relative z-30">
-
             <h1 className="font-normal mb-4 w-full text-center pb-2 max-w-[820px] bigTitle ">
                 <AnimatedText text={t('home_section_1_title')} />
             </h1>
@@ -16,7 +15,7 @@ export default function HomeSection1() {
             <div className="flex flex-row gap-4 justify-center px-16 max-w-[1200px]">
                 <ButtonOutLine variant="outline" className="h-[48px] border button ">
                     <ChatCenteredDots size={32} className="size-5" />
-                    <p>{t('free_support')}</p>
+                    <p className="!font-geist-mono">{t('free_support')}</p>
                 </ButtonOutLine>
                 <ButtonPrimary className="h-[48px] flex items-center gap-2 button ">
                     <CursorClick size={32} className="size-5" />
