@@ -23,10 +23,11 @@ export default function Home() {
         <HomeSection3 />
         <HomeSection4 />
         <HomeSection5 />
+        <HomeSection5 />
         <Section5 />
         <Section6 />
-        <HomeSection6 />
-        <HomeSection7 />
+        {/* <HomeSection6 />
+        <HomeSection7 /> */}
         <FooterFull active={'product'} />
       </main>
     </div>
