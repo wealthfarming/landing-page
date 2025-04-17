@@ -1,6 +1,10 @@
 import React from "react";
 
-const Footer: React.FC = () => {
+interface FooterFullProps {
+  active?: string;
+}
+
+const FooterFull: React.FC<FooterFullProps> = ({ active }) => {
   return (
     <footer className="text-white bg-sky-950">
       <div className="flex flex-col justify-center items-center px-10 pt-20 pb-10 w-full border-b border-cyan-900 max-md:px-5 max-md:max-w-full">
@@ -96,4 +100,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default FooterFull;
