@@ -16,7 +16,7 @@ import FloatingMetrics from "@/components/index/floating-metrics";
 
 const IndexLandingPage: React.FC = () => {
   return (
-    <div className="pb-[6363px] max-md:pb-24">
+    <div className="">
       <div className="overflow-hidden w-full bg-white max-md:max-w-full">
         <Header changeAt={0} />
         <IntroSection />
@@ -25,8 +25,8 @@ const IndexLandingPage: React.FC = () => {
         <SolutionSection />
         <NFTFutureSection />
         <SecurityDetailsSection />
-        <ProcessSection />
         <PartnersSection />
+        <ProcessSection />
         <ContactSection />
         <FAQSection />
         <Footer />
