@@ -1,8 +1,15 @@
 import React from "react";
 
-const Footer: React.FC = () => {
+// Footer component
+type FooterProps = {
+  active?: "introduction" | "product" | "ecosystem" | "investment-bank";
+};
+
+const FooterFull: React.FC<FooterProps> = ({ active }) => {
+  // Define the footer active state
+  const activeClassName = "text-[var(--primary)] font-semibold";
   return (
-    <footer className="text-white bg-sky-950">
+    <footer className="text-white bg-sky-950  bottom-0 w-full fixed " style={{ zIndex: -1000 }}>
       <div className="flex flex-col justify-center items-center px-10 pt-20 pb-10 w-full border-b border-cyan-900 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-wrap gap-10 justify-center items-start w-full max-w-[1200px] max-md:max-w-full">
           <div className="flex-1 shrink text-base leading-6 basis-0 min-h-[173px] min-w-60 max-md:max-w-full">
@@ -23,10 +30,10 @@ const Footer: React.FC = () => {
             <nav className="text-white w-[130px]">
               <h3 className="text-lg font-semibold">Trang</h3>
               <ul className="mt-4 w-full text-xs font-medium">
-                <li>GIỚI THIỆU</li>
-                <li className="mt-2">SẢN PHẨM</li>
-                <li className="mt-2">HỆ SINH THÁI</li>
-                <li className="mt-2">NGÂN HÀNG ĐẦU TƯ</li>
+                <li className={(active == "introduction") ? activeClassName : ""}>GIỚI THIỆU</li>
+                <li className={(active == "product") ? activeClassName + " mt-2" : "mt-2"}>SẢN PHẨM</li>
+                <li className={(active == "ecosystem") ? activeClassName + " mt-2" : "mt-2"}>HỆ SINH THÁI</li>
+                <li className={(active == "investment-bank") ? activeClassName + " mt-2" : "mt-2"}>NGÂN HÀNG ĐẦU TƯ</li>
               </ul>
             </nav>
             <div className="min-w-60 w-[253px]">
@@ -96,4 +103,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default FooterFull;

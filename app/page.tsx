@@ -13,10 +13,10 @@ import FooterFull from "@/components/footer/footer-full";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[80px_1fr] md:grid-rows-[260px_1fr]  lg:grid-rows-[260px_1fr] items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
 
       <HeaderDesktopFull changeAt={300} />
-      <main className="flex flex-col body row-start-2 justify-center items-center sm:items-start w-full relative">
+      <main className="flex flex-col body row-start-2 justify-center items-center sm:items-start w-full mb-[551px] sm:mb-[391px] relative bg-[var(--base-bg)]">
         <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={80} className="absolute w-full -z-10 top-[-400px] object-cover hidden lg:block" />
         <HomeSection1 />
         <HomeSection2 />
@@ -27,8 +27,8 @@ export default function Home() {
         <Section6 />
         <HomeSection6 />
         <HomeSection7 />
-        <FooterFull active={'product'} />
       </main>
+      <FooterFull active={'introduction'} />
     </div>
   );
 }
