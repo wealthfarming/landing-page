@@ -144,6 +144,9 @@
   --other-bg: #1A1A1A;
   /* was --khác-đen */
 
+  /* Green Colors */
+  --primary-green: #23CB70;
+
   --font-geist-sans: "IBM Plex Sans", sans-serif;
   --font-geist-mono: "IBM Plex Mono", monospace;
   --font-geist-serif: "DM Serif Text", serif;
