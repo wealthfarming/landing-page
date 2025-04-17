@@ -2,13 +2,14 @@
 import { JSX, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SlideTablet, SliderMobile, SliderDesktop } from "../carousel/home-carousel";
-
+import { FadeInSection } from "@/components/animation/introduction/Animations"
 export default function HomeSection3() {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const [width, setWidth] = useState(0);
     const [currentSlider, setCurrentSlider] = useState<JSX.Element | null>(null);
     const titleRef = useRef<HTMLDivElement>(null);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -34,12 +35,14 @@ export default function HomeSection3() {
     return (
         <div className="w-full body-large">
             <div ref={titleRef}>
-                <p
-                    className={`mt-4 text-[20px] text-lg text-center !text-[var(--text-medium)] max-w-[800px] mx-auto ${isVisible ? "slide-top" : ""
-                        }`}
-                >
-                    {t('home_section_3_title')}
-                </p>
+                <FadeInSection>
+                    <p
+                        className={`mt-4 text-[20px] text-lg text-center !text-[var(--text-medium)] max-w-[800px] mx-auto ${isVisible ? "slide-top" : ""
+                            }`}
+                    >
+                        {t('home_section_3_title')}
+                    </p>
+                </FadeInSection>
             </div>
             <style jsx>{`
             .slide-top {
@@ -80,9 +83,13 @@ export default function HomeSection3() {
                 </div>
             </div>
             <div className="mb-12">
-                <p className="mt-4 text-[20px] text-lg text-center max-w-[1100px] !text-[var(--text-medium)] mx-auto">
-                    {t('home_section_3_description')}
-                </p>
+                <FadeInSection>
+                    <p className="mt-4 text-[20px] text-lg text-center max-w-[1100px] !text-[var(--text-medium)] mx-auto">
+
+                        {t('home_section_3_description')}
+
+                    </p>
+                </FadeInSection>
             </div>
         </div>
     );

@@ -20,6 +20,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const { isDesktop } = useInterface();
 
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > changeAt);
@@ -39,6 +40,11 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const handleSelectChange = (lang: string) => {
         handleLanguageChange(lang);
     };
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    if (!mounted) return null;
     return (
         <header
             className={`w-full ${isScrolled ? 'canvas-bg-1' : 'bg-transparent'} shadow-md transition-all duration-300 ease-in-out fixed h-[72px] top-0`}
@@ -106,7 +112,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                     )} */}
                     {!isDesktop &&
                         <div className=" flex p-0 m-0 items-center justify-center border rounded-[6px] w-[40px] h-[40px]">
-                            <List width={35} height={35}/>
+                            <List width={35} height={35} />
                         </div>
                     }
                 </div>

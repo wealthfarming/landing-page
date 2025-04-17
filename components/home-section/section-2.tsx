@@ -1,8 +1,10 @@
 "use client"
 import Images from 'next/image'
-import CountdownTimer from '../countdown-timer'
 import RiseFade from '../animation/section2/index_grow'
 import { useTranslation } from 'react-i18next';
+import dynamic from 'next/dynamic';
+
+const CountdownTimer = dynamic(() => import('../countdown-timer'), { ssr: false });
 export default function HomeSection2() {
     const { t } = useTranslation();
     return (

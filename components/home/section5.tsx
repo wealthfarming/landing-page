@@ -1,13 +1,19 @@
 "use client";
-
+import { useEffect, useState } from "react";
+import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 export default function Section5() {
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    if (!mounted) return null;
     return (
         <>
             <div className="flex flex-col xl:flex-row w-full xl:py-20 xl:px-10 gap-10 bg-[var(--canvas-bg)] lg:p-[80px_40px] p-[40px_20px]">
                 <div className="flex flex-col justify-center gap-4 xl:w-[85%]">
-                    <div className="xl:text-4xl font-medium xl:mr-[350px] lg:text-3xl lg:text-center xl:text-left text-2xl text-center">Và dành những điều tuyệt vời nhất cho nhà đầu tư</div>
-                    <div className="text-[var(--text-medium)] lg:text-xl lg:text-center lg:px-[190px] xl:text-2xl xl:mr-[290px] xl:px-0 xl:text-left text-center">Tham gia hệ sinh thái Wealth Farming, nhà đầu tư được hưởng lợi nhuận vượt trội và thanh khoản linh hoạt 24/7 với chính sách Zero Limit – Tự do giao dịch các chứng chỉ NFT, vay vốn DeFi, và quản lý tài sản số hoàn toàn không giới hạn.</div>
+                    <div className="xl:text-4xl font-medium xl:mr-[350px] lg:text-3xl lg:text-center xl:text-left text-2xl text-center"><FadeInSection>Và dành những điều tuyệt vời nhất cho nhà đầu tư</FadeInSection></div>
+                    <div className="text-[var(--text-medium)] lg:text-xl lg:text-center lg:px-[190px] xl:text-2xl xl:mr-[290px] xl:px-0 xl:text-left text-center"><FadeInSection>Tham gia hệ sinh thái Wealth Farming, nhà đầu tư được hưởng lợi nhuận vượt trội và thanh khoản linh hoạt 24/7 với chính sách Zero Limit – Tự do giao dịch các chứng chỉ NFT, vay vốn DeFi, và quản lý tài sản số hoàn toàn không giới hạn.</FadeInSection></div>
                     <div className="flex mt-4 gap-2 lg:justify-center xl:justify-start justify-center">
                         <div className="flex lg:px-6 px-4 py-[10px] gap-2 canvas-bg-1 shadow-sm border border-[var(--primary-other)] button items-center ">
                             <ChatCenteredDots size={20}/>

@@ -4,9 +4,10 @@ import { Button } from '../ui/button'
 import { useTranslation } from 'react-i18next';
 import { ChatCenteredDots } from '@phosphor-icons/react';
 import { useInterface } from '../context/interface-context';
+import { FadeInSection } from "@/components/animation/introduction/Animations"
 export default function HomeSection4() {
     const { t } = useTranslation();
-    const {isDesktop, isTablet, isMobile} = useInterface();
+    const { isDesktop, isTablet, isMobile } = useInterface();
     return (
         <div className="w-full body-large">
             <div className='w-full h-[300px] relative overflow-hidden flex items-center justify-center'>
@@ -43,9 +44,13 @@ export default function HomeSection4() {
                         animation: move-sideways-3 10s infinite;
                     }
                 `}</style>
+
                 <div className='absolute top-1/2 transform -translate-y-1/2 w-full lg:w-1/3 h-full flex flex-col h3 items-center justify-center text-center !text-white '>
-                    {t('home_section_4_title')}
+                    <FadeInSection>
+                        {t('home_section_4_title')}
+                    </FadeInSection>
                 </div>
+
             </div>
             <div className='flex flex-col items-center justify-center w-full p-5 h-full lg:h-[412px] relative'>
                 <Image
@@ -59,7 +64,9 @@ export default function HomeSection4() {
                 <div className={`${isDesktop ? 'w-[1180px] text-[30px] font-semibold' : 'w-1/2'}  text-center`} style={{
                     lineHeight: isDesktop ? '33.6px' : isTablet ? "" : "",
                 }}>
-                    {t('home_section_4_description')}
+                    <FadeInSection>
+                        {t('home_section_4_description')}
+                    </FadeInSection>
                 </div>
                 <div className='flex flex-col items-center justify-center w-full p-5 mt-12 relative'>
                     <Button className="h-[50px] w-[180px] button !text-[12px] rounded-[4px]">

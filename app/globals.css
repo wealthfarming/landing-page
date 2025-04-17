@@ -507,3 +507,36 @@
 .animate-diagonal {
   animation: floatDiagonal 0.6s ease-in-out infinite;
 }
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveOut {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveInUp {
+  0% {
+    transform: translateY(30%) translateX(-4px);  
+  }
+  100% {
+    transform: translateY(0) translateX(0);  
+  }
+}
+@keyframes moveOutUp {
+  0% {
+    transform: translateY(-30%) translateX(4px);  
+  }
+  100% {
+    transform: translateY(0) translateX(0);  
+  }
+}

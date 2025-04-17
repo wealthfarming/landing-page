@@ -3,7 +3,7 @@ import { t } from "i18next";
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
-
+import { AnimatedText } from "@/components/animation/introduction/Animations"
 type Tab = {
     id: string;
     label: string;
@@ -32,13 +32,14 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
             {tabs.map(tab => (
                 <div key={tab.id} className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
                     <div
+                        style={{ transitionTimingFunction: 'cubic-bezier(0.25, 0.8, 0.25, 1)' }}
                         className={`
                             ${isDesktop ? `
                                 p-[20px] h-full  transition-all duration-300 ease-in-out
-                                flex flex-col justify-between border-[1px]
+                                flex flex-col justify-between border-[1px] rounded-[5px]
                                 ${selected === tab.id ? 'bg-[var(--primary)]' : 'bg-[var(--base-bg)]'}
                                 ` : `
-                                p-[20px] transition-all duration-300 ease-in-out w-full gap-[8px]
+                                p-[20px] transition-all duration-500 ease-in-out w-full gap-[8px]
                                 flex flex-col justify-between border-[1px]
                                 ${selected === tab.id && isTablet ? 'bg-[var(--primary)] h-[255px]' : 'bg-[var(--base-bg)]'}
                                 `}
@@ -117,7 +118,7 @@ export default function HomeSection5() {
                 <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
                     <div className="gap-[16px] max-w-[716px]">
                         <p className="h1">
-                            {t('Điểm nổi bật và khác biệt')}
+                            <AnimatedText text={[t('Điểm nổi bật và khác biệt')]} />
                         </p>
                         <p className={`max-w-[555px] ${!isMobile ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)]`}>
                             {t('"Review Indexes không còn là bí mật của phố Wall. NFT BEQ Indexes đang thay đổi luật chơi!” – John Doe, chuyên gia NYSE')}
