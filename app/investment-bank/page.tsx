@@ -123,7 +123,7 @@ export default function InvestmentBank() {
           </div>
         </div>
       </div>
-      <FooterFull active={'invest'} />
+      <FooterFull active={'investment-bank'} />
     </div >
   );
 }
