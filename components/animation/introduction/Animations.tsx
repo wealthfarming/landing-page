@@ -64,7 +64,7 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] ; d
       const renderedWords = words.map((word, wordIndex) => (
         <span key={`word-${phraseIndex}-${wordIndex}`} className="">
           {word.split('').map((char) => {
-            const delay = (charIndex / allText.length) * (duration || 0.8);
+            const delay = (charIndex / allText.length) * (0.8);
             charIndex++;
             return (
               <motion.span
