@@ -68,24 +68,28 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                         </Link>
                     </nav>
                     <div className="flex flex-row gap-4 items-center justify-items-start transition duration-300 ease-in-out opacity-100 text-sm z-[1001]">
-                        <Button variant="outline" className="bg-background hover:bg-gray-100 button border-none rounded-none w-[185px] h-[40px] transition-transform duration-300 ease-in-out ">
-                            <ChatCenteredDots size={24} />
-                            <p>
-                                {t('header_contactUs')}
-                            </p>
-                        </Button>
-                        <Button variant="outline" className="bg-[var(--color-primary)] border-none button rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out ">
-                            <CursorClick size={24} />
-                            <p>
-                                {t('header_investNow')}
-                            </p>
-                        </Button>
+                        <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank" >
+                            <Button variant="outline" className="!bg-background hover:brightness-[0.95]  button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out ">
+                                <ChatCenteredDots size={24} className="min-w-[20px] min-h-[20px]" />
+                                <p>
+                                    {t('free_support')}
+                                </p>
+                            </Button>
+                        </a>
+                        <a href="https://wealthfarming.app/" target="_blank" >
+                            <Button variant="outline" className="!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out ">
+                                <CursorClick size={24} className="min-w-[20px] min-h-[20px]" />
+                                <p>
+                                    {t('header_investNow')}
+                                </p>
+                            </Button>
+                        </a>
 
                         {/* Language Select */}
                         {!isScrolled && (
                             <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
-                                <SelectTrigger className="!h-[40px] flex flex-row items-center justify-between rounded-none bg-background">
-                                    <GlobeSimple size={24} />
+                                <SelectTrigger className="!h-[40px] flex flex-row items-center justify-between rounded-none bg-background !rounded-[4px]">
+                                    <GlobeSimple size={18} className="min-w-[18px] min-h-[18px]" />
                                     <SelectValue placeholder={changeLanguage} />
                                 </SelectTrigger>
                                 <SelectContent className="rounded-none z-[1001]">

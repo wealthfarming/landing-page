@@ -19,9 +19,9 @@ export default function ProductPage() {
                 
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-2 justify-center max-w-[1200px]">
-                    <ProductInfoCard title={"NFT NEC"} description={"Tạo dòng tiền ổn định, lợi nhuận ổn định trên 5%/tháng, biến chi tiêu hàng ngày thành thu nhập thụ động vĩnh viễn"} buttonText={"XEM CHI TIẾT"} button_color="bg-[var(--color-primary)]" />
-                    <ProductInfoCard title={"NFT BEQ Indexes Review Index"} description={"Tận dụng sức mạnh giao dịch Review Indexes, lợi nhuận vượt trội tới 6.8% mỗi quý, thanh khoản cao 24/7!"} buttonText={"ĐANG CẬP NHẬT"} />
-                    <ProductInfoCard title={"BEQ Web3 Wallet"} description={"Quản lý tài sản số toàn diện, tích hợp giao dịch, staking, lending chỉ trong một ví duy nhất!"} buttonText={"ĐANG CẬP NHẬT"} />
+                    <ProductInfoCard title={"NFT NEC"} description={"Tạo dòng tiền ổn định, lợi nhuận ổn định trên 5%/tháng, biến chi tiêu hàng ngày thành thu nhập thụ động vĩnh viễn"} buttonText={"XEM CHI TIẾT"} button_color="bg-[var(--color-primary)]" brightness="1.1" link="/landing-page-nec-nft"/>
+                    <ProductInfoCard title={"NFT BEQ Indexes Review Index"} description={"Tận dụng sức mạnh giao dịch Review Indexes, lợi nhuận vượt trội tới 6.8% mỗi quý, thanh khoản cao 24/7!"} buttonText={"ĐANG CẬP NHẬT"} button_color="bg-[var(--color-primary)]" brightness="1.1" link="/landing-index"/>
+                    <ProductInfoCard title={"BEQ Web3 Wallet"} description={"Quản lý tài sản số toàn diện, tích hợp giao dịch, staking, lending chỉ trong một ví duy nhất!"} buttonText={"ĐANG CẬP NHẬT"} brightness="0.95"/>
                 </div>
             </div>
             <FooterFull active={'product'} />

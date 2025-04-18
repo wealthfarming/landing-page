@@ -8,10 +8,12 @@ interface ProductInfoCardProps {
     description: string;
     buttonText: string;
     button_color?: string;
+    brightness?: string;
+    link?: string;
     button_icon?: React.ReactNode;
 }
 
-const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, buttonText , button_color , button_icon}) => {
+const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, buttonText, button_color, button_icon, brightness, link }) => {
     return (
         <div className="flex flex-col items-start justify-between border border-gray-200 p-5 h-[328px] w-full md:w-[calc(33% - 8px)] hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
             <div>
@@ -20,14 +22,16 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
                     {description}
                 </p>
             </div>
-            <Button
-                variant="outline"
-                style={{"boxShadow":"rgba(0, 0, 0, 0.24) 0px 1px 2px 0px"}}
-                className={" hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end border-none " + (button_color ? button_color : " bg-base")}
-            >
-                {button_icon ? button_icon : <CursorClick size={32} />}
-                <p className='button body'>{buttonText}</p>
-            </Button>
+            <a href={link || undefined}>
+                <Button
+                    variant="outline"
+                    style={{ "boxShadow": "rgba(0, 0, 0, 0.24) 0px 1px 2px 0px" }}
+                    className={"rounded-none w-full h-[48px] content-end border-none " + (button_color ? `!${button_color}` : "!bg-[var(--base-bg)]") + (brightness ? ` hover:brightness-[${brightness}]` : "")}
+                >
+                    {button_icon ? button_icon : <CursorClick size={32} />}
+                    <p className='button body'>{buttonText}</p>
+                </Button>
+            </a>
         </div>
     );
 };

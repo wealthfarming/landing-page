@@ -11,7 +11,7 @@ export default function ButtonPrimary({
     }) {
     return (
         <Button
-            className={cn(buttonVariants({ className }), "bg-[var(--color-primary)] button hover:bg-[var(--primary-border)] cursor-pointer rounded-none")}
+            className={cn(buttonVariants({ className }), "bg-[var(--color-primary)] button hover:brightness-[1.1] cursor-pointer rounded-none")}
             {...props}
         >
             {children}

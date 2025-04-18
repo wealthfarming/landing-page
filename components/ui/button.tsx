@@ -50,7 +50,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={` !border-[1px] !rounded-[4px] cursor-pointer !shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] !py-0 !px-[24px] ${cn(buttonVariants({ variant, size, className }))}`}
       {...props}
     />
   )
