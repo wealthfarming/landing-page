@@ -3,7 +3,7 @@ import SectionContainer from "./section-container";
 
 const SecuritySection: React.FC = () => {
   return (
-    <SectionContainer bgColor="bg-sky-950">
+    <SectionContainer bgColor="bg-sky-950 ">
       <h2 className="text-2xl text-center text-white max-md:max-w-full">
         Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch
       </h2>
