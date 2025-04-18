@@ -1,12 +1,14 @@
 "use client";
+import { useInterface } from "@/components/context/interface-context";
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import ProductInfoCard from "@/components/product/product-info-card";
 import Image from "next/image";
 
 export default function ProductPage() {
+    const { isDesktop, isTablet } = useInterface();
     return (
-        <div className="">
+        <div className={`${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]': 'mb-[887px]'}`}>
             <HeaderDesktopFull changeAt={300} />
             <div className="w-full h-[260px] hidden lg:block relative">
                 <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="absolute w-full -z-10 top-[-400px] object-cover" />
