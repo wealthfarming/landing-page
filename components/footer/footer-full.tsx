@@ -6,7 +6,7 @@ interface FooterFullProps {
 
 const FooterFull: React.FC<FooterFullProps> = ({ active }) => {
   return (
-    <footer className="text-white bg-sky-950">
+    <footer className="text-white bg-sky-950 w-full">
       <div className="flex flex-col justify-center items-center px-10 pt-20 pb-10 w-full border-b border-cyan-900 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-wrap gap-10 justify-center items-start w-full max-w-[1200px] max-md:max-w-full">
           <div className="flex-1 shrink text-base leading-6 basis-0 min-h-[173px] min-w-60 max-md:max-w-full">
