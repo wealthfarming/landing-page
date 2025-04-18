@@ -19,7 +19,7 @@ export default function ProductPage() {
 
                 <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 max-w-[1200px] mt-[40px] flex flex-col gap-6 text-center justify-center items-center py-2 ">
                     <div className="max-w-[904px] w-full bigTitle">
-                        <AnimatedText text={[t('page_product_title')]} duration={3}/></div>
+                        <AnimatedText text={[t('page_product_title')]} duration={1} delayBetween={0.05}/></div>
                     <p className=" w-full max-w-[721px] text-center body !font-geist-display">{t('page_product_description')}</p>
                 
                 </h1>

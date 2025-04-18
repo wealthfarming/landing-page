@@ -35,11 +35,10 @@ export function FadeInSection({ children }: Props) {
 type AnimatedTextProps = {
   text: string;
   customClass?: string;
-  duration?: number;
 };
 
 
-export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] ; duration? : number}> = ({ text, customClass = '' , duration}) => {
+export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] , duration?: number, delayBetween?:number }> = ({ text, customClass = '', duration, delayBetween }) => {
   const [nodes, setNodes] = useState<React.ReactNode[]>([]);
   const { i18n } = useTranslation();
   const [isClient, setIsClient] = useState(false);
@@ -64,17 +63,19 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] ; d
       const renderedWords = words.map((word, wordIndex) => (
         <span key={`word-${phraseIndex}-${wordIndex}`} className="">
           {word.split('').map((char) => {
-            const delay = (charIndex / allText.length) * (0.8);
+            const delay = (charIndex / allText.length ) * 0.8 + 0.1;
             charIndex++;
             return (
               <motion.span
                 key={`char-${phraseIndex}-${wordIndex}-${charIndex}`}
                 className="inline"
-                initial={{ opacity: 0.3 }}
+                initial={{ opacity: 0.1 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  delay: delay,
-                  duration: 0.4,
+                  delay: delay + ((delayBetween? delayBetween : 0) * charIndex|| 0),
+                  type: 'spring',
+                  stiffness: 100,
+                  duration: (duration || 0.4),
                   ease: 'easeOut',
                 }}
               >
