@@ -3,7 +3,7 @@ module.exports = {
   experimental: {
     urlImports: ['https://cdn.skypack.dev'],  // This should match the URL you're using
   },
-  webpack: (config: any) => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.jsx/,
       use: {
