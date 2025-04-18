@@ -15,7 +15,7 @@ export default function HomeSection1() {
 
 
     return (
-        <div className="w-full flex-grow flex flex-col items-center justify-start bg-background lg:mt-80 lg:pt-14 mt-18 sm:mt-18 md:mt-0 sm:py-18 md:py-18 relative z-30">
+        <div className="w-full flex-grow flex flex-col items-center justify-start bg-background pt-0 lg:pt-14 relative z-30">
 
             <h1 className="animate-fade-in font-normal mb-4 w-full text-center pb-2 max-w-[820px] bigTitle">
                 <AnimatedText text={[t('home_section_1_title_1'), t('home_section_1_title_2'), t('home_section_1_title_3'), t('home_section_1_title_4')]} customClass={['', 'font-bold', '', 'font-bold']} />
