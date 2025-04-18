@@ -38,7 +38,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
             )}
           </div>
           <div
-            className={`px-4 pt-4 pb-10 mt-4 w-full text-black bg-white rounded-lg border border-solid min-h-[140px] transition-all duration-500 ${
+            className={`px-4 pt-4 pb-10 mt-4 w-full text-black bg-white rounded-lg border border-solid min-h-[150px] transition-all duration-500 ${
               active
                 ? "border-[#fdea9b] scale-105 shadow-[0_6px_16px_0_rgba(211,170,23,0.2)]"
                 : "border-gray-200"
