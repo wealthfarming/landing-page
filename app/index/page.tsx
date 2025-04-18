@@ -1,5 +1,13 @@
-import React from "react";
-import Header from "@/components/header/header-desktop";
+"use client";
+
+import React, { Suspense } from "react";
+import dynamic from 'next/dynamic';
+
+const Header = dynamic(() => import("@/components/header/header-desktop"), {
+  ssr: false,
+  loading: () => <div className="h-[72px]" />
+});
+
 import IntroSection from "@/components/index/intro-section";
 import ProblemSection from "@/components/index/problem-section";
 import SecuritySection from "@/components/index/security-section";
@@ -14,9 +22,11 @@ import Footer from "@/components/index/footer";
 
 const IndexLandingPage = () => {
   return (
-    <div className="">
+    <div className="min-h-screen">
       <div className="overflow-hidden w-full bg-white max-md:max-w-full">
-        <Header changeAt={0} />
+        <Suspense fallback={<div className="h-[72px]" />}>
+          <Header changeAt={0} />
+        </Suspense>
         <IntroSection />
         <ProblemSection />
         <SecuritySection />

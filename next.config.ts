@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  reactStrictMode: true,
+  experimental: {
+    urlImports: ['https://cdn.skypack.dev'],  // This should match the URL you're using
+  },
+  webpack: (config: any) => {
+    config.module.rules.push({
+      test: /\.jsx/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-react']
+        }
+      }
+    });
+    return config;
+  },
 };
-
-export default nextConfig;
