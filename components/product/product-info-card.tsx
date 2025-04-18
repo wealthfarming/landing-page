@@ -22,7 +22,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
                     {description}
                 </p>
             </div>
-            <a href={link || undefined}>
+            <a className='w-full' href={link || undefined}>
                 <Button
                     variant="outline"
                     style={{ "boxShadow": "rgba(0, 0, 0, 0.24) 0px 1px 2px 0px" }}
