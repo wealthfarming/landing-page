@@ -13,7 +13,7 @@ const IntroSection: React.FC = () => {
     <SectionContainer borderBottom={false}>
       <div className="flex flex-col justify-center items-center self-stretch w-full text-center max-md:max-w-full ">
         <h1 className="text-5xl text-zinc-800 max-md:max-w-full max-md:text-4xl max-w-[1000px] font-geist-raleway">
-          <AnimatedText text={[t('index_section_1_title_1'), t('index_section_1_title_2'), t('index_section_1_title_3'), t('index_section_1_title_4')]} customClass={['font-[900]', '', 'font-[900]', '']} />
+          <AnimatedText text={[t('index_section_1_title_1'), t('index_section_1_title_2'), t('index_section_1_title_3'), t('index_section_1_title_4')]} customClass={['font-[900]', '', 'font-[900]', '']} duration={8} delayBetween={0.1}/>
         </h1>
         <p className="mt-5 max-w-screen-md text-base leading-6 text-gray-700 w-[768px] max-md:max-w-full">
           {t('home_section_1_description')}
