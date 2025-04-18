@@ -35,8 +35,16 @@ const IntroSection: React.FC = () => {
             </p>
           </div>
           <div className="w-full h-[218px] md:h-[522px] relative">
-            <div className="w-full h-full m-[1px] bg-black rounded-[20px]" style={{ "border": "4px solid", "borderImageSource": "conic-gradient(from 180deg at 50% 50%, #CDFEE4 0deg, #FDF0BA 130.41deg, #CDFEE4 360deg)" }}>
-
+            <div className="w-fit h-full p-1 rounded-[20px]" style={{"background":"conic-gradient(from 316deg at 50% 50%, rgba(232, 180, 97, 0) 18deg, rgb(237, 195, 116) 44.905deg, rgba(232, 212, 169, 0.85) 79.4925deg, rgba(235, 213, 167, 0.31) 110.755deg, rgba(253, 233, 155, 0) 280.8deg, rgb(191, 255, 221) 330.818deg, rgba(252, 233, 154, 0.76) 342deg, rgba(252, 233, 154, 0) 353.303deg)"}}>
+              <video
+              
+                className="w-full h-full rounded-[20px] object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+                src="https://videos.pexels.com/video-files/18069232/18069232-uhd_2560_1440_24fps.mp4"
+              ></video>
             </div>
 
             <div className="absolute top-[25px] md:top-[56px] md:left-[-59px] w-[101px] md:w-[202px] h-[80px] m-[1px] bg-white rounded-[6px] border-[var(--primary-border)] border">
