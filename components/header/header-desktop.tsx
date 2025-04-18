@@ -20,6 +20,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const { isDesktop } = useInterface();
 
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > changeAt);
@@ -39,6 +40,11 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const handleSelectChange = (lang: string) => {
         handleLanguageChange(lang);
     };
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    if (!mounted) return null;
     return (
         <header
             className={`w-full ${isScrolled ? 'canvas-bg-1' : 'bg-transparent'} shadow-md transition-all duration-300 ease-in-out fixed h-[72px] top-0`}
@@ -92,7 +98,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
 
 
                     {/* Language Select */}
-                    {!isScrolled && isDesktop && (
+                    {/* {!isScrolled && isDesktop && (
                         <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
                             <SelectTrigger className="!h-[40px] flex flex-row items-center justify-between rounded-none bg-background w-[80px]">
                                 <GlobeSimple size={24} />
@@ -103,10 +109,10 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                                 <SelectItem value="vi">{t('currentLanguage_vi')}</SelectItem>
                             </SelectContent>
                         </Select>
-                    )}
+                    )} */}
                     {!isDesktop &&
                         <div className=" flex p-0 m-0 items-center justify-center border rounded-[6px] w-[40px] h-[40px]">
-                            <List width={35} height={35}/>
+                            <List width={35} height={35} />
                         </div>
                     }
                 </div>

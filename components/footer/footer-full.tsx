@@ -1,10 +1,10 @@
 import React from "react";
 
-interface FooterFullProps {
-  active?: string;
-}
+type Props = {
+  active?: string; 
+};
 
-const FooterFull: React.FC<FooterFullProps> = ({ active }) => {
+const FooterFull: React.FC<Props> = ({ active }) => {
   return (
     <footer className="text-white bg-sky-950 w-full">
       <div className="flex flex-col justify-center items-center px-10 pt-20 pb-10 w-full border-b border-cyan-900 max-md:px-5 max-md:max-w-full">

@@ -83,7 +83,7 @@ export const SliderDesktop = () => {
                     className="absolute -bottom-10 flex-row items-center px-4 flex opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     
                 >
-                    <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] h-[40px] rounded-full shadow-md">
+                    <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] -left-2 h-[40px] rounded-full shadow-md">
                         Previous
                     </CarouselPrevious>
                     <CarouselNext className="bg-gray-800 text-white p-2 w-[40px] h-[40px] rounded-full shadow-md">
