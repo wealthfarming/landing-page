@@ -42,6 +42,16 @@
   "footer_contact": "Liên hệ",
   "footer_contact_decsription": "Mọi thắc mắc xin liên hệ:",
 
+  "index_section_1_title_1": "NFT NEC - Bạn không cần phải giàu có để đầu tư",
+  "index_section_1_title_2": " để",
+  "index_section_1_title_3": " dòng tiền giúp bạn tự do",
+  "index_section_1_title_4": " mỗi tháng",
+  "index_section_1_description": "Đầu tư vào NFT quỹ đầu tiên tích hợp AI dự đoán biến động chỉ số S&P 500, CAC 40, CSI 300. Minh bạch 100% trên blockchain, thanh khoản 24/7",
+  "index_section_2_description": "Chiến Lược Đánh Giá Chỉ Số Toàn Cầu",
+  "index_section_3_title": "Vấn Đề Của Quỹ </br> Index Truyền Thống",
+  "index_section_3_description": "Vì Sao 90% Nhà Đầu Tư Index Truyền Thống Bỏ Lỡ Cơ Hội?" ,
+
+
   "annual_report": "Báo cáo thường niên",
   "nft_report": "Báo cáo phân bổ tài sản NFT",
   "wealth_farming_information_disclosure": "Công bố thông tin Wealth Farming",
@@ -53,5 +63,7 @@
   "new_articles": "Các bài viết mới",
   "articles": "Bài viết",
   "importing_content": "Nhập nội dung",
-  "investment_bank": "Ngân hàng đầu tư"
+  "investment_bank": "Ngân hàng đầu tư",
+  "button_contact_private" : "Liên hệ tư vấn riêng",
+  "button_secret_documnet" : "TRUY CẬP TÀI LIỆU MẬT"
 }
