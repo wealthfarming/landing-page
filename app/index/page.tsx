@@ -1,8 +1,8 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React from "react";
 
-import IntroSection from "@/components/index/intro-section";
+// import IntroSection from "@/components/index/intro-section";
 // import ProblemSection from "@/components/index/problem-section";
 // import SecuritySection from "@/components/index/security-section";
 // import SolutionSection from "@/components/index/solution-section";
@@ -18,10 +18,11 @@ const IndexLandingPage = () => {
   return (
     <div className="min-h-screen">
       <div className="overflow-hidden w-full bg-white max-md:max-w-full">
+        hello
         {/* <Suspense fallback={<div className="h-[72px]" />}>
           <Header changeAt={0} />
         </Suspense> */}
-        <IntroSection />
+        {/* <IntroSection /> */}
         {/* <ProblemSection />
         <SecuritySection />
         <SolutionSection />
