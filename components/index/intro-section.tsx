@@ -16,19 +16,21 @@ const IntroSection: React.FC = () => {
           500, CAC 40, CSI 300. Minh bạch 100% trên blockchain, thanh khoản 24/7
         </p>
       </div>
-      <div className="flex gap-2  mt-10 text-sm font-medium tracking-wide justify-center items-center text-zinc-800 max-md:max-w-full">
-        <Button variant="white">ĐẶT LỊCH TƯ VẤN RIÊNG</Button>
-        <Button variant="orange">TRUY CẬP TÀI LIỆU MẬT</Button>
+      <div className="w-full flex flex-col justify-center items-center">
+        <div className="flex gap-2 md:flex-row flex-col my-10 md:mt-10 text-sm md:w-full w-[209px] font-medium tracking-wide justify-center items-center text-zinc-800 max-md:max-w-full">
+          <Button variant="white">ĐẶT LỊCH TƯ VẤN RIÊNG</Button>
+          <Button variant="orange">TRUY CẬP TÀI LIỆU MẬT</Button>
+        </div>
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="mt-10 max-w-full text-sm font-medium text-gray-700 md:min-h-[555px] w-[956px] ">
-          <div className="flex flex-wrap gap-2 items-center w-full max-md:max-w-full">
+          <div className="flex flex-wrap flex-row gap-2 items-center w-full max-md:max-w-full">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/1baeb458dd1369807c053be7ac1de2b04be1b451?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540"
               alt="Icon"
               className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
             />
-            <p className="self-stretch my-auto w-[768px] max-md:max-w-full">
+            <p className="self-stretch my-auto md:w-[768px] max-md:max-w-full">
               Chiến Lược Đánh Giá Chỉ Số Toàn Cầu
             </p>
           </div>
