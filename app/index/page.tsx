@@ -28,7 +28,7 @@ const IndexLandingPage = () => {
           <Header changeAt={0} />
         </Suspense>
         <IntroSection />
-        <ProblemSection />
+        {/* <ProblemSection />
         <SecuritySection />
         <SolutionSection />
         <NFTFutureSection />
@@ -37,7 +37,7 @@ const IndexLandingPage = () => {
         <ProcessSection />
         <ContactSection />
         <FAQSection />
-        <Footer />
+        <Footer /> */}
       </div>
     </div>
   );
