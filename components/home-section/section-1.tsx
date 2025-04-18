@@ -33,7 +33,7 @@ export default function HomeSection1() {
                 </a>
                 <a href="https://wealthfarming.app/" target="_blank" >
                 <ButtonPrimary className="h-[48px] flex items-center gap-2 button rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] py-0 !px-[24px]">
-                    <CursorClick size={32} className="size-5" />
+                    <CursorClick size={32} className="size-5 animate-diagonal-2" />
                     <p>{t('header_investNow')}</p>
                 </ButtonPrimary>
                 </a>

@@ -80,33 +80,33 @@ export default function HomeSection6() {
     const tabs = [
         {
             id: '01',
-            label: 'Minh bạch tuyệt đối nhờ công nghệ Blockchain',
+            label: t('home_section_6_tab_label_1'),
             img: '01.png',
-            content: 'Lợi nhuận, chỉ số và dòng tiền được ghi trên smart contract – không phí ẩn, không gian lận.'
+            content: t('home_section_6_tab_content_1')
         },
         {
             id: '02',
-            label: 'Chiến lược giao dịch dựa trên dữ liệu Big Data và AI',
+            label: t('home_section_6_tab_label_2'),
             img: '02.png',
-            content: 'Vận hành bằng mô hình Index Review do AI hỗ trợ, đã kiểm chứng qua nhiều chu kỳ thị trường.'
+            content: t('home_section_6_tab_content_2')
         },
         {
             id: '03',
-            label: 'Lợi nhuận thực, không dựa vào FOMO',
+            label: t('home_section_6_tab_label_3'),
             img: '03.png',
-            content: 'Sinh lời từ tài sản số có thanh khoản thật, mục tiêu >75%/năm, phân phối bằng USDC.'
+            content: t('home_section_6_tab_content_3')
         },
         {
             id: '04',
-            label: 'Không cần kiến thức tài chính chuyên sâu',
+            label: t('home_section_6_tab_label_4'),
             img: '04.png',
-            content: 'Chỉ cần sở hữu NFT – hệ thống tự động đầu tư, tái đầu tư và tối ưu dòng tiền.'
+            content: t('home_section_6_tab_content_4')
         },
         {
             id: '05',
-            label: 'Tài sản có thể thế chấp, chuyển nhượng, hoặc farming kép',
+            label: t('home_section_6_tab_label_5'),
             img: '05.png',
-            content: 'NFT tạo dòng tiền và có thể dùng để vay, staking hoặc giao dịch linh hoạt.'
+            content: t('home_section_6_tab_content_5')
         },
     ];
 
@@ -116,7 +116,7 @@ export default function HomeSection6() {
         <div className={`${isMobile ? "px-[20px] py-[40px]" : 'p-[40px] pb-[80px]'} gap-[10px] w-full flex justify-center`}>
             <div className="gap-[40px] w-full flex flex-col max-w-[1200px]">
                 <p className="max-w-[600px] h1">
-                    {t('Tại sao hàng triệu nhà đầu tư chọn BeQ Holdings?')}
+                    {t('home_section_6_title')}
                 </p>
                 <HomeSection6Tab tabs={tabs} />
             </div>
