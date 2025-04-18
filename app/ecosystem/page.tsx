@@ -5,7 +5,7 @@ import { useInterface } from "@/components/context/interface-context";
 import EcoCard from "@/components/ecosystem/eco-card";
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 type ContentItem = string;
@@ -102,7 +102,7 @@ const ecoData: EcoData = {
 export default function EcoPage() {
   const { isDesktop, isTablet, isMobile } = useInterface();
   const { language } = useLanguage();
-
+  const { t } = useTranslation();
   const selectedEcoData = ecoData[language] || ecoData['en'];
 
   return (
@@ -133,7 +133,7 @@ export default function EcoPage() {
                 isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'
               } font-semibold w-full text-center`}
             >
-              <AnimatedText text={[t('eco_title')]}duration={3}/>
+              <AnimatedText text={[t('eco_title')]} duration={3} />
             </h1>
             <p
               className={` ${
