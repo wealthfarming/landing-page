@@ -4,6 +4,7 @@ import ButtonPrimary from "../custom-button/button-primary";
 import ButtonOutLine from "../custom-button/button-outline";
 import { useTranslation } from "react-i18next";
 import { AnimatedText } from "@/components/animation/introduction/Animations"
+
 import { useEffect, useState } from "react";
 export default function HomeSection1() {
     const { t } = useTranslation();
