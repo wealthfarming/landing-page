@@ -56,8 +56,8 @@ export default function EcoPage() {
 
   const { isDesktop, isTablet, isMobile } = useInterface();
   return (
-    <div className="">
-      <HeaderDesktopFull changeAt={300} />
+    <div className="flex flex-col">
+      
       {isDesktop && (
         <Image
           src="/images/img/product_base.jpg"
@@ -67,8 +67,8 @@ export default function EcoPage() {
           className="absolute w-full -z-10 top-[-400px] object-cover"
         />
       )}
-
-      <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? 'mt-56' : isTablet ? 'mt-12' : 'mt-18'} relative z-30`}>
+      <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? 'mt-56 mb-[505px]' : isTablet ? 'mt-12 mb-[505px]' : 'pt-20'} relative z-30`}>
+      <HeaderDesktopFull changeAt={300} />
         <div className={`max-w-[1200px] flex flex-col ${isDesktop? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'}`}>
           <div className={`flex flex-col gap-6`}>
             <h1 className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'} font-semibold w-full text-center`}>
@@ -78,7 +78,7 @@ export default function EcoPage() {
               Hệ sinh thái đầu tư và quản lý tài sản số phi tập trung tiên phong ứng dụng công nghệ Blockchain, Web3 và AI, được BeQ Holdings phát triển đặc biệt để giúp nhà đầu tư trên toàn thế giới dễ dàng tạo dựng nguồn thu nhập thụ động bền vững, gia tăng giá trị tài sản minh bạch và an toàn, cùng khả năng thanh khoản 24/7 vượt trội với lợi nhuận tối ưu.
             </p>
           </div>
-          <div className={`${isDesktop ? 'grid-cols-2 gap-[40px_60px] mb-20' : isTablet ? 'grid-cols-2 gap-[40px_60px] mb-20' : 'grid-cols-1 gap-10 mb-10'} grid flex-wrap justify-center w-full`}>
+          <div className={`${isDesktop ? 'grid-cols-2 gap-[40px_60px] mb-20' : isTablet ? 'grid-cols-2 gap-[40px_60px] mb-20' : 'grid-cols-1 gap-10'} grid flex-wrap justify-center w-full`}>
             {ecoData.map((section, index) => (
               <EcoCard key={index} section={section} />
             ))}
