@@ -50,17 +50,14 @@ export const SliderDesktop = () => {
 
     return (
         <div
-            className={`w-full mx-auto mt-8 flex justify-center items-center max-w-screen `}
-            style={
-                { transform: "perspective(800px) scale(0.8) rotateY(15deg) !important" }
-            }
+            className={`w-full mx-auto mt-22 flex justify-center items-center max-w-screen  carousel_desktop`}
         >
             <Carousel
                 plugins={[Autoplay({ delay: 8000 })]}
                 opts={{ align: "center", loop: true }}
                 className="w-full flex items-center justify-center h-[300px] relative group"
             >
-                <CarouselContent visible={true} className="gap-8 w-full">
+                <CarouselContent visible={true} className="gap-8 w-[1200px] ">
                     {images.map((image, index) => (
                         <CarouselItem key={index} >
                             <div className="w-full flex justify-center items-center gap-8">
@@ -71,7 +68,7 @@ export const SliderDesktop = () => {
                                     height={300}
                                     className="object-cover w-[400px] h-[300px]"
                                 />
-                                <div className="w-full flex flex-col justify-center items-start">
+                                <div className="w-2/3 flex flex-col justify-center items-start">
                                     <h1 className="text-lg h1">{content[index]}</h1>
                                 </div>
                             </div>
@@ -83,7 +80,7 @@ export const SliderDesktop = () => {
                     className="absolute -bottom-10 flex-row items-center px-4 flex opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     
                 >
-                    <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] h-[40px] rounded-full shadow-md">
+                    <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] -left-2 h-[40px] rounded-full shadow-md">
                         Previous
                     </CarouselPrevious>
                     <CarouselNext className="bg-gray-800 text-white p-2 w-[40px] h-[40px] rounded-full shadow-md">

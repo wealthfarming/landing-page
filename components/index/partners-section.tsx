@@ -9,7 +9,7 @@ const PartnersSection: React.FC = () => {
       <p className="max-w-screen-md text-base text-center text-gray-700 max-md:max-w-full">
         Được tin cậy và sử dụng bởi các đối tác
       </p>
-      <div className="flex flex-wrap gap-10 items-center mt-6 max-md:max-w-full">
+      <div className="flex flex-wrap gap-10 items-center justify-center mt-6 max-md:max-w-full">
         {partnerLogos.map((logo, index) => (
           <img
             key={index}

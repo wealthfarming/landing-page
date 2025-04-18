@@ -28,7 +28,7 @@ export default function InvestmentBank() {
       <Image src="/images/img/product_base.jpg" alt="Product Banner" width={260} height={260} className={`w-full h-[260px] -z-10 ${!isDesktop ? "pt-[80px]" : ""} brightness-40`} />
       <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
         <div className="w-[1200px] max-w-[1200px]">
-          <p className="h1">
+          <p className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
             {t('investment_bank')}
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function InvestmentBank() {
               <div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">What's New</p>
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">What&apos;s New</p>
                     <p className="text-light text-[13px]">March 28, 2025</p>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function InvestmentBank() {
           </div>
         </div>
       </div>
-      <FooterFull active={'invest'} />
+      <FooterFull active={'investment-bank'} />
     </div >
   );
 }

@@ -33,21 +33,23 @@ const FAQSection: React.FC = () => {
 
   return (
     <SectionContainer>
-      <div className="flex flex-col max-w-screen-md w-[768px] max-md:max-w-full">
-        <h2 className="self-center text-4xl font-medium text-center text-zinc-800 max-md:max-w-full">
-          Những câu hỏi thường gặp
-        </h2>
-        <div className="mt-10 w-full max-md:max-w-full">
-          {faqItems.map((item, index) => (
-            <FAQItem
-              key={index}
-              number={item.number}
-              question={item.question}
-              answer={item.answer}
-              isOpen={openItem === index}
-              onClick={() => toggleItem(index)}
-            />
-          ))}
+      <div className="flex justify-center">
+        <div className="flex flex-col max-w-screen-md w-[768px] max-md:max-w-full">
+          <h2 className="self-center text-4xl font-medium text-center text-zinc-800 max-md:max-w-full max-md:text-[28px]">
+            Những câu hỏi thường gặp
+          </h2>
+          <div className="mt-10 w-full max-md:max-w-full">
+            {faqItems.map((item, index) => (
+              <FAQItem
+                key={index}
+                number={item.number}
+                question={item.question}
+                answer={item.answer}
+                isOpen={openItem === index}
+                onClick={() => toggleItem(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </SectionContainer>

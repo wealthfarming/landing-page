@@ -23,7 +23,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
         onClick={onClick}
       >
         <div className="flex flex-wrap flex-1 shrink gap-2 items-center self-stretch my-auto basis-0 min-w-60 max-md:max-w-full">
-          <div className="gap-1 self-stretch px-1 my-auto w-10 h-10 text-lg whitespace-nowrap bg-white border border-gray-200 border-solid min-h-10 rounded-[100px] text-zinc-800">
+          <div className="flex items-center justify-center gap-1 self-stretch px-1 my-auto w-10 h-10 text-lg whitespace-nowrap bg-white border border-gray-200 border-solid min-h-10 rounded-[100px] text-zinc-800">
             {number}
           </div>
           <h3 className="flex-1 shrink self-stretch my-auto text-base basis-0 text-zinc-800 max-md:max-w-full">

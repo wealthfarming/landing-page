@@ -22,7 +22,7 @@ const ContactForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-4 text-sm bg-white rounded-lg min-w-60 shadow-[0px_4px_32px_rgba(0,0,0,0.06)] w-[297px]"
+      className="p-4 text-sm bg-white rounded-lg min-w-60 shadow-[0px_4px_32px_rgba(0,0,0,0.06)] w-[297px] max-md:w-full"
     >
       <div className="w-full">
         <label htmlFor="name" className="text-black">
