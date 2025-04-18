@@ -16,10 +16,14 @@ import Header from "@/components/header/header-desktop";
 const IndexLandingPage = () => {
   return (
     <div className="min-h-screen">
-      <div className="overflow-hidden w-full bg-white max-md:max-w-full">
-        <Suspense fallback={<div className="h-[72px]" />}>
+      <Suspense fallback={<div className="h-[72px]" />}>
           <Header changeAt={0} />
         </Suspense>
+        <div className="w-full h-[260px] bg-black">
+
+        </div>
+      <div className="overflow-hidden w-full bg-white max-md:max-w-full">
+        
         <IntroSection />
         <ProblemSection />
         <SecuritySection />
