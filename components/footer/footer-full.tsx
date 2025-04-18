@@ -11,9 +11,9 @@ type FooterProps = {
 const FooterFull: React.FC<FooterProps> = ({ active }) => {
   // Define the footer active state
   const activeClassName = "text-[var(--primary)] font-semibold";
-  const { isDesktop, isTablet } = useInterface();
+  const { isDesktop, isTablet, isMobile } = useInterface();
   return (
-    <footer className="text-white bg-[#003048] bottom-0 w-full fixed" style={{ zIndex: -1000 }}>
+    <footer className={`text-white bg-[#003048] bottom-0 w-full ${isMobile ? '' : 'fixed'} `} style={{ zIndex: -1000 }}>
       <div className={`flex flex-col justify-center items-center ${isDesktop ? 'px-10 py-20 ' : isTablet ? 'px-10 py-20 ' : 'px-5 py-10'} w-full border-b border-cyan-900`}>
         <div className={`flex flex-wrap justify-center items-start w-full ${isDesktop ? 'max-w-[1200px] gap-10' : isTablet ? 'gap-10' : 'flex-col gap-10'}`}>
           <div className={`flex-1 shrink leading-6 basis-0 ${isDesktop ? 'gap-10 flex flex-col' : isTablet ? 'gap-10 flex flex-col maw-w-[299px]' : 'flex flex-col gap-5'}`}>
@@ -30,7 +30,7 @@ const FooterFull: React.FC<FooterProps> = ({ active }) => {
               duyệt lên đến 30 triệu GBP
             </p>
           </div>
-          <div className={`flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : isTablet ? 'gap-10' : 'flex-col gap-10'} items-start basis-0`}>
+          <div className={`flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : isTablet ? 'gap-10' : 'flex-col gap-10'} items-start justify-end basis-0`}>
             <nav className={`flex flex-col text-[var(--other-border)] ${isDesktop ? 'w-[103px] gap-6' : isTablet ? '' : ''}`}>
               <div className="text-[20px] font-medium">Trang</div>
               <ul className="w-full text-[12px] font-normal flex flex-col opacity-80">
