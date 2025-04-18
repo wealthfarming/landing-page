@@ -21,6 +21,38 @@
   "home_section_4_title": "Every financial goal deserves a unique roadmap – and we are here to accompany you.",
   "home_section_4_description": "Wealth Farming is not just a smart financial ecosystem – it is a personalized strategic platform that optimizes cash flow, multiplies assets, and flexibly adapts to all economic cycles, creating a competitive advantage for investors in both the short and long term.",
   
+  "home_section_5_title": "Highlights and differences",
+  "home_section_5_description": "\"Review Indexes are no longer a secret on Wall Street. The NFT BEQ Indexes are changing the game!\" – John Doe, NYSE expert",
+  "home_section_5_tab_label_1": "Legal financial NFTs, transparent cash flow",
+  "home_section_5_tab_content_1": "NEC and Review Index are transparent investment NFTs, with no fixed interest commitments, no dividend distributions – complying with standards that do not classify them as securities, easily auditable and publicly disclosed.",
+  "home_section_5_tab_label_2": "Dual legal framework - aiming for a global IPO",
+  "home_section_5_tab_content_2": "Operated by two independent legal entities in the US and the UK, the BeQ ecosystem is ready for IPO through SPAC - paving the way for global institutional investors.",
+  "home_section_5_tab_label_3": "Integrating RWA - real assets enter DeFi",
+  "home_section_5_tab_content_3": "Wealth Farming expands into real estate, physical assets, and commodities through the NFTization model – helping real cash flow safely and transparently access DeFi.",
+  "home_section_5_tab_label_4": "The performance of Index Review has grown remarkably.",
+  "home_section_5_tab_content_4": "BeQ's strategic indicators have increased by over 300% in 27 months, fully backtested and publicly available on the system – no emotional promotion, only based on actual results.",
+  "home_section_5_tab_label_5": "Comprehensive decentralized financial technology ecosystem",
+  "home_section_5_tab_content_5": "The BeQ ecosystem is a comprehensive decentralized financial infrastructure – combining transparent smart contracts, AI asset evaluation, genuine backed stablecoins, and cash-flow NFTs – operating like a digital bank but without intermediaries.",
+
+  "home_section_5b_title": "And give the best things to the investors",
+  "home_section_5b_description": "By joining the Wealth Farming ecosystem, investors can enjoy extraordinary profits and flexible liquidity 24/7 with the Zero Limit policy – freely trading NFT certificates, borrowing with DeFi, and managing digital assets without any restrictions.",
+
+  "home_section_6b_description": "Wealth Farming is the world's leading decentralized investment and asset management platform, utilizing Fintech, AI & Blockchain, helping investors generate stable cash flow, achieve sustainable asset growth, and attain true financial freedom.",
+
+  "home_section_6_title": "Why do millions of investors choose BeQ Holdings?",
+  "home_section_6_tab_label_1": "Absolute transparency thanks to Blockchain technology",
+  "home_section_6_tab_content_1": "Profits, metrics, and cash flows are recorded on the smart contract – no hidden fees, no fraud.",
+  "home_section_6_tab_label_2": "Trading strategy based on Big Data and AI",
+  "home_section_6_tab_content_2": "Operated by the AI-assisted Index Review model, which has been tested through multiple market cycles.",
+  "home_section_6_tab_label_3": "Actual profit, not based on FOMO",
+  "home_section_6_tab_content_3": "Earn from liquid digital assets, target >75%/year, distributed in USDC.",
+  "home_section_6_tab_label_4": "No need for in-depth financial knowledge",
+  "home_section_6_tab_content_4": "Just own an NFT – the system automatically invests, reinvests, and optimizes cash flow.",
+  "home_section_6_tab_label_5": "Assets can be mortgaged, transferred, or double farming.",
+  "home_section_6_tab_content_5": "NFT creates a cash flow and can be used for borrowing, staking, or flexible trading.",
+
+  "home_section_7_title": "Don't wait! Your financial future is in your hands",
+
   "countdown_timer_button": "OWN IT NOW",
   "free_support": "FREE CONSULTATION",
 
@@ -30,6 +62,8 @@
   "header_investBank": "Investment Bank",
   "header_contactUs": "Contact Us",
   "header_investNow": "Invest Now",
+  "header_investNowup": "INVEST NOW",
+  "header_invest_today_up": "INVEST TODAY",
 
   "footer_description": "Wealth Farming – The financial ecosystem of BeQ Group Foundation (UK), legally licensed by the government of the United Kingdom (Registration number 14478063, granted on 11/11/2022). Operating under industries 58190, 64205, 64301, 66300, with an approved financial guarantee of up to 30 million GBP.",
   "footer_page": "Page",
