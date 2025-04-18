@@ -4,9 +4,9 @@ import SectionTitle from "./section-title";
 
 const ProblemSection: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionContainer borderBottom={false}>
       <SectionTitle
-        title="Vấn Đề Của QuỹIndex Truyền Thống"
+        title="Vấn Đề Của Quỹ Index Truyền Thống"
         subtitle='"Vì Sao 90% Nhà Đầu Tư Index Truyền Thống Bỏ Lỡ Cơ Hội?" '
       />
       <div className="flex relative flex-col mt-10 w-full min-h-[272px] max-md:max-w-full">

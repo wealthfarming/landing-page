@@ -2,14 +2,15 @@ import React from "react";
 import Button from "./button";
 import SectionContainer from "./section-container";
 import { Separator } from "../ui/separator";
+import { AnimatedText } from "../animation/introduction/Animations";
+import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 
 const IntroSection: React.FC = () => {
   return (
-    <SectionContainer>
-      <div className="flex flex-col justify-center items-center self-stretch w-full text-center max-md:max-w-full">
-        <h1 className="text-5xl font-medium text-zinc-800 max-md:max-w-full max-md:text-4xl">
-          <span className="text-[rgba(232,181,97,1)]">BEQ INDEXES </span>
-          PREWIEW INDEX NFT
+    <SectionContainer borderBottom={false}>
+      <div className="flex flex-col justify-center items-center self-stretch w-full text-center max-md:max-w-full ">
+        <h1 className="text-5xl font-medium text-zinc-800 max-md:max-w-full max-md:text-4xl max-w-[1000px]">
+          <AnimatedText text={['NFT NEC - You don’t need to be rich to invest', ' let ', 'cash flow help you be free', ' every month']} customClass={['font-[900]', '', 'font-[900]', '']} />
         </h1>
         <p className="mt-5 max-w-screen-md text-base leading-6 text-gray-700 w-[768px] max-md:max-w-full">
           Đầu tư vào NFT quỹ đầu tiên tích hợp AI dự đoán biến động chỉ số S&P
@@ -18,8 +19,14 @@ const IntroSection: React.FC = () => {
       </div>
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex gap-2 md:flex-row flex-col my-10 md:mt-10 text-sm md:w-full w-[209px] font-medium tracking-wide justify-center items-center text-zinc-800 max-md:max-w-full">
-          <Button variant="white">ĐẶT LỊCH TƯ VẤN RIÊNG</Button>
-          <Button variant="orange">TRUY CẬP TÀI LIỆU MẬT</Button>
+          <Button variant="white" classname="px-8 !font-[500] !text-[12px] ">
+            <ChatCenteredDots size={20} />
+            <p>ĐẶT LỊCH TƯ VẤN RIÊNG</p>
+          </Button>
+          <Button variant="orange" classname="px-8 !font-[500] !text-[12px] ">
+            <CursorClick size={20} />
+            <p>TRUY CẬP TÀI LIỆU MẬT</p>
+          </Button>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
@@ -35,9 +42,9 @@ const IntroSection: React.FC = () => {
             </p>
           </div>
           <div className="w-full h-[218px] md:h-[522px] relative">
-            <div className="w-fit h-full p-1 rounded-[20px]" style={{"background":"conic-gradient(from 316deg at 50% 50%, rgba(232, 180, 97, 0) 18deg, rgb(237, 195, 116) 44.905deg, rgba(232, 212, 169, 0.85) 79.4925deg, rgba(235, 213, 167, 0.31) 110.755deg, rgba(253, 233, 155, 0) 280.8deg, rgb(191, 255, 221) 330.818deg, rgba(252, 233, 154, 0.76) 342deg, rgba(252, 233, 154, 0) 353.303deg)"}}>
+            <div className="w-fit h-full p-1 rounded-[20px]" style={{ "background": "conic-gradient(from 316deg at 50% 50%, rgba(232, 180, 97, 0) 18deg, rgb(237, 195, 116) 44.905deg, rgba(232, 212, 169, 0.85) 79.4925deg, rgba(235, 213, 167, 0.31) 110.755deg, rgba(253, 233, 155, 0) 280.8deg, rgb(191, 255, 221) 330.818deg, rgba(252, 233, 154, 0.76) 342deg, rgba(252, 233, 154, 0) 353.303deg)" }}>
               <video
-              
+
                 className="w-full h-full rounded-[20px] object-cover"
                 autoPlay
                 loop

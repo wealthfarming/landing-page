@@ -2,12 +2,14 @@ import React from "react";
 
 interface ButtonProps {
   children: React.ReactNode;
+  classname?: string;
   variant?: "white" | "orange";
   onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
+  classname,
   variant = "white",
   onClick,
 }) => {
@@ -21,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${baseClasses} ${variantClasses[variant]}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${classname} cursor-pointer h-[60px] flex flex-row justify-center items-center gap-2`}
       onClick={onClick}
     >
       {children}
