@@ -35,10 +35,11 @@ export function FadeInSection({ children }: Props) {
 type AnimatedTextProps = {
   text: string;
   customClass?: string;
+  duration?: number;
 };
 
 
-export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] }> = ({ text, customClass = '' }) => {
+export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] ; duration? : number}> = ({ text, customClass = '' , duration}) => {
   const [nodes, setNodes] = useState<React.ReactNode[]>([]);
   const { i18n } = useTranslation();
   const [isClient, setIsClient] = useState(false);
@@ -63,7 +64,7 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] }> 
       const renderedWords = words.map((word, wordIndex) => (
         <span key={`word-${phraseIndex}-${wordIndex}`} className="">
           {word.split('').map((char) => {
-            const delay = (charIndex / allText.length) * 0.8;
+            const delay = (charIndex / allText.length) * (duration || 0.8);
             charIndex++;
             return (
               <motion.span
