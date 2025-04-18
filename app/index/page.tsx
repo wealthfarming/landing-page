@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Header from "@/components/header/header-desktop";
 import IntroSection from "@/components/index/intro-section";
@@ -12,9 +11,8 @@ import PartnersSection from "@/components/index/partners-section";
 import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import Footer from "@/components/index/footer";
-import FloatingMetrics from "@/components/index/floating-metrics";
 
-const IndexLandingPage: React.FC = () => {
+const IndexLandingPage = () => {
   return (
     <div className="">
       <div className="overflow-hidden w-full bg-white max-md:max-w-full">
