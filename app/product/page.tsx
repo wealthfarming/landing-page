@@ -26,9 +26,25 @@ export default function ProductPage() {
                 
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-2 justify-center max-w-[1200px]">
-                    <ProductInfoCard title={t('page_product_box1_title')} description={t('page_product_box1_description')} buttonText={t('page_product_box1_button')} button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]" />
-                    <ProductInfoCard title={t('page_product_box2_title')} description={t('page_product_box2_description')} buttonText={t('page_product_box2_button')}  />
-                    <ProductInfoCard title={t('page_product_box3_title')} description={t('page_product_box3_description')} buttonText={t('page_product_box3_button')}  />
+                    <ProductInfoCard 
+                        title={t('page_product_box1_title')} 
+                        description={t('page_product_box1_description')} 
+                        buttonText={t('page_product_box1_button')} 
+                        button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]"
+                        link="https://wealthfarming.app"
+                    />
+                    <ProductInfoCard 
+                        title={t('page_product_box2_title')} 
+                        description={t('page_product_box2_description')} 
+                        buttonText={t('page_product_box2_button')} 
+                        button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]"
+                        link="/index"
+                    />
+                    <ProductInfoCard 
+                        title={t('page_product_box3_title')} 
+                        description={t('page_product_box3_description')} 
+                        buttonText={t('page_product_box3_button')}
+                    />
                 </div>
             </div>
             <FooterFull active={'product'} />
