@@ -2,18 +2,17 @@
 import React from "react";
 import { useInterface } from "../context/interface-context";
 import { DiscordLogo, FacebookLogo, TelegramLogo, XLogo } from "@phosphor-icons/react";
+import { t } from "i18next";
 
-// Footer component
 type FooterProps = {
   active?: "introduction" | "product" | "ecosystem" | "investment-bank";
 };
 
 const FooterFull: React.FC<FooterProps> = ({ active }) => {
-  // Define the footer active state
   const activeClassName = "text-[var(--primary)] font-semibold";
-  const { isDesktop, isTablet } = useInterface();
+  const { isDesktop, isTablet, isMobile } = useInterface();
   return (
-    <footer className="text-white bg-[#003048] bottom-0 w-full fixed" style={{ zIndex: -1000 }}>
+    <footer className={`text-white bg-[#003048] bottom-0 w-full ${isMobile ? '' : 'fixed'} `} style={{ zIndex: -1000 }}>
       <div className={`flex flex-col justify-center items-center ${isDesktop ? 'px-10 py-20 ' : isTablet ? 'px-10 py-20 ' : 'px-5 py-10'} w-full border-b border-cyan-900`}>
         <div className={`flex flex-wrap justify-center items-start w-full ${isDesktop ? 'max-w-[1200px] gap-10' : isTablet ? 'gap-10' : 'flex-col gap-10'}`}>
           <div className={`flex-1 shrink leading-6 basis-0 ${isDesktop ? 'gap-10 flex flex-col' : isTablet ? 'gap-10 flex flex-col maw-w-[299px]' : 'flex flex-col gap-5'}`}>
@@ -23,26 +22,22 @@ const FooterFull: React.FC<FooterProps> = ({ active }) => {
               className="object-contain w-[149px]"
             />
             <p className={`text-[var(--other-border)] opacity-80 text-[15px] ${isDesktop ? 'w-[405px]' : isTablet ? 'w-[259px]' : 'w-full'}`}>
-              Wealth Farming – Hệ sinh thái tài chính thuộc BeQ Group Foundation
-              (UK), được cấp phép hợp pháp bởi chính phủ Vương quốc Anh (Số đăng
-              ký 14478063, cấp ngày 11/11/2022). Hoạt động theo các mã ngành
-              58190, 64205, 64301, 66300, với mức bảo lãnh tài chính được phê
-              duyệt lên đến 30 triệu GBP
+              {t('footer_description')}
             </p>
           </div>
-          <div className={`flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : isTablet ? 'gap-10' : 'flex-col gap-10'} items-start basis-0`}>
+          <div className={`flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : isTablet ? 'gap-10' : 'flex-col gap-10'} items-start justify-end basis-0`}>
             <nav className={`flex flex-col text-[var(--other-border)] ${isDesktop ? 'w-[103px] gap-6' : isTablet ? '' : ''}`}>
-              <div className="text-[20px] font-medium">Trang</div>
+              <div className="text-[20px] font-medium">{t('footer_page')}</div>
               <ul className="w-full text-[12px] font-normal flex flex-col opacity-80">
-                <li className={(active == "introduction") ? activeClassName : ""}>Giới thiệu</li>
-                <li className={(active == "product") ? activeClassName + " mt-2" : "mt-2"}>Sản phẩm</li>
-                <li className={(active == "ecosystem") ? activeClassName + " mt-2" : "mt-2"}>Hệ sinh thái</li>
-                <li className={(active == "investment-bank") ? activeClassName + " mt-2" : "mt-2"}>Ngân hàng đầu tư</li>
+                <li className={(active == "introduction") ? activeClassName : ""}>{t('footer_introduct')}</li>
+                <li className={(active == "product") ? activeClassName + " mt-2" : "mt-2"}>{t('footer_product')}</li>
+                <li className={(active == "ecosystem") ? activeClassName + " mt-2" : "mt-2"}>{t('footer_eco')}</li>
+                <li className={(active == "investment-bank") ? activeClassName + " mt-2" : "mt-2"}>{t('footer_invest')}</li>
               </ul>
             </nav>
             <div className={`${isDesktop ? 'w-[213px]' : isTablet ? '' : ''}`}>
               <div className="text-[var(--other-border)] opacity-80">
-                <h3 className="text-[20px] font-semibold">Liên hệ</h3>
+                <h3 className="text-[20px] font-semibold">{t('footer_contact')}</h3>
                 <div className="mt-5 w-full text-xs font-medium flex flex-col gap-3">
                   <div className="flex gap-2 items-start mt-2 w-full">
                     <img
@@ -70,7 +65,7 @@ const FooterFull: React.FC<FooterProps> = ({ active }) => {
                       className="object-contain shrink-0 w-4 aspect-square"
                     />
                     <p className="flex-1 shrink basis-0">
-                      Tòa nhà BEQ, Quận 1, TP.HCM
+                      {t('footer_contact_address')}
                     </p>
                   </div>
                 </div>
@@ -83,7 +78,7 @@ const FooterFull: React.FC<FooterProps> = ({ active }) => {
               </div>
               <div className="mt-10 w-[163px]">
                 <h3 className="text-[20px] font-medium text-[var(--other-border)]">
-                  Social Proof
+                {t('footer_social_proof')}
                 </h3>
                 <div className="flex gap-3 items-center mt-5 w-full">
                   <img
@@ -105,8 +100,7 @@ const FooterFull: React.FC<FooterProps> = ({ active }) => {
       <div className="flex flex-col justify-center items-center px-10 py-4 w-full text-sm font-medium border-b border-gray-200">
         <div className="flex gap-10 justify-center w-full max-w-[1200px] max-md:max-w-full">
           <p className="flex-1 shrink opacity-50 basis-0 max-md:max-w-full">
-            Trang web được bảo vệ bởi AES-256. Mọi hành vi sao chép trái phép sẽ
-            bị truy tố.
+          {t('footer_copyright')}
           </p>
         </div>
       </div>
