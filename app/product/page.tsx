@@ -2,26 +2,31 @@
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import ProductInfoCard from "@/components/product/product-info-card";
+
+import { AnimatedText } from "@/components/animation/introduction/Animations"
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function ProductPage() {
+    const { t } = useTranslation();
     return (
         <div className="">
-            <HeaderDesktopFull changeAt={300} />
+            <HeaderDesktopFull changeAt={200} />
             <div className="w-full h-[260px] hidden lg:block relative">
                 <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="absolute w-full -z-10 top-[-400px] object-cover" />
             </div>
             <div className="w-full flex-grow flex flex-col items-center justify-start bg-background mb-[375px] mt-18 pb-18 lg:mt-0 relative z-30">
 
                 <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 max-w-[1200px] mt-[40px] flex flex-col gap-6 text-center justify-center items-center py-2 ">
-                    <div className="max-w-[904px] w-full bigTitle">Sản phẩm & Dịch vụ tài chính phi tập trung Wealth Farming</div>
-                    <p className=" w-full max-w-[721px] text-center body !font-geist-display">Từ chứng chỉ quỹ NFT mang lại thu nhập thụ động suốt đời, chiến lược đầu tư Review Indexes đỉnh cao, cho đến dịch vụ vay vốn phi tập trung (DeFi Lending) ứng dụng công nghệ AI tự động định giá và quản lý rủi ro, hệ sinh thái Wealth Farming của BeQ Holdings đáp ứng trọn vẹn từng mục tiêu đầu tư cá nhân – an toàn, minh bạch và hiệu quả tối ưu.</p>
+                    <div className="max-w-[904px] w-full bigTitle">
+                        <AnimatedText text={[t('page_product_title')]} duration={3}/></div>
+                    <p className=" w-full max-w-[721px] text-center body !font-geist-display">{t('page_product_description')}</p>
                 
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-2 justify-center max-w-[1200px]">
-                    <ProductInfoCard title={"NFT NEC"} description={"Tạo dòng tiền ổn định, lợi nhuận ổn định trên 5%/tháng, biến chi tiêu hàng ngày thành thu nhập thụ động vĩnh viễn"} buttonText={"XEM CHI TIẾT"} button_color="bg-[var(--color-primary)]" brightness="1.1" link="/landing-page-nec-nft"/>
-                    <ProductInfoCard title={"NFT BEQ Indexes Review Index"} description={"Tận dụng sức mạnh giao dịch Review Indexes, lợi nhuận vượt trội tới 6.8% mỗi quý, thanh khoản cao 24/7!"} buttonText={"ĐANG CẬP NHẬT"} button_color="bg-[var(--color-primary)]" brightness="1.1" link="/landing-index"/>
-                    <ProductInfoCard title={"BEQ Web3 Wallet"} description={"Quản lý tài sản số toàn diện, tích hợp giao dịch, staking, lending chỉ trong một ví duy nhất!"} buttonText={"ĐANG CẬP NHẬT"} brightness="0.95"/>
+                    <ProductInfoCard title={t('page_product_box1_title')} description={t('page_product_box1_description')} buttonText={t('page_product_box1_button')} button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]" />
+                    <ProductInfoCard title={t('page_product_box2_title')} description={t('page_product_box2_description')} buttonText={t('page_product_box2_button')}  />
+                    <ProductInfoCard title={t('page_product_box3_title')} description={t('page_product_box3_description')} buttonText={t('page_product_box3_button')}  />
                 </div>
             </div>
             <FooterFull active={'product'} />

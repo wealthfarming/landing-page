@@ -1,4 +1,5 @@
 "use client";
+import { AnimatedText } from "@/components/animation/introduction/Animations";
 import { useInterface } from "@/components/context/interface-context";
 import EcoCard from "@/components/ecosystem/eco-card";
 import FooterFull from "@/components/footer/footer-full";
@@ -72,7 +73,7 @@ export default function EcoPage() {
         <div className={`max-w-[1200px] flex flex-col ${isDesktop? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'}`}>
           <div className={`flex flex-col gap-6`}>
             <h1 className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'} font-semibold w-full text-center`}>
-              Wealth Farming – Hệ sinh thái đầu tư và quản lý tài sản số toàn diện
+                            <AnimatedText text={['Wealth Farming – Hệ sinh thái đầu tư và quản lý tài sản số toàn diện']} duration={3} />
             </h1>
             <p className={` ${isDesktop ? 'text-xl px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'} font-medium w-full text-center text-[var(--text-medium)]`}>
               Hệ sinh thái đầu tư và quản lý tài sản số phi tập trung tiên phong ứng dụng công nghệ Blockchain, Web3 và AI, được BeQ Holdings phát triển đặc biệt để giúp nhà đầu tư trên toàn thế giới dễ dàng tạo dựng nguồn thu nhập thụ động bền vững, gia tăng giá trị tài sản minh bạch và an toàn, cùng khả năng thanh khoản 24/7 vượt trội với lợi nhuận tối ưu.

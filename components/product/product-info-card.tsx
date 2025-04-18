@@ -22,16 +22,14 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
                     {description}
                 </p>
             </div>
-            <a className='w-full' href={link || undefined}>
-                <Button
-                    variant="outline"
-                    style={{ "boxShadow": "rgba(0, 0, 0, 0.24) 0px 1px 2px 0px" }}
-                    className={"rounded-none w-full h-[48px] content-end border-none " + (button_color ? `!${button_color}` : "!bg-[var(--base-bg)]") + (brightness ? ` hover:brightness-[${brightness}]` : "")}
-                >
-                    {button_icon ? button_icon : <CursorClick size={32} />}
-                    <p className='button body'>{buttonText}</p>
-                </Button>
-            </a>
+            <Button
+                variant="outline"
+                style={{"boxShadow":"rgba(0, 0, 0, 0.24) 0px 1px 2px 0px"}}
+                className={" hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end border-none cursor-pointer " + (button_color ? button_color : " bg-base")}
+            >
+                {button_icon ? button_icon : <CursorClick size={32} />}
+                <p className='button body'>{buttonText}</p>
+            </Button>
         </div>
     );
 };
