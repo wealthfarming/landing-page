@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
-import { AnimatedText } from "@/components/animation/introduction/Animations";
 
 export default function InvestmentBank() {
   const { isDesktop, isMobile } = useInterface();
@@ -30,7 +29,7 @@ export default function InvestmentBank() {
       <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
         <div className="w-[1200px] max-w-[1200px]">
           <p className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
-            <AnimatedText text={[t('investment_bank')]} duration={3} />
+            {t('investment_bank')}
           </p>
         </div>
       </div>
