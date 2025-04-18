@@ -4,8 +4,9 @@ import { useInterface } from "@/components/context/interface-context";
 import EcoCard from "@/components/ecosystem/eco-card";
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import { useEffect } from "react";
 
 type ContentItem = string;
 
@@ -101,8 +102,11 @@ const ecoData: EcoData = {
 export default function EcoPage() {
   const { isDesktop, isTablet, isMobile } = useInterface();
   const { language } = useLanguage();
+  const {t} = useTranslation()
+
 
   const selectedEcoData = ecoData[language] || ecoData['en'];
+  
 
   return (
     <div className="flex flex-col">

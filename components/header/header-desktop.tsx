@@ -13,9 +13,11 @@ import {
 import { ChatCenteredDots, CursorClick, GlobeSimple, List } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useInterface } from '@/components/context/interface-context';
+import { useLanguage } from "../context/i18n";
 
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
+    const {language , setLanguage} = useLanguage();
     const { t, i18n } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const { isDesktop } = useInterface();
@@ -39,6 +41,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     };
     const handleSelectChange = (lang: string) => {
         handleLanguageChange(lang);
+        setLanguage(lang)
     };
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
