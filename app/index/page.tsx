@@ -28,7 +28,7 @@ const IndexLandingPage: React.FC = () => {
       </div>
       <div className="w-full bg-white " style={{ "display": "flex", "flexFlow": "column", "gap": "0px", "height": "min-content", "overflow": "visible", "padding": "0px", "position": "relative" }}>
         <IntroSection />
-        <div className="w-full sticky h-[100vh] top-0 pt-[40px] pb-[80px]  white z-[2]">
+        <div className="w-full sticky h-[100vh] top-[20px] pt-[40px] pb-[80px]  white z-[2]">
           <ProblemSection />
         </div>
         <div style={{ "overflow": "visible", "position": "sticky", "top": "20px", "width": "100%", "zIndex": "2" }}>
