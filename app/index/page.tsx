@@ -45,8 +45,6 @@ const IndexLandingPage: React.FC = () => {
 
           {/* <FooterFull /> */}
         </div>
-
-
       </div>
     </div>
   );
