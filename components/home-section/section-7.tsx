@@ -21,11 +21,11 @@ export default function HomeSection7() {
 
             <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] px-[40px] flex flex-col justify-center items-center gap-[10px]">
                 <p className={`${isMobile ? 'h2' : 'h1'} !text-[var(--other-border)] flex text-center max-w-[720px]`}>
-                    {t('Đừng chờ đợi! Tương lai tài chính đang nằm trong tay bạn')}
+                    {t('home_section_7_title')}
                 </p>
                 <a className="flex gap-[8px] shadow-md hover:bg-[var(--primary-gradient)] bg-[var(--primary)] px-[24px] w-max items-center justify-center h-[48px]" href="https://wealthfarming.app/" target="_blank">
                     <CursorClick className="animate-diagonal" width="20" height={20} />
-                    <p className="text-[12px]">{t('ĐẦU TƯ NGAY HÔM NAY')}</p>
+                    <p className="text-[12px]">{t('header_invest_today_up')}</p>
                 </a>
             </div>
         </div>

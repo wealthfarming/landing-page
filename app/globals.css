@@ -3,6 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @font-face {
   font-family: "Inter Display";
   font-style: italic;
@@ -234,12 +235,15 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
   }
   body {
     @apply bg-background text-foreground;
   }
 }
-
+.font-geist-raleway{
+  font-family: var(--font-geist-raleway);
+}
 .font-geist-sans {
   font-family: var(--font-geist-sans);
 }
@@ -526,6 +530,9 @@
 .animate-diagonal {
   animation: floatDiagonal 0.6s ease-in-out infinite;
 }
+.animate-diagonal-2 {
+  animation: floatDiagonal 0.9s ease-in-out infinite;
+}
 
 @keyframes moveIn {
   0% {
@@ -558,4 +565,18 @@
   100% {
     transform: translateY(0) translateX(0);  
   }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.raleway-[weight] {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--weight);
+  font-style: normal;
 }

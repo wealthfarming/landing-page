@@ -12,7 +12,7 @@ export default function ButtonOutLine({
     return (
         <Button
             variant={"outline"}
-            className={cn(buttonVariants({ className }), "bg-[var(--base-bg)] button hover:bg-[var(--primary-other)] cursor-pointer rounded-none")}
+            className={cn(buttonVariants({ className }), "!bg-[var(--base-bg)] button hover:brightness-[0.95] cursor-pointer rounded-none")}
             {...props}
         >
             {children}

@@ -4,6 +4,7 @@ import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { useInterface } from "../context/interface-context";
+import { t } from "i18next";
 
 export default function Section6() {
     const [mounted, setMounted] = useState(false);
@@ -51,10 +52,7 @@ export default function Section6() {
                             lineHeight: isDesktop ? "30.6px" : isTablet ? "30.6px" : "28.9px",
                         }}
                     >
-                        Wealth Farming là nền tảng đầu tư và quản lý tài sản số phi
-                        tập trung hàng đầu thế giới, ứng dụng Fintech, AI &
-                        Blockchain, giúp nhà đầu tư tạo ra dòng tiền ổn định, tăng
-                        trưởng tài sản bền vững và đạt đến tự do tài chính thực sự.
+                        {t('home_section_6b_description')}
                     </div>
                     <div className={`relative z-10 flex ${isDesktop ? 'mt-10' : isTablet ? 'mt-10' : 'mt-5'} gap-2 justify-center`}>
                         <div className={`flex gap-2 justify-center ${isDesktop ? '' : ''}`}>
@@ -63,7 +61,7 @@ export default function Section6() {
                                     <ChatCenteredDots size={20} />
                                 </div>
                                 <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
-                                    TƯ VẤN MIỄN PHÍ
+                                    {t('free_support')}
                                 </div>
                             </div>
                             <div className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
@@ -71,7 +69,7 @@ export default function Section6() {
                                     <CursorClick size={20} />
                                 </div>
                                 <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
-                                    ĐẦU TƯ NGAY
+                                    {t('header_investNowup')}
                                 </div>
                             </div>
                         </div>
