@@ -9,49 +9,67 @@ import { useInterface } from "../../components/context/interface-context";
 const ProcessSection: React.FC = () => {
   const { isDesktop, isTablet, isMobile } = useInterface();
   const processStepRef = useRef<HTMLDivElement>(null);
-  const lastScrollY = useRef(window.scrollY);
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 4;
 
+  const activeStepRef = useRef(activeStep);
+  const isScrolling = useRef(false);
+  
   useEffect(() => {
-    const handleWheel = (event: WheelEvent) => {
-      if (processStepRef.current) {
-        const rect = processStepRef.current.getBoundingClientRect();
-        const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-        if (isInView) {
-          if (activeStep < totalSteps - 1) {
-            if (activeStep === 0 && event.deltaY < 0) {
-              return;
-            }
-            event.preventDefault();
-
-            if (event.deltaY > 0 && activeStep < totalSteps - 1) {
-              setActiveStep((prev) => prev + 1);
-            } else if (event.deltaY < 0 && activeStep > 0) {
-              setActiveStep((prev) => prev - 1);
-            }
-          } else if (activeStep === totalSteps - 1 && event.deltaY < 0) {
-            event.preventDefault();
-            setActiveStep((prev) => prev - 1);
-          }
-        }
-      }
-    };
-
-    const handleScroll = () => {
-      lastScrollY.current = window.scrollY;
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("scroll", handleScroll);
-    };
+    activeStepRef.current = activeStep;
   }, [activeStep]);
 
+  useEffect(() => {
+    const isSectionInView = () => {
+      if (processStepRef.current) {
+        const rect = processStepRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        return rect.top >= -rect.height * 0.4 && rect.bottom <= windowHeight + rect.height * 0.4;
+      }
+      return false;
+    };
+  
+    const handleWheel = (event: WheelEvent) => {
+      if (!isSectionInView()) return;
+      if (isScrolling.current) {
+        event.preventDefault(); 
+        return;
+      }
+  
+      const delta = event.deltaY;
+      const currentStep = activeStepRef.current;
+  
+      if (delta > 0 && currentStep < totalSteps - 1) {
+        event.preventDefault();
+        isScrolling.current = true;
+        const nextStep = currentStep + 1;
+        setActiveStep(nextStep);
+        activeStepRef.current = nextStep;
+  
+        setTimeout(() => {
+          isScrolling.current = false;
+        }, 500);
+      } else if (delta < 0 && currentStep > 0) {
+        event.preventDefault();
+        isScrolling.current = true;
+        const prevStep = currentStep - 1;
+        setActiveStep(prevStep);
+        activeStepRef.current = prevStep;
+  
+        setTimeout(() => {
+          isScrolling.current = false;
+        }, 500);
+      }
+    };
+  
+    window.addEventListener("wheel", handleWheel, { passive: false });
+  
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+  
+  
   return (
     <>
       {(isDesktop || isTablet) && (
