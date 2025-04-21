@@ -236,9 +236,11 @@
   * {
     @apply border-border outline-ring/50;
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    
   }
   body {
     @apply bg-background text-foreground;
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
   }
 }
 .font-geist-raleway{
@@ -576,4 +578,33 @@
   font-optical-sizing: auto;
   font-weight: var(--weight);
   font-style: normal;
+}
+.slide-tl {
+	-webkit-animation: slide-tl 0.9s ease-out infinite alternate-reverse ;
+	        animation: slide-tl 0.9s ease-out infinite alternate-reverse ;
+}
+/**
+ * ----------------------------------------
+ * animation slide-tl
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-tl {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20%) translateX(-20%);
+            transform: translateY(-20%) translateX(-20%);
+  }
+}
+@keyframes slide-tl {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20%) translateX(-20%);
+            transform: translateY(-20%) translateX(-20%);
+  }
 }
