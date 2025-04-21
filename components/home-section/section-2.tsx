@@ -8,9 +8,9 @@ const CountdownTimer = dynamic(() => import('../countdown-timer'), { ssr: false 
 export default function HomeSection2() {
     const { t } = useTranslation();
     return (
-        <div className="flex flex-col items-center justify-center border-gray-200 p-5 w-full mb-10 relative">
+        <div className="flex flex-col items-center justify-center border-gray-200 p-5 w-full mb-10 relative bg-[var(--base-bg)]">
 
-            <div className="flex flex-col lg:flex-row max-w-[1100px] justify-center items-center" style={{ zIndex: 101 }}>
+            <div className="flex flex-col lg:flex-row max-w-[1100px] justify-center items-center bg-[var(--base-bg)]" style={{ zIndex: 101 }}>
                 <Images src="/images/img/section1s_home.webp" alt="Section 2" width={631} height={450} className="mr-8" />
                 <Images src={"/images/img/chartline_section2.png"} alt="Section base 2" width={1200} height={80} className="absolute w-full -z-10" />
                 <div className='-z-10'>
