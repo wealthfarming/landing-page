@@ -38,7 +38,7 @@ export default function ProductPage() {
                         description={t('page_product_box2_description')} 
                         buttonText={t('page_product_box2_button')} 
                         button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]"
-                        link="/index"
+                        link="/index-landing"
                     />
                     <ProductInfoCard 
                         title={t('page_product_box3_title')} 
