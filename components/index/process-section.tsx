@@ -9,11 +9,14 @@ import { useInterface } from "../../components/context/interface-context";
 const ProcessSection: React.FC = () => {
   const { isDesktop, isTablet, isMobile } = useInterface();
   const processStepRef = useRef<HTMLDivElement>(null);
-  const lastScrollY = useRef(window.scrollY);
+  const lastScrollY = useRef(0);
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 4;
 
   useEffect(() => {
+    // Initialize lastScrollY with current scroll position
+    lastScrollY.current = window.scrollY;
+
     const handleWheel = (event: WheelEvent) => {
       if (processStepRef.current) {
         const rect = processStepRef.current.getBoundingClientRect();
