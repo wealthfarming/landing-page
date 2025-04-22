@@ -18,7 +18,7 @@ export function FadeInSection({ children }: Props) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: -100 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{
         duration: 1,
@@ -66,7 +66,7 @@ type AnimatedTextProps = {
  * />
  * ```
  */
-export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] , duration?: number, delayBetween?:number }> = ({ text, customClass = '', duration, delayBetween }) => {
+export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], duration?: number, delayBetween?: number }> = ({ text, customClass = '', duration, delayBetween }) => {
   const [nodes, setNodes] = useState<React.ReactNode[]>([]);
   const { i18n } = useTranslation();
   const [isClient, setIsClient] = useState(false);
@@ -84,35 +84,34 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[] , d
       const classForPhrase = customClass[phraseIndex] || '';
       const words = phrase.split(' ');
       const renderedWords = words.map((word, wordIndex) => (
-        <span key={`word-${phraseIndex}-${wordIndex}`} className="">
+        <div key={`word-${phraseIndex}-${wordIndex}`} className="inline-flex mr-[8px]">
           {word.split('').map((char) => {
-            const delay =( delayBetween? ( (delayBetween * charIndex ) ) : (charIndex / allText.length ) * 0.8);
+            const delay = (delayBetween ? ((delayBetween * charIndex)) : (charIndex / allText.length) * 0.8);
             charIndex++;
             return (
-              <motion.span
+                <motion.span
                 key={`char-${phraseIndex}-${wordIndex}-${charIndex}`}
-                className="inline"
-                initial={{ opacity: 0.1 }}
-                animate={{ opacity: 1 }}
+                className="inline-block"
+                initial={{ opacity: 0.1, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{
-                  delay:  (delayBetween? ( delay ) : 0),
-                  type: 'spring', 
+                  delay: delay,
+                  type: 'tween',
                   stiffness: 100,
-                  duration: (duration || 0.4),
-                  ease: 'easeOut',
+                  duration: duration || 0.4,
                 }}
-              >
-                {char === ' ' ? '\u00A0' : char }
-              </motion.span>
+                >
+                {char === ' ' ? '\u00A0' : char}
+                </motion.span>
             );
-            
+
           })}
           {' '}
-        </span>
+        </div>
       ));
 
       return (
-        <span key={`phrase-${phraseIndex}`} className={classForPhrase}>
+        <span key={`phrase-${phraseIndex}`} className={classForPhrase + ' text-justify max-w-[1000px]'}>
           {renderedWords}
         </span>
       );
