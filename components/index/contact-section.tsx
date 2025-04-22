@@ -5,22 +5,22 @@ import ContactForm from "./contact-form";
 
 const ContactSection: React.FC = () => {
   return (
-    <SectionContainer bgColor="bg-slate-50">
+    <SectionContainer bgColor="bg-[var(--canvas-bg-index)]">
       <div className="flex justify-center">
         <div className="flex flex-wrap gap-10 justify-center items-start max-w-screen-md w-[768px] max-md:max-w-full">
           <div className="flex flex-col flex-1 shrink justify-center text-base basis-8 min-w-60 text-zinc-800 max-md:max-w-full gap-[20px]">
-            <h2 className="self-start big-title text-center">
+            <h2 className="self-start big-title-desk-index text-center">
               Liên hệ
             </h2>
-            <p className="font-semibold max-md:max-w-full">
+            <p className="se-normal-desk-index max-md:max-w-full">
               Có câu hỏi nào không?
             </p>
-            <p className="leading-6 text-gray-700 max-md:max-w-full">
+            <p className="leading-6 re-normal-desk-index !text-[var(--text-medium-index)] max-md:max-w-full">
               Chúng tôi ở đây để giúp đỡ và trả lời bất kỳ câu hỏi nào bạn có thể
               có. Chúng tôi rất mong nhận được phản hồi từ bạn. Vui lòng điền vào
               mẫu này hoặc gửi email cho chúng tôi tại
             </p>
-            <div className=" flex flex-col gap-[12px] w-full max-md:max-w-full">
+            <div className=" flex flex-col gap-[12px] w-full max-md:max-w-full re-normal-desk-index">
               <div className="flex gap-3 items-start w-full whitespace-nowrap max-md:max-w-full">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/a4293226d4abd9346624d06bab90f668fdc3b523?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540"
