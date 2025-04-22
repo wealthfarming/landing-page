@@ -286,6 +286,15 @@
   letter-spacing: 0em; 
   line-height: 1.2em; 
 }
+.big-title {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 40px; 
+  letter-spacing: 0%; 
+  line-height: 100%; 
+}
 
 .h1 {
   color: var(--text-bold); 

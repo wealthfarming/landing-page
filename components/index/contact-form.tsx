@@ -68,9 +68,9 @@ const ContactForm: React.FC = () => {
       </div>
       <button
         type="submit"
-        className="self-stretch px-4 mt-6 w-full font-medium tracking-wider bg-orange-300 rounded min-h-10 shadow-[0px_2px_2px_rgba(0,0,0,0.12)] text-zinc-800"
+        className="self-stretch px-4 mt-6 w-full font-medium tracking-wider bg-[var(--primary)] rounded min-h-10 shadow-[0px_2px_2px_rgba(0,0,0,0.12)] text-zinc-800"
       >
-        Gửi thông tin
+        GỬI THÔNG TIN
       </button>
     </form>
   );
