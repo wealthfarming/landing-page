@@ -4,9 +4,10 @@ import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { useInterface } from "../context/interface-context";
-import { t } from "i18next";
+import { useTranslation } from 'react-i18next';
 
 export default function Section6() {
+    const { t } = useTranslation();
     const [mounted, setMounted] = useState(false);
     const { isDesktop, isTablet, isMobile } = useInterface();
 

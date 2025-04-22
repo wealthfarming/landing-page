@@ -1,5 +1,5 @@
 'use client';
-import { t } from "i18next";
+import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
@@ -15,6 +15,7 @@ type Tab = {
 export function HomeSection6Tab({ tabs }: { tabs: Tab[] }) {
     const [selected, setSelected] = useState<string | null>(null);
     const { isDesktop, isTablet } = useInterface();
+    const { t } = useTranslation();
 
     return (
         <div className={`flex flex-col gap-[20px]`}>
@@ -77,6 +78,7 @@ export function HomeSection6Tab({ tabs }: { tabs: Tab[] }) {
 }
 
 export default function HomeSection6() {
+    const { t } = useTranslation();
     const tabs = [
         {
             id: '01',
