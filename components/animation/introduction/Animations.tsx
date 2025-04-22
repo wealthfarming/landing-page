@@ -126,7 +126,7 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], du
     return (
       <>
         {text.map((phrase, i) => (
-          <span key={`plain-${i}`} className={customClass[i] || ''}>
+          <span key={`plain-${i}`} className={customClass[i] + ' opacity-10' || 'opacity-10'}>
             {phrase}{' '}
           </span>
         ))}
