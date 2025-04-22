@@ -59,8 +59,14 @@ const IndexLandingPage: React.FC = () => {
   return (
     <div className="max-md:pb-24">
       <Header changeAt={260} />
-      {/* Banner... */}
-
+      <div className="w-full h-[260px] hidden lg:block relative">
+        <img
+          src="https://framerusercontent.com/images/421ll4oDtrclmr3OtfbBhOV9E.png?lossless=1"
+          alt="Index Banner"
+          className="absolute w-full -z-10 top-[-400px] object-cover brightness-50"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </div>
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible">
         <IntroSection />
         <div className="w-full sticky h-[100vh] top-[20px] pt-[40px] pb-[80px]  white z-[2]">

@@ -20,7 +20,7 @@ const IntroSection: React.FC = () => {
               text={[
                 "BEQ INDEXES", "REWIEW INDEX NFT"
               ]}
-              customClass={["font-[900] text-[E8B561] !text-[49px]", "font-[900] !text-[49px] "]}
+              customClass={["font-[900] text-[E8B561]", "font-[900]"]}
               delayBetween={0.1}
             />
           ) : (
@@ -31,9 +31,8 @@ const IntroSection: React.FC = () => {
                 t("index_section_1_title_3"),
                 t("index_section_1_title_4"),
               ]}
-              customClass={["font-bold !text-[49px] ", "!text-[49px] ", "font-[900] !text-[49px] ", "!text-[49px] "]}
-              delayBetween={0.05}
-              duration={0.3}
+              customClass={["font-[900]", "", "font-[900]", ""]}
+              delayBetween={0.1}
             />
           )}
         </h1>
@@ -51,7 +50,7 @@ const IntroSection: React.FC = () => {
           </Button>
           <Button
           onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-          variant="orange" classname="px-8 !font-[500] !text-[12px] hover:bg-[#fcd392]">
+          variant="orange" classname="px-8 !font-[500] !text-[12px] ">
             <CursorClick size={20} />
             <p>{t("button_secret_documnet")}</p>
           </Button>
@@ -71,14 +70,14 @@ const IntroSection: React.FC = () => {
           </div>
           <div className="w-full h-fit md:h-[522px] relative">
             <div
-              className="w-full h-fit p-1 rounded-[8px]"
+              className="w-full h-fit p-1 rounded-[20px]"
               style={{
                 background:
                   "conic-gradient(from 316deg at 50% 50%, rgba(232, 180, 97, 0) 18deg, rgb(237, 195, 116) 44.905deg, rgba(232, 212, 169, 0.85) 79.4925deg, rgba(235, 213, 167, 0.31) 110.755deg, rgba(253, 233, 155, 0) 280.8deg, rgb(191, 255, 221) 330.818deg, rgba(252, 233, 154, 0.76) 342deg, rgba(252, 233, 154, 0) 353.303deg)",
               }}
             >
               <video
-                className="w-full h-full rounded-[8px] object-cover"
+                className="w-full h-full rounded-[20px] object-cover"
                 autoPlay
                 loop
                 muted
