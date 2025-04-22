@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 
 export default function InvestmentBank() {
-  const { isDesktop, isMobile } = useInterface();
+  const { isDesktop, isMobile , isTablet } = useInterface();
   const { t } = useTranslation();
   const [selected, setSelected] = useState("nft_report");
 
@@ -34,7 +34,7 @@ export default function InvestmentBank() {
         </div>
       </div>
 
-      <div className="flex w-full justify-center p-[40px] pb-[40px]">
+      <div className={`flex w-full justify-center p-[40px] pb-[100px] bg-[var(--canvas-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]': ''} `}>
         <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] `}>
           <div className="gap-[40px] flex-col items-center w-[336px] min-w-[336px] ">
             {tabs.map((tab) => (
