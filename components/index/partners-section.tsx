@@ -11,7 +11,7 @@ const PartnersSection: React.FC = () => {
     "https://cdn.builder.io/api/v1/image/assets/TEMP/c5bbe9a72dd3f25c336b0604690ae868aa8a11dc",
   ];
 
-  const logos = [...partnerLogos, ...partnerLogos, ...partnerLogos]; // Tăng số lượng để không thấy khoảng trống
+  const logos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
 
   const x = useMotionValue(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -20,11 +20,11 @@ const PartnersSection: React.FC = () => {
     let animationFrameId: number;
 
     const loop = () => {
-      x.set(x.get() - 1); // tốc độ di chuyển, tăng số sẽ nhanh hơn
+      x.set(x.get() - 1);
       if (trackRef.current) {
-        const totalWidth = trackRef.current.scrollWidth / 3; // vì nhân 3 lần
+        const totalWidth = trackRef.current.scrollWidth / 3;
         if (Math.abs(x.get()) >= totalWidth) {
-          x.set(0); // quay về đầu mà không gây giật
+          x.set(0);
         }
       }
       animationFrameId = requestAnimationFrame(loop);
@@ -43,7 +43,7 @@ const PartnersSection: React.FC = () => {
         Được tin cậy và sử dụng bởi các đối tác
       </p>
 
-      <div className="overflow-hidden mt-6 max-w-screen-md w-full max-md:max-w-full mx-auto">
+      <div className="overflow-hidden mt-6 w-full max-md:max-w-full mx-auto">
         <motion.div
           ref={trackRef}
           style={{
@@ -52,13 +52,15 @@ const PartnersSection: React.FC = () => {
           }}
         >
           {logos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`Partner logo ${index + 1}`}
-              className="w-[109px] object-contain aspect-[2.27]"
-            />
+            <div key={index} className="px-7 shrink-0">
+              <img
+                src={logo}
+                alt={`Partner logo ${index + 1}`}
+                className="w-[109px] object-contain aspect-[2.27]"
+              />
+            </div>
           ))}
+
         </motion.div>
       </div>
     </SectionContainer>
