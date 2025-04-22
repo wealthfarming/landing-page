@@ -68,7 +68,7 @@ export default function InvestmentBank() {
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                    <p className="text-light ">March 28, 2025</p>
+                    <p className="text-light text-[13px]">March 28, 2025</p>
                   </div>
                 </div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
@@ -95,7 +95,7 @@ export default function InvestmentBank() {
               <div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">Styling Elements</p>
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('styling_elements')}</p>
                     <p className="text-light text-[13px]">March 28, 2025</p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function InvestmentBank() {
                 </div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">Best Practices</p>
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('best_practices')}</p>
                     <p className="text-light text-[13px]">March 28, 2025</p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function InvestmentBank() {
               <div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">What&apos;s New</p>
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('what_new')}</p>
                     <p className="text-light text-[13px]">March 28, 2025</p>
                   </div>
                 </div>
