@@ -1,5 +1,5 @@
 'use client';
-import { t } from "i18next";
+import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
@@ -8,6 +8,7 @@ import { CursorClick } from "@phosphor-icons/react";
 
 export default function HomeSection7() {
     const { isDesktop, isTablet, isMobile } = useInterface();
+    const { t } = useTranslation();
 
     return (
         <div className={`w-full ${isDesktop ? 'h-[336px]' : isTablet ? 'h-[349px]' : 'h-[222px]'} flex gap-[10px] relative`}>
