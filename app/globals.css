@@ -145,8 +145,10 @@
 
   /* Other Colors */
   --primary-other: #EBEBEB;
+  /* was --khác-chính */
+  --other-border: #E3E6E9;
   /* was --khác-viền */
-  --other-border: #FFFFFF;
+  --other-white: #FFFFFF;
   /* was --khác-trắng */
   --other-bg: #1A1A1A;
   /* was --khác-đen */

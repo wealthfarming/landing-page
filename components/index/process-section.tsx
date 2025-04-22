@@ -12,6 +12,8 @@ import SectionTitle from "./section-title";
 import ProcessStep from "./process-step";
 import PerformanceTable from "./performance-table";
 import { useInterface } from "../../components/context/interface-context";
+import { ChartLine, Database, ShoppingCartSimple } from "phosphor-react";
+import { Robot } from "@phosphor-icons/react";
 
 const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTMLDivElement>) => {
   const { isDesktop, isTablet, isMobile } = useInterface();
@@ -92,34 +94,34 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
             ref={processStepRef}
             className="flex relative gap-4 items-center mt-10 w-full max-md:max-w-full"
           >
-            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-gray-200 border-solid inset-x-[134px] min-w-60 w-[910px]" />
+            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[134px] min-w-60 w-[900px]" />
             {[
               {
                 number: "01",
                 title: "Crawl dữ liệu số",
-                icon: "a5af695dc9c973a517f0cf9063b6abbab5b2ba6f"
+                icon: Database
               },
               {
                 number: "02",
                 title: "AI dự đoán cổ phiếu thêm/loại",
-                icon: "6fb1449d5b691fe3994c0ce444fa9bdaf8d59f1d"
+                icon: Robot
               },
               {
                 number: "03",
                 title: "Mua ngay sau cutoff date",
-                icon: "f54438ab0e32425c90307c9edcfa519a4a58af12"
+                icon: ShoppingCartSimple
               },
               {
                 number: "04",
                 title: "Chốt lời 20% hoặc cắt lỗ -13.33%",
-                icon: "249e2d7060232b8b9f8b0cfd98085dfc295f36d3"
+                icon: ChartLine
               }
             ].map((step, index) => (
               <ProcessStep
                 key={index}
                 number={step.number}
                 title={step.title}
-                iconSrc={`https://cdn.builder.io/api/v1/image/assets/TEMP/${step.icon}?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540`}
+                iconSrc={step.icon}
                 activeStep={activeStep}
                 stepIndex={index}
               />
@@ -143,7 +145,7 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
             subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
           />
           <div className="grid grid-cols-2 relative gap-4 items-center mt-10 w-full max-md:max-w-full">
-            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-gray-200 border-solid inset-x-[100px] min-w-[150px]" />
+            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[100px] min-w-[150px]" />
             {[
               {
                 number: "01",
