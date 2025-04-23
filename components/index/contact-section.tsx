@@ -5,7 +5,7 @@ import ContactForm from "./contact-form";
 
 const ContactSection: React.FC = () => {
   return (
-    <SectionContainer bgColor="bg-[var(--canvas-bg-index)]">
+    <SectionContainer bgColor="bg-[var(--base-bg)]">
       <div className="flex justify-center">
         <div className="flex flex-wrap gap-10 justify-center items-start max-w-screen-md w-[768px] max-md:max-w-full">
           <div className="flex flex-col flex-1 shrink justify-center text-base basis-8 min-w-60 text-zinc-800 max-md:max-w-full gap-[20px]">
