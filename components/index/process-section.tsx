@@ -1,193 +1,150 @@
-"use client";
-
-import React, {
-  forwardRef,
-  useEffect,
-  useRef,
-  useState,
-  ForwardedRef
-} from "react";
+import React, { forwardRef, useEffect, useRef, useState, ForwardedRef } from "react";
 import SectionContainer from "./section-container";
 import SectionTitle from "./section-title";
 import ProcessStep from "./process-step";
 import PerformanceTable from "./performance-table";
-import { useInterface } from "../../components/context/interface-context";
 import { ChartLineUp, HardDrive, Robot, ShoppingCartSimple } from "phosphor-react";
+import { useInterface } from "../context/interface-context";
 
-const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTMLDivElement>) => {
-  const { isDesktop, isTablet, isMobile } = useInterface();
-  const processStepRef = useRef<HTMLDivElement>(null);
-  const [activeStep, setActiveStep] = useState(0);
-  const totalSteps = 4;
+interface ProcessSectionProps {
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+  activeStep: number;
+  sticky: boolean;
+}
 
-  const activeStepRef = useRef(activeStep);
-  const isScrolling = useRef(false);
+const steps = [
+  { number: "01", title: "Crawl dữ liệu số", icon: HardDrive },
+  { number: "02", title: "AI dự đoán cổ phiếu thêm/loại", icon: Robot },
+  { number: "03", title: "Mua ngay sau cutoff date", icon: ShoppingCartSimple },
+  { number: "04", title: "Chốt lời 20% hoặc cắt lỗ -13.33%", icon: ChartLineUp },
+];
+
+const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
+  setActiveStep, activeStep, sticky
+}, ref: ForwardedRef<HTMLDivElement>) => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const lastScrollY = useRef<number>(0);
+  const [isSectionInView, setIsSectionInView] = useState(false);
+  const [scrollCount, setScrollCount] = useState(0);
+  const {isMobile} = useInterface();
 
   useEffect(() => {
-    activeStepRef.current = activeStep;
-  }, [activeStep]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsSectionInView(true);
+        }
+      },
+      { threshold: 0.1}
+    );
 
-  useEffect(() => {
-    const isSectionInView = () => {
-      if (processStepRef.current) {
-        const rect = processStepRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        return (
-          rect.top >= -rect.height * 0.4 &&
-          rect.bottom <= windowHeight + rect.height * 0.4
-        );
-      }
-      return false;
-    };
-
-    const handleWheel = (event: WheelEvent) => {
-      if (!isSectionInView()) return;
-
-      if (isScrolling.current) {
-        event.preventDefault();
-        return;
-      }
-
-      const delta = event.deltaY;
-      const currentStep = activeStepRef.current;
-
-      if (delta > 0 && currentStep < totalSteps - 1) {
-        event.preventDefault();
-        isScrolling.current = true;
-        const nextStep = currentStep + 1;
-        setActiveStep(nextStep);
-        activeStepRef.current = nextStep;
-
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 500);
-      } else if (delta < 0 && currentStep > 0) {
-        event.preventDefault();
-        isScrolling.current = true;
-        const prevStep = currentStep - 1;
-        setActiveStep(prevStep);
-        activeStepRef.current = prevStep;
-
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 500);
-      }
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => {
-      window.removeEventListener("wheel", handleWheel);
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
-  return (
-    <>
-      {(isDesktop || isTablet) && (
+  useEffect(() => {
+    if (!isSectionInView) return;
+  
+    const SCROLL_THRESHOLD = 700;
+    let scrollBuffer = 0;
+  
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      const deltaY = currentY - lastScrollY.current;
+      scrollBuffer += deltaY;
+  
+      if (scrollBuffer >= SCROLL_THRESHOLD) {
+        setScrollCount((prev) => (prev < steps.length - 1 ? prev + 1 : prev));
+        scrollBuffer = 0;
+      } else if (scrollBuffer <= -SCROLL_THRESHOLD) {
+        setScrollCount((prev) => (prev > 0 ? prev - 1 : prev));
+        scrollBuffer = 0;
+      }
+  
+      lastScrollY.current = currentY;
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isSectionInView]);
+
+  useEffect(() => {
+    setActiveStep(scrollCount);
+  }, [scrollCount, setActiveStep]);
+
+  const renderSteps = () =>
+    steps.map((step, index) => (
+      <div key={index} className="flex-1">
+        <ProcessStep
+          number={step.number}
+          title={step.title}
+          iconSrc={step.icon}
+          activeStep={activeStep}
+          stepIndex={index}
+        />
+      </div>
+    ));
+
+    return isMobile ? (
+      <div className="relative w-full">
         <SectionContainer>
           <SectionTitle
             title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
             subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
           />
-          <div
-            ref={processStepRef}
-            className="flex relative gap-4 items-center mt-10 w-full max-md:max-w-full"
-          >
-            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[134px] min-w-60 w-[900px]" />
-            {[
-              {
-                number: "01",
-                title: "Crawl dữ liệu số",
-                icon: HardDrive
-              },
-              {
-                number: "02",
-                title: "AI dự đoán cổ phiếu thêm/loại",
-                icon: Robot
-              },
-              {
-                number: "03",
-                title: "Mua ngay sau cutoff date",
-                icon: ShoppingCartSimple
-              },
-              {
-                number: "04",
-                title: "Chốt lời 20% hoặc cắt lỗ -13.33%",
-                icon: ChartLineUp
-              }
-            ].map((step, index) => (
+          <div className="grid grid-cols-2 gap-4 mt-10">
+            {steps.map((step, index) => (
               <ProcessStep
                 key={index}
                 number={step.number}
                 title={step.title}
                 iconSrc={step.icon}
-                activeStep={activeStep}
+                activeStep={index}
                 stepIndex={index}
               />
             ))}
           </div>
-
-          <div className="flex flex-col self-center mt-10 max-w-screen-md text-base font-medium text-zinc-800 w-[768px] max-md:max-w-full">
-            <h3 className="text-2xl text-center max-md:max-w-full">Performance Table</h3>
+          <div className="mt-10 max-w-screen-md mx-auto text-base font-medium text-zinc-800">
+            <h3 className="text-lg max-md:text-[17px] font-bold text-center">Performance Table</h3>
             <PerformanceTable />
-            <p className="self-center mt-6 text-center text-gray-700 max-md:max-w-full">
+            <p className="mt-6 text-center text-gray-700">
               Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
             </p>
           </div>
         </SectionContainer>
-      )}
-
-      {isMobile && (
-        <SectionContainer>
-          <SectionTitle
-            title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
-            subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
-          />
-          <div className="grid grid-cols-2 relative gap-3 items-center mt-10 w-full max-md:max-w-full">
-          {[
-              {
-                number: "01",
-                title: "Crawl dữ liệu số",
-                icon: HardDrive
-              },
-              {
-                number: "02",
-                title: "AI dự đoán cổ phiếu thêm/loại",
-                icon: Robot
-              },
-              {
-                number: "03",
-                title: "Mua ngay sau cutoff date",
-                icon: ShoppingCartSimple
-              },
-              {
-                number: "04",
-                title: "Chốt lời 20% hoặc cắt lỗ -13.33%",
-                icon: ChartLineUp
-              }
-            ].map((step, index) => (
-              <ProcessStep
-                key={index}
-                number={step.number}
-                title={step.title}
-                iconSrc={step.icon}
-                activeStep={activeStep}
-                stepIndex={index}
-              />
-            ))}
-          </div>
-
-          <div className="flex flex-col self-center mt-10 max-w-screen-md text-base font-medium text-zinc-800 max-md:max-w-full">
-            <h3 className="text-2xl text-center max-md:max-w-full">Performance Table</h3>
-            <PerformanceTable />
-            <p className="self-center mt-6 text-center text-gray-700 max-md:max-w-full">
-              Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
-            </p>
-          </div>
-        </SectionContainer>
-      )}
-    </>
-  );
+      </div>
+    ) : (
+      <div
+        ref={sectionRef}
+        style={{ minHeight: `${steps.length * 100}vh` }}
+        className="relative w-full"
+      >
+        <div
+          ref={ref}
+          className="sticky top-0 h-screen flex flex-col items-center justify-center z-30"
+        >
+          <SectionContainer>
+            <SectionTitle
+              title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
+              subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
+            />
+            <div className="flex relative gap-4 items-center mt-10 w-full max-md:flex-col">
+              {renderSteps()}
+            </div>
+            <div className="flex flex-col self-center mt-10 max-w-screen-md text-base font-medium text-zinc-800 w-[768px] max-md:max-w-full">
+              <h3 className="text-2xl text-center max-md:max-w-full">Performance Table</h3>
+              <PerformanceTable />
+              <p className="self-center mt-6 text-center text-gray-700 max-md:max-w-full">
+                Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
+              </p>
+            </div>
+          </SectionContainer>
+        </div>
+      </div>
+    );
+    
 });
 
 export default ProcessSection;

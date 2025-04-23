@@ -8,15 +8,15 @@ const PerformanceTable: React.FC = () => {
   ];
 
   return (
-    <div className="p-2 mt-6 w-full bg-white rounded-xl border border-gray-200 border-solid max-md:max-w-full">
-      <div className="flex items-start w-full text-lg font-semibold text-orange-300 border-b border-gray-200 max-md:max-w-full">
-        <div className="flex-1 p-4 whitespace-nowrap">
+    <div className="p-2 mt-2 w-full bg-white rounded-xl border border-gray-200 border-solid max-md:max-w-full">
+      <div className="flex items-start w-full text-xl font-medium text-orange-300 border-b border-gray-200 max-md:max-w-full max-md:text-lg">
+        <div className="w-1/5 p-4 whitespace-nowrap">
           Năm
         </div>
-        <div className="flex-1 p-4 text-right whitespace-nowrap">
+        <div className="w-2/5 p-4 text-right whitespace-nowrap">
           Lợi nhuận
         </div>
-        <div className="flex-1 p-4 text-right">
+        <div className="w-2/5 p-4 text-right whitespace-nowrap">
           Vốn $100k →
         </div>
       </div>
@@ -24,15 +24,15 @@ const PerformanceTable: React.FC = () => {
       {performanceData.map((item, index) => (
         <div
           key={item.year}
-          className={`flex items-start w-full ${index % 2 !== 0 ? "rounded-lg bg-slate-50" : ""} max-md:max-w-full`}
+          className={`flex items-start w-full text-[15px] ${index % 2 !== 0 ? "rounded-lg bg-slate-50" : ""} max-md:max-w-full `}
         >
-          <div className="flex-1 p-4 font-semibold whitespace-nowrap">
+          <div className="w-1/5 p-4 font-semibold whitespace-nowrap max-md:h-[40px] text-center items-center flex">
             {item.year}
           </div>
-          <div className="flex-1 p-4 text-right text-green-500">
+          <div className="w-2/5 p-4 text-right text-[var(--primary-green)] max-md:h-[40px] items-center flex justify-end">
             {item.profit}
           </div>
-          <div className="flex-1 p-4 text-right">
+          <div className="w-2/5 p-4 text-right max-md:h-[40px] items-center flex justify-end">
             {item.capital}
           </div>
         </div>
