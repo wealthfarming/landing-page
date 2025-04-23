@@ -7,7 +7,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import { t } from "i18next"
+import { useTranslation } from 'react-i18next';
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react";
 
@@ -20,19 +20,20 @@ const images = [
     "/images/img/slide_6.jpg",
 ]
 
-const content = [
-    t('home_section_3_slide_1'),
-    t('home_section_3_slide_2'),
-    t('home_section_3_slide_3'),
-    t('home_section_3_slide_4'),
-    t('home_section_3_slide_5'),
-    t('home_section_3_slide_6'),
-
-]
 
 export const SliderDesktop = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const resizeObserver = useRef<() => void | null>(null);
+    const { t } = useTranslation();
+    const content = [
+        t('home_section_3_slide_1'),
+        t('home_section_3_slide_2'),
+        t('home_section_3_slide_3'),
+        t('home_section_3_slide_4'),
+        t('home_section_3_slide_5'),
+        t('home_section_3_slide_6'),
+
+    ]
 
     useEffect(() => {
         const handleResize = () => {
@@ -78,7 +79,7 @@ export const SliderDesktop = () => {
                 </CarouselContent>
                 <div
                     className="absolute -bottom-10 flex-row items-center px-4 flex opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    
+
                 >
                     <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] -left-2 h-[40px] rounded-full shadow-md">
                         Previous
@@ -96,6 +97,16 @@ export const SliderDesktop = () => {
 export const SliderMobile = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const resizeObserver = useRef<() => void | null>(null);
+    const { t } = useTranslation();
+    const content = [
+        t('home_section_3_slide_1'),
+        t('home_section_3_slide_2'),
+        t('home_section_3_slide_3'),
+        t('home_section_3_slide_4'),
+        t('home_section_3_slide_5'),
+        t('home_section_3_slide_6'),
+
+    ]
 
     useEffect(() => {
         const handleResize = () => {
@@ -158,6 +169,16 @@ export const SliderMobile = () => {
 }
 
 export const SlideTablet = () => {
+    const { t } = useTranslation();
+    const content = [
+        t('home_section_3_slide_1'),
+        t('home_section_3_slide_2'),
+        t('home_section_3_slide_3'),
+        t('home_section_3_slide_4'),
+        t('home_section_3_slide_5'),
+        t('home_section_3_slide_6'),
+
+    ]
     return (
         <Carousel
             plugins={[Autoplay({ delay: 8000 })]}
