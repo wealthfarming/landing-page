@@ -32,7 +32,8 @@ const IntroSection: React.FC = () => {
                 t("index_section_1_title_4"),
               ]}
               customClass={["font-[900]", "", "font-[900]", ""]}
-              delayBetween={0.1}
+              delayBetween={0.05}
+              duration={0.3}
             />
           )}
         </h1>
@@ -43,14 +44,14 @@ const IntroSection: React.FC = () => {
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex gap-2 md:flex-row flex-col my-10 md:mt-10 text-sm md:w-full w-[209px] font-medium tracking-wide justify-center items-center text-zinc-800 max-md:max-w-full">
           <Button
-          onClick={() => window.open("https://www.facebook.com/profile.php?id=61574682066111", "_blank")}
-           variant="white" classname="px-8 !font-[500] !text-[12px] ">
+            onClick={() => window.open("https://www.facebook.com/profile.php?id=61574682066111", "_blank")}
+            variant="white" classname="px-8 !font-[500] !text-[12px] ">
             <ChatCenteredDots size={20} />
             <p>{t("button_contact_private")}</p>
           </Button>
           <Button
-          onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-          variant="orange" classname="px-8 !font-[500] !text-[12px] ">
+            onClick={() => window.open("https://wealthfarming.app/", "_blank")}
+            variant="orange" classname="px-8 !font-[500] !text-[12px] ">
             <CursorClick size={20} />
             <p>{t("button_secret_documnet")}</p>
           </Button>

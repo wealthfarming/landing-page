@@ -85,16 +85,20 @@
 :root {
   /* Text Colors */
   --text-bold: #1A1A1A;
+  --text-bold-index: #1F252E;
   /* was --chữ-đậm */
   --text-medium: #4D4D4D;
+  --text-medium-index: #434B57;
   /* was --chữ-vừa */
   --text-light: #808080;
+  --text-light-index: #6F7D91;
   /* was --chữ-nhạt */
   --text-mute: #B3B3B3;
   /* was --chữ-mờ */
 
   /* Background Colors */
   --canvas-bg: #F6F8FD;
+  --canvas-bg-index: #F7F8FD;
   /* was --nền-canvas */
   --base-bg: #FFFFFF;
   /* was --nền-1 */
@@ -152,6 +156,7 @@
   /* was --khác-trắng */
   --other-bg: #1A1A1A;
   /* was --khác-đen */
+  --input-bg-index: #EDEFF3;
 
   /* Green Colors */
   --primary-green: #23CB70;
@@ -287,6 +292,51 @@
   font-size: 50px; 
   letter-spacing: 0em; 
   line-height: 1.2em; 
+}
+.big-title-desk-index {
+  color: var(--text-bold-index); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 40px; 
+  letter-spacing: 0; 
+  line-height: 100%; 
+}
+.se-normal-desk-index {
+  color: var(--text-bold-index); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 600; 
+  font-size: 16px; 
+  letter-spacing: 0; 
+  line-height: 150%; 
+}
+.re-normal-desk-index {
+  color: var(--text-bold-index); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 400; 
+  font-size: 16px; 
+  letter-spacing: 0; 
+  line-height: 150%; 
+}
+.re-small-mobile-index {
+  color: var(--text-bold-index); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 400; 
+  font-size: 13px; 
+  letter-spacing: 0; 
+  line-height: 100%; 
+}
+.btn-other-mobile-index {
+  color: var(--text-bold-index); 
+  font-family: var(--font-geist-mono);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 13px; 
+  letter-spacing: 0.05em; 
+  line-height: 100%; 
 }
 
 .h1 {
