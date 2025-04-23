@@ -23,8 +23,8 @@ const FAQItem: React.FC<FAQItemProps> = ({
         onClick={onClick}
       >
         <div className="flex flex-wrap flex-1 shrink gap-2 items-center self-stretch my-auto basis-0 min-w-60 max-md:max-w-full">
-          <div className="text-[var(--text-bold-index)] bg-[var(--canvas-bg-1)] text-[18px] font-geist-mono flex items-center justify-center gap-1 self-stretch px-1 my-auto w-10 h-10 whitespace-nowrap border border-[var(--other-border)] border-solid min-h-10 rounded-[100px]">
-            {number}
+          <div className="flex items-center justify-center  bg-[var(--canvas-bg-1)] flex items-center justify-center gap-1 self-stretch px-1 my-auto w-10 h-10 whitespace-nowrap border border-[var(--other-border)] border-solid min-h-10 rounded-[100px]">
+            <p className="flex items-center justify-center h-[23px] w-[22px] text-[var(--text-bold-index)] text-[18px] font-geist-mono font-[500] tracking-[0] leading-[100%]">{number}</p>
           </div>
           <h3 className="flex-1 shrink self-stretch my-auto me-normal-desk-index basis-0 max-md:max-w-full">
             {question}
