@@ -29,13 +29,13 @@ export default function InvestmentBank() {
       <Image src="/images/img/product_base.jpg" alt="Product Banner" width={260} height={260} className={`w-full h-[260px] -z-10 ${!isDesktop ? "pt-[80px]" : ""} brightness-40`} />
       <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
         <div className="w-[1200px] max-w-[1200px]">
-          <p className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
+          <div className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
             <AnimatedText
               text={[t('investment_bank')]}
               delayBetween={0.05}
               duration={0.3}
             />
-          </p>
+          </div>
         </div>
       </div>
 
@@ -68,13 +68,13 @@ export default function InvestmentBank() {
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function InvestmentBank() {
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
               </div>
@@ -96,19 +96,19 @@ export default function InvestmentBank() {
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('styling_elements')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] flex hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('best_practices')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function InvestmentBank() {
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex-col gap-[10px] justify-center">
                     <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('what_new')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <p className="text-light text-[13px]">{t('date_investment_bank')}</p>
                   </div>
                 </div>
               </div>
