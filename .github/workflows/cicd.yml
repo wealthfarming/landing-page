@@ -3,7 +3,7 @@ name: CICD
 on:
   push:
     branches:
-      - development
+      - staging
     paths-ignore:
       - '.vscode/**'
       - '.env*'
@@ -11,12 +11,12 @@ on:
       - '**.md'
 
 env:
-  SERVICE: dev-landing-page
+  SERVICE: landing-page
 
 jobs:
   build-image:
     if: contains(github.event.head_commit.message, '[cd-skip]') == false
-    runs-on: dev-landing-page
+    runs-on: landing-page
     steps:
       - uses: actions/checkout@v4
       - name: Check out repo
@@ -24,8 +24,8 @@ jobs:
   deploy:
     needs:
       - build-image
-    runs-on: dev-landing-page
+    runs-on: landing-page
     steps:
       - run: |
-          docker compose -f /root/dev-landing-page/apps/docker-compose.yml up -d --force-recreate $SERVICE
+          docker compose -f /root/landing-page/apps/docker-compose.yml up -d --force-recreate $SERVICE
           docker image prune -f
