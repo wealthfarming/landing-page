@@ -1,5 +1,8 @@
 "use client";
+
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +21,7 @@ const ContactForm: React.FC = () => {
     // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
-
+  const {t} = useTranslation()
   return (
     <form
       onSubmit={handleSubmit}
@@ -26,7 +29,7 @@ const ContactForm: React.FC = () => {
     >
       <div className="w-full">
         <label htmlFor="name" className="!text-[#000000] re-small-mobile-index">
-          Họ tên
+          {t('fullname')}
         </label>
         <input
           id="name"
@@ -34,13 +37,13 @@ const ContactForm: React.FC = () => {
           type="text"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Nhập tên của bạn"
+          placeholder={t('enter_fullname')}
           className="gap-1 self-stretch p-4 mt-2 w-full bg-[var(--input-bg-index)] border border-[var(--other-border)] border-solid min-h-12 re-small-mobile-index !text-[var(--text-light-index)]"
         />
       </div>
       <div className="mt-6 w-full">
         <label htmlFor="phone" className="!text-[#000000] re-small-mobile-index">
-          SDT
+          {t('number')}
         </label>
         <input
           id="phone"
@@ -48,13 +51,13 @@ const ContactForm: React.FC = () => {
           type="tel"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="Nhập SDT của bạn"
+          placeholder={t('enter_number')}
           className="gap-1 self-stretch p-4 mt-2 w-full bg-[var(--input-bg-index)] border border-[var(--other-border)] border-solid min-h-12 re-small-mobile-index !text-[var(--text-light-index)]"
         />
       </div>
       <div className="mt-6 w-full">
         <label htmlFor="email" className="!text-[#000000] re-small-mobile-index">
-          Email
+          {t('email')}
         </label>
         <input
           id="email"
@@ -62,7 +65,7 @@ const ContactForm: React.FC = () => {
           type="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Nhập SDT của bạn (Zalo / Tele)"
+          placeholder={t('enter_email')}
           className="gap-1 self-stretch p-4 mt-2 w-full bg-[var(--input-bg-index)] border border-[var(--other-border)] border-solid min-h-12 re-small-mobile-index !text-[var(--text-light-index)]"
         />
       </div>
@@ -70,7 +73,7 @@ const ContactForm: React.FC = () => {
         type="submit"
         className="self-stretch px-4 mt-6 w-full font-medium tracking-wider bg-[var(--primary)] rounded min-h-10 shadow-[0px_2px_2px_rgba(0,0,0,0.12)] btn-other-mobile-index"
       >
-        GỬI THÔNG TIN
+        {t('submit_information')}
       </button>
     </form>
   );
