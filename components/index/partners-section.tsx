@@ -1,8 +1,9 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import SectionContainer from "./section-container";
 import { useTranslation } from "react-i18next";
-
 
 const PartnersSection: React.FC = () => {
   const partnerLogos = [
@@ -14,7 +15,7 @@ const PartnersSection: React.FC = () => {
   ];
 
   const logos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const x = useMotionValue(0);
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -41,29 +42,36 @@ const PartnersSection: React.FC = () => {
 
   return (
     <SectionContainer>
-      <p className="max-w-screen-md text-base text-center text-gray-700 max-md:max-w-full">
+      <p className="max-w-screen-md text-base text-center text-[var(--text-light)] max-md:max-w-full">
         {t('index_partner_section_title')}
       </p>
 
-      <div className="overflow-hidden mt-6 w-full max-md:max-w-full mx-auto">
-        <motion.div
-          ref={trackRef}
+      <div className="overflow-hidden mt-6 w-full max-md:max-w-full mx-auto relative">
+        <div
+          className="fade-container"
           style={{
-            display: "flex",
-            x: transformX,
+            maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
           }}
         >
-          {logos.map((logo, index) => (
-            <div key={index} className="px-7 shrink-0">
-              <img
-                src={logo}
-                alt={`Partner logo ${index + 1}`}
-                className="w-[109px] object-contain aspect-[2.27]"
-              />
-            </div>
-          ))}
-
-        </motion.div>
+          <motion.div
+            ref={trackRef}
+            style={{
+              display: "flex",
+              x: transformX,
+            }}
+          >
+            {logos.map((logo, index) => (
+              <div key={index} className="px-7 shrink-0">
+                <img
+                  src={logo}
+                  alt={`Partner logo ${index + 1}`}
+                  className="w-[109px] object-contain aspect-[2.27]"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </SectionContainer>
   );
