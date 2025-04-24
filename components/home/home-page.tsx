@@ -17,42 +17,29 @@ export default function HomePage() {
     const { isDesktop, isTablet } = useInterface();
     return (
         <>
-        {(isDesktop || isTablet) && (
-            <div className="grid grid-rows-[80px_1fr] md:grid-rows-[260px_1fr] lg:grid-rows-[260px_1fr] items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
-            <HeaderDesktopFull changeAt={300} />
-            <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]': ''}  relative bg-[var(--base-bg)] z-30`}>
-                <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={80} className="absolute w-full -z-10 top-[-400px] object-cover hidden lg:block" />
-                <HomeSection1 />
-                <HomeSection2 />
-                <HomeSection3 />
-                <HomeSection4 />
-                <HomeSection5 />
-                <Section5 />
-                <Section6 />
-                <HomeSection6 />
-                <HomeSection7 />
-            </main>
-            <FooterFull active={'introduction'} />
-        </div>
-        )}
-        {(!isDesktop && !isTablet) && (
-            <div className="grid grid-rows-[80px_1fr] md:grid-rows-[260px_1fr] lg:grid-rows-[260px_1fr] items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
-            <HeaderDesktopFull changeAt={300} />
-            <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]': ''}  relative bg-[var(--base-bg)] z-30`}>
-                <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={80} className="absolute w-full -z-10 top-[-400px] object-cover hidden lg:block" />
-                <HomeSection1 />
-                <HomeSection2 />
-                <HomeSection3 />
-                <HomeSection4 />
-                <HomeSection5 />
-                <Section5 />
-                <Section6 />
-                <HomeSection6 />
-                <HomeSection7 />
+            <div className="flex flex-col items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
+                <HeaderDesktopFull changeAt={300} />
+                <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px] pt-30' : 'pt-30'} top-[-260px] bg-[var(--base-bg)] z-30`}>
+                    {isDesktop &&
+                        <div className="w-full h-[260px] relative">
+                            <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+                            <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
+                        </div>
+                    }
+                    <HomeSection1 />
+                    <HomeSection2 />
+                    <HomeSection3 />
+                    <HomeSection4 />
+                    <HomeSection5 />
+                    <Section5 />
+                    <Section6 />
+                    <HomeSection6 />
+                    <HomeSection7 />
+                </main>
                 <FooterFull active={'introduction'} />
-            </main>
-        </div>
-        )}
+            </div>
         </>
     );
 }

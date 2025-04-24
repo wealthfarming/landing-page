@@ -100,24 +100,23 @@ const ecoData: EcoData = {
 };
 
 export default function EcoPage() {
-  const { isDesktop, isTablet, isMobile } = useInterface();
+  const { isDesktop, isTablet } = useInterface();
   const { language } = useLanguage();
   const { t } = useTranslation();
   const selectedEcoData = ecoData[language] || ecoData['en'];
 
   return (
     <div className="flex flex-col">
-      {isDesktop && (
-        <Image
-          src="/images/img/product_base.jpg"
-          alt="Product Banner"
-          width={735}
-          height={80}
-          className="absolute w-full -z-10 top-[-400px] object-cover"
-        />
-      )}
+      {isDesktop &&
+        <div className="w-full h-[260px] relative">
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+          <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
+        </div>
+      }
       <div
-        className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? 'mt-56 mb-[505px]' : isTablet ? 'mt-12 mb-[505px]' : 'pt-20'
+        className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? ' mb-[505px]' : isTablet ? 'mb-[505px] pt-20' : 'pt-20'
           } relative z-30`}
       >
         <HeaderDesktopFull changeAt={300} />
@@ -145,10 +144,10 @@ export default function EcoPage() {
           </div>
           <div
             className={`${isDesktop
+              ? 'grid-cols-2 gap-[40px_60px] mb-20'
+              : isTablet
                 ? 'grid-cols-2 gap-[40px_60px] mb-20'
-                : isTablet
-                  ? 'grid-cols-2 gap-[40px_60px] mb-20'
-                  : 'grid-cols-1 gap-10'
+                : 'grid-cols-1 gap-10'
               } grid flex-wrap justify-center w-full`}
           >
             {selectedEcoData.map((section, index) => (
