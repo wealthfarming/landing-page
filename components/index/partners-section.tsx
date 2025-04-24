@@ -41,7 +41,7 @@ const PartnersSection: React.FC = () => {
 
   return (
     <SectionContainer>
-      <p className="max-w-screen-md text-base text-center text-gray-700 max-md:max-w-full">
+      <p className="text-[15px] text-[var(--text-light)] w-full flex justify-center max-md:max-w-full">
         {t('index_partner_section_title')}
       </p>
 
