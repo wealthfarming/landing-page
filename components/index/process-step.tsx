@@ -2,6 +2,8 @@
 import React from "react";
 import { useInterface } from "../context/interface-context";
 import { Icon } from "phosphor-react";
+import { useTranslation } from "react-i18next";
+
 
 interface ProcessStepProps {
   number: string;
@@ -25,7 +27,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 
   const iconFill = isCompleted ? "var(--primary)" : "var(--text-mute)";
   const IconComponent = typeof iconSrc !== "string" ? iconSrc : null;
-
+  const {t} = useTranslation()
   return (
     <>
       {(isDesktop || isTablet) && (
@@ -58,7 +60,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
               IconComponent && <IconComponent size={27} color={iconFill} weight="fill" />
             )}
             <div className="mt-4 w-full">
-              <p className="text-[15px] text-[var(--text-mute)] font-medium">Bước {number}</p>
+              <p className="text-[15px] text-[var(--text-mute)] font-medium">{t('step')} {number}</p>
               <h4
                 className={`text-xl font-medium ${stepIndex === activeStep ? "text-[var(--primary)] animate-fade-in" : ""
                   }`}

@@ -1,68 +1,61 @@
 import React from "react";
 import SectionContainer from "./section-container";
 import SectionTitle from "./section-title";
+import { useTranslation } from "react-i18next";
+
 
 const SolutionSection: React.FC = () => {
+  const {t} = useTranslation()
   return (
     <SectionContainer>
       <SectionTitle
-        title={
-          <>
-            Giải Pháp BEQ INDEXES <br />
-            REVIEW INDEX NFT
-          </>
-        }
-        subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
+        title={<span dangerouslySetInnerHTML={{ __html: t('solution_section_title') }} />}
+        subtitle={t('solution_section_subtitle')}
       />
       <div className="flex flex-wrap gap-10 justify-center items-start mt-20 w-full max-md:mt-10 max-md:max-w-full">
         <div className="flex-1 shrink p-2 text-base bg-white rounded-xl border border-gray-200 border-solid basis-0 min-w-60 text-zinc-800 max-md:max-w-full">
-          {/* Header: Tính năng và Lợi ích */}
           <div className="flex w-full text-lg font-semibold text-orange-300 border-b border-gray-200">
             <div className="flex-1 p-4">
-              Tính năng
+              {t('feature')}
             </div>
             <div className="flex-1 p-4">
-              Lợi ích
+              {t('benefit')}
             </div>
           </div>
 
-          {/* Row 1: Dự Đoán Chỉ Số AI */}
           <div className="flex w-full">
             <div className="flex-1 p-4 font-semibold">
-              Dự Đoán Chỉ Số AI
+              {t('solution_section_feature_1')}
             </div>
             <div className="flex-1 p-4 leading-6">
-              Độ chính xác 89.2% từ 74 sự kiện bổ sung cổ phiếu (2022-2025).
+              {t('solution_section_benefit_1')}
             </div>
           </div>
 
-          {/* Row 2: NFT Quỹ */}
           <div className="flex w-full rounded-lg bg-slate-50">
             <div className="flex-1 p-4 font-semibold">
-              NFT Quỹ
+              {t('solution_section_feature_2')}
             </div>
             <div className="flex-1 p-4 leading-6">
-              Giao dịch 24/7 trên Wealth Farming, volume $12.5M/ngày.
+              {t('solution_section_benefit_2')}
             </div>
           </div>
 
-          {/* Row 3: DeFi Integration */}
           <div className="flex w-full">
             <div className="flex-1 p-4 font-semibold">
-              DeFi Integration
+              {t('solution_section_feature_3')}
             </div>
             <div className="flex-1 p-4 leading-6">
-              Staking NFT nhận lãi 8%/năm + vay thế chấp 70% giá trị.
+              {t('solution_section_benefit_3')}
             </div>
           </div>
 
-          {/* Row 4: Cơ Chế Rủi Ro */}
           <div className="flex w-full rounded-lg bg-slate-50">
             <div className="flex-1 p-4 font-semibold">
-              Cơ Chế Rủi Ro
+              {t('solution_section_feature_4')}
             </div>
             <div className="flex-1 p-4 leading-6">
-              Hedging bằng hợp đồng tương lai, cắt lỗ tự động -13.33%.
+              {t('solution_section_benefit_4')}
             </div>
           </div>
         </div>
@@ -92,7 +85,7 @@ const SolutionSection: React.FC = () => {
               className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
             />
             <p className="self-stretch my-auto w-[768px] max-md:max-w-full">
-              Chiến Lược Đánh Giá Chỉ Số Toàn Cầu
+              {t('solution_section_strategy_label')}
             </p>
           </div>
         </div>

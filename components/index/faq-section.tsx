@@ -1,29 +1,30 @@
 "use client";
+
 import React, { useState } from "react";
 import SectionContainer from "./section-container";
 import FAQItem from "./faq-item";
+import { useTranslation } from "react-i18next";
+
 
 const FAQSection: React.FC = () => {
+  const {t} = useTranslation()
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   const faqItems = [
     {
       number: "01",
-      question: "Làm sao BEQ dự đoán chính xác thay đổi chỉ số?",
-      answer:
-        "BEQ sử dụng công nghệ AI tiên tiến phân tích dữ liệu lịch sử và các yếu tố thị trường để dự đoán thay đổi chỉ số với độ chính xác cao.",
+      question: t('faq_section_question_1'),
+      answer: t('faq_section_answer_1'),
     },
     {
       number: "02",
-      question: "Rủi ro nếu Ủy ban chỉ số từ chối khuyến nghị?",
-      answer:
-        "Chúng tôi có cơ chế hedging và cắt lỗ tự động ở mức -13.33% để bảo vệ vốn đầu tư của bạn trong trường hợp này.",
+      question: t('faq_section_question_2'),
+      answer: t('faq_section_answer_2'),
     },
     {
       number: "03",
-      question: "Cách mua NFT quỹ trên Wealth Farming?",
-      answer:
-        "Bạn có thể mua NFT quỹ bằng USDT/USDC trên nền tảng Wealth Farming với quy trình đơn giản và thanh khoản 24/7.",
+      question: t('faq_section_question_3'),
+      answer: t('faq_section_answer_3'),
     },
   ];
 
@@ -36,7 +37,7 @@ const FAQSection: React.FC = () => {
       <div className="flex justify-center">
         <div className="flex flex-col max-w-screen-md w-[768px] max-md:max-w-full">
           <h2 className="self-center text-4xl font-medium text-center text-zinc-800 max-md:max-w-full max-md:text-[28px]">
-            Những câu hỏi thường gặp
+            {t('faq_section_title')}
           </h2>
           <div className="mt-10 w-full max-md:max-w-full">
             {faqItems.map((item, index) => (

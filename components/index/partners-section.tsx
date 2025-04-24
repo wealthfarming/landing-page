@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import SectionContainer from "./section-container";
+import { useTranslation } from "react-i18next";
+
 
 const PartnersSection: React.FC = () => {
   const partnerLogos = [
@@ -12,7 +14,7 @@ const PartnersSection: React.FC = () => {
   ];
 
   const logos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
-
+  const {t} = useTranslation()
   const x = useMotionValue(0);
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +42,7 @@ const PartnersSection: React.FC = () => {
   return (
     <SectionContainer>
       <p className="max-w-screen-md text-base text-center text-gray-700 max-md:max-w-full">
-        Được tin cậy và sử dụng bởi các đối tác
+        {t('index_partner_section_title')}
       </p>
 
       <div className="overflow-hidden mt-6 w-full max-md:max-w-full mx-auto">
