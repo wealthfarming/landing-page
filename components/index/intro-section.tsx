@@ -51,9 +51,9 @@ const IntroSection: React.FC = () => {
           </Button>
           <Button
             onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-            variant="orange" classname="px-8 !font-[500] !text-[12px] ">
-            <CursorClick size={20} />
-            <p>{t("button_secret_documnet")}</p>
+            variant="orange" classname="px-8 !font-[500] !text-[12px] w-[164px]">
+            <CursorClick size={20} className="animate-diagonal-2"/>
+            <p>{t("header_investNowup")}</p>
           </Button>
         </div>
       </div>
