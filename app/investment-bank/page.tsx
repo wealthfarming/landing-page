@@ -26,7 +26,14 @@ export default function InvestmentBank() {
   return (
     <div>
       <HeaderDesktopFull changeAt={190} />
-      <Image src="/images/img/product_base.jpg" alt="Product Banner" width={260} height={260} className={`w-full h-[260px] -z-10 ${!isDesktop ? "pt-[80px]" : ""} brightness-40`} />
+
+      <div className="w-full h-[260px] relative">
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+        <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
+      </div>
+
       <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
         <div className="w-[1200px] max-w-[1200px]">
           <p className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
