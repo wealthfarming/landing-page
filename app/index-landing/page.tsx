@@ -51,12 +51,12 @@ const IndexLandingPage: React.FC = () => {
         <SolutionSection />
         <NFTFutureSection />
         <SecurityDetailsSection />
-
+        <PartnersSection />
         {/* Process Section */}
         <div className="relative w-full">
           <div
             className={`${
-              sticky ? "sticky top-0 min-h-screen overflow-hidden z-30" : ""
+              sticky ? "sticky top-[0px] min-h-screen overflow-hidden z-30" : ""
             }`}
           >
             <ProcessSection
@@ -67,7 +67,7 @@ const IndexLandingPage: React.FC = () => {
           </div>
         </div>
 
-        <PartnersSection />
+        
         <ContactSection />
         <FAQSection />
       </div>

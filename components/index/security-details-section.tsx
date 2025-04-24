@@ -5,7 +5,7 @@ import FeatureCard from "./feature-card";
 
 const SecurityDetailsSection: React.FC = () => {
   return (
-    <SectionContainer bgColor="bg-slate-50">
+    <SectionContainer>
       <SectionTitle
         title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
         subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"

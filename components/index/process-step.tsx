@@ -32,11 +32,11 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   return (
     <>
       {(isDesktop || isTablet) && (
-        <div className="flex z-10 flex-col flex-1 shrink self-stretch my-auto basis-0 min-w-[200px] max-w-[262px] relative">
+        <div className="flex z-10 flex-col flex-1 shrink self-stretch my-auto basis-0 w-[262px] relative">
           <div
             className={`flex gap-1 justify-center items-center self-center px-1 w-10 h-10 min-h-10 rounded-[100px] ${isCompleted
-                ? "bg-[var(--primary)]"
-                : "bg-white border border-[var(--other-border)] text-lg font-medium whitespace-nowrap"
+              ? "bg-[var(--primary)]"
+              : "bg-white border border-[var(--other-border)] text-lg font-medium whitespace-nowrap"
               }`}
           >
             {isCompleted ? (
@@ -50,19 +50,16 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
             )}
           </div>
           {(stepIndex > 0) && (
-            <>
             <div
-              className="absolute top-5 left-[-173px] w-[265px] h-0 border border-solid z-0 transition-all duration-500"
-              style={{
-                borderColor: lineColor,
-                transform: "translateX(20px)",
-              }}/>
-              </>
+            className="absolute top-5 left-[-49%] w-[92%] h-0 border border-solid z-0 transition-all duration-500"
+            style={{
+              borderColor: lineColor,
+            }} />
           )}
           <div
-            className={`px-4 pt-4 pb-10 mt-4 w-full rounded-lg border border-solid h-[212px] ${stepIndex === activeStep
-                ? "border-[var(--primary-border)] duration-500 shadow-[0_6px_16px_0_rgba(211,170,23,0.2)]"
-                : "border-[var(--other-border)]"
+            className={`px-4 pt-4 pb-10 mt-4 w-full bg-[var(--base-bg)] rounded-lg border border-solid h-[212px] ${stepIndex === activeStep
+              ? "border-[var(--primary-border)] duration-500 shadow-[0_6px_16px_0_rgba(211,170,23,0.2)]"
+              : "border-[var(--other-border)]"
               }`}
           >
             {typeof iconSrc === "string" ? (
@@ -78,8 +75,8 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
               </p>
               <h4
                 className={`text-xl font-medium font-geist-raleway w-[221.25px] ${stepIndex === activeStep
-                    ? "text-[var(--primary)]"
-                    : ""
+                  ? "text-[var(--primary)]"
+                  : ""
                   }`}
               >
                 {title}

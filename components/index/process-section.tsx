@@ -47,7 +47,7 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
   useEffect(() => {
     if (!isSectionInView) return;
 
-    const SCROLL_THRESHOLD = 700;
+    const SCROLL_THRESHOLD = 500;
     let scrollBuffer = 0;
 
     const handleScroll = () => {
@@ -88,8 +88,8 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
     ));
 
   return isMobile ? (
-    <div className="relative max-w-[1200px]">
-      <SectionContainer>
+    <div className="relative max-w-[1200px] min-h-screen">
+      <SectionContainer bgColor="bg-[var(--canvas-bg)]">
         <SectionTitle
           title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
           subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
@@ -125,19 +125,19 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
         ref={ref}
         className="sticky top-0 h-screen flex flex-col items-center justify-center z-30"
       >
-        <SectionContainer>
+        <SectionContainer bgColor="bg-[var(--canvas-bg)]">
           <SectionTitle
             title="Chiến Lược & Hiệu Suất"
             subtitle="Cơ Chế Tạo Ra Lợi Nhuận 82.55% Năm"
           />
-          <div className="flex relative gap-4 items-center mt-10 w-full max-md:flex-col">
-            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[134px] min-w-60 w-[900px]" />
+          <div className="flex relative gap-4 items-center mt-10 w-[1105px] max-md:flex-col">
+            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[134px] min-w-60 w-[430px]" />
             {renderSteps()}
           </div>
           <div className="flex flex-col gap-2 self-center mt-10 max-w-screen-md text-base font-medium text-[var(--text-bold)] w-[768px] max-md:max-w-full">
             <h3 className="text-lg text-center max-md:max-w-full font-bold">Performance Table</h3>
             <PerformanceTable />
-            <p className="self-center text-center text-[var(--text-mute)] max-md:max-w-full">
+            <p className="self-center text-center text-[var(--text-mute)] max-md:max-w-full text-[12px]">
               Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
             </p>
           </div>
