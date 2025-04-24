@@ -14,9 +14,14 @@ export default function ProductPage() {
     return (
         <div className={`${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : 'mb-[887px]'}`}>
             <HeaderDesktopFull changeAt={300} />
-            <div className="w-full h-[260px] hidden lg:block relative">
-                <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="absolute w-full -z-10 top-[-400px] object-cover" />
-            </div>
+            {isDesktop &&
+                <div className="w-full h-[260px] relative">
+                    <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+                    <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
+                </div>
+            }
             <div className="w-full flex-grow flex flex-col items-center justify-start bg-background mb-[375px] mt-18 pb-18 lg:mt-0 relative z-30">
 
                 <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 max-w-[1200px] mt-[40px] flex flex-col gap-6 text-center justify-center items-center py-2 ">

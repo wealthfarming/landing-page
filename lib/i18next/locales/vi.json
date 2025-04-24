@@ -1,7 +1,7 @@
 {
   "currentLanguage": "Ngôn ngữ hiện tại",
-  "currentLanguage_en": "Tiếng Anh",
-  "currentLanguage_vi": "Tiếng Việt",
+  "currentLanguage_en": "EN",
+  "currentLanguage_vi": "VI",
   
   "home_section_1_title_1":"Wealth Farming – Giải pháp",
   "home_section_1_title_2":" đầu tư thông minh,",
@@ -68,10 +68,10 @@
   "countdown_timer_button": "SỞ HỮU NGAY",
   "free_support": "TƯ VẤN MIỄN PHÍ",
 
-  "header_introduct": "Giới thiệu",
-  "header_product": "Sản phẩm",
-  "header_eco": "Hệ sinh thái",
-  "header_investBank": "Ngân hàng đầu tư",
+  "header_introduct": "GIỚI THIỆU",
+  "header_product": "SẢN PHẨM",
+  "header_eco": "HỆ SINH THÁI",
+  "header_investBank": "NGÂN HÀNG ĐẦU TƯ",
   "header_contactUs": "Liên hệ chúng tôi",
   "header_investNow": "Đầu tư ngay",
   "header_investNowup": "ĐẦU TƯ NGAY",
