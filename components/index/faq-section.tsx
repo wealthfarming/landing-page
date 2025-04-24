@@ -9,7 +9,8 @@ import { useTranslation } from "react-i18next";
 const FAQSection: React.FC = () => {
   const {t} = useTranslation()
   const [openItem, setOpenItem] = useState<number | null>(null);
-
+  const [openItems, setOpenItems] = useState<number[]>([]);
+  
   const faqItems = [
     {
       number: "01",
@@ -29,24 +30,28 @@ const FAQSection: React.FC = () => {
   ];
 
   const toggleItem = (index: number) => {
-    setOpenItem(openItem === index ? null : index);
+    setOpenItems((prevOpenItems) =>
+      prevOpenItems.includes(index)
+        ? prevOpenItems.filter((i) => i !== index) 
+        : [...prevOpenItems, index]              
+    );
   };
 
   return (
     <SectionContainer>
       <div className="flex justify-center">
-        <div className="flex flex-col max-w-screen-md w-[768px] max-md:max-w-full">
-          <h2 className="self-center text-4xl font-medium text-center text-zinc-800 max-md:max-w-full max-md:text-[28px]">
-            {t('faq_section_title')}
+        <div className="flex flex-col max-w-screen-md w-[768px] max-md:max-w-full gap-[40px]">
+          <h2 className="self-center h1-index text-center max-md:max-w-full">
+          {t('faq_section_title')}
           </h2>
-          <div className="mt-10 w-full max-md:max-w-full">
+          <div className="w-full max-md:max-w-full bg-[var(--canvas-bg)] p-5 border border-[var(--primary-other)] flex flex-col gap-[16px]">
             {faqItems.map((item, index) => (
               <FAQItem
                 key={index}
                 number={item.number}
                 question={item.question}
                 answer={item.answer}
-                isOpen={openItem === index}
+                isOpen={openItems.includes(index)}
                 onClick={() => toggleItem(index)}
               />
             ))}

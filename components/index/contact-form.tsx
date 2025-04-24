@@ -25,11 +25,11 @@ const ContactForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-4 text-sm bg-white rounded-lg min-w-60 shadow-[0px_4px_32px_rgba(0,0,0,0.06)] w-[297px] max-md:w-full"
+      className="flex flex-col gap-[20px] h-[408px] border border-[var(--other-border)] p-9 text-sm bg-[var(--canvas-bg)]  w-[400px] max-md:w-full"
     >
-      <div className="w-full">
-        <label htmlFor="name" className="!text-[#000000] re-small-mobile-index">
-          {t('fullname')}
+      <div className="w-full flex flex-col gap-[10px]">
+        <label htmlFor="name" className="">
+          Họ tên
         </label>
         <input
           id="name"
@@ -38,12 +38,12 @@ const ContactForm: React.FC = () => {
           value={formData.name}
           onChange={handleChange}
           placeholder={t('enter_fullname')}
-          className="gap-1 self-stretch p-4 mt-2 w-full bg-[var(--input-bg-index)] border border-[var(--other-border)] border-solid min-h-12 re-small-mobile-index !text-[var(--text-light-index)]"
+          className="gap-1 self-stretch p-4 w-full bg-[var(--base-bg)] border border-[var(--other-border)] border-solid h-[48px]"
         />
       </div>
-      <div className="mt-6 w-full">
-        <label htmlFor="phone" className="!text-[#000000] re-small-mobile-index">
-          {t('number')}
+      <div className="w-full flex flex-col gap-[10px]">
+        <label htmlFor="phone" className="">
+          Email
         </label>
         <input
           id="phone"
@@ -52,10 +52,10 @@ const ContactForm: React.FC = () => {
           value={formData.phone}
           onChange={handleChange}
           placeholder={t('enter_number')}
-          className="gap-1 self-stretch p-4 mt-2 w-full bg-[var(--input-bg-index)] border border-[var(--other-border)] border-solid min-h-12 re-small-mobile-index !text-[var(--text-light-index)]"
+          className="gap-1 self-stretch p-4 w-full bg-[var(--base-bg)] border border-[var(--other-border)] border-solid h-[48px]"
         />
       </div>
-      <div className="mt-6 w-full">
+      <div className="w-full flex flex-col gap-[10px]">
         <label htmlFor="email" className="!text-[#000000] re-small-mobile-index">
           {t('email')}
         </label>
@@ -66,12 +66,12 @@ const ContactForm: React.FC = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder={t('enter_email')}
-          className="gap-1 self-stretch p-4 mt-2 w-full bg-[var(--input-bg-index)] border border-[var(--other-border)] border-solid min-h-12 re-small-mobile-index !text-[var(--text-light-index)]"
+          className="gap-1 self-stretch p-4 w-full bg-[var(--base-bg)] border border-[var(--other-border)] border-solid h-[48px]"
         />
       </div>
       <button
         type="submit"
-        className="self-stretch px-4 mt-6 w-full font-medium tracking-wider bg-[var(--primary)] rounded min-h-10 shadow-[0px_2px_2px_rgba(0,0,0,0.12)] btn-other-mobile-index"
+        className="self-stretch px-4 w-full font-medium tracking-wider bg-[linear-gradient(90deg,_var(--primary)_0%,_var(--primary-gradient)_100%)] border border-[var(--primary-border)] min-h-[48px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.25)] button"
       >
         {t('submit_information')}
       </button>
