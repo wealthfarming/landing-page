@@ -67,9 +67,9 @@ const IndexLandingPage: React.FC = () => {
           <NFTFutureSection />
           <SecurityDetailsSection />
           {/* Process Section */}
-          <div className="relative w-full">
+          <div className="relative w-full min-h-screen">
             <div
-              className={`${sticky ? "sticky top-[0px] min-h-screen overflow-hidden z-30" : ""
+              className={`${sticky ? "sticky top-[80px] min-h-screen overflow-hidden z-30" : ""
                 }`}
             >
               <ProcessSection

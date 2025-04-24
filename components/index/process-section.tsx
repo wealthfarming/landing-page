@@ -123,16 +123,18 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
     >
       <div
         ref={ref}
-        className="sticky top-0 h-screen flex flex-col items-center justify-center z-30"
+        className="sticky top-[80px] h-screen flex flex-col items-center justify-center z-30"
       >
         <SectionContainer bgColor="bg-[var(--canvas-bg)]">
           <SectionTitle
             title="Chiến Lược & Hiệu Suất"
             subtitle="Cơ Chế Tạo Ra Lợi Nhuận 82.55% Năm"
           />
-          <div className="flex relative gap-4 items-center mt-10 w-[1105px] max-md:flex-col">
-            <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[134px] min-w-60 w-[430px]" />
-            {renderSteps()}
+          <div className="flex w-full items-center justify-center">
+            <div className="flex relative gap-4 items-center justify-center mt-10 w-[1105px] max-md:flex-col">
+              <div className="absolute top-5 z-0 shrink-0 self-start h-0 border border-[var(--other-border)] border-solid inset-x-[134px] min-w-60 w-[430px]" />
+              {renderSteps()}
+            </div>
           </div>
           <div className="flex flex-col gap-2 self-center mt-10 max-w-screen-md text-base font-medium text-[var(--text-bold)] w-[768px] max-md:max-w-full">
             <h3 className="text-lg text-center max-md:max-w-full font-bold">Performance Table</h3>
