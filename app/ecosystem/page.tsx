@@ -117,40 +117,39 @@ export default function EcoPage() {
         />
       )}
       <div
-        className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${
-          isDesktop ? 'mt-56 mb-[505px]' : isTablet ? 'mt-12 mb-[505px]' : 'pt-20'
-        } relative z-30`}
+        className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? 'mt-56 mb-[505px]' : isTablet ? 'mt-12 mb-[505px]' : 'pt-20'
+          } relative z-30`}
       >
         <HeaderDesktopFull changeAt={300} />
         <div
-          className={`max-w-[1200px] flex flex-col ${
-            isDesktop ? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'
-          }`}
+          className={`max-w-[1200px] flex flex-col ${isDesktop ? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'
+            }`}
         >
           <div className={`flex flex-col gap-6`}>
             <h1
-              className={` ${
-                isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'
-              } font-semibold w-full text-center`}
+              className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'
+                } font-semibold w-full text-center`}
             >
-              <AnimatedText text={[t('eco_title')]} duration={3} />
+              <AnimatedText
+                text={[t('eco_title')]}
+                delayBetween={0.05}
+                duration={0.3}
+              />
             </h1>
             <p
-              className={` ${
-                isDesktop ? 'text-xl px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'
-              } font-medium w-full text-center text-[var(--text-medium)]`}
+              className={` ${isDesktop ? 'text-xl px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'
+                } font-medium w-full text-center text-[var(--text-medium)]`}
             >
               {t('eco_description')}
             </p>
           </div>
           <div
-            className={`${
-              isDesktop
+            className={`${isDesktop
                 ? 'grid-cols-2 gap-[40px_60px] mb-20'
                 : isTablet
-                ? 'grid-cols-2 gap-[40px_60px] mb-20'
-                : 'grid-cols-1 gap-10'
-            } grid flex-wrap justify-center w-full`}
+                  ? 'grid-cols-2 gap-[40px_60px] mb-20'
+                  : 'grid-cols-1 gap-10'
+              } grid flex-wrap justify-center w-full`}
           >
             {selectedEcoData.map((section, index) => (
               <EcoCard key={index} section={section} />

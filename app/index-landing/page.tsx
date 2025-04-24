@@ -11,6 +11,7 @@ import ProcessSection from "@/components/index/process-section";
 import PartnersSection from "@/components/index/partners-section";
 import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
+import FooterFull from "@/components/footer/footer-full";
 
 const steps = [
   { number: "01", title: "Crawl dữ liệu số" },
@@ -38,10 +39,10 @@ const IndexLandingPage: React.FC = () => {
 
     observer.observe(ref);
     return () => observer.disconnect();
-  }, []); // Không phụ thuộc vào activeStep
+  }, []); 
 
   return (
-    <div className="max-md:pb-24">
+    <div className="">
       <Header changeAt={260} />
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible">
         <IntroSection />
@@ -70,6 +71,8 @@ const IndexLandingPage: React.FC = () => {
         <ContactSection />
         <FAQSection />
       </div>
+      <FooterFull active={'introduction'} fixed={false} />
+
     </div>
   );
 };

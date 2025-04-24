@@ -1,9 +1,9 @@
 'use client';
-import { t } from "i18next";
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { AnimatedText } from "@/components/animation/introduction/Animations"
+import { useTranslation } from 'react-i18next';
 type Tab = {
     id: string;
     label: string;
@@ -15,6 +15,7 @@ type Tab = {
 export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     const [selected, setSelected] = useState("ai_system");
     const { isDesktop, isTablet, isMobile } = useInterface();
+    const { t } = useTranslation();
 
     useEffect(() => {
         if (isTablet) {
@@ -73,6 +74,7 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
 }
 
 export default function HomeSection5() {
+    const { t } = useTranslation();
     const tabs = [
         {
             id: 'ai_system',
@@ -111,6 +113,7 @@ export default function HomeSection5() {
         },
     ];
     const { isDesktop, isMobile } = useInterface();
+
 
     return (
         <div className="flex justify-center gap-[10px] w-full p-[40px] pt-[80px]">

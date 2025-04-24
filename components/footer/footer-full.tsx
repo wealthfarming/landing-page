@@ -5,14 +5,15 @@ import { DiscordLogo, FacebookLogo, TelegramLogo, XLogo } from "@phosphor-icons/
 import { useTranslation } from "react-i18next";
 type FooterProps = {
   active?: "introduction" | "product" | "ecosystem" | "investment-bank";
+  fixed?: boolean;
 };
 
-const FooterFull: React.FC<FooterProps> = ({ active }) => {
+const FooterFull: React.FC<FooterProps> = ({ active, fixed = true }) => {
   const activeClassName = "text-[var(--primary)] font-semibold";
   const { isDesktop, isTablet, isMobile } = useInterface();
   const {t} = useTranslation();
   return (
-    <footer className={`text-white bg-[#003048] bottom-0 w-full ${isMobile ? '' : 'fixed'} `} style={{ zIndex: -1000 }}>
+    <footer className={`text-white bg-[#003048] bottom-0 w-full ${isMobile || !fixed? '' : 'fixed'} `} style={{ zIndex: -1000 }}>
       <div className={`flex flex-col justify-center items-center ${isDesktop ? 'px-10 py-20 ' : isTablet ? 'px-10 py-20 ' : 'px-5 py-10'} w-full border-b border-cyan-900`}>
         <div className={`flex flex-wrap justify-center items-start w-full ${isDesktop ? 'max-w-[1200px] gap-10' : isTablet ? 'gap-10' : 'flex-col gap-10'}`}>
           <div className={`flex-1 shrink leading-6 basis-0 ${isDesktop ? 'gap-10 flex flex-col' : isTablet ? 'gap-10 flex flex-col maw-w-[299px]' : 'flex flex-col gap-5'}`}>
