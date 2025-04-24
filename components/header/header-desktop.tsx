@@ -94,11 +94,11 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                     {/* Language Select */}
                     {!isScrolled && isDesktop && (
                         <Select  onValueChange={handleSelectChange} defaultValue={currentLanguage}>
-                            <SelectTrigger className="!h-[43px] flex flex-row items-center justify-between rounded-none bg-background !rounded-[4px] w-[100px]">
+                            <SelectTrigger className="!h-[43px] flex flex-row items-center justify-between rounded-none bg-background !rounded-[4px] w-[150px]">
                                 <GlobeSimple size={18} className="min-w-[18px] min-h-[18px]" />
                                 <SelectValue placeholder={changeLanguage} />
                             </SelectTrigger>
-                            <SelectContent className="rounded-none z-[1001] !w-[100px] !max-w-[100px] !min-w-[100px]">
+                            <SelectContent className="rounded-none z-[1001] !w-[150px] !max-w-[150px] !min-w-[150px]">
                                 <SelectItem  value="en">{t('currentLanguage_en')}</SelectItem>
                                 <SelectItem  value="vi">{t('currentLanguage_vi')}</SelectItem>
                             </SelectContent>
