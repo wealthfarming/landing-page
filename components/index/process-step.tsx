@@ -3,6 +3,7 @@
 import React from "react";
 import { useInterface } from "../context/interface-context";
 import { Check, Icon } from "phosphor-react";
+import { useTranslation } from "react-i18next";
 
 interface ProcessStepProps {
   number: string;
@@ -23,7 +24,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 }) => {
   const { isDesktop, isTablet, isMobile } = useInterface();
   const isCompleted = isDesktop || isTablet ? stepIndex <= activeStep : active;
-
+  const {t} = useTranslation()
   const iconFill = isCompleted ? "var(--primary)" : "var(--text-mute)";
   const IconComponent = typeof iconSrc !== "string" ? iconSrc : null;
 
@@ -71,7 +72,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
             )}
             <div className="mt-4 w-full">
               <p className="text-[15px] text-[var(--text-mute)] font-medium">
-                Bước {number}
+              {t('step')} {number}
               </p>
               <h4
                 className={`text-xl font-medium font-geist-raleway w-[221.25px] ${stepIndex === activeStep
@@ -102,7 +103,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
             </div>
             <div className="mt-4 w-full">
               <p className="text-[15px] text-[var(--text-mute)] font-medium">
-                Bước {number}
+              {t('step')} {number}
               </p>
               <h4 className="text-lg font-medium">{title}</h4>
             </div>

@@ -9,7 +9,7 @@ const PerformanceTable: React.FC = () => {
   ];
   const {t} = useTranslation()
   return (
-    <div className="p-2 mt-6 w-full bg-white rounded-xl border border-gray-200 border-solid max-md:max-w-full">
+    <div className="p-2 mt-2 w-full bg-white rounded-xl border border-gray-200 border-solid max-md:max-w-full">
       <div className="flex items-start w-full text-lg font-semibold text-orange-300 border-b border-gray-200 max-md:max-w-full">
         <div className="flex-1 p-4 whitespace-nowrap">
         {t('year')}

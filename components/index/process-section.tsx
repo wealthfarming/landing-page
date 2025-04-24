@@ -5,6 +5,7 @@ import ProcessStep from "./process-step";
 import PerformanceTable from "./performance-table";
 import { ChartLineUp, HardDrive, Robot, ShoppingCartSimple } from "phosphor-react";
 import { useInterface } from "../context/interface-context";
+import { useTranslation } from "react-i18next";
 
 interface ProcessSectionProps {
   setActiveStep: React.Dispatch<React.SetStateAction<number>>;
@@ -13,15 +14,16 @@ interface ProcessSectionProps {
 }
 
 const steps = [
-  { number: "01", title: "Crawl dữ liệu số", icon: HardDrive },
-  { number: "02", title: "AI dự đoán cổ phiếu thêm/loại", icon: Robot },
-  { number: "03", title: "Mua ngay sau cutoff date", icon: ShoppingCartSimple },
-  { number: "04", title: "Chốt lời 20% hoặc cắt lỗ -13.33%", icon: ChartLineUp },
+  { number: "01", title: "process_section_step_1", icon: HardDrive },
+  { number: "02", title: "process_section_step_2", icon: Robot },
+  { number: "03", title: "process_section_step_3", icon: ShoppingCartSimple },
+  { number: "04", title: "process_section_step_4", icon: ChartLineUp },
 ];
 
 const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
   setActiveStep, activeStep, sticky
 }, ref: ForwardedRef<HTMLDivElement>) => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const lastScrollY = useRef<number>(0);
   const [isSectionInView, setIsSectionInView] = useState(false);
@@ -79,7 +81,7 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
       <div key={index} className="flex-1">
         <ProcessStep
           number={step.number}
-          title={step.title}
+          title={t(step.title)}
           iconSrc={step.icon}
           activeStep={activeStep}
           stepIndex={index}
@@ -91,15 +93,15 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
     <div className="relative max-w-[1200px] min-h-screen">
       <SectionContainer bgColor="bg-[var(--canvas-bg)]">
         <SectionTitle
-          title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
-          subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
+          title={t('process_section_title')}
+          subtitle={t('process_section_subtitle')}
         />
         <div className="grid grid-cols-2 gap-4 mt-10">
           {steps.map((step, index) => (
             <ProcessStep
               key={index}
               number={step.number}
-              title={step.title}
+              title={t(step.title)}
               iconSrc={step.icon}
               activeStep={index}
               stepIndex={index}
@@ -107,10 +109,10 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
           ))}
         </div>
         <div className="mt-10 max-w-screen-md mx-auto text-base font-medium text-[var(--text-bold)]">
-          <h3 className="text-lg max-md:text-[17px] font-bold text-center">Performance Table</h3>
+          <h3 className="text-lg max-md:text-[17px] font-bold text-center">{t('process_section_performance_table_title')}</h3>
           <PerformanceTable />
           <p className="mt-6 text-center text-[var(--text-mute)]">
-            Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
+            {t('process_section_disclaimer')}
           </p>
         </div>
       </SectionContainer>
@@ -127,8 +129,8 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
       >
         <SectionContainer bgColor="bg-[var(--canvas-bg)]">
           <SectionTitle
-            title="Chiến Lược & Hiệu Suất"
-            subtitle="Cơ Chế Tạo Ra Lợi Nhuận 82.55% Năm"
+            title={t('process_section_title')}
+            subtitle={t('process_section_subtitle')}
           />
           <div className="flex w-full items-center justify-center">
             <div className="flex relative gap-4 items-center justify-center mt-10 w-[1105px] max-md:flex-col">
@@ -137,10 +139,10 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
             </div>
           </div>
           <div className="flex flex-col gap-2 self-center mt-10 max-w-screen-md text-base font-medium text-[var(--text-bold)] w-[768px] max-md:max-w-full">
-            <h3 className="text-lg text-center max-md:max-w-full font-bold">Performance Table</h3>
+            <h3 className="text-lg text-center max-md:max-w-full font-bold">{t('process_section_performance_table_title')}</h3>
             <PerformanceTable />
             <p className="self-center text-center text-[var(--text-mute)] max-md:max-w-full text-[12px]">
-              Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
+              {t('process_section_disclaimer')}
             </p>
           </div>
         </SectionContainer>
