@@ -80,10 +80,10 @@ const IndexLandingPage: React.FC = () => {
           <SolutionSection />
           <NFTFutureSection />
           <SecurityDetailsSection />
+          <PartnersSection />
           <div ref={processRef}>
             <ProcessSection />
           </div>
-          <PartnersSection />
           <ContactSection />
           <FAQSection />
 
