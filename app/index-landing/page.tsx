@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import Header from "@/components/header/header-desktop";
+import HeaderDesktopFull from "@/components/header/header-desktop";
 import IntroSection from "@/components/index/intro-section";
 import ProblemSection from "@/components/index/problem-section";
 import SecuritySection from "@/components/index/security-section";
@@ -12,10 +12,12 @@ import PartnersSection from "@/components/index/partners-section";
 import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import FooterFull from "@/components/footer/footer-full";
-
+import { useInterface } from '@/components/context/interface-context';
+import Image from "next/image";
 const IndexLandingPage: React.FC = () => {
   const processRef = useRef<HTMLDivElement>(null);
 
+  const { isDesktop, isMobile, isTablet } = useInterface();
   useEffect(() => {
     let hasScrolled = false;
 
@@ -59,15 +61,15 @@ const IndexLandingPage: React.FC = () => {
 
   return (
     <div className="">
-      <Header changeAt={260} />
-      <div className="w-full h-[260px] hidden lg:block relative">
-        <img
-          src="https://framerusercontent.com/images/421ll4oDtrclmr3OtfbBhOV9E.png?lossless=1"
-          alt="Index Banner"
-          className="absolute w-full -z-10 top-[-400px] object-cover brightness-50"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </div>
+      <HeaderDesktopFull changeAt={190} />
+      {isDesktop &&
+        <div className="w-full h-[260px] relative">
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+          <Image src="/images/img/index_banner.webp" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
+        </div>
+      }
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible">
         <IntroSection />
         <div className="w-full sticky h-[100vh] top-[20px] pt-[40px] pb-[80px]  white z-[2]">

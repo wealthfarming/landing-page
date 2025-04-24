@@ -1,7 +1,7 @@
 {
   "currentLanguage": "Current Language",
-  "currentLanguage_en": "English",
-  "currentLanguage_vi": "Vietnamese",
+  "currentLanguage_en": "EN",
+  "currentLanguage_vi": "VI",
 
   "home_section_1_title_1":"Wealth Farming – A",
   "home_section_1_title_2":" smart investment",
@@ -56,10 +56,10 @@
   "countdown_timer_button": "OWN IT NOW",
   "free_support": "FREE CONSULTATION",
 
-  "header_introduct": "Introduction",
-  "header_product": "Product",
-  "header_eco": "Ecosystem",
-  "header_investBank": "Investment Bank",
+  "header_introduct": "INTRODUCTION",
+  "header_product": "PRODUCT",
+  "header_eco": "ECOSYSTEM",
+  "header_investBank": "INVESTMENT BANK",
   "header_contactUs": "Contact Us",
   "header_investNow": "Invest Now",
   "header_investNowup": "INVEST NOW",
