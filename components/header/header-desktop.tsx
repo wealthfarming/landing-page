@@ -78,7 +78,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                         </a>
                         <a href="https://wealthfarming.app/" target="_blank" >
                             <Button variant="outline" className="!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none w-[155px] h-[40px] transition-transform duration-300 ease-in-out ">
-                                <CursorClick size={24} className="min-w-[20px] min-h-[20px]" />
+                                <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                                 <p>
                                     {t('header_investNow')}
                                 </p>
