@@ -13,8 +13,11 @@ import ProcessStep from "./process-step";
 import PerformanceTable from "./performance-table";
 import { useInterface } from "../../components/context/interface-context";
 import { ChartLineUp, HardDrive, Robot, ShoppingCartSimple } from "phosphor-react";
+import { useTranslation } from "react-i18next";
+
 
 const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTMLDivElement>) => {
+  const {t} = useTranslation()
   const { isDesktop, isTablet, isMobile } = useInterface();
   const processStepRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
@@ -86,8 +89,8 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
       {(isDesktop || isTablet) && (
         <SectionContainer>
           <SectionTitle
-            title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
-            subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
+            title={t('process_section_title')}
+            subtitle={t('process_section_subtitle')}
           />
           <div
             ref={processStepRef}
@@ -97,22 +100,22 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
             {[
               {
                 number: "01",
-                title: "Crawl dữ liệu số",
+                title: t('process_section_step_1'),
                 icon: HardDrive
               },
               {
                 number: "02",
-                title: "AI dự đoán cổ phiếu thêm/loại",
+                title: t('process_section_step_2'),
                 icon: Robot
               },
               {
                 number: "03",
-                title: "Mua ngay sau cutoff date",
+                title: t('process_section_step_3'),
                 icon: ShoppingCartSimple
               },
               {
                 number: "04",
-                title: "Chốt lời 20% hoặc cắt lỗ -13.33%",
+                title: t('process_section_step_4'),
                 icon: ChartLineUp
               }
             ].map((step, index) => (
@@ -128,10 +131,10 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
           </div>
 
           <div className="flex flex-col self-center mt-10 max-w-screen-md text-base font-medium text-zinc-800 w-[768px] max-md:max-w-full">
-            <h3 className="text-2xl text-center max-md:max-w-full">Performance Table</h3>
+            <h3 className="text-2xl text-center max-md:max-w-full">{t('process_section_performance_table_title')}</h3>
             <PerformanceTable />
             <p className="self-center mt-6 text-center text-gray-700 max-md:max-w-full">
-              Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
+              {t('process_section_disclaimer')}
             </p>
           </div>
         </SectionContainer>
@@ -140,29 +143,29 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
       {isMobile && (
         <SectionContainer>
           <SectionTitle
-            title="Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch"
-            subtitle="Cơ Hội Đầu Tư Chỉ Số Thế Hệ Mới - Linh Hoạt, Minh Bạch, Hiệu Quả"
+            title={t('process_section_title')}
+            subtitle={t('process_section_subtitle')}
           />
           <div className="grid grid-cols-2 relative gap-3 items-center mt-10 w-full max-md:max-w-full">
-          {[
+            {[
               {
                 number: "01",
-                title: "Crawl dữ liệu số",
+                title: t('process_section_step_1'),
                 icon: HardDrive
               },
               {
                 number: "02",
-                title: "AI dự đoán cổ phiếu thêm/loại",
+                title: t('process_section_step_2'),
                 icon: Robot
               },
               {
                 number: "03",
-                title: "Mua ngay sau cutoff date",
+                title: t('process_section_step_3'),
                 icon: ShoppingCartSimple
               },
               {
                 number: "04",
-                title: "Chốt lời 20% hoặc cắt lỗ -13.33%",
+                title: t('process_section_step_4'),
                 icon: ChartLineUp
               }
             ].map((step, index) => (
@@ -178,10 +181,10 @@ const ProcessSection = forwardRef<HTMLDivElement>((_props, ref: ForwardedRef<HTM
           </div>
 
           <div className="flex flex-col self-center mt-10 max-w-screen-md text-base font-medium text-zinc-800 max-md:max-w-full">
-            <h3 className="text-2xl text-center max-md:max-w-full">Performance Table</h3>
+            <h3 className="text-2xl text-center max-md:max-w-full">{t('process_section_performance_table_title')}</h3>
             <PerformanceTable />
             <p className="self-center mt-6 text-center text-gray-700 max-md:max-w-full">
-              Hiệu suất quá khứ không đảm bảo kết quả tương lai. Đầu tư có rủi ro.
+              {t('process_section_disclaimer')}
             </p>
           </div>
         </SectionContainer>
