@@ -1,11 +1,13 @@
 import React from "react";
 import SectionContainer from "./section-container";
+import { useTranslation } from "react-i18next";
 
 const SecuritySection: React.FC = () => {
+  const {t} = useTranslation()
   return (
     <SectionContainer bgColor="bg-sky-950 ">
       <h2 className="text-2xl text-center text-white max-md:max-w-full">
-        Bảo Mật Tuyệt Đối - Minh Bạch Từng Giao Dịch
+        {t('index_security_section_title')}
       </h2>
       <div className="mt-10 w-full text-sm text-white max-md:max-w-full">
         <img

@@ -38,7 +38,7 @@ const IntroSection: React.FC = () => {
           )}
         </h1>
         <p className="mt-5 max-w-screen-md text-base leading-6 text-gray-700 w-[768px] max-md:max-w-full">
-          {t("home_section_1_description")}
+          {t("index_intro_section_subtitle")}
         </p>
       </div>
       <div className="w-full flex flex-col justify-center items-center">
@@ -90,14 +90,14 @@ const IntroSection: React.FC = () => {
             <div className="absolute top-[25px] md:top-[56px] md:left-[-59px] w-[101px] md:w-[202px] h-[80px] m-[1px] bg-white rounded-[6px] border-[var(--primary-border)] border">
               <div className="flex flex-col justify-center items-center h-full w-full">
                 <div className="flex flex-row items-center justify-center h-1/3 md:h-1/2 w-full border-b-[1px] border-b-gray-300 text-[13px] md:text-[16px] font-[var(--font-geist-display)]">
-                  Lợi Nhuận
+                  {t('profit')}
                 </div>
                 <div className="flex flex-col md:flex-row items-center text-center h-2/3 md:h-1/2 w-full">
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#23CB70] text-[18px] md:text-[24px] text-white font-[var(--font-geist-mono)] font-[500]">
                     <p>82.55%</p>
                   </div>
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#23CB70] text-[16px] md:text-[18px] font-[var(--font-geist-display)]">
-                    <p>Năm</p>
+                    <p>{t('year')}</p>
                   </div>
                 </div>
               </div>
@@ -106,14 +106,14 @@ const IntroSection: React.FC = () => {
             <div className="absolute bottom-[27.5px] md:bottom-[57.22px] right-[-3px] md:right-[-83px] w-[101px] md:w-[202px] h-[80px] m-[1px] bg-white rounded-[6px] border-[var(--primary-border)] border ">
               <div className="flex flex-col justify-center items-center h-full w-full">
                 <div className="flex flex-row items-center justify-center h-1/3 md:h-1/2 w-full border-b-[1px] border-b-gray-300 text-[13px] md:text-[16px] font-[var(--font-geist-display)]">
-                  Thanh khoản
+                  {t('liquidity')}
                 </div>
                 <div className="flex flex-col md:flex-row-reverse items-center text-center h-2/3 md:h-1/2 w-full">
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#E8B561] text-[18px] md:text-[24px] text-white font-[var(--font-geist-mono)] font-[500]">
                     <p>24/7</p>
                   </div>
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#E8B561] text-[16px] md:text-[18px] font-[var(--font-geist-display)]">
-                    <p>Liên tục</p>
+                    <p>{t('continuity')}</p>
                   </div>
                 </div>
               </div>

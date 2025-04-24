@@ -85,20 +85,16 @@
 :root {
   /* Text Colors */
   --text-bold: #1A1A1A;
-  --text-bold-index: #1F252E;
   /* was --chữ-đậm */
   --text-medium: #4D4D4D;
-  --text-medium-index: #434B57;
   /* was --chữ-vừa */
   --text-light: #808080;
-  --text-light-index: #6F7D91;
   /* was --chữ-nhạt */
   --text-mute: #B3B3B3;
   /* was --chữ-mờ */
 
   /* Background Colors */
   --canvas-bg: #F6F8FD;
-  --canvas-bg-index: #F7F8FD;
   /* was --nền-canvas */
   --base-bg: #FFFFFF;
   /* was --nền-1 */
@@ -106,6 +102,8 @@
   /* Primary Colors */
   --primary: #E8B561;
   /* was --1st-chính */
+  --primary-bold: #F1C204;
+  /* was --1st-chính-đậm*/
   --primary-gradient: #ECC079;
   /* was --1st-gradient */
   --primary-border: #FDEA9B;
@@ -171,6 +169,7 @@
   --font-geist-nav: var(--font-ibm-plex-sans), sans-serif;
   --font-geist-button: "IBM Plex Mono", monospace;
   --font-geist-raleway: "Raleway", sans-serif;
+  --font-geist-raleway-place-holder: "Raleway", "Raleway Placeholder", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -293,50 +292,14 @@
   letter-spacing: 0em; 
   line-height: 1.2em; 
 }
-.big-title-desk-index {
-  color: var(--text-bold-index); 
-  font-family: var(--font-geist-display);
-  font-style: bold;
-  font-weight: 500; 
-  font-size: 40px; 
-  letter-spacing: 0; 
-  line-height: 100%; 
-}
-.se-normal-desk-index {
-  color: var(--text-bold-index); 
-  font-family: var(--font-geist-display);
-  font-style: bold;
+.h1-index {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-raleway-place-holder);
+  font-style: normal;
   font-weight: 600; 
-  font-size: 16px; 
-  letter-spacing: 0; 
-  line-height: 150%; 
-}
-.re-normal-desk-index {
-  color: var(--text-bold-index); 
-  font-family: var(--font-geist-display);
-  font-style: bold;
-  font-weight: 400; 
-  font-size: 16px; 
-  letter-spacing: 0; 
-  line-height: 150%; 
-}
-.re-small-mobile-index {
-  color: var(--text-bold-index); 
-  font-family: var(--font-geist-display);
-  font-style: bold;
-  font-weight: 400; 
-  font-size: 13px; 
-  letter-spacing: 0; 
-  line-height: 100%; 
-}
-.btn-other-mobile-index {
-  color: var(--text-bold-index); 
-  font-family: var(--font-geist-mono);
-  font-style: bold;
-  font-weight: 500; 
-  font-size: 13px; 
-  letter-spacing: 0.05em; 
-  line-height: 100%; 
+  font-size: 40px; 
+  letter-spacing: 0em; 
+  line-height: 1.3em; 
 }
 
 .h1 {
@@ -435,6 +398,14 @@
   color: var(--text-bold); 
   font-family: var(--font-geist-display);
   font-weight: 400; 
+  font-size: 18px; 
+  letter-spacing: 0em; 
+  line-height: 1.7em; 
+}
+.body-large-index {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-weight: 500 !important; 
   font-size: 18px; 
   letter-spacing: 0em; 
   line-height: 1.7em; 
