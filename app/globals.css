@@ -3,6 +3,45 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@font-face {
+  font-family: "Inter Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Inter Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,6 +83,93 @@
 }
 
 :root {
+  /* Text Colors */
+  --text-bold: #1A1A1A;
+  /* was --chữ-đậm */
+  --text-medium: #4D4D4D;
+  /* was --chữ-vừa */
+  --text-light: #808080;
+  /* was --chữ-nhạt */
+  --text-mute: #B3B3B3;
+  /* was --chữ-mờ */
+
+  /* Background Colors */
+  --canvas-bg: #F6F8FD;
+  /* was --nền-canvas */
+  --base-bg: #FFFFFF;
+  /* was --nền-1 */
+
+  /* Primary Colors */
+  --primary: #E8B561;
+  /* was --1st-chính */
+  --primary-bold: #F1C204;
+  /* was --1st-chính-đậm*/
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
+  --primary-border: #FDEA9B;
+  /* was --1st-viền */
+  --primary-gradient: #ECC079;
+  /* was --1st-gradient */
+  --primary-bg: #003048;
+  /* was --1st-nền */
+
+  /* Info Colors */
+  --primary-info: #0553FA;
+  /* was --info-chính */
+  --info-border: #9BBAFD;
+  /* was --info-viền */
+  --info-bg: #E6EEFE;
+  /* was --info-nền */
+
+  /* Error Colors */
+  --primary-error: #FA0505;
+  /* was --lỗi-chính */
+  --error-border: #FC9A9A;
+  /* was --lỗi-viền */
+  --error-bg: #FFE8E8;
+  /* was --lỗi-nền */
+
+  /* Success Colors */
+  --primary-success: #20CB70;
+  /* was --ổn-chính */
+  --success-border: #A7F1CA;
+  /* was --ổn-viền */
+  --success-bg: #E9FCF2;
+  /* was --ổn-nền */
+
+  /* Warning Colors */
+  --primary-warning: #F5B324;
+  /* was --cảnh-báo-chính */
+  --warning-border: #FADD9E;
+  /* was --cảnh-báo-viền */
+  --warning-bg: #FEF7E7;
+  /* was --cảnh-báo-nền */
+
+  /* Other Colors */
+  --primary-other: #EBEBEB;
+  /* was --khác-chính */
+  --other-border: #E3E6E9;
+  /* was --khác-viền */
+  --other-white: #FFFFFF;
+  /* was --khác-trắng */
+  --other-bg: #1A1A1A;
+  /* was --khác-đen */
+  --input-bg-index: #EDEFF3;
+
+  /* Green Colors */
+  --primary-green: #23CB70;
+
+  --font-geist-sans: "IBM Plex Sans", sans-serif;
+  --font-geist-mono: "IBM Plex Mono", monospace;
+  --font-geist-serif: var(--font-dm-serif), serif;
+  --font-geist-display: var(--font-inter), sans-serif;
+  --font-geist-heading: var(--font-inter), sans-serif;
+  --font-geist-body: var(--font-inter), sans-serif;
+  --font-geist-code: "IBM Plex Mono", monospace;
+  --font-geist-nav: var(--font-ibm-plex-sans), sans-serif;
+  --font-geist-button: "IBM Plex Mono", monospace;
+  --font-geist-raleway: "Raleway", sans-serif;
+  --font-geist-raleway-place-holder: "Raleway", "Raleway Placeholder", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -51,7 +177,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  /* --primary: oklch(0.205 0 0); */
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -85,7 +211,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  /* --primary: oklch(0.922 0 0); */
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -115,8 +241,396 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    
   }
   body {
     @apply bg-background text-foreground;
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+  }
+}
+.font-geist-raleway{
+  font-family: var(--font-geist-raleway);
+}
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
+.font-geist-serif {
+  font-family: var(--font-geist-serif);
+}
+.font-geist-display {
+  font-family: var(--font-geist-display);
+}
+.font-geist-heading {
+  font-family: var(--font-geist-heading);
+}
+.font-geist-body {
+  font-family: var(--font-geist-body);
+}
+.font-geist-code {
+  font-family: var(--font-geist-code);
+}
+.font-geist-nav {
+  font-family: var(--font-geist-nav);
+}
+.font-geist-button {
+  font-family: var(--font-geist-button);
+}
+.font-geist-raleway {
+  font-family: var(--font-geist-raleway);
+}
+
+.bigTitle {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 50px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+.h1-index {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-raleway-place-holder);
+  font-style: normal;
+  font-weight: 600; 
+  font-size: 40px; 
+  letter-spacing: 0em; 
+  line-height: 1.3em; 
+}
+
+.h1 {
+  color: var(--text-bold); 
+  font-family:var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 42px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h1 {
+    font-size: 29px;
+  }
+}
+
+.h2 {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 31px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+@media (max-width: 809px) {
+  .h2 {
+    font-size: 26px;
+  }
+}
+
+
+.h3 {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: bold;
+  font-weight: 500; 
+  font-size: 24px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h3 {
+    font-size: 20px;
+  }
+}
+
+.h4 {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-style: normal;
+  font-weight: 500; 
+  font-size: 20px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h4 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h4 {
+    font-size: 18px;
+  }
+}
+.h6 {
+  color: var(--text-bold); 
+  font-family: "Inter Display"; 
+  font-style: normal;
+  font-weight: 700; 
+  font-size: 16px; 
+  letter-spacing: 0em; 
+  line-height: 1.4em; 
+}
+
+.body-large {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-weight: 400; 
+  font-size: 18px; 
+  letter-spacing: 0em; 
+  line-height: 1.7em; 
+}
+.body-large-index {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-weight: 500 !important; 
+  font-size: 18px; 
+  letter-spacing: 0em; 
+  line-height: 1.7em; 
+}
+
+.body {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-weight: 400; 
+  font-size: 15px; 
+  letter-spacing: 0em; 
+  line-height: 1.8em; 
+}
+
+.small {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-display);
+  font-weight: 400; 
+  font-size: 13px; 
+  letter-spacing: 0.01em; 
+  line-height: 1.5em; 
+}
+
+.nav {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-sans); 
+  font-weight: 500; 
+  font-size: 11px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+.button {
+  color: var(--text-bold);
+  font-family: "IBM Plex Mono", monospace; 
+  font-weight: 500; 
+  font-size: 12px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+/* Text color */
+.text-bold {
+  color: var(--text-bold);
+}
+.text-medium {
+  color: var(--text-medium); 
+}
+.text-light {
+  color: var(--text-light); 
+}
+.text-mute {
+  color: var(--text-mute); 
+}
+
+/* Background */
+.canvas-bg {
+  background-color: var(--canvas-bg); 
+}
+.canvas-bg-1 {
+  background-color: #FFFFFF; 
+}
+
+/* Info */
+.text-info {
+  color: var(--primary-info); 
+}
+.border-info {
+  border-color: var(--info-border); 
+}
+.bg-info {
+  background-color: var(--info-bg); 
+}
+
+/* Error */
+.text-error {
+  color: var(--primary-error); 
+}
+.border-error {
+  border-color: var(--error-border); 
+}
+.bg-error {
+  background-color: var(--error-bg); 
+}
+
+/* Success */
+.text-success {
+  color: var(--primary-success); 
+}
+.border-success {
+  border-color: var(--success-border); 
+}
+.bg-success {
+  background-color: var(--success-bg); 
+}
+
+/* Warning */
+.text-warning {
+  color: var(--primary-warning); 
+}
+.border-warning {
+  border-color: var(--warning-border); 
+}
+.bg-warning {
+  background-color: var(--warning-bg);
+}
+
+/* Other */
+.text-other {
+  color: var(--primary-other); 
+}
+.border-other {
+  border-color: var(--other-border); 
+}
+.bg-other {
+  background-color: var(--other-bg); 
+}
+
+.custom-box-shadow {
+  box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+  -webkit-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+  -moz-box-shadow: 0px -50px 70px 0px rgba(0, 0, 0, 0.50) inset;
+}
+
+.carousel_desktop {
+  transform: perspective(800px) scale(0.8) rotateY(15deg) !important ;
+}
+.fadeIn {
+  animation: fadeIn 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes floatDiagonal {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.animate-diagonal {
+  animation: floatDiagonal 0.6s ease-in-out infinite;
+}
+.animate-diagonal-2 {
+  animation: floatDiagonal 0.9s ease-in-out infinite;
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveOut {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveInUp {
+  0% {
+    transform: translateY(30%) translateX(-4px);  
+  }
+  100% {
+    transform: translateY(0) translateX(0);  
+  }
+}
+@keyframes moveOutUp {
+  0% {
+    transform: translateY(-30%) translateX(4px);  
+  }
+  100% {
+    transform: translateY(0) translateX(0);  
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.raleway-[weight] {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--weight);
+  font-style: normal;
+}
+.slide-tl {
+	-webkit-animation: slide-tl 0.9s ease-out infinite alternate-reverse ;
+	        animation: slide-tl 0.9s ease-out infinite alternate-reverse ;
+}
+/**
+ * ----------------------------------------
+ * animation slide-tl
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-tl {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20%) translateX(-20%);
+            transform: translateY(-20%) translateX(-20%);
+  }
+}
+@keyframes slide-tl {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20%) translateX(-20%);
+            transform: translateY(-20%) translateX(-20%);
   }
 }
