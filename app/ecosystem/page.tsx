@@ -111,7 +111,7 @@ export default function EcoPage() {
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-          <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <img src="https://framerusercontent.com/images/spz7hDU5litoX0coZpURvnudds.jpg?lossless=1" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
 
         </div>
       }
