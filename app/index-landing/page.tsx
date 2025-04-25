@@ -84,10 +84,6 @@ const IndexLandingPage: React.FC = () => {
           <FAQSection />
 
         </div>
-
-
-        <ContactSection />
-        <FAQSection />
       </div>
       <FooterFull active={'introduction'} fixed={false} />
 

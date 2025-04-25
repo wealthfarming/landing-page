@@ -33,23 +33,27 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsSectionInView(true);
-        }
+        setIsSectionInView(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.0,
+        rootMargin: "-60% 0px -90% 0px",
+      }
     );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
+  
+    const el = sectionRef.current;
+    if (el) observer.observe(el);
+  
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (el) observer.unobserve(el);
     };
   }, []);
+  
 
   useEffect(() => {
     if (!isSectionInView) return;
 
-    const SCROLL_THRESHOLD = 500;
+    const SCROLL_THRESHOLD = 700;
     let scrollBuffer = 0;
 
     const handleScroll = () => {
