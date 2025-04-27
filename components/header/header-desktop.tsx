@@ -13,13 +13,13 @@ import {
 import { ChatCenteredDots, CursorClick, GlobeSimple, List } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useInterface } from '@/components/context/interface-context';
-
+import logoFullDark from "../../public/images/img/logo_full_dark.svg"
+import logoFull from "../../public/images/img/logo-full.svg"
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
     const { t, i18n } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const { isDesktop, isMobile } = useInterface();
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,7 +52,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             style={{ zIndex: 1000 }}
         >
             <div className="flex items-center justify-between flex-[1_0_0] transition-all duration-300 ease-in-out max-w-[1200px]">
-                <Image src={isScrolled || !isDesktop ? 'images/img/logo_full_dark.svg' : 'images/img/logo-full.svg'} alt="Logo" width={117} height={28} className="w-[117px] h-[28px]" />
+                <Image src={isScrolled || !isDesktop ? logoFullDark : logoFull} alt="Logo" width={117} height={28} className="w-[117px] h-[28px]" />
                 {isDesktop && <nav className={" items-center transition duration-300 ease-in-out opacity-100 nav"}>
                     <Link href="/" className={"hover:text-[var(--primary)] px-3" + (isScrolled ? "" : " text-white")}>
                         {t('header_introduct')}

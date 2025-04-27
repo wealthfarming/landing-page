@@ -5,11 +5,7 @@ import ChartIndex from "@/components/ui/chart-index";
 import { useTranslation } from "react-i18next";
 
 const ProblemSection: React.FC = () => {
-
   const { t } = useTranslation();
-
-
-
 
   return (
     <SectionContainer borderBottom={false}>

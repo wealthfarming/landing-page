@@ -6,13 +6,17 @@ import EcoCard from "@/components/ecosystem/eco-card";
 import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import { useTranslation } from "react-i18next";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import productBase from "../../public/images/img/product_base.jpg"
+import eco1 from "../../public/images/img/eco-1.png"
+import eco2 from "../../public/images/img/eco-2.png"
+import eco3 from "../../public/images/img/eco-3.png"
+import eco4 from "../../public/images/img/eco-4.png"
 
 type ContentItem = string;
 
 interface Section {
-  img: string;
+  img: StaticImageData;
   title: string;
   content: ContentItem[];
 }
@@ -24,7 +28,7 @@ interface EcoData {
 const ecoData: EcoData = {
   vi: [
     {
-      img: "/images/img/eco-1.png",
+      img: eco1,
       title: "Quản lý tài sản số toàn diện với BeQ Web3 Wallet",
       content: [
         "Một ví dụ duy nhất, tích hợp đầy đủ giao dịch NFT, crypto và quản lý tài sản số.",
@@ -33,7 +37,7 @@ const ecoData: EcoData = {
       ],
     },
     {
-      img: "/images/img/eco-2.png",
+      img: eco2,
       title: "Đầu tư thông minh, tạo thu nhập thụ động ổn định",
       content: [
         "NFT NEC – chuyển chi tiêu hằng ngày thành dòng tiền thu nhập thụ động lâu dài.",
@@ -42,7 +46,7 @@ const ecoData: EcoData = {
       ],
     },
     {
-      img: "/images/img/eco-3.png",
+      img: eco3,
       title: "Ứng dụng công nghệ Blockchain và AI tiên tiến",
       content: [
         "AI Credit Scoring – định giá tài sản số chính xác, giảm thiểu rủi ro đầu tư.",
@@ -51,7 +55,7 @@ const ecoData: EcoData = {
       ],
     },
     {
-      img: "/images/img/eco-4.png",
+      img: eco4,
       title: "Báo cáo đầu tư và phân tích chuyên nghiệp, minh bạch",
       content: [
         "Báo cáo tự động hóa thông qua Smart Contract, rõ ràng từng khoản đầu tư.",
@@ -62,7 +66,7 @@ const ecoData: EcoData = {
   ],
   en: [
     {
-      img: "/images/img/eco-1.png",
+      img: eco1,
       title: "Comprehensive digital asset management with BeQ Web3 Wallet",
       content: [
         "A unique wallet that fully integrates NFT transactions, crypto, and digital asset management.",
@@ -71,7 +75,7 @@ const ecoData: EcoData = {
       ],
     },
     {
-      img: "/images/img/eco-2.png",
+      img: eco2,
       title: "Smart investment, creating stable passive income",
       content: [
         "NFT NEC – converting daily spending into a long-term source of passive income.",
@@ -80,7 +84,7 @@ const ecoData: EcoData = {
       ],
     },
     {
-      img: "/images/img/eco-3.png",
+      img: eco3,
       title: "The advanced application of Blockchain and AI technology",
       content: [
         "AI Credit Scoring – accurate digital asset valuation, minimizing investment risk.",
@@ -89,7 +93,7 @@ const ecoData: EcoData = {
       ],
     },
     {
-      img: "/images/img/eco-4.png",
+      img: eco4,
       title: "Professional, transparent investment reporting and analysis",
       content: [
         "Automated reporting through Smart Contracts clearly outlines each investment.",
@@ -112,7 +116,7 @@ export default function EcoPage() {
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-          <Image  src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
 
         </div>
       }

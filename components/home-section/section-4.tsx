@@ -5,6 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { ChatCenteredDots } from '@phosphor-icons/react';
 import { useInterface } from '../context/interface-context';
 import { FadeInSection } from "@/components/animation/introduction/Animations"
+import section4 from "../../public/images/img/section_4.jpg"
+import section4_2 from "../../public/images/img/section_4_2.png"
+
 export default function HomeSection4() {
     const { t } = useTranslation();
     const { isDesktop, isTablet, isMobile } = useInterface();
@@ -12,7 +15,7 @@ export default function HomeSection4() {
         <div className="w-full body-large">
             <div className='w-full h-[300px] relative overflow-hidden flex items-center justify-center'>
                 <Image
-                    src="/images/img/section_4.jpg"
+                    src={section4}
                     alt="section4"
                     width={1200}
                     height={625}
@@ -54,7 +57,7 @@ export default function HomeSection4() {
             </div>
             <div className='flex flex-col items-center justify-center w-full p-5 h-full lg:h-[412px] relative'>
                 <Image
-                    src={"/images/img/section_4_2.png"}
+                    src={section4_2}
                     alt="Section 4"
                     width={1200}
                     height={412}

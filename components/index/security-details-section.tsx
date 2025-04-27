@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 const SecurityDetailsSection: React.FC = () => {
   const {t} = useTranslation()
   return (
-    <SectionContainer bgColor="bg-slate-50">
+    <SectionContainer>
       <SectionTitle
         title={t('security_details_section_title')}
         subtitle={t('security_details_section_subtitle')}

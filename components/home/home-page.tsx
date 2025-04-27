@@ -6,13 +6,13 @@ import HomeSection3 from "@/components/home-section/section-3";
 import HomeSection4 from "@/components/home-section/section-4";
 import Image from "next/image";
 import HomeSection5 from "@/components/home-section/section-5"
+import HomeSection8 from "@/components/home-section/section-8"
+import HomeSection9 from "@/components/home-section/section-9"
 import HomeSection6 from "@/components/home-section/section-6"
 import HomeSection7 from "@/components/home-section/section-7"
-import Section5 from "@/components/home/section5";
-import Section6 from "@/components/home/section6";
 import FooterFull from "@/components/footer/footer-full";
 import { useInterface } from "@/components/context/interface-context";
-
+import productBase from "../../public/images/img/product_base.jpg"
 export default function HomePage() {
     const { isDesktop, isTablet } = useInterface();
     return (
@@ -23,9 +23,7 @@ export default function HomePage() {
                     {isDesktop &&
                         <div className="w-full h-[260px] relative">
                             <div className="absolute inset-0 bg-black/50 z-10"></div>
-
-                            <img src="https://framerusercontent.com/images/spz7hDU5litoX0coZpURvnudds.jpg?lossless=1" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
-
+                            <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                         </div>
                     }
                     <HomeSection1 />
@@ -33,10 +31,10 @@ export default function HomePage() {
                     <HomeSection3 />
                     <HomeSection4 />
                     <HomeSection5 />
-                    <Section5 />
-                    <Section6 />
                     <HomeSection6 />
                     <HomeSection7 />
+                    <HomeSection8 />
+                    <HomeSection9 />
                 </main>
                 <FooterFull active={'introduction'} />
             </div>
