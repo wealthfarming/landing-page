@@ -249,6 +249,12 @@
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
   }
 }
+
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100%; /* Prevent content from overflowing the viewport */
+}
+
 .font-geist-raleway{
   font-family: var(--font-geist-raleway);
 }
