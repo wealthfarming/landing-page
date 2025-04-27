@@ -1,14 +1,20 @@
 'use client';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { Plus } from 'phosphor-react';
 import { FadeInSection } from "@/components/animation/introduction/Animations"
+import section8_1 from "../../public/images/home-section-6/01.png"
+import section8_2 from "../../public/images/home-section-6/02.png"
+import section8_3 from "../../public/images/home-section-6/03.png"
+import section8_4 from "../../public/images/home-section-6/04.png"
+import section8_5 from "../../public/images/home-section-6/05.png"
+
 type Tab = {
     id: string;
     label: string;
-    img: string;
+    img: StaticImageData;
     content: string;
 };
 
@@ -20,8 +26,6 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
     return (
         <div className={`flex flex-col gap-[20px]`}>
             {isDesktop && tabs.map(tab => (
-
-
                 <div key={tab.id} className={`
                     transition-all duration-500 ease-in-out
                     ${selected === tab.id ? 'scale-100' : 'scale-99'}
@@ -31,7 +35,7 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                             style={
                                 selected === tab.id
                                     ? {
-                                        backgroundImage: `url('/images/home-section-6/${tab.img}')`,
+                                        backgroundImage: `url(${tab.img})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
                                     }
@@ -83,31 +87,31 @@ export default function HomeSection8() {
         {
             id: '01',
             label: t('home_section_6_tab_label_1'),
-            img: '01.png',
+            img: section8_1,
             content: t('home_section_6_tab_content_1')
         },
         {
             id: '02',
             label: t('home_section_6_tab_label_2'),
-            img: '02.png',
+            img: section8_2,
             content: t('home_section_6_tab_content_2')
         },
         {
             id: '03',
             label: t('home_section_6_tab_label_3'),
-            img: '03.png',
+            img: section8_3,
             content: t('home_section_6_tab_content_3')
         },
         {
             id: '04',
             label: t('home_section_6_tab_label_4'),
-            img: '04.png',
+            img: section8_4,
             content: t('home_section_6_tab_content_4')
         },
         {
             id: '05',
             label: t('home_section_6_tab_label_5'),
-            img: '05.png',
+            img: section8_5,
             content: t('home_section_6_tab_content_5')
         },
     ];

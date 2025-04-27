@@ -3,6 +3,8 @@ import Images from 'next/image'
 import RiseFade from '../animation/section2/index_grow'
 import { useTranslation } from 'react-i18next';
 import dynamic from 'next/dynamic';
+import section1s_home from "../../public/images/img/section1s_home.webp"
+import chartline_section2 from "../../public/images/img/chartline_section2.png"
 
 const CountdownTimer = dynamic(() => import('../countdown-timer'), { ssr: false });
 export default function HomeSection2() {
@@ -11,8 +13,8 @@ export default function HomeSection2() {
         <div className="flex flex-col items-center justify-center border-gray-200 p-5 w-full mb-10 relative bg-[var(--base-bg)]">
 
             <div className="flex flex-col lg:flex-row max-w-[1100px] justify-center items-center bg-[var(--base-bg)]" style={{ zIndex: 101 }}>
-                <Images src="/images/img/section1s_home.webp" alt="Section 2" width={631} height={450} className="mr-8" />
-                <Images src={"/images/img/chartline_section2.png"} alt="Section base 2" width={1200} height={80} className="absolute w-full -z-10" />
+                <Images src={section1s_home} alt="Section 2" width={631} height={450} className="mr-8" />
+                <Images src={chartline_section2} alt="Section base 2" width={1200} height={80} className="absolute w-full -z-10" />
                 <div className='-z-10'>
                     <RiseFade num={30} />
                     <RiseFade num={20} />

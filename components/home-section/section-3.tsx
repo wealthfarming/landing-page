@@ -83,7 +83,6 @@ export default function HomeSection3() {
             `}</style>
             <div
                 className="overflow-hidden h-[450px] w-full"
-               
             >
                 {
                     width > 1200 ? (

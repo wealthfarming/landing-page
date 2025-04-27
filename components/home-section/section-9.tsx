@@ -4,16 +4,16 @@ import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { CursorClick } from "@phosphor-icons/react";
+import section9 from "../../public/images/home-section-7/section-7.png"
 
-
-export default function HomeSection7() {
+export default function HomeSection9() {
     const { isDesktop, isTablet, isMobile } = useInterface();
     const { t } = useTranslation();
 
     return (
         <div className={`w-full ${isDesktop ? 'h-[336px]' : isTablet ? 'h-[349px]' : 'h-[222px]'} flex gap-[10px] relative`}>
-            <img
-                src="/images/home-section-7/section-7.png"
+            <Image
+                src={section9}
                 alt=""
                 className={`w-full ${isDesktop ? 'h-[336px]' : isTablet ? 'h-[349px]' : 'h-[222px]'} object-cover`}
             />

@@ -21,6 +21,8 @@ const steps = [
 ];
 import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
+import indexBanner from "../../public/images/img/index_banner.webp"
+
 const IndexLandingPage: React.FC = () => {
   const processRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
@@ -49,7 +51,7 @@ const IndexLandingPage: React.FC = () => {
       {isDesktop &&
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image src="/images/img/index_banner.webp" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
       }
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible">

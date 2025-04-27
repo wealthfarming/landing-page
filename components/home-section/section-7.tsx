@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from 'react-i18next';
-
+import section6 from "../../public/images/img/section6.webp"
 export default function HomeSection7() {
     const { t } = useTranslation();
     const [mounted, setMounted] = useState(false);
@@ -16,7 +16,7 @@ export default function HomeSection7() {
     }, []);
     if (!mounted) return null;
     return (
-        <div className="flex w-full justify-center relative bg-[url('/images/img/section6.webp')] bg-cover bg-center bg-no-repeat">
+        <div className={`flex w-full justify-center relative bg-[url(${section6})] bg-cover bg-center bg-no-repeat`}>
             <div
                 className={`flex flex-col justify-center items-center w-full ${isDesktop
                     ? "py-20 px-10 h-[520px] max-w-[1200px]"

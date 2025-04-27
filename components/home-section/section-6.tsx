@@ -4,6 +4,8 @@ import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from 'react-i18next';
+import eco1 from "../../public/images/img/eco-1.png"
+import Image from "next/image";
 export default function HomeSection6() {
     const { isDesktop, isTablet, isMobile } = useInterface()
     const [mounted, setMounted] = useState(false);
@@ -41,7 +43,7 @@ export default function HomeSection6() {
                         </div>
                     </div>
                     <div className={`flex ${isDesktop ? 'w-[50%] justify-start h-[386px]' : isTablet ? 'w-full justify-center' : 'w-full'} `}>
-                        <img src="/images/img/eco-1.png" alt="" className={`${isDesktop ? 'w-full' : isTablet ? 'w-[84%]' : ''} h-full`} />
+                        <Image src={eco1} alt="" className={`${isDesktop ? 'w-full' : isTablet ? 'w-[84%]' : ''} h-full`} />
                     </div>
                 </div>
             </div>

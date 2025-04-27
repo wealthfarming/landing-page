@@ -6,7 +6,7 @@ import { useInterface } from '@/components/context/interface-context';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 import { AnimatedText } from "@/components/animation/introduction/Animations";
-
+import productBase from "../../public/images/img/product_base.jpg"
 export default function InvestmentBank() {
   const { isDesktop, isMobile, isTablet } = useInterface();
   const { t } = useTranslation();
@@ -30,7 +30,7 @@ export default function InvestmentBank() {
       <div className="w-full h-[260px] relative">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-        <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+        <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
 
       </div>
 
@@ -130,7 +130,6 @@ export default function InvestmentBank() {
                 </div>
               </div>
             }
-
           </div>
         </div>
       </div>

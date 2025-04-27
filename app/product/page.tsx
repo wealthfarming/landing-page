@@ -5,6 +5,7 @@ import HeaderDesktopFull from "@/components/header/header-desktop";
 import ProductInfoCard from "@/components/product/product-info-card";
 import { AnimatedText } from "@/components/animation/introduction/Animations"
 import Image from "next/image";
+import productBase from "../../public/images/img/product_base.jpg"
 import { useTranslation } from "react-i18next";
 
 export default function ProductPage() {
@@ -16,7 +17,7 @@ export default function ProductPage() {
             {isDesktop &&
                 <div className="w-full h-[260px] relative">
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
-                    <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+                    <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
             }
             <div className="w-full flex-grow flex flex-col items-center justify-start bg-background mb-[375px] mt-18 pb-18 lg:mt-0 relative z-30">
