@@ -26,7 +26,7 @@ const IndexLandingPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [sticky, setSticky] = useState(false);
 
-  const { isDesktop, isMobile, isTablet } = useInterface();
+  const { isDesktop } = useInterface();
   useEffect(() => {
     const ref = processRef.current;
     if (!ref) return;
@@ -49,9 +49,7 @@ const IndexLandingPage: React.FC = () => {
       {isDesktop &&
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-
           <Image src="/images/img/index_banner.webp" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
-
         </div>
       }
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible">
@@ -82,7 +80,6 @@ const IndexLandingPage: React.FC = () => {
           <PartnersSection />
           <ContactSection />
           <FAQSection />
-
         </div>
       </div>
       <FooterFull active={'introduction'} fixed={false} />
