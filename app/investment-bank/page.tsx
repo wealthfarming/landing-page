@@ -61,7 +61,6 @@ export default function InvestmentBank() {
                 <p className="text-[15px]">{t(tab.label)}</p>
               </div>
             ))}
-
           </div>
           <div className="w-full">
             <div className="h-[34px] border-b border-[var(--primary-other)] ">
