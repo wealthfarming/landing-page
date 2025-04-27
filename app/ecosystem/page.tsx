@@ -7,6 +7,7 @@ import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import productBase from "../../public/images/img/product_base.jpg"
 
 type ContentItem = string;
 
@@ -111,7 +112,7 @@ export default function EcoPage() {
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-          <img src="https://framerusercontent.com/images/spz7hDU5litoX0coZpURvnudds.jpg?lossless=1" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <Image  src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
 
         </div>
       }
