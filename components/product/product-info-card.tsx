@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button'; // Adjust the import path as necessary
 import { CursorClick } from '@phosphor-icons/react';
+import Link from 'next/link'; // Import Link from next/link
 
 interface ProductInfoCardProps {
     title: string;
@@ -14,15 +15,6 @@ interface ProductInfoCardProps {
 }
 
 const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, buttonText, button_color, button_icon, brightness, link }) => {
-    const handleClick = () => {
-        if (link) {
-            if (link.startsWith('http')) {
-                window.open(link, '_blank');
-            } else {
-                window.location.href = link;
-            }
-        }
-    };
 
     return (
         <div className="flex flex-col items-start justify-between border border-gray-200 p-5 h-[328px] w-full md:w-[calc(33% - 8px)] hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
@@ -32,15 +24,18 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
                     {description}
                 </p>
             </div>
-            <Button
-                variant="outline"
-                style={{"boxShadow":"rgba(0, 0, 0, 0.24) 0px 1px 2px 0px"}}
-                className={" hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end border-none cursor-pointer " + (button_color ? button_color : " bg-base")}
-                onClick={handleClick}
-            >
-                {button_icon ? button_icon : <CursorClick size={32} className='animate-diagonal-2' />}
-                <p className='button body'>{buttonText}</p>
-            </Button>
+
+            {/* Wrap the button with Link component */}
+            <Link href={link || "/"} passHref className='w-full'>
+                <Button
+                    variant="outline"
+                    style={{"boxShadow":"rgba(0, 0, 0, 0.24) 0px 1px 2px 0px"}}
+                    className={"hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end border-none cursor-pointer " + (button_color ? button_color : " bg-base")}
+                >
+                    {button_icon ? button_icon : <CursorClick size={32} className='animate-diagonal-2' />}
+                    <p className='button body'>{buttonText}</p>
+                </Button>
+            </Link>
         </div>
     );
 };
