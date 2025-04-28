@@ -105,10 +105,10 @@ export default function EcoPage() {
           </div>
           <div
             className={`${isDesktop
-              ? 'grid-cols-2 gap-[40px_60px] mb-20'
+              ? 'grid-cols-2 gap-[40px_60px] px-[40px] pb-[80px]'
               : isTablet
-                ? 'grid-cols-2 gap-[40px_60px] mb-20'
-                : 'grid-cols-1 gap-10'
+                ? 'grid-cols-2 gap-[40px_60px] px-[20px] pb-[40px]'
+                : 'grid-cols-1 gap-10  px-[20px] pb-[40px]'
               } grid flex-wrap justify-center w-full`}
           >
             {selectedEcoData.map((section, index) => (
