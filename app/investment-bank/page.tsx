@@ -41,6 +41,7 @@ export default function InvestmentBank() {
               text={[t('investment_bank')]}
               delayBetween={0.05}
               duration={0.3}
+              center={false}
             />
           </p>
         </div>
