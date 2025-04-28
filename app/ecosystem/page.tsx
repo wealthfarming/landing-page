@@ -88,13 +88,13 @@ export default function EcoPage() {
           <div className={`flex flex-col gap-6`}>
             <h1
               className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'
-                } font-semibold w-full text-center`}
+                } font-[600] w-full text-center`}
             >
               <AnimatedText
                 text={[t('eco_title')]}
                 delayBetween={0.05}
                 duration={0.3}
-                customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] flex flex-wrap' : 'text-[34px] leading-[40.8px] flex flex-wrap'}`]}
+                customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] font-[500] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] font-[500] flex flex-wrap' : 'text-[34px]  leading-[40.8px] font-[500] flex flex-wrap'}`]}
               />
             </h1>
             <p

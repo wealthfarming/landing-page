@@ -22,7 +22,7 @@ export default function ProductPage() {
             }
             <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? ' mt-0 pb-[40px]' : ' mt-18 '} relative z-30`}>
 
-                <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 max-w-[1200px] mt-[40px] flex flex-col gap-6 text-center justify-center items-center py-2 ">
+                <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 max-w-[1200px] mt-[40px] px-[20px] flex flex-col gap-6 text-center justify-center items-center py-2 ">
                     <div className="max-w-[904px] w-full bigTitle">
                         <AnimatedText
                             customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] flex flex-wrap' : 'text-[34px] leading-[40.8px] flex flex-wrap'}`]}
