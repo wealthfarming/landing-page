@@ -112,10 +112,10 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
             />
           ))}
         </div>
-        <div className="mt-10 max-w-screen-md mx-auto text-base font-medium text-[var(--text-bold)]">
+        <div className="mt-10 w-full mx-auto text-base font-medium text-[var(--text-bold)]">
           <h3 className="text-lg max-md:text-[17px] font-bold text-center">{t('process_section_performance_table_title')}</h3>
           <PerformanceTable />
-          <p className="mt-6 text-center text-[var(--text-mute)]">
+          <p className="mt-2 text-center text-[var(--text-mute)] text-[12px]">
             {t('process_section_disclaimer')}
           </p>
         </div>

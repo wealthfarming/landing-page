@@ -20,7 +20,7 @@ const IntroSection: React.FC = () => {
               text={[
                 "BEQ INDEXES", "REWIEW INDEX NFT"
               ]}
-              customClass={["font-[900] text-[E8B561]", "font-[900]"]}
+              customClass={["font-[600] text-[var(--primary)] font-geist-raleway text-[49px] max-md:text-[34px]", "font-[600] font-geist-raleway text-[49px] max-md:text-[34px]"]}
               delayBetween={0.1}
             />
           ) : (
@@ -37,7 +37,7 @@ const IntroSection: React.FC = () => {
             />
           )}
         </h1>
-        <p className="mt-5 max-w-screen-md text-base leading-6 text-gray-700 w-[768px] max-md:max-w-full">
+        <p className="mt-5 max-w-screen-md text-[15px] leading-6 text-gray-700 w-[768px] max-md:max-w-full max-md:font-geist-display">
           {t("index_intro_section_subtitle")}
         </p>
       </div>
@@ -45,20 +45,21 @@ const IntroSection: React.FC = () => {
         <div className="flex gap-2 md:flex-row flex-col my-10 md:mt-10 text-sm md:w-full w-[209px] font-medium tracking-wide justify-center items-center text-zinc-800 max-md:max-w-full">
           <Button
             onClick={() => window.open("https://www.facebook.com/profile.php?id=61574682066111", "_blank")}
-            variant="white" classname="px-8 !font-[500] !text-[12px] ">
+            variant="white" classname="px-8 !font-[500] !text-[12px] max-md:px-4 max-md:h-10">
             <ChatCenteredDots size={20} />
             <p>{t("button_contact_private")}</p>
           </Button>
+      
           <Button
             onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-            variant="orange" classname="px-8 !font-[500] !text-[12px] w-[164px]">
-            <CursorClick size={20} className="animate-diagonal-2"/>
-            <p>{t("header_investNowup")}</p>
+            variant="white" classname="!font-[500] !text-[12px] !max-md:px-4 max-md:h-10 max-md:w-full !bg-[var(--primary)]">
+            <CursorClick size={20} className="animate-diagonal-2" />
+            <p>{t("button_secret_documnet")}</p>
           </Button>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <div className="mt-10 max-w-full text-sm font-medium text-gray-700 md:min-h-[555px] w-[956px] ">
+        <div className="mt-10 max-w-full max-md:flex max-md:flex-col max-md:gap-2 text-sm font-medium text-gray-700 md:min-h-[555px] w-[956px] max-md:mt-0">
           <div className="flex flex-wrap flex-row gap-2 items-center w-full max-md:max-w-full">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/1baeb458dd1369807c053be7ac1de2b04be1b451?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540"
@@ -93,7 +94,7 @@ const IntroSection: React.FC = () => {
                   {t('profit')}
                 </div>
                 <div className="flex flex-col md:flex-row items-center text-center h-2/3 md:h-1/2 w-full">
-                  <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#23CB70] text-[18px] md:text-[24px] text-white font-[var(--font-geist-mono)] font-[500]">
+                  <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#23CB70] text-[18px] md:text-[24px] text-white  font-[500]">
                     <p>82.55%</p>
                   </div>
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#23CB70] text-[16px] md:text-[18px] font-[var(--font-geist-display)]">
@@ -109,7 +110,7 @@ const IntroSection: React.FC = () => {
                   {t('liquidity')}
                 </div>
                 <div className="flex flex-col md:flex-row-reverse items-center text-center h-2/3 md:h-1/2 w-full">
-                  <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#E8B561] text-[18px] md:text-[24px] text-white font-[var(--font-geist-mono)] font-[500]">
+                  <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#E8B561] text-[18px] md:text-[24px] text-white font-[500]">
                     <p>24/7</p>
                   </div>
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#E8B561] text-[16px] md:text-[18px] font-[var(--font-geist-display)]">
