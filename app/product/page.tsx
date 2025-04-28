@@ -20,19 +20,21 @@ export default function ProductPage() {
                     <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
             }
-            <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? ' mt-0 pb-[40px]': ' px-[20px]  mt-18 '} relative z-30`}>
+            <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? ' mt-0 pb-[40px]' : ' mt-18 '} relative z-30`}>
 
                 <h1 className="lg:text-7xl md:text-5xl text-4xl font-normal mb-4 w-full md:w-9/12 max-w-[1200px] mt-[40px] flex flex-col gap-6 text-center justify-center items-center py-2 ">
                     <div className="max-w-[904px] w-full bigTitle">
                         <AnimatedText
+                            customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] flex flex-wrap' : 'text-[34px] leading-[40.8px] flex flex-wrap'}`]}
                             text={[t('page_product_title')]}
                             delayBetween={0.05}
                             duration={0.3}
+                            
                         />
                     </div>
                     <p className=" w-full max-w-[721px] text-center body !font-geist-display">{t('page_product_description')}</p>
                 </h1>
-                <div className="grid grid-cols-1 p-[20px] md:grid-cols-2 md:p-[40px] lg:grid-cols-3 flex-wrap gap-2 justify-center max-w-[1200px]">
+                <div className={`grid grid-cols-1 p-[20px] md:grid-cols-2 md:p-[40px] lg:grid-cols-3 flex-wrap gap-5 md:gap-2  justify-center max-w-[1200px] ${isDesktop ? 'px-[20px]' : ''} `}>
                     <ProductInfoCard
                         title={t('page_product_box1_title')}
                         description={t('page_product_box1_description')}

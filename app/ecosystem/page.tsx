@@ -94,10 +94,11 @@ export default function EcoPage() {
                 text={[t('eco_title')]}
                 delayBetween={0.05}
                 duration={0.3}
+                customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] flex flex-wrap' : 'text-[34px] leading-[40.8px] flex flex-wrap'}`]}
               />
             </h1>
             <p
-              className={` ${isDesktop ? 'text-xl px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'
+              className={` ${isDesktop ? 'text-[18px] px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'
                 } font-medium w-full text-center text-[var(--text-medium)]`}
             >
               {t('eco_description')}
@@ -105,10 +106,10 @@ export default function EcoPage() {
           </div>
           <div
             className={`${isDesktop
-              ? 'grid-cols-2 gap-[40px_60px] px-[40px] pb-[80px]'
+              ? 'grid-cols-2 gap-[40px_60px] pb-[80px]'
               : isTablet
-                ? 'grid-cols-2 gap-[40px_60px] px-[20px] pb-[40px]'
-                : 'grid-cols-1 gap-10  px-[20px] pb-[40px]'
+                ? 'grid-cols-2 gap-[40px_60px] pb-[40px]'
+                : 'grid-cols-1 gap-10 pb-[40px]'
               } grid flex-wrap justify-center w-full`}
           >
             {selectedEcoData.map((section, index) => (

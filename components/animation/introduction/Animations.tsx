@@ -36,6 +36,8 @@ type AnimatedTextProps = {
   text: string;
   customClass?: string;
   duration?: number;
+  charHeight?: number;
+  center?: boolean;
 };
 
 
@@ -48,7 +50,8 @@ type AnimatedTextProps = {
  * @param {string[]} [props.customClass] - An optional array of CSS class names to apply to each phrase.
  * @param {number} [props.duration] - The duration (in seconds) of the animation for each character. Defaults to 0.4 seconds.
  * @param {number} [props.delayBetween] - The delay (in seconds) between the animations of each character.
- *
+ * @param {number} [props.charHeight] - The height of the characters for animation purposes.
+ * 
  * @returns {JSX.Element} A span element containing the animated text.
  *
  * @remarks
@@ -66,7 +69,7 @@ type AnimatedTextProps = {
  * />
  * ```
  */
-export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], duration?: number, delayBetween?: number }> = ({ text, customClass = '', duration, delayBetween }) => {
+export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], duration?: number, delayBetween?: number, charHeight?: number, center?: boolean }> = ({ text, customClass = '', duration, delayBetween, center = true , charHeight }) => {
   const [nodes, setNodes] = useState<React.ReactNode[]>([]);
   const { i18n } = useTranslation();
   const [isClient, setIsClient] = useState(false);
@@ -91,9 +94,10 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], du
             return (
                 <motion.span
                 key={`char-${phraseIndex}-${wordIndex}-${charIndex}`}
-                className="inline-block"
+                className={`flex flex-wrap ` + (charHeight ? ` !h-[${charHeight}px] !leading-[${charHeight}px]` : '')}
                 initial={{ opacity: 0.1, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
+                style={charHeight ? { height: `${charHeight}px !importal`, lineHeight: `${charHeight}px` } : {}}
                 transition={{
                   delay: delay,
                   type: 'tween',
@@ -111,7 +115,7 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], du
       ));
 
       return (
-        <span key={`phrase-${phraseIndex}`} className={classForPhrase + ' text-justify max-w-[1000px]'}>
+        <span key={`phrase-${phraseIndex}`} className={`${classForPhrase} ${center ? "justify-center" : ""} text-justify max-w-[1000px] items-center w-full`}>
           {renderedWords}
         </span>
       );

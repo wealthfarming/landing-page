@@ -46,7 +46,7 @@ export default function InvestmentBank() {
         </div>
       </div>
 
-      <div className={`flex w-full relative justify-center p-[40px] pb-[100px] bg-[var(--canvas-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `}>
+      <div className={`flex w-full relative justify-center p-[40px] bg-[var(--base-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `}>
         <div className="absolute inset-0 bg-black/50 z-0" style={{"filter":"brightness(1.31)","WebkitFilter":"brightness(1.31)","opacity":"0.05"}}>
             <Image src="/images/img/section_4_2.png" alt="Background Image" layout="fill" objectFit="cover" />
         </div>
