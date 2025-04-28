@@ -1,9 +1,11 @@
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useInterface } from "../context/interface-context";
 
 type ContentItem = string;
 
 interface Section {
-  img: string;
+  img: StaticImageData;
   title: string;
   content: ContentItem[];
 }
@@ -13,11 +15,11 @@ interface EcoCardProps {
 }
 
 export default function EcoCard({ section }: EcoCardProps) {
-  const { isDesktop, isTablet, isMobile } = useInterface();
+  const { isDesktop, isTablet } = useInterface();
   return (
     <div className={`flex flex-col ${isDesktop ? 'gap-6' : isTablet ? 'gap-4' : 'gap-6'} w-full`}>
       <div className={`flex w-full ${isDesktop ? 'h-[400px]' : isTablet ? 'h-[256px]' : 'h-[320px]'}`}>
-        <img
+        <Image
           src={section.img}
           alt={section.title}
           className={`object-cover object-center w-full h-full`}

@@ -10,14 +10,20 @@ import Autoplay from "embla-carousel-autoplay"
 import { useTranslation } from 'react-i18next';
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react";
+import slide1 from "../../public/images/img/slide_1.jpg"
+import slide2 from "../../public/images/img/slide_2.jpg"
+import slide3 from "../../public/images/img/slide_3.jpg"
+import slide4 from "../../public/images/img/slide_4.jpeg"
+import slide5 from "../../public/images/img/slide_5.webp"
+import slide6 from "../../public/images/img/slide_6.jpg"
 
 const images = [
-    "/images/img/slide_1.jpg",
-    "/images/img/slide_2.jpg",
-    "/images/img/slide_3.jpg",
-    "/images/img/slide_4.jpeg",
-    "/images/img/slide_5.webp",
-    "/images/img/slide_6.jpg",
+    slide1,
+    slide2,
+    slide3,
+    slide4,
+    slide5,
+    slide6,
 ]
 
 

@@ -10,6 +10,7 @@ import { Apiget } from "@/lib/api/get"
 import { API_URL } from "@/lib/config";
 import { useEffect } from 'react';
 
+import productBase from "../../public/images/img/product_base.jpg"
 export default function InvestmentBank() {
   const { isDesktop, isMobile, isTablet } = useInterface();
   const { t, i18n } = useTranslation();
@@ -22,16 +23,16 @@ export default function InvestmentBank() {
   useEffect(() => {
     const getPostCategories = async () => {
       const data = await Apiget(
-        API_URL + '/api/postcategories',
+        API_URL + '/api/posts-categories',
         {
-          sort: 'post_category_id',
+          sort: 'createdAt',
           limit: 0,
+          locale: i18n.language,
         }
       );
       const postcategories = data.map((item: any) => ({
         name: item.name,
-        en: item.title_en,
-        vi: item.title_vi,
+        title: item.title,
       }));
       setTabs(postcategories);
       setSelected(postcategories[0]['name']);
@@ -41,8 +42,9 @@ export default function InvestmentBank() {
       const data = await Apiget(
         API_URL + '/api/posts',
         {
-          sort: 'post_id',
+          sort: 'createdAt',
           limit: 0,
+          locale: i18n.language,
         }
       );
 
@@ -56,9 +58,8 @@ export default function InvestmentBank() {
 
         posts_with_key[item.category.name].push({
           name: item.name,
-          en: item.title_en,
-          vi: item.title_vi,
-          date: item.date,
+          title: item.title,
+          date: item.createdAt,
         });
       });
       setContents(posts_with_key);
@@ -66,7 +67,7 @@ export default function InvestmentBank() {
 
     getPostCategories();
     getPosts();
-  }, []);
+  }, [i18n.language]);
   // const tabs = [
   //   { id: 'annual_report', label: 'annual_report' },
   //   { id: 'nft_report', label: 'nft_report' },
@@ -85,7 +86,7 @@ export default function InvestmentBank() {
       <div className="w-full h-[260px] relative">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-        <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+        <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
 
       </div>
 
@@ -113,10 +114,9 @@ export default function InvestmentBank() {
                   }`}
                 onClick={() => setSelected(tab.name)}
               >
-                <p className="text-[15px]">{tab[i18n.language]}</p>
+                <p className="text-[15px]">{tab.title}</p>
               </div>
             ))}
-
           </div>
           <div className="w-full">
             <div className="h-[34px] border-b border-[var(--primary-other)] ">
@@ -129,7 +129,7 @@ export default function InvestmentBank() {
               <div key={index}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[i18n.language]}</p>
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content.title}</p>
                     <p className="text-light text-[13px]">
                       {i18n.language === 'en'
                         ? new Intl.DateTimeFormat('en-US', {

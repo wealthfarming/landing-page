@@ -60,7 +60,7 @@
   "page_product_box1_button": "XEM CHI TIẾT",
   "page_product_box2_title": "NFT BEQ Indexes Review Index",
   "page_product_box2_description": "Tận dụng sức mạnh giao dịch Review Indexes, lợi nhuận vượt trội tới 6.8% mỗi quý, thanh khoản cao 24/7!",
-  "page_product_box2_button": "ĐANG CẬP NHẬT",
+  "page_product_box2_button": "XEM CHI TIẾT",
   "page_product_box3_title": "BEQ Web3 Wallet",
   "page_product_box3_description": "Quản lý tài sản số toàn diện, tích hợp giao dịch, staking, lending chỉ trong một ví duy nhất!",
   "page_product_box3_button": "ĐANG CẬP NHẬT",
@@ -178,5 +178,22 @@
   "faq_section_question_2": "Rủi ro nếu Ủy ban chỉ số từ chối khuyến nghị?",
   "faq_section_answer_2": "Chúng tôi có cơ chế hedging và cắt lỗ tự động ở mức -13.33% để bảo vệ vốn đầu tư của bạn trong trường hợp này.",
   "faq_section_question_3": "Cách mua NFT quỹ trên Wealth Farming?",
-  "faq_section_answer_3": "Bạn có thể mua NFT quỹ bằng USDT/USDC trên nền tảng Wealth Farming với quy trình đơn giản và thanh khoản 24/7."
+  "faq_section_answer_3": "Bạn có thể mua NFT quỹ bằng USDT/USDC trên nền tảng Wealth Farming với quy trình đơn giản và thanh khoản 24/7.",
+
+  "eco_data_title_1": "Quản lý tài sản số toàn diện với BeQ Web3 Wallet",
+  "eco_data_content_1_1": "Một ví duy nhất, tích hợp đầy đủ giao dịch NFT, crypto và quản lý tài sản số.",
+  "eco_data_content_1_2": "Kết nối và giao dịch dễ dàng với các nền tảng DeFi, DEX uy tín.",
+  "eco_data_content_1_3": "Bảo mật tuyệt đối bằng công nghệ blockchain và AI.",
+  "eco_data_title_2": "Đầu tư thông minh, tạo thu nhập thụ động ổn định:",
+  "eco_data_content_2_1": "NFT NEC – chuyển chi tiêu hằng ngày thành dòng tiền thu nhập thụ động lâu dài.",
+  "eco_data_content_2_2": "NFT BEQ INDEXES – lợi nhuận vượt trội (27-30%/năm), giao dịch dễ dàng, thanh khoản linh hoạt.",
+  "eco_data_content_2_3": "Lợi nhuận rõ ràng, minh bạch thông qua hợp đồng thông minh (Smart Contract).",
+  "eco_data_title_3": "Ứng dụng công nghệ Blockchain và AI tiên tiến",
+  "eco_data_content_3_1": "AI Credit Scoring – định giá tài sản số chính xác, giảm thiểu rủi ro đầu tư.",
+  "eco_data_content_3_2": "Hệ thống DeFi Lending – vay vốn tức thì, không cần bán tài sản.",
+  "eco_data_content_3_3": "Bảo mật và minh bạch tuyệt đối, mọi giao dịch được ghi nhận công khai trên blockchain.",
+  "eco_data_title_4": "Báo cáo đầu tư và phân tích chuyên nghiệp, minh bạch",
+  "eco_data_content_4_1": "Báo cáo tự động hóa thông qua Smart Contract, rõ ràng từng khoản đầu tư.",
+  "eco_data_content_4_2": "Phân tích tài sản và danh mục đầu tư thông minh, hỗ trợ ra quyết định nhanh chóng.",
+  "eco_data_content_4_3": "Cập nhật liên tục về biến động thị trường để nhà đầu tư luôn chủ động."
 }
