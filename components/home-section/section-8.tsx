@@ -69,7 +69,7 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                     key={tab.id}
                     className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
                 >
-                    <div className={`flex gap-[20px] items-center`}>
+                    <div className={`flex gap-[20px] items-start`}>
                         <p className={`h4 ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
                         <p className={`h3 ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
                     </div>
