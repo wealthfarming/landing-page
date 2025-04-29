@@ -7,14 +7,14 @@
 @font-face {
   font-family: "Inter Display";
   font-style: italic;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
   src: url("/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("ttf");
 }
 @font-face {
   font-family: "Inter Display";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
   src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("ttf");
 }
@@ -22,7 +22,7 @@
 @font-face {
   font-family: "IBM Plex Sans";
   font-style: italic;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
   src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf") format("ttf");
 }
@@ -30,7 +30,7 @@
 @font-face {
   font-family: "IBM Plex Sans";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
   src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf") format("ttf");
 }
@@ -38,9 +38,18 @@
 @font-face {
   font-family: 'IBM Plex Mono';
   src: url('/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: 100 900;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
+
 
 @theme inline {
   --color-background: var(--background);
@@ -336,6 +345,53 @@ html, body {
     font-size: 29px;
   }
 }
+
+.title-invest {
+  color: var(--text-bold); 
+  font-family:var(--font-geist-raleway-place-holder);
+  font-style: normal;
+  font-weight: 600; 
+  font-size: 49px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .title-invest {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 809px) {
+  .title-invest {
+    font-size: 34px;
+  }
+}
+
+.h2-rich {
+  color: var(--text-bold); 
+  font-family:var(--font-geist-display);
+  font-style: normal;
+  font-weight: 500; 
+  font-size: 16px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+.p-rich {
+  color: var(--text-bold); 
+  font-family:var(--font-geist-display);
+  font-style: normal;
+  font-weight: 400; 
+  font-size: 12px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+.code-rich {
+  background-color: #0000001A;
+  border-radius: 6px;
+  padding: 0.1em 0.2em;
+}
+
 
 .h2 {
   color: var(--text-bold); 

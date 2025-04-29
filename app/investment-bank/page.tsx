@@ -17,67 +17,75 @@ export default function InvestmentBank() {
 
   const [selected, setSelected] = useState('');
   const [tabs, setTabs] = useState<any[]>([]);
-  const [contents, setContents] = useState<Record<string, any>>({});
+  const [contents, setContents] = useState<any[]>([]);
 
 
   useEffect(() => {
     const getPostCategories = async () => {
-      const data = await Apiget(
+      const data_en = await Apiget(
         API_URL + '/api/posts-categories',
         {
           sort: 'createdAt',
           limit: 0,
-          locale: i18n.language,
+          locale: 'en',
         }
       );
-      const postcategories = data.map((item: any) => ({
-        name: item.name,
-        title: item.title,
-      }));
-      setTabs(postcategories);
-      setSelected(postcategories[0]['name']);
-    };
-
-    const getPosts = async () => {
-      const data = await Apiget(
-        API_URL + '/api/posts',
+      const data_vi = await Apiget(
+        API_URL + '/api/posts-categories',
         {
           sort: 'createdAt',
           limit: 0,
-          locale: i18n.language,
+          locale: 'vi',
         }
       );
-
-      const posts_with_key: Record<string, any> = {};
-
-      data.forEach((item: any) => {
-
-        if (!posts_with_key[item.category.name]) {
-          posts_with_key[item.category.name] = [];
-        }
-
-        posts_with_key[item.category.name].push({
-          name: item.name,
-          title: item.title,
-          date: item.createdAt,
-        });
+      const postscategories = data_en.map((itemEn: any) => {
+        const itemVi = data_vi.find((itemVi: any) => itemVi.id === itemEn.id);
+        return {
+          id: itemEn.id,
+          title_vi: itemVi.title,
+          title_en: itemEn.title,
+        };
       });
-      setContents(posts_with_key);
+      setTabs(postscategories);
+      setSelected(postscategories[0]['id']);
     };
-
     getPostCategories();
+  }, []);
+
+  useEffect(() => {
+    const getPosts = async () => {
+
+      const data_en = await Apiget(
+        API_URL + '/api/posts',
+        {
+          'where[category][equals]': selected,
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'en',
+        }
+      );
+      const data_vi = await Apiget(
+        API_URL + '/api/posts',
+        {
+          'where[category][equals]': selected,
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'vi',
+        }
+      );
+      const posts = data_en.map((itemEn: any) => {
+        const itemVi = data_vi.find((itemVi: any) => itemVi.id === itemEn.id);
+        return {
+          id: itemEn.id,
+          title_vi: itemVi.title,
+          title_en: itemEn.title,
+          date: itemEn.createdAt
+        };
+      });
+      setContents(posts);
+    };
     getPosts();
-  }, [i18n.language]);
-  // const tabs = [
-  //   { id: 'annual_report', label: 'annual_report' },
-  //   { id: 'nft_report', label: 'nft_report' },
-  //   { id: 'wealth_farming_information_disclosure', label: 'wealth_farming_information_disclosure' },
-  //   { id: 'beq_noification', label: 'beq_noification' },
-  //   { id: 'fund_management_report', label: 'fund_management_report' },
-  //   { id: 'investment_nft_catalog', label: 'investment_nft_catalog' },
-  //   { id: 'for_new_investors', label: 'for_new_investors' },
-  //   { id: 'regulations_rules_wf', label: 'regulations_rules_wf' },
-  // ];
+  }, [selected]);
 
   return (
     <div>
@@ -111,14 +119,14 @@ export default function InvestmentBank() {
           <div className="gap-[40px] flex-col items-center lg:w-[336px] w-full  min-w-[336px] ">
             {tabs.map((tab) => (
               <div
-                key={tab.name}
-                className={`h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.name
+                key={tab.id}
+                className={`h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
                   ? 'bg-[var(--primary)]'
                   : 'bg-[var(--canvas-bg)] hover:bg-[#C5C6CA]'
                   }`}
-                onClick={() => setSelected(tab.name)}
+                onClick={() => setSelected(tab.id)}
               >
-                <p className="text-[15px]">{tab.title}</p>
+                <p className="text-[15px]">{tab[`title_${i18n.language}`]}</p>
               </div>
             ))}
           </div>
@@ -129,11 +137,13 @@ export default function InvestmentBank() {
               </div>
             </div>
 
-            {contents[selected]?.map((content: any, index: number) => (
-              <div key={index}>
+            {contents.map((content: any) => (
+              <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content.title}</p>
+                  <a href={`/investment-bank/${content.title_en?.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[`title_${i18n.language}`]}</p>
+                    </a>
                     <p className="text-light text-[13px]">
                       {i18n.language === 'en'
                         ? new Intl.DateTimeFormat('en-US', {
