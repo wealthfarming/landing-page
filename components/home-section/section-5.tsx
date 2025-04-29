@@ -127,10 +127,10 @@ export default function HomeSection5() {
 
 
     return (
-        <div className="flex justify-center gap-[10px] w-full p-[40px] pt-[80px]">
+        <div className={`flex justify-center gap-[10px] w-full ${!isMobile ? 'p-[40px] pt-[80px]' : 'px-[20px] py-[40px]'}`}>
             <div className=" max-w-[1200px] w-full">
                 <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
-                    <div className="gap-[16px] max-w-[716px]">
+                    <div className="flex flex-col gap-[16px] max-w-[716px]">
                         <div className="h1">
                             <AnimatedText text={[t('home_section_5_title')]} />
                         </div>

@@ -30,9 +30,9 @@ export default function HomePage() {
                     <HomeSection2 />
                     <HomeSection3 />
                     <HomeSection4 />
-                    <HomeSection5 />
                     <HomeSection6 />
                     <HomeSection7 />
+                    <HomeSection5 />
                     <HomeSection8 />
                     <HomeSection9 />
                 </main>

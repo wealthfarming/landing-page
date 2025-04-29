@@ -16,12 +16,13 @@ export default function HomeSection7() {
     }, []);
     if (!mounted) return null;
     return (
-        <div className={`flex w-full justify-center relative bg-[url(${section6})] bg-cover bg-center bg-no-repeat`}>
+        <div className={`flex w-full justify-center relative bg-[url(${section6})] bg-cover bg-center bg-no-repeat`}
+            style={{ backgroundImage: `url(${section6.src})` }}>
             <div
                 className={`flex flex-col justify-center items-center w-full ${isDesktop
                     ? "py-20 px-10 h-[520px] max-w-[1200px]"
                     : isMobile
-                        ? "p-[40px_20px]"
+                        ? "p-[60px_20px]"
                         : "p-[80px_40px]"
                     }`}
             >

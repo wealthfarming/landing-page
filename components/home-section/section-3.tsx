@@ -3,12 +3,13 @@ import { JSX, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SlideTablet, SliderMobile, SliderDesktop } from "../carousel/home-carousel";
 import { FadeInSection } from "@/components/animation/introduction/Animations"
-
+import { useInterface } from "@/components/context/interface-context";
 export default function HomeSection3() {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const [width, setWidth] = useState(0);
     const titleRef = useRef<HTMLDivElement>(null);
+    const { isDesktop, isMobile } = useInterface();
 
 
     useEffect(() => {
@@ -44,11 +45,11 @@ export default function HomeSection3() {
     }, []);
 
     return (
-        <div className="w-full body-large">
+        <div className={`w-full flex flex-col gap-[20px] body-large ${isDesktop ? 'px-10 py-20' : 'px-5 py-10'}`}>
             <div ref={titleRef}>
                 <FadeInSection>
                     <p
-                        className={`mt-4 text-[20px] text-lg text-center !text-[var(--text-medium)] max-w-[800px] mx-auto ${isVisible ? "slide-top" : ""
+                        className={`${!isMobile ? 'text-center' : 'text-left'} mt-4 body-large !text-[var(--text-medium)] max-w-[800px] mx-auto ${isVisible ? "slide-top" : ""
                             }`}
                     >
                         {t('home_section_3_title')}
@@ -82,7 +83,7 @@ export default function HomeSection3() {
             }
             `}</style>
             <div
-                className="overflow-hidden h-[450px] w-full"
+                className={`overflow-hidden ${isDesktop ? 'h-[450px] w-screen -ml-10 -mr-10' : 'h-[408px] w-full'}`}
             >
                 {
                     width > 1200 ? (
@@ -94,9 +95,9 @@ export default function HomeSection3() {
                     )
                 }
             </div>
-            <div className="mb-12">
+            <div className="">
                 <FadeInSection>
-                    <p className="mt-4 text-[20px] text-lg text-center max-w-[1100px] !text-[var(--text-medium)] mx-auto">
+                    <p className="body-large text-center max-w-[1100px] !text-[var(--text-medium)] mx-auto">
 
                         {t('home_section_3_description')}
 
