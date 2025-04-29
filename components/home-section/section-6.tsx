@@ -20,7 +20,7 @@ export default function HomeSection6() {
                 <div className={` flex ${isDesktop ? 'max-w-[1200px] gap-10' : isTablet ? 'w-full flex-col gap-10' : 'w-full flex-col gap-12'}`}>
                     <div className={`flex flex-col ${isDesktop ? 'w-[50%] pt-[33px] gap-8 h-auto' : isTablet ? 'gap-8' : 'gap-4'}`}>
                         <div className={`flex flex-col justify-center gap-4 ${isDesktop ? '' : isTablet ? 'items-center' : ''}`}>
-                            <div className={`${isDesktop ? 'text-3xl mr-[68px] text-left' : isTablet ? 'text-3xl text-center max-w-[657px]' : 'text-[29px] text-center'} font-semibold font-geist-raleway`}>{t('home_section_5b_title')}</div>
+                            <div className={`${isDesktop ? ' mr-[68px] text-left' : isTablet ? ' text-center max-w-[657px]' : ' text-center'} h2-raleway`}>{t('home_section_5b_title')}</div>
                             <div className={`${isDesktop ? 'text-lg mr-[52px] text-left' : isTablet ? 'text-xl text-center max-w-[605px]' : 'text-[17px] text-center'} text-[var(--text-medium)] font-medium`}>{t('home_section_5b_description')}</div>
                         </div>
                         <div className={`flex gap-2 ${isDesktop ? 'justify-start pb-8' : 'justify-center'}`}>

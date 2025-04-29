@@ -91,7 +91,7 @@ export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
                         animation: move-sideways-2 5s infinite;
                     }
                 `}</style>
-                <Button className="h-[60px] w-full button  !text-[15px] rounded-none">
+                <Button className="h-[60px] w-full button rounded-none">
                     {t('countdown_timer_button')}
                 </Button>
             </div>

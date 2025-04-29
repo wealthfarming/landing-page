@@ -297,6 +297,9 @@ html, body {
 .font-geist-raleway {
   font-family: var(--font-geist-raleway);
 }
+.font-geist-raleway-place-holder {
+  font-family: var(--font-geist-raleway-place-holder);
+}
 
 .bigTitle {
   color: var(--text-bold); 
@@ -417,7 +420,7 @@ html, body {
   font-weight: 600; 
   font-size: 30px; 
   letter-spacing: 0em; 
-  line-height: 1.2em; 
+  line-height: 1.4em; 
 }
 @media (max-width: 809px) {
   .h2-raleway {
@@ -448,9 +451,9 @@ html, body {
   }
 }
 
-.h4 {
+.h4-raleway {
   color: var(--text-bold); 
-  font-family: var(--font-geist-display);
+  font-family: var(--font-geist-raleway-place-holder);
   font-style: normal;
   font-weight: 500; 
   font-size: 20px; 
@@ -459,13 +462,13 @@ html, body {
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
-  .h4 {
+  .h4-raleway {
     font-size: 19px;
   }
 }
 
 @media (max-width: 809px) {
-  .h4 {
+  .h4-raleway {
     font-size: 18px;
   }
 }

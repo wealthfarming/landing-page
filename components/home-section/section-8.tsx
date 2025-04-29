@@ -35,7 +35,7 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                             style={
                                 selected === tab.id
                                     ? {
-                                        backgroundImage: `url(${tab.img})`,
+                                        backgroundImage: `url(${tab.img.src})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
                                     }
@@ -53,10 +53,10 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
 
                             <div className={`relative z-[2] flex gap-[40px] w-full items-center`}>
 
-                                <p className={`h4 transition-all duration-200 ease-in-out ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveIn_0.2s_ease-in-out]' : 'animate-[moveOut_0.2s_ease-in-out]'}`}>{t(tab.id)}</p>
-                                <p className={`h2 ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveInUp_0.2s_ease-in-out]' : 'animate-[moveOutUp_0.2s_ease-in-out]'}`}>{t(tab.label)}</p>
+                                <p className={`h4-raleway !font-[700] transition-all duration-200 ease-in-out ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveIn_0.2s_ease-in-out]' : 'animate-[moveOut_0.2s_ease-in-out]'}`}>{t(tab.id)}</p>
+                                <p className={`h2 font-geist-raleway-place-holder ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveInUp_0.2s_ease-in-out]' : 'animate-[moveOutUp_0.2s_ease-in-out]'}`}>{t(tab.label)}</p>
                                 <Plus width={24} height={24} className={`ml-auto text-[var(--text-bold)] ${selected == tab.id ? 'hidden' : ''}`} />
-                                <p className={` text-[var(--other-border)] ${selected == tab.id ? '' : 'hidden'} ml-auto text-right text-[18px] max-w-[400px]`}>{t(tab.content)}</p>
+                                <p className={` text-[var(--other-border)] ${selected == tab.id ? '' : 'hidden'} ml-auto text-right text-[18px] max-w-[400px] font-[500]`}>{t(tab.content)}</p>
                             </div>
                         </div>
                     </FadeInSection>
@@ -70,10 +70,10 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                     className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
                 >
                     <div className={`flex gap-[20px] items-start`}>
-                        <p className={`h4 ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
-                        <p className={`h3 ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
+                        <p className={`h4-raleway !font-[700] ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
+                        <p className={`h3 font-geist-raleway-place-holder ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
                     </div>
-                    <p className={`pl-[41px] ${isTablet ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)]`}>{t(tab.content)}</p>
+                    <p className={`pl-[41px] ${isTablet ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)] font-[500]`}>{t(tab.content)}</p>
                 </div>
             ))}
         </div>
@@ -121,7 +121,7 @@ export default function HomeSection8() {
     return (
         <div className={`${isMobile ? "px-[20px] py-[40px]" : 'p-[40px] pb-[80px]'} gap-[10px] w-full flex justify-center`}>
             <div className="gap-[40px] w-full flex flex-col max-w-[1200px]">
-                <p className="max-w-[600px] h1">
+                <p className="max-w-[600px] h2-raleway">
                     {t('home_section_6_title')}
                 </p>
                 <HomeSection8Tab tabs={tabs} />

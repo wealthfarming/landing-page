@@ -60,7 +60,7 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
                     >
                         <div>
                             <Image src={selected === tab.id ? tab.icon_selected : tab.icon} alt="" width={45} height={45} />
-                            <p className="pt-[8px] no-anim h4">{t(tab.label)}</p>
+                            <p className="pt-[8px] no-anim h4-raleway">{t(tab.label)}</p>
                         </div>
                         <div
                             className={`
@@ -131,10 +131,10 @@ export default function HomeSection5() {
             <div className=" max-w-[1200px] w-full">
                 <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
                     <div className="flex flex-col gap-[16px] max-w-[716px]">
-                        <div className="h1">
+                        <div className="h2-raleway">
                             <AnimatedText text={[t('home_section_5_title')]} />
                         </div>
-                        <p className={`max-w-[555px] ${!isMobile ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)]`}>
+                        <p className={`max-w-[555px] ${!isMobile ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)] font-[500]`}>
                             {t('home_section_5_description')}
                         </p>
                     </div>
