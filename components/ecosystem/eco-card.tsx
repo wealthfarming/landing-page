@@ -22,11 +22,11 @@ export default function EcoCard({ section }: EcoCardProps) {
         <Image
           src={section.img}
           alt={section.title}
-          className={`object-cover object-center w-full h-full`}
+          className={`object-contain object-center w-full h-full`}
         />
       </div>
       <div className={`flex flex-col w-full ${isDesktop ? 'gap-4' : isTablet ? 'gap-2' : 'gap-4'}`}>
-        <div className={`${isDesktop ? 'text-[31px]' : isTablet ? 'text-[30px]' : 'text-[28px]'} font-semibold`}>{section.title}</div>
+        <div className={`${isDesktop ? 'text-[31px]' : isTablet ? 'text-[30px]' : 'text-[28px]'} font-[500]`}>{section.title}</div>
         <div className="flex flex-col w-full gap-2">
           {section.content.map((item: ContentItem, contentIndex: number) => (
             <div

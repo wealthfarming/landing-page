@@ -34,21 +34,25 @@ export default function InvestmentBank() {
 
       </div>
 
-      <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
+      <div className="flex justify-center w-full h-[120px] md:h-[135px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
         <div className="w-[1200px] max-w-[1200px]">
           <p className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
             <AnimatedText
               text={[t('investment_bank')]}
               delayBetween={0.05}
               duration={0.3}
+              center={false}
             />
           </p>
         </div>
       </div>
 
-      <div className={`flex w-full justify-center p-[40px] pb-[100px] bg-[var(--canvas-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `}>
-        <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] `}>
-          <div className="gap-[40px] flex-col items-center w-[336px] min-w-[336px] ">
+      <div className={`flex w-full relative justify-center p-[40px] bg-[var(--base-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `}>
+        <div className="absolute inset-0 bg-black/50 z-0" style={{"filter":"brightness(1.31)","WebkitFilter":"brightness(1.31)","opacity":"0.05"}}>
+            <Image src="/images/img/section_4_2.png" alt="Background Image" layout="fill" objectFit="cover" />
+        </div>
+        <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] z-10`}>
+          <div className="gap-[40px] flex-col items-center lg:w-[336px] w-full  min-w-[336px] ">
             {tabs.map((tab) => (
               <div
                 key={tab.id}
