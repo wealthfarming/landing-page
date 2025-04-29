@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { CursorClick } from "@phosphor-icons/react";
 import section9 from "../../public/images/home-section-7/section-7.png"
-
+import ButtonPrimary from "../custom-button/button-primary";
 export default function HomeSection9() {
     const { isDesktop, isTablet, isMobile } = useInterface();
     const { t } = useTranslation();
@@ -20,13 +20,15 @@ export default function HomeSection9() {
 
             <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-            <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] px-[40px] flex flex-col justify-center items-center gap-[10px]">
-                <p className={`${isMobile ? 'h2' : 'h1'} !text-[var(--other-border)] flex text-center max-w-[720px]`}>
+            <div className={`absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] ${!isMobile ? 'px-[40px]' : 'px-[20px]'} flex flex-col justify-center items-center gap-[10px]`}>
+                <p className={`${isMobile ? 'h2' : 'h1'} !text-white flex text-center max-w-[720px]`}>
                     {t('home_section_7_title')}
                 </p>
-                <a className="flex gap-[8px] shadow-md hover:bg-[var(--primary-gradient)] bg-[var(--primary)] px-[24px] w-max items-center justify-center h-[48px]" href="https://wealthfarming.app/" target="_blank">
-                    <CursorClick className="animate-diagonal" width="20" height={20} />
-                    <p className="text-[12px]">{t('header_invest_today_up')}</p>
+                <a href="https://wealthfarming.app/" target="_blank" >
+                    <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] py-0">
+                        <CursorClick size={32} className="size-5 animate-diagonal-2" />
+                        <p>{t('header_invest_today_up')}</p>
+                    </ButtonPrimary>
                 </a>
             </div>
         </div>

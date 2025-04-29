@@ -13,13 +13,13 @@ export default function HomeSection4() {
     const { isDesktop, isTablet, isMobile } = useInterface();
     return (
         <div className="w-full body-large">
-            <div className='w-full h-[300px] relative overflow-hidden flex items-center justify-center'>
+            <div className={`w-full ${!isMobile ? 'h-[308px]' : 'h-[201px]'} relative overflow-hidden flex items-center justify-center`}>
                 <Image
                     src={section4}
                     alt="section4"
                     width={1200}
                     height={625}
-                    className="object-cover top-1/2 h-[300px] w-full"
+                    className="object-cover top-1/2 h-full w-full"
                     style={{ "filter": "brightness(0.5)" }}
                 />
                 <div
@@ -48,14 +48,14 @@ export default function HomeSection4() {
                     }
                 `}</style>
 
-                <div className='absolute top-1/2 transform -translate-y-1/2 w-full lg:w-1/3 h-full flex flex-col h3 items-center justify-center text-center !text-white '>
+                <div className='absolute top-1/2 transform -translate-y-1/2 w-full lg:w-1/3 h-full flex flex-col body-large items-center justify-center text-center !text-white '>
                     <FadeInSection>
                         {t('home_section_4_title')}
                     </FadeInSection>
                 </div>
 
             </div>
-            <div className='flex flex-col items-center justify-center w-full p-5 h-full lg:h-[412px] relative'>
+            <div className='flex flex-col items-center justify-center w-full p-5 pt-10 h-full lg:h-[412px] relative'>
                 <Image
                     src={section4_2}
                     alt="Section 4"
@@ -64,15 +64,15 @@ export default function HomeSection4() {
                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
                     style={{ opacity: 0.1 }}
                 />
-                <div className={`${isDesktop ? 'w-[1180px] text-[30px] font-semibold' : 'w-1/2'}  text-center`} style={{
+                <div className={`${isDesktop ? 'w-[1180px] text-[30px] font-semibold' : 'w-full'}  text-center`} style={{
                     lineHeight: isDesktop ? '33.6px' : isTablet ? "" : "",
                 }}>
-                    <FadeInSection>
-                        {t('home_section_4_description')}
+                    <FadeInSection >
+                        <p className='h2-raleway'>{t('home_section_4_description')}</p>
                     </FadeInSection>
                 </div>
-                <div className='flex flex-col items-center justify-center w-full p-5 mt-12 relative'>
-                    <Button className="h-[50px] w-[180px] button !text-[12px] rounded-[4px]">
+                <div className={`flex flex-col items-center justify-center w-full p-5 pt-9 relative`}>
+                    <Button className="button !text-[12px] rounded-[4px]">
                         <ChatCenteredDots size={32} className="size-5" />
                         <p>{t('free_support')}</p>
                     </Button>

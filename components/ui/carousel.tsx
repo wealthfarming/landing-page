@@ -142,13 +142,13 @@ function CarouselContent({
   return (
     <div
       ref={carouselRef}
-      className={cn("overflow-visible", !visible && "overflow-hidden")}
+      className={cn("overflow-visible h-full", !visible && "overflow-hidden")}
       data-slot="carousel-content"
     >
       <div
         className={cn(
           "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          orientation === "horizontal" ? "" : "-mt-4 flex-col",
           className
         )}
         {...props}
@@ -167,7 +167,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="carousel-item"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        orientation === "horizontal" ? "" : "pt-4",
         className
       )}
       {...props}

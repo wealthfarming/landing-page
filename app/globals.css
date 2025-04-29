@@ -298,6 +298,13 @@ html, body {
   letter-spacing: 0em; 
   line-height: 1.2em; 
 }
+
+@media (max-width: 767px) {
+  .bigTitle {
+    font-size: 34px;
+  }
+}
+
 .h1-index {
   color: var(--text-bold); 
   font-family: var(--font-geist-raleway-place-holder);
@@ -340,9 +347,25 @@ html, body {
   line-height: 1.2em; 
 }
 
+
 @media (max-width: 809px) {
   .h2 {
     font-size: 26px;
+  }
+}
+
+.h2-raleway {
+  color: var(--text-bold); 
+  font-family: var(--font-geist-raleway-place-holder);
+  font-style: normal;
+  font-weight: 600; 
+  font-size: 30px; 
+  letter-spacing: 0em; 
+  line-height: 1.2em; 
+}
+@media (max-width: 809px) {
+  .h2-raleway {
+    font-size: 29px;
   }
 }
 
@@ -403,11 +426,18 @@ html, body {
 .body-large {
   color: var(--text-bold); 
   font-family: var(--font-geist-display);
-  font-weight: 400; 
+  font-weight: 500; 
   font-size: 18px; 
   letter-spacing: 0em; 
   line-height: 1.7em; 
 }
+
+@media (max-width: 767px) {
+  .body-large {
+    font-size: 17px;
+  }
+}
+
 .body-large-index {
   color: var(--text-bold); 
   font-family: var(--font-geist-display);
