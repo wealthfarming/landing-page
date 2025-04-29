@@ -15,18 +15,18 @@ interface EcoCardProps {
 }
 
 export default function EcoCard({ section }: EcoCardProps) {
-  const { isDesktop, isTablet, isMobile } = useInterface();
+  const { isDesktop, isTablet } = useInterface();
   return (
     <div className={`flex flex-col ${isDesktop ? 'gap-6' : isTablet ? 'gap-4' : 'gap-6'} w-full`}>
       <div className={`flex w-full ${isDesktop ? 'h-[400px]' : isTablet ? 'h-[256px]' : 'h-[320px]'}`}>
         <Image
           src={section.img}
           alt={section.title}
-          className={`object-cover object-center w-full h-full`}
+          className={`object-contain object-center w-full h-full`}
         />
       </div>
       <div className={`flex flex-col w-full ${isDesktop ? 'gap-4' : isTablet ? 'gap-2' : 'gap-4'}`}>
-        <div className={`${isDesktop ? 'text-[31px]' : isTablet ? 'text-[30px]' : 'text-[28px]'} font-semibold`}>{section.title}</div>
+        <div className={`${isDesktop ? 'text-[31px]' : isTablet ? 'text-[30px]' : 'text-[28px]'} font-[500]`}>{section.title}</div>
         <div className="flex flex-col w-full gap-2">
           {section.content.map((item: ContentItem, contentIndex: number) => (
             <div

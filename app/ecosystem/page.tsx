@@ -21,94 +21,50 @@ interface Section {
   content: ContentItem[];
 }
 
-interface EcoData {
-  [key: string]: Section[];
-}
-
-const ecoData: EcoData = {
-  vi: [
-    {
-      img: eco1,
-      title: "Quản lý tài sản số toàn diện với BeQ Web3 Wallet",
-      content: [
-        "Một ví dụ duy nhất, tích hợp đầy đủ giao dịch NFT, crypto và quản lý tài sản số.",
-        "Kết nối và giao dịch để đăng vì các nền tảng DeFi, DEX uy tín.",
-        "Bảo mật tuyệt đối bằng công nghệ blockchain và AI.",
-      ],
-    },
-    {
-      img: eco2,
-      title: "Đầu tư thông minh, tạo thu nhập thụ động ổn định",
-      content: [
-        "NFT NEC – chuyển chi tiêu hằng ngày thành dòng tiền thu nhập thụ động lâu dài.",
-        "NFT BEQ INDEXES – lợi nhuận vượt trội (27-30%/năm), giao dịch linh hoạt.",
-        "Lợi nhuận rõ ràng, minh bạch thông qua hợp đồng thông minh (Smart Contract).",
-      ],
-    },
-    {
-      img: eco3,
-      title: "Ứng dụng công nghệ Blockchain và AI tiên tiến",
-      content: [
-        "AI Credit Scoring – định giá tài sản số chính xác, giảm thiểu rủi ro đầu tư.",
-        "Hệ thống DEFI LENDING – vay vốn tức thì, không cần bán tài sản.",
-        "Bảo mật và minh bạch tuyệt đối, mọi giao dịch được ghi nhận công khai trên blockchain.",
-      ],
-    },
-    {
-      img: eco4,
-      title: "Báo cáo đầu tư và phân tích chuyên nghiệp, minh bạch",
-      content: [
-        "Báo cáo tự động hóa thông qua Smart Contract, rõ ràng từng khoản đầu tư.",
-        "Phân tích tài sản và danh mục đầu tư thông minh, hỗ trợ ra quyết định nhanh chóng.",
-        "Cập nhật liên tục về biến động thị trường để nhà đầu tư luôn chủ động.",
-      ],
-    },
-  ],
-  en: [
-    {
-      img: eco1,
-      title: "Comprehensive digital asset management with BeQ Web3 Wallet",
-      content: [
-        "A unique wallet that fully integrates NFT transactions, crypto, and digital asset management.",
-        "Easily connect and transact with reputable DeFi platforms and DEX.",
-        "Absolute security through blockchain and AI technology.",
-      ],
-    },
-    {
-      img: eco2,
-      title: "Smart investment, creating stable passive income",
-      content: [
-        "NFT NEC – converting daily spending into a long-term source of passive income.",
-        "NFT BEQ INDEXES – superior profits (27-30%/year), easy trading, flexible liquidity.",
-        "Profits are clear and transparent through smart contracts.",
-      ],
-    },
-    {
-      img: eco3,
-      title: "The advanced application of Blockchain and AI technology",
-      content: [
-        "AI Credit Scoring – accurate digital asset valuation, minimizing investment risk.",
-        "The DeFi Lending system – instant loans without the need to sell assets.",
-        "Absolute security and transparency, all transactions are publicly recorded on the blockchain.",
-      ],
-    },
-    {
-      img: eco4,
-      title: "Professional, transparent investment reporting and analysis",
-      content: [
-        "Automated reporting through Smart Contracts clearly outlines each investment.",
-        "Analyzing assets and investment portfolios intelligently, supporting quick decision-making.",
-        "Continuous updates on market fluctuations to keep investors proactive.",
-      ],
-    },
-  ],
-};
-
 export default function EcoPage() {
   const { isDesktop, isTablet } = useInterface();
   const { language } = useLanguage();
   const { t } = useTranslation();
-  const selectedEcoData = ecoData[language] || ecoData['en'];
+  const ecoData  = [
+    {
+      img: eco1,
+      title: t('eco_data_title_1'),
+      content: [
+        t('eco_data_content_1_1'),
+        t('eco_data_content_1_2'),
+        t('eco_data_content_1_3'),
+      ],
+    },
+    {
+      img: eco2,
+      title: t('eco_data_title_2'),
+      content: [
+        t('eco_data_content_2_1'),
+        t('eco_data_content_2_2'),
+        t('eco_data_content_2_3'),
+      ],
+    },
+    {
+      img: eco3,
+      title: t('eco_data_title_3'),
+      content: [
+        t('eco_data_content_3_1'),
+        t('eco_data_content_3_2'),
+        t('eco_data_content_3_3'),
+      ],
+    },
+    {
+      img: eco4,
+      title: t('eco_data_title_4'),
+      content: [
+        t('eco_data_content_4_1'),
+        t('eco_data_content_4_2'),
+        t('eco_data_content_4_3'),
+      ],
+    },
+  ]
+
+  const selectedEcoData = ecoData;
 
   return (
     <div className="flex flex-col">
@@ -132,16 +88,17 @@ export default function EcoPage() {
           <div className={`flex flex-col gap-6`}>
             <h1
               className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'
-                } font-semibold w-full text-center`}
+                } font-[600] w-full text-center`}
             >
               <AnimatedText
                 text={[t('eco_title')]}
                 delayBetween={0.05}
                 duration={0.3}
+                customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] font-[500] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] font-[500] flex flex-wrap' : 'text-[34px]  leading-[40.8px] font-[500] flex flex-wrap'}`]}
               />
             </h1>
             <p
-              className={` ${isDesktop ? 'text-xl px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'
+              className={` ${isDesktop ? 'text-[18px] px-[199px]' : isTablet ? 'px-[110px] text-xl' : 'text-lg mb-5'
                 } font-medium w-full text-center text-[var(--text-medium)]`}
             >
               {t('eco_description')}
@@ -149,10 +106,10 @@ export default function EcoPage() {
           </div>
           <div
             className={`${isDesktop
-              ? 'grid-cols-2 gap-[40px_60px] mb-20'
+              ? 'grid-cols-2 gap-[40px_60px] pb-[80px]'
               : isTablet
-                ? 'grid-cols-2 gap-[40px_60px] mb-20'
-                : 'grid-cols-1 gap-10'
+                ? 'grid-cols-2 gap-[40px_60px] pb-[40px]'
+                : 'grid-cols-1 gap-10 pb-[40px]'
               } grid flex-wrap justify-center w-full`}
           >
             {selectedEcoData.map((section, index) => (

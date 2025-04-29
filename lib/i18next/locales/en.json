@@ -8,6 +8,7 @@
   "home_section_1_title_3":" solution, generating",
   "home_section_1_title_4":" superior profits",
   "home_section_1_description": "When decentralized finance meets artificial intelligence, combined with a team of practical fund managers and experts with over 20 years of R&D experience in financial products for Euronext,... a breakthrough investment opportunity emerges.",
+  "home_section_1_description_mobile": "When decentralized finance meets artificial intelligence, breakthrough investment opportunities arise.",
   "home_section_2_title": "Growth +300% in 2 years, preparing for listing!",
   "home_section_2_description": "NFT Review Index – exclusive digital asset from the top-notch strategy, built by the former R&D Director of Euronext. Outperforming all indices for over 2 years. Own it now before the public launch!",
   "home_section_3_title": "Join the world's leading decentralized financial ecosystem, combining Fintech, AI & Blockchain to create an unprecedented financial revolution!",
@@ -177,5 +178,22 @@
   "faq_section_question_2": "What are the risks if the Index Committee rejects recommendations?",
   "faq_section_answer_2": "We have hedging mechanisms and automatic stop-loss at -13.33% to protect your investment capital in such cases.",
   "faq_section_question_3": "How to buy fund NFTs on Wealth Farming?",
-  "faq_section_answer_3": "You can purchase fund NFTs using USDT/USDC on the Wealth Farming platform with a simple process and 24/7 liquidity."
+  "faq_section_answer_3": "You can purchase fund NFTs using USDT/USDC on the Wealth Farming platform with a simple process and 24/7 liquidity.",
+
+  "eco_data_title_1": "Comprehensive digital asset management with BeQ Web3 Wallet",
+  "eco_data_content_1_1": "A unique wallet that fully integrates NFT transactions, crypto, and digital asset management.",
+  "eco_data_content_1_2": "Easily connect and transact with reputable DeFi platforms and DEX.",
+  "eco_data_content_1_3": "Absolute security through blockchain and AI technology.",
+  "eco_data_title_2": "Smart investment, creating stable passive income:",
+  "eco_data_content_2_1": "NFT NEC – converting daily spending into a long-term source of passive income.",
+  "eco_data_content_2_2": "NFT BEQ INDEXES – superior profits (27-30%/year), easy trading, flexible liquidity.",
+  "eco_data_content_2_3": "Profits are clear and transparent through smart contracts.",
+  "eco_data_title_3": "The advanced application of Blockchain and AI technology",
+  "eco_data_content_3_1": "AI Credit Scoring – accurate digital asset valuation, minimizing investment risk.",
+  "eco_data_content_3_2": "The DeFi Lending system – instant loans without the need to sell assets.",
+  "eco_data_content_3_3": "Absolute security and transparency, all transactions are publicly recorded on the blockchain.",
+  "eco_data_title_4": "Professional, transparent investment reporting and analysis",
+  "eco_data_content_4_1": "Automated reporting through Smart Contracts clearly outlines each investment.",
+  "eco_data_content_4_2": "Analyzing assets and investment portfolios intelligently, supporting quick decision-making.",
+  "eco_data_content_4_3": "Continuous updates on market fluctuations to keep investors proactive."
 }
