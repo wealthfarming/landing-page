@@ -61,7 +61,7 @@ export default function InvestmentBank() {
         {post?.image && (
           <Image
             src={`${API_URL}${post.image}`}
-            alt="Product Banner"
+            alt=""
             width={735}
             height={260}
             className="w-full h-[260px] object-cover"
