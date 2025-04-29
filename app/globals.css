@@ -285,9 +285,7 @@ html, body {
 .font-geist-button {
   font-family: var(--font-geist-button);
 }
-.font-geist-raleway {
-  font-family: var(--font-geist-raleway);
-}
+
 
 .bigTitle {
   color: var(--text-bold); 

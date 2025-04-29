@@ -42,20 +42,23 @@ const IntroSection: React.FC = () => {
         </p>
       </div>
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="flex gap-2 md:flex-row flex-col my-10 md:mt-10 text-sm md:w-full w-[209px] font-medium tracking-wide justify-center items-center text-zinc-800 max-md:max-w-full">
-          <Button
-            onClick={() => window.open("https://www.facebook.com/profile.php?id=61574682066111", "_blank")}
-            variant="white" classname="px-8 !font-[500] !text-[12px] max-md:px-4 max-md:h-10">
-            <ChatCenteredDots size={20} />
-            <p>{t("button_contact_private")}</p>
-          </Button>
-      
-          <Button
-            onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-            variant="white" classname="!font-[500] !text-[12px] !max-md:px-4 max-md:h-10 max-md:w-full !bg-[var(--primary)]">
-            <CursorClick size={20} className="animate-diagonal-2" />
-            <p>{t("button_secret_documnet")}</p>
-          </Button>
+        <div className="flex gap-2 md:flex-row flex-col my-10 md:mt-10 text-sm md:w-full font-medium tracking-wide justify-center items-center text-zinc-800">
+          <div>
+            <Button
+              onClick={() => window.open("https://www.facebook.com/profile.php?id=61574682066111", "_blank")}
+              variant="white" classname="px-8 !font-[500] !text-[12px] max-md:px-4 max-md:h-10 flex justify-center items-center">
+              <ChatCenteredDots size={20} />
+              <p>{t("button_contact_private")}</p>
+            </Button>
+          </div>
+          <div>
+            <Button
+              onClick={() => window.open("https://wealthfarming.app/", "_blank")}
+              variant="orange" classname="!font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] max-md:w-[132px] flex justify-center items-center">
+              <CursorClick size={20} className="animate-diagonal-2" />
+              <p>{t("button_secret_documnet")}</p>
+            </Button>
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
@@ -66,7 +69,7 @@ const IntroSection: React.FC = () => {
               alt="Icon"
               className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
             />
-            <p className="self-stretch my-auto md:w-[768px] max-md:max-w-full">
+            <p className="self-stretch my-auto md:w-[768px] max-md:max-w-full max-md:whitespace-nowrap max-md:text-[12px]">
               {t("index_section_2_description")}
             </p>
           </div>

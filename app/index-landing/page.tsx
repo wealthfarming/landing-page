@@ -54,36 +54,27 @@ const IndexLandingPage: React.FC = () => {
           <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
       }
-      <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-10 max-md:pb-10">
+      <div className="w-full bg-white " style={{ "display": "flex", "flexFlow": "column", "gap": "0px", "height": "min-content", "overflow": "visible", "padding": "0px", "position": "relative" }}>
         <IntroSection />
-        <div className="w-full md:sticky md:h-[100vh] top-[20px] pt-[50px] pb-[80px] white z-[2] max-md:pt-0">
+        <div className="w-full sticky h-[100vh] top-[20px] pt-[40px] pb-[80px]  white z-[2]">
           <ProblemSection />
-
         </div>
-        <div style={{ overflow: "visible", position: "sticky", top: "30px", width: "100%", zIndex: 2 }}>
+        <div style={{ "overflow": "visible", "position": "sticky", "top": "20px", "width": "100%", "zIndex": "2" }}>
           <SecuritySection />
         </div>
         <div className="w-full flex flex-col items-center justify-start bg-background relative z-30">
           <SolutionSection />
           <NFTFutureSection />
           <SecurityDetailsSection />
-          {/* Process Section */}
-          <div className="relative w-full min-h-screen">
-            <div
-              className={`${sticky ? "sticky top-[80px] min-h-screen overflow-hidden z-30" : ""
-                }`}
-            >
-              <ProcessSection
-                activeStep={activeStep}
-                setActiveStep={setActiveStep}
-                sticky={sticky}
-              />
-            </div>
-          </div>
+          {/* <ProcessSection /> */}
           <PartnersSection />
           <ContactSection />
           <FAQSection />
+
+          {/* <FooterFull /> */}
         </div>
+
+
       </div>
       <FooterFull active={'introduction'} fixed={false} />
 
