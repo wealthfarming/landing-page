@@ -38,7 +38,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
   const currentLanguage = i18n.language;
   const changeLanguage = i18n.language === "en" ? "vi" : "en";
   const handleLanguageChange = (lang: string) => {
-    if (lang !== "en" && lang !== "vi") return;
+    if (lang !== "en" && lang !== "vi" && lang !== "fr") return;
     i18n.changeLanguage(lang);
     localStorage.setItem("language", lang);
   };
@@ -85,7 +85,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                 </Button>
               </a>
               <a href="https://wealthfarming.app/" target="_blank" >
-                <Button variant="outline" className="!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none w-[148px] h-[40px] transition-transform duration-300 ease-in-out ">
+                <Button variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} h-[40px] transition-transform duration-300 ease-in-out`}>
                   <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                   <p>{t('header_investNowup')}</p>
                 </Button>
@@ -103,6 +103,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
               <SelectContent className="rounded-none z-[1001] !w-[200px] !max-w-[200px] !min-w-[200px]">
                 <SelectItem value="en">{t('currentLanguage_en')}</SelectItem>
                 <SelectItem value="vi">{t('currentLanguage_vi')}</SelectItem>
+                <SelectItem value="fr">{t('currentLanguage_fr')}</SelectItem>
               </SelectContent>
             </Select>
           )}
@@ -133,6 +134,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             <SelectContent className="rounded-none z-[1001] !w-full !max-w-full !min-w-full text-[11px]">
                 <SelectItem value="en">{t('currentLanguage_en')}</SelectItem>
                 <SelectItem value="vi">{t('currentLanguage_vi')}</SelectItem>
+                <SelectItem value="fr">{t('currentLanguage_fr')}</SelectItem>
             </SelectContent>
             </Select>
 
