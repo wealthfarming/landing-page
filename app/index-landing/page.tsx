@@ -12,6 +12,7 @@ import PartnersSection from "@/components/index/partners-section";
 import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import FooterFull from "@/components/footer/footer-full";
+import indexBanner from "../../public/images/img/index_banner.webp"
 
 const steps = [
   { number: "01", title: "Crawl dữ liệu số" },
@@ -50,7 +51,7 @@ const IndexLandingPage: React.FC = () => {
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-          <Image src="/images/img/index_banner.webp" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
 
         </div>
       }
