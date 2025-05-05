@@ -5,16 +5,11 @@ import Image, { StaticImageData } from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { Plus } from 'phosphor-react';
 import { FadeInSection } from "@/components/animation/introduction/Animations"
-import section8_1 from "../../public/images/home-section-6/01.png"
-import section8_2 from "../../public/images/home-section-6/02.png"
-import section8_3 from "../../public/images/home-section-6/03.png"
-import section8_4 from "../../public/images/home-section-6/04.png"
-import section8_5 from "../../public/images/home-section-6/05.png"
 
 type Tab = {
     id: string;
     label: string;
-    img: StaticImageData;
+    img: string;
     content: string;
 };
 
@@ -87,31 +82,31 @@ export default function HomeSection8() {
         {
             id: '01',
             label: t('home_section_6_tab_label_1'),
-            img: section8_1,
+            img: '/images/home-section-6/01.png',
             content: t('home_section_6_tab_content_1')
         },
         {
             id: '02',
             label: t('home_section_6_tab_label_2'),
-            img: section8_2,
+            img: "/images/home-section-6/02.png",
             content: t('home_section_6_tab_content_2')
         },
         {
             id: '03',
             label: t('home_section_6_tab_label_3'),
-            img: section8_3,
+            img: "/images/home-section-6/03.png",
             content: t('home_section_6_tab_content_3')
         },
         {
             id: '04',
             label: t('home_section_6_tab_label_4'),
-            img: section8_4,
+            img: "/images/home-section-6/04.png",
             content: t('home_section_6_tab_content_4')
         },
         {
             id: '05',
             label: t('home_section_6_tab_label_5'),
-            img: section8_5,
+            img: "/images/home-section-6/05.png",
             content: t('home_section_6_tab_content_5')
         },
     ];
