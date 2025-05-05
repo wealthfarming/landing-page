@@ -54,12 +54,12 @@ const IndexLandingPage: React.FC = () => {
 
         </div>
       }
-      <div className="w-full bg-white flex flex-col gap-0 overflow-visible">
+      <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-20 max-md:pb-10">
         <IntroSection />
-        <div className="w-full sticky h-[100vh] top-[20px] pt-[40px] pb-[80px]  white z-[2]">
+        <div className="w-full md:sticky md:h-[100vh] top-[20px] md:pb-[80px] white z-[2]">
           <ProblemSection />
         </div>
-        <div style={{ overflow: "visible", position: "sticky", top: "20px", width: "100%", zIndex: 2 }}>
+        <div className="overflow-visible sticky top-10 w-full z-[2] md:h-[100vh] md:top-5">
           <SecuritySection />
         </div>
         <div className="w-full flex flex-col items-center justify-start bg-background relative z-30">
