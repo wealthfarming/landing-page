@@ -21,7 +21,7 @@ const SecuritySection: React.FC = () => {
             alt="Info icon"
             className="object-contain shrink-0 w-5"
           />
-          <p className="self-stretch my-auto w-[768px] max-md:max-w-full">
+          <p className="self-stretch my-auto w-[768px] max-md:max-w-full max-md:text-[12px]">
             Tài khoản demo real-time hiển thị lợi nhuận 20% từ ALSTOM (CAC40
             Q1/2025).
           </p>

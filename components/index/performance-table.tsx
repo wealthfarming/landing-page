@@ -11,10 +11,10 @@ const PerformanceTable: React.FC = () => {
   return (
     <div className="p-2 mt-2 w-full bg-white rounded-xl border border-[var(--other-border)] border-solid max-md:max-w-full">
       <div className="flex items-start w-full text-lg font-semibold text-[var(--primary)] border-b border-[var(--other-border)] max-md:max-w-full">
-        <div className="flex-1 p-4 whitespace-nowrap">
+        <div className="md:flex-1 p-4 whitespace-nowrap">
         {t('year')}
         </div>
-        <div className="flex-1 p-4 text-right whitespace-nowrap">
+        <div className="md:flex-1 p-4 text-right whitespace-nowrap max-md:w-[137px]">
         {t('profit')}
         </div>
         <div className="flex-1 p-4 text-right">
@@ -30,10 +30,10 @@ const PerformanceTable: React.FC = () => {
           <div className="w-1/5 p-4 font-semibold whitespace-nowrap h-[40px] text-center items-center flex">
             {item.year}
           </div>
-          <div className="w-2/5 p-4 text-right text-[var(--primary-green)] h-[40px] items-center flex justify-end">
+          <div className="w-2/5 p-4 text-right text-[var(--primary-green)] h-[40px] items-center flex justify-end max-md:w-[137px]">
             {item.profit}
           </div>
-          <div className="w-2/5 p-4 text-right h-[40px] items-center flex justify-end">
+          <div className="w-2/5 p-4 text-right h-[40px] items-center flex justify-end max-md:flex-1">
             {item.capital}
           </div>
         </div>

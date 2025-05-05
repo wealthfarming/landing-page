@@ -15,11 +15,13 @@ import { useEffect, useState } from "react";
 import { useInterface } from '@/components/context/interface-context';
 import logoFullDark from "../../public/images/img/logo_full_dark.svg";
 import logoFull from "../../public/images/img/logo-full.svg";
+import { useLanguage } from "../context/i18n";
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
   const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDesktop, isMobile } = useInterface();
+  const {setLanguage} = useLanguage()
 
   // State to control menu visibility on mobile
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,6 +42,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
   const handleLanguageChange = (lang: string) => {
     if (lang !== "en" && lang !== "vi" && lang !== "fr") return;
     i18n.changeLanguage(lang);
+    setLanguage(lang);
     localStorage.setItem("language", lang);
   };
   const handleSelectChange = (lang: string) => {
