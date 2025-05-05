@@ -21,14 +21,12 @@ const steps = [
 ];
 import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
-import indexBanner from "../../public/images/img/index_banner.webp"
-
 const IndexLandingPage: React.FC = () => {
   const processRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
   const [sticky, setSticky] = useState(false);
 
-  const { isDesktop } = useInterface();
+  const { isDesktop, isMobile, isTablet } = useInterface();
   useEffect(() => {
     const ref = processRef.current;
     if (!ref) return;
@@ -51,19 +49,24 @@ const IndexLandingPage: React.FC = () => {
       {isDesktop &&
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
+          <Image src="/images/img/index_banner.webp" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+
         </div>
       }
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-20 max-md:pb-10">
         <IntroSection />
-        <ProblemSection />
-        <div style={{ "overflow": "visible", "position": "sticky", "top": "40px", "width": "100%", "zIndex": "2" }}>
+        <div className="w-full md:sticky md:h-[100vh] top-[20px] md:pb-[80px] white z-[2]">
+          <ProblemSection />
+        </div>
+        <div className="overflow-visible sticky top-10 w-full z-[2] md:h-[100vh] md:top-5">
           <SecuritySection />
         </div>
         <div className="w-full flex flex-col items-center justify-start bg-background relative z-30">
           <SolutionSection />
           <NFTFutureSection />
           <SecurityDetailsSection />
+          {/* Process Section */}
           <div className="relative w-full min-h-screen">
             <div
               className={`${sticky ? "sticky top-[80px] min-h-screen overflow-hidden z-30" : ""
@@ -80,10 +83,7 @@ const IndexLandingPage: React.FC = () => {
           <ContactSection />
           <FAQSection />
 
-          {/* <FooterFull /> */}
         </div>
-
-
       </div>
       <FooterFull active={'introduction'} fixed={false} />
 
