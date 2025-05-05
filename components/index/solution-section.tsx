@@ -14,11 +14,11 @@ const SolutionSection: React.FC = () => {
       />
       <div className="flex flex-wrap gap-10 justify-center items-start mt-20 w-full max-md:mt-10 max-md:max-w-full">
         <div className="flex-1 shrink p-2 text-base bg-white rounded-xl border border-gray-200 border-solid basis-0 min-w-60 text-zinc-800 max-md:max-w-full">
-          <div className="flex w-full text-lg font-semibold text-orange-300 border-b border-gray-200">
-            <div className="flex-1 p-4">
+          <div className="flex w-full text-lg text-orange-300 border-b border-gray-200 font-[var(--font-geist-raleway)]">
+            <div className="flex-1 p-4 font-medium">
               {t('feature')}
             </div>
-            <div className="flex-1 p-4">
+            <div className="flex-1 p-4 font-medium">
               {t('benefit')}
             </div>
           </div>

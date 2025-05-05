@@ -54,7 +54,7 @@ const IndexLandingPage: React.FC = () => {
           <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
       }
-      <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-10 max-md:pb-10">
+      <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-20 max-md:pb-10">
         <IntroSection />
         <ProblemSection />
         <div style={{ "overflow": "visible", "position": "sticky", "top": "40px", "width": "100%", "zIndex": "2" }}>
