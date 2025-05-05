@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const SecuritySection: React.FC = () => {
   const {t} = useTranslation()
   return (
-    <SectionContainer bgColor="bg-sky-950 ">
+    <SectionContainer bgColor="bg-sky-950" borderBottom={false}>
       <h2 className="text-2xl text-center text-white max-md:max-w-full">
         {t('index_security_section_title')}
       </h2>
