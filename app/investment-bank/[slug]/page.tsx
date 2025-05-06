@@ -21,6 +21,7 @@ export default function InvestmentBank() {
   const { isDesktop, isMobile, isTablet } = useInterface();
   const { t, i18n } = useTranslation();
   const slug = params.slug as string;
+  const formattedSlug = slug.replaceAll('-', ' ');
   const [post, setPost] = useState<any>(null);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function InvestmentBank() {
       const data = await Apiget(
         API_URL + '/api/posts',
         {
-          'where[title][like]': slug,
+          'where[title][like]': formattedSlug,
           sort: 'createdAt',
           limit: 1,
           locale: i18n.language,
@@ -40,7 +41,7 @@ export default function InvestmentBank() {
           id: data[0].id,
           title: data[0].title,
           description: data[0].description,
-          image: data[0].image?.url,
+          image: data[0].image,
         };
         console.log(post);
         setPost(post);
@@ -60,8 +61,8 @@ export default function InvestmentBank() {
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         {post?.image && (
           <Image
-            src={`${API_URL}${post.image}`}
-            alt=""
+            src={`${API_URL}${post.image.url}`}
+            alt={post.image.alt}
             width={735}
             height={260}
             className="w-full h-[260px] object-cover"
@@ -113,6 +114,14 @@ export default function InvestmentBank() {
                   }
 
                   return node.text;
+                },
+                list: ({ node, nodesToJSX, converters }) => {
+                  const children = nodesToJSX({ nodes: node.children, parent: node, converters });
+                  return (
+                    <ul className="list-disc list-outside pl-[30.2812px] p-rich space-y-1">
+                      {children}
+                    </ul>
+                  );
                 },
               })}
             />
