@@ -34,7 +34,7 @@ export default function HomeSection6() {
                             </div>
                             <div className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
                                 <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
-                                    <CursorClick size={20} />
+                                    <CursorClick size={20} className="animate-diagonal-2"/>
                                 </div>
                                 <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
                                     {t('header_investNowup')}
