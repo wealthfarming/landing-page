@@ -41,9 +41,9 @@ const FAQSection: React.FC = () => {
     <SectionContainer>
       <div className="flex justify-center">
         <div className="flex flex-col max-w-screen-md w-[768px] max-md:max-w-full gap-[40px]">
-          <h2 className="self-center h1-index text-center max-md:max-w-full">
+          <div className="self-center text-[40px] text-center max-md:max-w-full max-md:text-[29px] font-semibold">
           {t('faq_section_title')}
-          </h2>
+          </div>
           <div className="w-full max-md:max-w-full bg-[var(--canvas-bg)] p-5 border border-[var(--primary-other)] flex flex-col gap-[16px]">
             {faqItems.map((item, index) => (
               <FAQItem

@@ -10,12 +10,12 @@ const ContactSection: React.FC = () => {
   const {t} = useTranslation()
   return (
     <SectionContainer bgColor="bg-[var(--base-bg)]">
-      <div className="flex flex-[1_0_0] justify-center h-[408px]">
+      <div className="flex flex-[1_0_0] justify-center h-[408px] max-md:h-auto">
         <div className="flex flex-wrap gap-10 justify-center items-start max-w-screen-md w-[768px] max-md:max-w-full ">
           <div className="flex flex-col flex-1 shrink justify-center text-base basis-8 w-[600px] text-zinc-800 max-md:max-w-full gap-[20px]">
-            <h2 className="self-start h1-index text-center">
+            <div className="self-start text-[40px] text-center max-md:text-[29px] font-semibold">
             {t('contact_section_title')}
-            </h2>
+            </div>
             <p className="body-large-index max-md:max-w-full">
             {t('contact_section_question')}
             </p>
