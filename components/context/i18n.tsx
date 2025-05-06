@@ -33,7 +33,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const setLanguage = (lang: string) => {
-    if (lang !== "en" && lang !== "vi") return;
+    if (lang !== "en" && lang !== "vi" && lang !== "fr") return;
     setLanguageState(lang);
   };
 

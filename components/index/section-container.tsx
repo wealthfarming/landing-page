@@ -13,7 +13,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
 }) => {
   return (
     <section
-      className={`flex flex-col justify-center items-center px-10 py-20 w-full ${bgColor} ${borderBottom ? "border-b border-gray-200" : ""} max-md:px-5 max-md:max-w-full`}
+      className={`flex flex-col justify-center items-center px-10 py-20 max-md:py-10 w-full ${bgColor} ${borderBottom ? "border-b border-gray-200" : ""} max-md:px-5 max-md:max-w-full`}
     >
       <div className="flex flex-col justify-center w-full max-w-[1200px] max-md:max-w-full">
         {children}

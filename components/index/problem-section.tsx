@@ -11,7 +11,7 @@ const ProblemSection: React.FC = () => {
     <SectionContainer borderBottom={false}>
       <SectionTitle
         title={t('index_problem_section_title')}
-        subtitle={t('index_problem_section_subtitle')}
+        subtitle={`"${t('index_problem_section_subtitle')}"`}
       />
       <div className="flex relative flex-col mt-10 w-full min-h-[272px] max-md:max-w-full">
         <div className="flex relative flex-wrap gap-2 w-full min-h-[272px] max-md:max-w-full">

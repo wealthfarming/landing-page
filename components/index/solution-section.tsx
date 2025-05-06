@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 
 const SolutionSection: React.FC = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   return (
     <SectionContainer>
       <SectionTitle
@@ -14,17 +14,17 @@ const SolutionSection: React.FC = () => {
       />
       <div className="flex flex-wrap gap-10 justify-center items-start mt-20 w-full max-md:mt-10 max-md:max-w-full">
         <div className="flex-1 shrink p-2 text-base bg-white rounded-xl border border-gray-200 border-solid basis-0 min-w-60 text-zinc-800 max-md:max-w-full">
-          <div className="flex w-full text-lg font-semibold text-orange-300 border-b border-gray-200">
-            <div className="flex-1 p-4">
+          <div className="flex w-full text-lg text-orange-300 border-b border-gray-200 font-[var(--font-geist-raleway)]">
+            <div className="flex-1 p-4 font-medium">
               {t('feature')}
             </div>
-            <div className="flex-1 p-4">
+            <div className="flex-1 p-4 font-medium">
               {t('benefit')}
             </div>
           </div>
 
-          <div className="flex w-full">
-            <div className="flex-1 p-4 font-semibold">
+          <div className="flex w-full font-geist-display text-[15px]">
+            <div className="flex-1 p-4 font-semibold ">
               {t('solution_section_feature_1')}
             </div>
             <div className="flex-1 p-4 leading-6">
@@ -32,7 +32,7 @@ const SolutionSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex w-full rounded-lg bg-slate-50">
+          <div className="flex w-full rounded-lg bg-slate-50 font-geist-display text-[15px]">
             <div className="flex-1 p-4 font-semibold">
               {t('solution_section_feature_2')}
             </div>
@@ -41,7 +41,7 @@ const SolutionSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex w-full">
+          <div className="flex w-full font-geist-display text-[15px]">
             <div className="flex-1 p-4 font-semibold">
               {t('solution_section_feature_3')}
             </div>
@@ -50,7 +50,7 @@ const SolutionSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex w-full rounded-lg bg-slate-50">
+          <div className="flex w-full rounded-lg bg-slate-50 font-geist-display text-[15px]">
             <div className="flex-1 p-4 font-semibold">
               {t('solution_section_feature_4')}
             </div>
@@ -82,7 +82,7 @@ const SolutionSection: React.FC = () => {
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/057ca6d14da423d30721f79b58699eecfd47b2e6?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540"
               alt="Info icon"
-              className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
+              className=""
             />
             <p className="self-stretch my-auto w-[768px] max-md:max-w-full">
               {t('solution_section_strategy_label')}

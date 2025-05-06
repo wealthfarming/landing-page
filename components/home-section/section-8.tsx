@@ -5,11 +5,11 @@ import Image, { StaticImageData } from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { Plus } from 'phosphor-react';
 import { FadeInSection } from "@/components/animation/introduction/Animations"
-import section8_1 from "../../public/images/home-section-6/01.png"
-import section8_2 from "../../public/images/home-section-6/02.png"
-import section8_3 from "../../public/images/home-section-6/03.png"
-import section8_4 from "../../public/images/home-section-6/04.png"
-import section8_5 from "../../public/images/home-section-6/05.png"
+import section8_1 from "@/public/images/home-section-6/01.png"
+import section8_2 from "@/public/images/home-section-6/02.png"
+import section8_3 from "@/public/images/home-section-6/03.png"
+import section8_4 from "@/public/images/home-section-6/04.png"
+import section8_5 from "@/public/images/home-section-6/05.png"
 
 type Tab = {
     id: string;
@@ -35,26 +35,35 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                             style={
                                 selected === tab.id
                                     ? {
-                                        backgroundImage: `url(${tab.img.src})`,
+                                        backgroundImage: `url(${tab.img})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
                                     }
                                     : undefined
                             }
                             className={`
-                        border-b-[1px] border-[var(--primary-other)] relative overflow-hidden py-[16px] ${selected == tab.id ? 'px-16' : 'px-0'} h-[100px]
-                        `}
+                                border-b-[1px] border-[var(--primary-other)] relative overflow-hidden py-[16px] 
+                                ${selected == tab.id ? 'px-16' : 'px-0'} h-[100px]
+                            `}
                             onMouseEnter={() => setSelected(tab.id)}
                             onMouseLeave={() => setSelected(null)}
                         >
                             {selected === tab.id && (
-                                <div className="absolute inset-0 bg-black/40 z-[1]"></div>
+                                <>
+                                    <Image 
+                                        src={tab.img}
+                                        alt={tab.label}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-black/40 z-[1]"></div>
+                                </>
                             )}
 
                             <div className={`relative z-[2] flex gap-[40px] w-full items-center`}>
 
-                                <p className={`h4-raleway !font-[700] transition-all duration-200 ease-in-out ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveIn_0.2s_ease-in-out]' : 'animate-[moveOut_0.2s_ease-in-out]'}`}>{t(tab.id)}</p>
-                                <p className={`h2 font-geist-raleway-place-holder ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveInUp_0.2s_ease-in-out]' : 'animate-[moveOutUp_0.2s_ease-in-out]'}`}>{t(tab.label)}</p>
+                                <p className={`h4 transition-all duration-200 ease-in-out ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveIn_0.2s_ease-in-out]' : 'animate-[moveOut_0.2s_ease-in-out]'}`}>{t(tab.id)}</p>
+                                <p className={`h2 ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveInUp_0.2s_ease-in-out]' : 'animate-[moveOutUp_0.2s_ease-in-out]'}`}>{t(tab.label)}</p>
                                 <Plus width={24} height={24} className={`ml-auto text-[var(--text-bold)] ${selected == tab.id ? 'hidden' : ''}`} />
                                 <p className={` text-[var(--other-border)] ${selected == tab.id ? '' : 'hidden'} ml-auto text-right text-[18px] max-w-[400px] font-[500]`}>{t(tab.content)}</p>
                             </div>
@@ -64,7 +73,6 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
             ))}
 
             {!isDesktop && tabs.map(tab => (
-
                 <div
                     key={tab.id}
                     className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
@@ -77,7 +85,6 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                 </div>
             ))}
         </div>
-
     );
 }
 
