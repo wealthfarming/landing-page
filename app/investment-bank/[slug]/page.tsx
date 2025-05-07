@@ -15,6 +15,7 @@ import { title } from "process";
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import LessThanBase from "../../../public/images/investment-bank/less.svg"
 import { RichText } from '@payloadcms/richtext-lexical/react';
+import Background_Slug from "../../../public/images/investment-bank/background_slug.avif"
 
 export default function InvestmentBank() {
   const params = useParams();
@@ -50,6 +51,14 @@ export default function InvestmentBank() {
     getPosts();
   }, [i18n.language]);
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
 
 
 
@@ -76,8 +85,11 @@ export default function InvestmentBank() {
         </div>
       </div>
 
-      <div className={`${!isDesktop ? isMobile ? 'p-[20px]' : 'py-[40px] px-[40px]' : 'py-[80px] px-[40px]'}  flex justify-center bg-[var(--base-bg)]`}>
-        <div className={`max-w-[1200px] w-full flex ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'}  justify-center`}>
+      <div className={`${!isDesktop ? isMobile ? 'p-[20px]' : 'py-[40px] px-[40px]' : 'py-[80px] px-[40px]'}  flex justify-center bg-[var(--base-bg)] relative`}>
+        <div className="absolute top-0 right-0 bottom-0 left-0">
+          <Image src={Background_Slug} alt="Background Slug" width={1200} height={673} className="w-full h-full z-10 object-center object-cover opacity-5" />
+        </div>
+        <div className={`max-w-[1200px] w-full flex ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'}  justify-center z-20`}>
           <a href="/investment-bank">
             <Button variant="outline" className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out ">
               <Image src={LessThanBase} width={20} height={20} alt="'LessThanBase" className="min-w-[20px] min-h-[20px]" />
@@ -86,46 +98,49 @@ export default function InvestmentBank() {
           </a>
 
           {post?.description &&
-            <RichText
-              data={post.description}
-              converters={({ defaultConverters }) => ({
-                ...defaultConverters,
-                heading: ({ node, nodesToJSX, converters, parent, childIndex }) => {
-                  const children = nodesToJSX({ nodes: node.children, parent, converters });
+            <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)]`}>
+              <RichText
+                data={post.description}
+                converters={({ defaultConverters }) => ({
+                  ...defaultConverters,
+                  heading: ({ node, nodesToJSX, converters, parent, childIndex }) => {
+                    const children = nodesToJSX({ nodes: node.children, parent, converters });
 
-                  if (node.tag === 'h2') {
-                    return <h2 className="h2-rich">{children}</h2>;
-                  }
+                    if (node.tag === 'h2') {
+                      return <h2 className="h2-rich">{children}</h2>;
+                    }
 
-                  return typeof defaultConverters.heading === 'function'
-                    ? defaultConverters.heading({ node, nodesToJSX, converters, parent, childIndex })
-                    : null;
-                },
-                paragraph: ({ node, nodesToJSX, converters, parent, childIndex }) => {
-                  const children = nodesToJSX({ nodes: node.children, parent, converters });
-                  console.log('Paragraph node:', { node, children });
-                  return <p className="mt-2 p-rich">{children}</p>;
-                },
-                text: ({ node }) => {
-                  const FORMAT_CODE = 1 << 4;
+                    return typeof defaultConverters.heading === 'function'
+                      ? defaultConverters.heading({ node, nodesToJSX, converters, parent, childIndex })
+                      : null;
+                  },
+                  paragraph: ({ node, nodesToJSX, converters, parent, childIndex }) => {
+                    const children = nodesToJSX({ nodes: node.children, parent, converters });
+                    console.log('Paragraph node:', { node, children });
+                    return <p className="mt-2 p-rich">{children}</p>;
+                  },
+                  text: ({ node }) => {
+                    const FORMAT_CODE = 1 << 4;
 
-                  if ((node.format & FORMAT_CODE) !== 0) {
-                    return <code className="code-rich">{node.text}</code>;
-                  }
+                    if ((node.format & FORMAT_CODE) !== 0) {
+                      return <code className="code-rich">{node.text}</code>;
+                    }
 
-                  return node.text;
-                },
-                list: ({ node, nodesToJSX, converters }) => {
-                  const children = nodesToJSX({ nodes: node.children, parent: node, converters });
-                  return (
-                    <ul className="list-disc list-outside pl-[30.2812px] p-rich space-y-1">
-                      {children}
-                    </ul>
-                  );
-                },
-              })}
-            />
+                    return node.text;
+                  },
+                  list: ({ node, nodesToJSX, converters }) => {
+                    const children = nodesToJSX({ nodes: node.children, parent: node, converters });
+                    return (
+                      <ul className="list-disc list-outside pl-[30.2812px] p-rich space-y-1">
+                        {children}
+                      </ul>
+                    );
+                  },
+                })}
+              />
+            </div>
           }
+
 
         </div>
       </div>
