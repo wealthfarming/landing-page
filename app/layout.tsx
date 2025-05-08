@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className={`${dmSerifText.variable} ${ibmPlexSans.variable} ${inter.variable}`}>
       <I18nProvider>
         <InterfaceProvider>
-          <Toaster richColors position="top-right"/>
+          <Toaster richColors position="bottom-right"/>
           <body>{children}</body>
         </InterfaceProvider>
       </I18nProvider>
