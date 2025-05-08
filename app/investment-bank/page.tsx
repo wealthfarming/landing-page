@@ -141,7 +141,7 @@ export default function InvestmentBank() {
               <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                  <a href={`/investment-bank/${content.title_en?.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <a href={`/investment-bank/${content.title_en?.replace(/\s+/g, '-').trim()}`}>
                       <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[`title_${i18n.language}`]}</p>
                     </a>
                     <p className="text-light text-[13px]">

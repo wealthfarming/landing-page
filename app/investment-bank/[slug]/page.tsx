@@ -16,21 +16,34 @@ import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import LessThanBase from "../../../public/images/investment-bank/less.svg"
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import Background_Slug from "../../../public/images/investment-bank/background_slug.avif"
+import { getCustomRichTextConverters } from "@/components/rich-text/custom-rich-text-converters";
 
 export default function InvestmentBank() {
   const params = useParams();
   const { isDesktop, isMobile, isTablet } = useInterface();
   const { t, i18n } = useTranslation();
   const slug = params.slug as string;
-  const formattedSlug = slug.replaceAll('-', ' ');
+
+  const formattedSlug = decodeURIComponent(slug.replace(/-/g, ' '));
   const [post, setPost] = useState<any>(null);
 
   useEffect(() => {
     const getPosts = async () => {
+      const get_data_id = await Apiget(
+        API_URL + '/api/posts',
+        {
+          'where[title][equals]': `${formattedSlug}`,
+          sort: 'createdAt',
+          limit: 1,
+          locale: 'en',
+        }
+      );
+
+      const data_id = get_data_id[0]?.id ?? 'undefined';
       const data = await Apiget(
         API_URL + '/api/posts',
         {
-          'where[title][like]': formattedSlug,
+          'where[id][equals]': data_id,
           sort: 'createdAt',
           limit: 1,
           locale: i18n.language,
@@ -44,7 +57,6 @@ export default function InvestmentBank() {
           description: data[0].description,
           image: data[0].image,
         };
-        console.log(post);
         setPost(post);
       }
     };
@@ -85,7 +97,7 @@ export default function InvestmentBank() {
         </div>
       </div>
 
-      <div className={`${!isDesktop ? isMobile ? 'p-[20px]' : 'py-[40px] px-[40px]' : 'py-[80px] px-[40px]'}  flex justify-center bg-[var(--base-bg)] relative`}>
+      <div className={`${!isDesktop ? isMobile ? 'p-[20px]' : 'py-[40px] px-[40px]' : 'py-[80px] px-[40px]'}  flex justify-center bg-[var(--base-bg)] relative ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''}`}>
         <div className="absolute top-0 right-0 bottom-0 left-0">
           <Image src={Background_Slug} alt="Background Slug" width={1200} height={673} className="w-full h-full z-10 object-center object-cover opacity-5" />
         </div>
@@ -101,42 +113,7 @@ export default function InvestmentBank() {
             <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)]`}>
               <RichText
                 data={post.description}
-                converters={({ defaultConverters }) => ({
-                  ...defaultConverters,
-                  heading: ({ node, nodesToJSX, converters, parent, childIndex }) => {
-                    const children = nodesToJSX({ nodes: node.children, parent, converters });
-
-                    if (node.tag === 'h2') {
-                      return <h2 className="h2-rich">{children}</h2>;
-                    }
-
-                    return typeof defaultConverters.heading === 'function'
-                      ? defaultConverters.heading({ node, nodesToJSX, converters, parent, childIndex })
-                      : null;
-                  },
-                  paragraph: ({ node, nodesToJSX, converters, parent, childIndex }) => {
-                    const children = nodesToJSX({ nodes: node.children, parent, converters });
-                    console.log('Paragraph node:', { node, children });
-                    return <p className="mt-2 p-rich">{children}</p>;
-                  },
-                  text: ({ node }) => {
-                    const FORMAT_CODE = 1 << 4;
-
-                    if ((node.format & FORMAT_CODE) !== 0) {
-                      return <code className="code-rich">{node.text}</code>;
-                    }
-
-                    return node.text;
-                  },
-                  list: ({ node, nodesToJSX, converters }) => {
-                    const children = nodesToJSX({ nodes: node.children, parent: node, converters });
-                    return (
-                      <ul className="list-disc list-outside pl-[30.2812px] p-rich space-y-1">
-                        {children}
-                      </ul>
-                    );
-                  },
-                })}
+                converters={({ defaultConverters }) => getCustomRichTextConverters(defaultConverters)}
               />
             </div>
           }
