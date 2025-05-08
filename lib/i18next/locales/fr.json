@@ -205,5 +205,8 @@
   "eco_data_title_4": "Reporting et analyse d'investissement professionnels et transparents",
   "eco_data_content_4_1": "Le reporting automatisé via Smart Contracts décrit clairement chaque investissement.",
   "eco_data_content_4_2": "Analyse intelligente des actifs et portefeuilles d'investissement, facilitant la prise de décision rapide.",
-  "eco_data_content_4_3": "Mises à jour continues des fluctuations du marché pour garder les investisseurs proactifs."
+  "eco_data_content_4_3": "Mises à jour continues des fluctuations du marché pour garder les investisseurs proactifs.",
+  "submit_contact": "Soumettre le formulaire avec succès",
+  "submit_error": "Erreur lors de l'envoi du formulaire : une erreur inattendue s'est produite",
+  "email_invalid": "Le champ suivant est invalide : e-mail"
 }
