@@ -112,15 +112,12 @@ export default function InvestmentBank() {
   return (
     <div>
       <HeaderDesktopFull changeAt={190} />
-
-      <div className="w-full h-[260px] relative">
+      <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-
         <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
-
       </div>
 
-      <div className="flex justify-center w-full h-[120px] md:h-[135px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
+      <div className="flex justify-center w-full h-[120px] md:h-[135px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)] relative" style={{zIndex: 30}}>
         <div className="w-[1200px] max-w-[1200px]">
           <div className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
             <AnimatedText
@@ -133,9 +130,9 @@ export default function InvestmentBank() {
         </div>
       </div>
 
-      <div className={`flex w-full relative justify-center p-[40px] bg-[var(--base-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `}>
-        <div className="absolute inset-0 bg-black/50 z-0" style={{ "filter": "brightness(1.31)", "WebkitFilter": "brightness(1.31)", "opacity": "0.05" }}>
-          <Image src="/images/img/section_4_2.png" alt="Background Image" layout="fill" objectFit="cover" />
+      <div className={`flex w-full relative justify-center p-[40px] bg-[var(--base-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `} style={{zIndex: 1}}>
+        <div className="absolute inset-0 bg-black/50 z-0" style={{"filter":"brightness(1.31)","WebkitFilter":"brightness(1.31)","opacity":"0.05"}}>
+            <Image src="/images/img/section_4_2.png" alt="Background Image" layout="fill" objectFit="cover" />
         </div>
         <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] z-10`}>
           <div className="gap-[40px] flex-col items-center lg:w-[336px] w-full  min-w-[336px] ">
