@@ -24,7 +24,6 @@ export default function InvestmentBank() {
   const { t, i18n } = useTranslation();
   const slug = params.slug as string;
 
-  const formattedSlug = decodeURIComponent(slug.replace(/-/g, ' '));
   const [post, setPost] = useState<any>(null);
 
   useEffect(() => {
@@ -32,12 +31,13 @@ export default function InvestmentBank() {
       const get_data_id = await Apiget(
         API_URL + '/api/posts',
         {
-          'where[title][equals]': `${formattedSlug}`,
+          'where[route][equals]': slug,
           sort: 'createdAt',
           limit: 1,
           locale: 'en',
         }
       );
+
 
       const data_id = get_data_id[0]?.id ?? 'undefined';
       const data = await Apiget(
