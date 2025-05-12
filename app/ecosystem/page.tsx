@@ -118,7 +118,7 @@ export default function EcoPage() {
           </div>
         </div>
       </div>
-      <FooterFull active={"product"} />
+      <FooterFull active={"ecosystem"} />
     </div>
   );
 }

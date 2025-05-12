@@ -14,7 +14,7 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
   const { isDesktop, isTablet, isMobile } = useInterface();
   const {t} = useTranslation();
   return (
-    <footer className={`text-white bg-[#003048] bottom-0 w-full ${classname} ${isMobile || !fixed? '' : 'fixed'} `} style={{ zIndex: -1000 }}>
+    <footer className={`text-white bg-[#003048] bottom-0 w-full ${classname} ${isMobile || !fixed? '' : 'fixed'} `}>
       <div className={`flex flex-col justify-center items-center ${isDesktop ? 'px-10 py-20 ' : isTablet ? 'px-10 py-20 ' : 'px-5 py-10'} w-full border-b border-cyan-900`}>
         <div className={`flex flex-wrap justify-center items-start w-full ${isDesktop ? 'max-w-[1200px] gap-10' : isTablet ? 'gap-10' : 'flex-col gap-10'}`}>
           <div className={`flex-1 shrink leading-6 basis-0 ${isDesktop ? 'gap-10 flex flex-col' : isTablet ? 'gap-10 flex flex-col maw-w-[299px]' : 'flex flex-col gap-5'}`}>
@@ -31,10 +31,36 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
             <nav className={`flex flex-col text-[var(--other-border)] ${isDesktop ? 'w-[103px] gap-6' : isTablet ? '' : ''}`}>
               <div className="text-[20px] font-medium">{t('footer_page')}</div>
               <ul className="w-full text-[12px] font-normal flex flex-col opacity-80">
-                <li className={(active == "introduction") ? activeClassName : ""}>{t('footer_introduct')}</li>
-                <li className={(active == "product") ? activeClassName + " mt-2" : "mt-2"}>{t('footer_product')}</li>
-                <li className={(active == "ecosystem") ? activeClassName + " mt-2" : "mt-2"}>{t('footer_eco')}</li>
-                <li className={(active == "investment-bank") ? activeClassName + " mt-2" : "mt-2"}>{t('footer_invest')}</li>
+                <li className={(active == "introduction") ? activeClassName : ""}>
+                  <a href="/" className="hover:text-[var(--primary)]">
+                    {t('footer_introduct')}
+                  </a>
+                </li>
+                <li className={(active == "product") ? activeClassName + " mt-2" : "mt-2"}>
+                  <a href="/product" className="hover:text-[var(--primary)]">
+                    {t('footer_product')}
+                  </a>
+                </li>
+                <li className={(active == "ecosystem") ? activeClassName + " mt-2" : "mt-2"}>
+                  <a href="/ecosystem" className="hover:text-[var(--primary)]">
+                    {t('footer_eco')}
+                  </a>
+                </li>
+                <li className={(active == "investment-bank") ? activeClassName + " mt-2" : "mt-2"}>
+                  <a href="/investment-bank" className="hover:text-[var(--primary)]">
+                    {t('footer_invest')}
+                  </a>
+                </li>
+                <li className="mt-2">
+                  <a 
+                    href="https://find-and-update.company-information.service.gov.uk/company/14478063" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-[var(--primary)]"
+                  >
+                    {t('header_license')}
+                  </a>
+                </li>
               </ul>
             </nav>
             <div className={`${isDesktop ? 'w-[213px]' : isTablet ? '' : ''}`}>
