@@ -75,6 +75,14 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             <Link href="/investment-bank" className={"hover:text-[var(--primary)] px-3" + (isScrolled ? "" : " text-white")}>
               {t('header_investBank')}
             </Link>
+            <a 
+              href="https://find-and-update.company-information.service.gov.uk/company/14478063" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={"hover:text-[var(--primary)] px-3" + (isScrolled ? "" : " text-white")}
+            >
+              {t('header_license')}
+            </a>
           </nav>
         )}
 
@@ -127,6 +135,14 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             <Link href="/product" className="py-2 text-[11px]">{t('header_product')}</Link>
             <Link href="/ecosystem" className="py-2 text-[11px]">{t('header_eco')}</Link>
             <Link href="/investment-bank" className="py-2 text-[11px]">{t('header_investBank')}</Link>
+            <a 
+              href="https://find-and-update.company-information.service.gov.uk/company/14478063" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="py-2 text-[11px]"
+            >
+              {t('header_license')}
+            </a>
 
             {/* Language Selector */}
             <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
