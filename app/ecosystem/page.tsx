@@ -67,20 +67,18 @@ export default function EcoPage() {
   const selectedEcoData = ecoData;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-[100px]" >
+        <HeaderDesktopFull changeAt={300} />
       {isDesktop &&
-        <div className="w-full h-[260px] relative">
+        <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-
           <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
-
         </div>
       }
       <div
         className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? ' mb-[505px]' : isTablet ? 'mb-[505px] pt-20' : 'pt-20'
           } relative z-30`}
       >
-        <HeaderDesktopFull changeAt={300} />
         <div
           className={`max-w-[1200px] flex flex-col ${isDesktop ? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'
             }`}
