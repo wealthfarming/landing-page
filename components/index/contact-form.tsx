@@ -4,6 +4,21 @@ import React, { useState } from "react";
 import axios, { AxiosError } from "axios";
 import { useTranslation } from "react-i18next";
 import { API_URL } from "@/lib/config";
+import { toast } from "sonner";
+
+interface ErrorResponse {
+  errors?: Array<{
+    name: string;
+    data: {
+      collection: string;
+      errors: Array<{
+        field: string;
+        message: string;
+      }>;
+    };
+    message: string;
+  }>;
+}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -21,13 +36,28 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     try {
       const response = await axios.post(`${API_URL}/api/contact`, formData);
+      toast.success(`${t('submit_contact')}`)
       setFormData({ fullName: "", phoneNumber: "", email: "" });
     } catch (error) {
-      const axiosError = error as AxiosError;
+      // Ép kiểu error thành AxiosError với ErrorResponse
+      const axiosError = error as AxiosError<ErrorResponse>;
       console.error(
         "Error submitting form:",
         axiosError.response?.data || axiosError.message || "An unexpected error occurred"
       );
+
+      if (axiosError.response && axiosError.response.data) {
+        const errorData = axiosError.response.data;
+
+        if (errorData.errors && Array.isArray(errorData.errors)) {
+          const error = errorData.errors[0];
+          if (error.message === "The following field is invalid: email") {
+            toast.error(t("email_invalid"));
+            return;
+          }
+        } 
+      }
+      toast.error(t("submit_error"));
     }
   };
 

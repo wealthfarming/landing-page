@@ -197,5 +197,8 @@
   "eco_data_title_4": "Professional, transparent investment reporting and analysis",
   "eco_data_content_4_1": "Automated reporting through Smart Contracts clearly outlines each investment.",
   "eco_data_content_4_2": "Analyzing assets and investment portfolios intelligently, supporting quick decision-making.",
-  "eco_data_content_4_3": "Continuous updates on market fluctuations to keep investors proactive."
+  "eco_data_content_4_3": "Continuous updates on market fluctuations to keep investors proactive.",
+  "submit_contact": "Submit form successfully",
+  "submit_error": "Error submitting form: An unexpected error occurred",
+  "email_invalid": "The following field is invalid: email"
 }

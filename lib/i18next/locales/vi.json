@@ -198,5 +198,8 @@
   "eco_data_title_4": "Báo cáo đầu tư và phân tích chuyên nghiệp, minh bạch",
   "eco_data_content_4_1": "Báo cáo tự động hóa thông qua Smart Contract, rõ ràng từng khoản đầu tư.",
   "eco_data_content_4_2": "Phân tích tài sản và danh mục đầu tư thông minh, hỗ trợ ra quyết định nhanh chóng.",
-  "eco_data_content_4_3": "Cập nhật liên tục về biến động thị trường để nhà đầu tư luôn chủ động."
+  "eco_data_content_4_3": "Cập nhật liên tục về biến động thị trường để nhà đầu tư luôn chủ động.",
+  "submit_contact": "Gửi thông tin thành công",
+  "submit_error": "Lỗi khi gửi thông tin: Lỗi không xác định",
+  "email_invalid": "Email không hợp lệ"
 }
