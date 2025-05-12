@@ -50,9 +50,7 @@ const IndexLandingPage: React.FC = () => {
       {isDesktop &&
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-
           <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
-
         </div>
       }
       <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-20 max-md:pb-10">
@@ -86,7 +84,7 @@ const IndexLandingPage: React.FC = () => {
 
         </div>
       </div>
-      <FooterFull active={'introduction'} fixed={false} />
+      <FooterFull active={'index-landing'} fixed={false} />
 
     </div>
   );

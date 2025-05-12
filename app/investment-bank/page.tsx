@@ -24,7 +24,7 @@ export default function InvestmentBank() {
   ];
 
   return (
-    <div>
+    <div className="pb-[100px]">
       <HeaderDesktopFull changeAt={190} />
       <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
         <div className="absolute inset-0 bg-black/50 z-10"></div>

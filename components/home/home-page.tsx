@@ -21,7 +21,7 @@ export default function HomePage() {
                 <HeaderDesktopFull changeAt={300} />
                 <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px] pt-30' : 'pt-30'} top-[-260px] bg-[var(--base-bg)] z-30`}>
                     {isDesktop &&
-                        <div className="w-full h-[260px] relative">
+                        <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
                             <div className="absolute inset-0 bg-black/50 z-10"></div>
                             <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                         </div>
