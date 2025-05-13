@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from 'react-i18next';
-
+import section6 from "../../public/images/img/section6.webp"
 export default function HomeSection7() {
     const { t } = useTranslation();
     const [mounted, setMounted] = useState(false);
@@ -16,12 +16,13 @@ export default function HomeSection7() {
     }, []);
     if (!mounted) return null;
     return (
-        <div className="flex w-full justify-center relative bg-[url('/images/img/section6.webp')] bg-cover bg-center bg-no-repeat">
+        <div className={`flex w-full justify-center relative bg-[url(${section6})] bg-cover bg-center bg-no-repeat`}
+            style={{ backgroundImage: `url(${section6.src})` }}>
             <div
                 className={`flex flex-col justify-center items-center w-full ${isDesktop
                     ? "py-20 px-10 h-[520px] max-w-[1200px]"
                     : isMobile
-                        ? "p-[40px_20px]"
+                        ? "p-[60px_20px]"
                         : "p-[80px_40px]"
                     }`}
             >
@@ -57,22 +58,26 @@ export default function HomeSection7() {
                     </div>
                     <div className={`relative z-10 flex ${isDesktop ? 'mt-10' : isTablet ? 'mt-10' : 'mt-5'} gap-2 justify-center`}>
                         <div className={`flex gap-2 justify-center ${isDesktop ? '' : ''}`}>
-                            <div className={`${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} flex bg-[var(--base-bg)] shadow-sm rounded-[4px] border border-[var(--primary-other)] button items-center hover:bg-[var(--canvas-bg)] hover:cursor-pointer`}>
-                                <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
-                                    <ChatCenteredDots size={20} />
+                            <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
+                                <div className={`${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} flex bg-[var(--base-bg)] shadow-sm rounded-[4px] border border-[var(--primary-other)] button items-center hover:bg-[var(--canvas-bg)] hover:cursor-pointer`}>
+                                    <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
+                                        <ChatCenteredDots size={20} />
+                                    </div>
+                                    <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
+                                        {t('free_support')}
+                                    </div>
                                 </div>
-                                <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
-                                    {t('free_support')}
+                            </a>
+                            <a href="https://wealthfarming.app/" target="_blank" >
+                                <div className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
+                                    <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
+                                        <CursorClick size={20} className="animate-diagonal-2" />
+                                    </div>
+                                    <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
+                                        {t('header_investNowup')}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
-                                <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
-                                    <CursorClick size={20} />
-                                </div>
-                                <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
-                                    {t('header_investNowup')}
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 

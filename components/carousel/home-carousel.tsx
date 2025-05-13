@@ -10,14 +10,20 @@ import Autoplay from "embla-carousel-autoplay"
 import { useTranslation } from 'react-i18next';
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react";
+import slide1 from "../../public/images/img/slide_1.jpg"
+import slide2 from "../../public/images/img/slide_2.jpg"
+import slide3 from "../../public/images/img/slide_3.jpg"
+import slide4 from "../../public/images/img/slide_4.jpeg"
+import slide5 from "../../public/images/img/slide_5.webp"
+import slide6 from "../../public/images/img/slide_6.jpg"
 
 const images = [
-    "/images/img/slide_1.jpg",
-    "/images/img/slide_2.jpg",
-    "/images/img/slide_3.jpg",
-    "/images/img/slide_4.jpeg",
-    "/images/img/slide_5.webp",
-    "/images/img/slide_6.jpg",
+    slide1,
+    slide2,
+    slide3,
+    slide4,
+    slide5,
+    slide6,
 ]
 
 
@@ -123,31 +129,31 @@ export const SliderMobile = () => {
     }, []);
 
     return (
-        <div className="w-full flex justify-center items-center mt-8">
+        <div className="w-full flex justify-center items-center h-full">
             <Carousel
                 plugins={[Autoplay({ delay: 8000 })]}
                 opts={{ align: "center", loop: true }}
-                className="w-full">
-                <CarouselContent className="">
+                className="w-full h-full">
+                <CarouselContent className="h-full w-full">
                     {images.map((image, index) => (
                         <CarouselItem key={index}>
-                            <div className="p-1 relative" >
+                            <div className="relative w-full h-full" >
                                 <div className="custom-box-shadow z-[100]"></div>
                                 <Image
                                     src={images[index]}
                                     alt={`Slide ${index + 1}`}
-                                    width={400}
-                                    height={300}
-                                    className="w-full h-[300px] "
+                                    width={335}
+                                    height={408}
+                                    className="h-full w-full object-cover object-center"
                                 />
                                 <div
-                                    className="absolute text-white text-lg bottom-1 left-0 font-bold p-4 w-full h-[50%] z-20 overflow-hidden flex items-end"
+                                    className="absolute bottom-0 left-0 font-bold p-4 w-full h-[50%] z-20 overflow-hidden flex items-end"
                                     style={{
                                         background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))"
                                     }}
                                 >
-                                    <p>
-                                        APDSFS
+                                    <p className="body-large !text-white">
+                                        {content[index]}
                                     </p>
                                 </div>
                             </div>

@@ -6,59 +6,146 @@ import { useInterface } from '@/components/context/interface-context';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 import { AnimatedText } from "@/components/animation/introduction/Animations";
+import { Apiget } from "@/lib/api/get"
+import { API_URL } from "@/lib/config";
+import { useEffect } from 'react';
 
+import productBase from "../../public/images/img/product_base.jpg"
 export default function InvestmentBank() {
   const { isDesktop, isMobile, isTablet } = useInterface();
-  const { t } = useTranslation();
-  const [selected, setSelected] = useState("nft_report");
+  const { t, i18n } = useTranslation();
 
-  const tabs = [
-    { id: 'annual_report', label: 'annual_report' },
-    { id: 'nft_report', label: 'nft_report' },
-    { id: 'wealth_farming_information_disclosure', label: 'wealth_farming_information_disclosure' },
-    { id: 'beq_noification', label: 'beq_noification' },
-    { id: 'fund_management_report', label: 'fund_management_report' },
-    { id: 'investment_nft_catalog', label: 'investment_nft_catalog' },
-    { id: 'for_new_investors', label: 'for_new_investors' },
-    { id: 'regulations_rules_wf', label: 'regulations_rules_wf' },
-  ];
+  const [selected, setSelected] = useState('');
+  const [tabs, setTabs] = useState<any[]>([]);
+  const [contents, setContents] = useState<any[]>([]);
+
+
+  useEffect(() => {
+    const getPostCategories = async () => {
+      const data_en = await Apiget(
+        API_URL + '/api/posts-categories',
+        {
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'en',
+        }
+      );
+      const data_vi = await Apiget(
+        API_URL + '/api/posts-categories',
+        {
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'vi',
+        }
+      );
+      const data_fr = await Apiget(
+        API_URL + '/api/posts-categories',
+        {
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'fr',
+        }
+      );
+      const postscategories = data_en.map((itemEn: any) => {
+        const itemVi = data_vi.find((itemVi: any) => itemVi.id === itemEn.id);
+        const itemFr = data_fr.find((itemFr: any) => itemFr.id === itemEn.id);
+        return {
+          id: itemEn.id,
+          title_vi: itemVi.title,
+          title_en: itemEn.title,
+          title_fr: itemFr.title,
+        };
+      });
+      setTabs(postscategories);
+      setSelected(postscategories[0]['id']);
+    };
+    getPostCategories();
+  }, []);
+
+  useEffect(() => {
+    const getPosts = async () => {
+
+      const data_en = await Apiget(
+        API_URL + '/api/posts',
+        {
+          'where[category][equals]': selected,
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'en',
+        }
+      );
+      const data_vi = await Apiget(
+        API_URL + '/api/posts',
+        {
+          'where[category][equals]': selected,
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'vi',
+        }
+      );
+      const data_fr = await Apiget(
+        API_URL + '/api/posts',
+        {
+          'where[category][equals]': selected,
+          sort: 'createdAt',
+          limit: 0,
+          locale: 'fr',
+        }
+      );
+      const posts = data_en.map((itemEn: any) => {
+        const itemVi = data_vi.find((itemVi: any) => itemVi.id === itemEn.id);
+        const itemFr = data_fr.find((itemFr: any) => itemFr.id === itemEn.id);
+        return {
+          id: itemEn.id,
+          route: itemEn.route,
+          title_vi: itemVi.title,
+          title_en: itemEn.title,
+          title_fr: itemFr.title,
+          date: itemEn.createdAt
+        };
+      });
+      setContents(posts);
+    };
+    getPosts();
+  }, [selected]);
 
   return (
-    <div>
+    <div className="pb-[100px]">
       <HeaderDesktopFull changeAt={190} />
-
-      <div className="w-full h-[260px] relative">
+      <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-
-        <Image src="/images/img/product_base.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
-
+        <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
       </div>
 
-      <div className="flex justify-center w-full h-[140px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)]">
+      <div className="flex justify-center w-full h-[120px] md:h-[135px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)] relative" style={{zIndex: 30}}>
         <div className="w-[1200px] max-w-[1200px]">
-          <p className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
+          <div className={`h1 ${isDesktop ? '!text-[50px]' : isMobile ? '!text-[34px]' : '!text-[44px]'}`}>
             <AnimatedText
               text={[t('investment_bank')]}
               delayBetween={0.05}
               duration={0.3}
+              center={false}
             />
-          </p>
+          </div>
         </div>
       </div>
 
-      <div className={`flex w-full justify-center p-[40px] pb-[100px] bg-[var(--canvas-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `}>
-        <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] `}>
-          <div className="gap-[40px] flex-col items-center w-[336px] min-w-[336px] ">
+      <div className={`flex w-full relative justify-center p-[40px] bg-[var(--base-bg)] ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''} `} style={{zIndex: 1}}>
+        <div className="absolute inset-0 bg-black/50 z-0" style={{"filter":"brightness(1.31)","WebkitFilter":"brightness(1.31)","opacity":"0.05"}}>
+            <Image src="/images/img/section_4_2.png" alt="Background Image" layout="fill" objectFit="cover" />
+        </div>
+        <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] z-10`}>
+          <div className="gap-[40px] flex-col items-center lg:w-[336px] w-full  min-w-[336px] ">
             {tabs.map((tab) => (
               <div
                 key={tab.id}
-                className={`h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
+                className={`min-h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
                   ? 'bg-[var(--primary)]'
                   : 'bg-[var(--canvas-bg)] hover:bg-[#C5C6CA]'
                   }`}
                 onClick={() => setSelected(tab.id)}
               >
-                <p className="text-[15px]">{t(tab.label)}</p>
+                <p className="text-[15px]">{tab[`title_${i18n.language}`]}</p>
               </div>
             ))}
           </div>
@@ -69,67 +156,38 @@ export default function InvestmentBank() {
               </div>
             </div>
 
-            {selected == 'annual_report' &&
-              <div>
+            {contents.map((content: any) => (
+              <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
-                  </div>
-                </div>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
+                    <a href={`/investment-bank/${content.route}`}>
+                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[`title_${i18n.language}`]}</p>
+                    </a>
+                    <p className="text-light text-[13px]">
+                      {
+                        i18n.language === 'vi'
+                          ? new Intl.DateTimeFormat('vi-VN', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                          }).format(new Date(content.date))
+                          : i18n.language === 'fr'
+                            ? new Intl.DateTimeFormat('fr-FR', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            }).format(new Date(content.date))
+                            : new Intl.DateTimeFormat('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            }).format(new Date(content.date))
+                      }
+                    </p>
                   </div>
                 </div>
               </div>
-            }
-
-            {selected == 'nft_report' &&
-              <div>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('articles')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
-                  </div>
-                </div>
-              </div>
-            }
-
-            {selected == 'wealth_farming_information_disclosure' &&
-              <div>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('styling_elements')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
-                  </div>
-                </div>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] flex hover:text-[#f1c204] cursor-pointer transition-colors">{t('importing_content')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
-                  </div>
-                </div>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('best_practices')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
-                  </div>
-                </div>
-              </div>
-            }
-
-            {selected == 'beq_noification' &&
-              <div>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{t('what_new')}</p>
-                    <p className="text-light text-[13px]">March 28, 2025</p>
-                  </div>
-                </div>
-              </div>
-            }
+            ))}
 
           </div>
         </div>

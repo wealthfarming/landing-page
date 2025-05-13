@@ -12,6 +12,7 @@ import PartnersSection from "@/components/index/partners-section";
 import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import FooterFull from "@/components/footer/footer-full";
+import indexBanner from "../../public/images/img/index_banner.webp"
 
 const steps = [
   { number: "01", title: "Crawl dữ liệu số" },
@@ -26,7 +27,7 @@ const IndexLandingPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [sticky, setSticky] = useState(false);
 
-  const { isDesktop } = useInterface();
+  const { isDesktop, isMobile, isTablet } = useInterface();
   useEffect(() => {
     const ref = processRef.current;
     if (!ref) return;
@@ -49,15 +50,15 @@ const IndexLandingPage: React.FC = () => {
       {isDesktop &&
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image src="/images/img/index_banner.webp" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
       }
-      <div className="w-full bg-white flex flex-col gap-0 overflow-visible">
+      <div className="w-full bg-white flex flex-col gap-0 overflow-visible max-md:pt-20 max-md:pb-10">
         <IntroSection />
-        <div className="w-full sticky h-[100vh] top-[20px] pt-[40px] pb-[80px]  white z-[2]">
+        <div className="w-full md:sticky md:h-[100vh] top-[20px] md:pb-[80px] white z-[2]">
           <ProblemSection />
         </div>
-        <div style={{ overflow: "visible", position: "sticky", top: "20px", width: "100%", zIndex: 2 }}>
+        <div className="overflow-visible sticky top-10 w-full z-[2] md:h-[120vh] md:top-5">
           <SecuritySection />
         </div>
         <div className="w-full flex flex-col items-center justify-start bg-background relative z-30">
@@ -80,9 +81,10 @@ const IndexLandingPage: React.FC = () => {
           <PartnersSection />
           <ContactSection />
           <FAQSection />
+
         </div>
       </div>
-      <FooterFull active={'introduction'} fixed={false} />
+      <FooterFull active={'index-landing'} fixed={false} />
 
     </div>
   );
