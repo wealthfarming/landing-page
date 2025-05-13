@@ -14,6 +14,7 @@ import { useParams } from 'next/navigation';
 import { title } from "process";
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import LessThanBase from "../../../public/images/investment-bank/less.svg"
+import Quest from "../../../public/images/investment-bank/quest.avif"
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import Background_Slug from "../../../public/images/investment-bank/background_slug.avif"
 import { getCustomRichTextConverters } from "@/components/rich-text/custom-rich-text-converters";
@@ -39,7 +40,7 @@ export default function InvestmentBank() {
       );
 
 
-      const data_id = get_data_id[0]?.id ?? 'undefined';
+      const data_id = get_data_id[0]?.id ?? '/undefined';
       const data = await Apiget(
         API_URL + '/api/posts',
         {
@@ -80,15 +81,15 @@ export default function InvestmentBank() {
 
       <div className="w-full h-[260px] relative z-[30]">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        {post?.image && (
-          <Image
-            src={`${API_URL}${post.image.url}`}
-            alt={post.image.alt}
-            width={735}
-            height={260}
-            className="w-full h-[260px] object-cover"
-          />
-        )}
+
+        <Image
+          src={post?.image ? `${API_URL}${post.image.url}` : Quest}
+          alt={post?.image?.alt || 'Default image'}
+          width={735}
+          height={260}
+          className="w-full h-[260px] object-cover"
+        />
+
       </div>
 
       <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>

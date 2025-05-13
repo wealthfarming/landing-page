@@ -16,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSerifText.variable} ${ibmPlexSans.variable} ${inter.variable}`}>
-      <I18nProvider>
-        <InterfaceProvider>
-          <Toaster richColors position="bottom-right"/>
-          <body>{children}</body>
-        </InterfaceProvider>
-      </I18nProvider>
+    <html lang="en" suppressHydrationWarning={true} className={`${dmSerifText.variable} ${ibmPlexSans.variable} ${inter.variable}`}>
+      <body>
+        <I18nProvider>
+          <InterfaceProvider>
+            <Toaster richColors position="bottom-right" />
+            {children}
+          </InterfaceProvider>
+        </I18nProvider>
+      </body>
     </html>
   );
 }
