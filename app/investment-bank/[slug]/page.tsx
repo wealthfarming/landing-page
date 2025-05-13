@@ -6,13 +6,10 @@ import { useInterface } from '@/components/context/interface-context';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { AnimatedText } from "@/components/animation/introduction/Animations";
 import { Apiget } from "@/lib/api/get"
 import { API_URL } from "@/lib/config";
 import { useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { title } from "process";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import LessThanBase from "../../../public/images/investment-bank/less.svg"
 import Quest from "../../../public/images/investment-bank/quest.avif"
 import { RichText } from '@payloadcms/richtext-lexical/react';
@@ -72,16 +69,11 @@ export default function InvestmentBank() {
 
   if (!isClient) return null;
 
-
-
-
   return (
-    <div>
+    <div className="pb-[100px]">
       <HeaderDesktopFull changeAt={190} />
-
       <div className="w-full h-[260px] relative z-[30]">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-
         <Image
           src={post?.image ? `${API_URL}${post.image.url}` : Quest}
           alt={post?.image?.alt || 'Default image'}
@@ -89,9 +81,7 @@ export default function InvestmentBank() {
           height={260}
           className="w-full h-[260px] object-cover"
         />
-
       </div>
-
       <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
         <div className="max-w-[1200px] w-full">
           {post?.title && <p className="title-invest">{post.title}</p>}
@@ -118,11 +108,8 @@ export default function InvestmentBank() {
               />
             </div>
           }
-
-
         </div>
       </div>
-
       <FooterFull />
     </div >
   );
