@@ -1,22 +1,17 @@
 // app/investment-bank/[slug]/page.tsx
-import InvestmentBankClient from './investment-bank-client';
-import { API_URL }           from '@/lib/config';
-import { Apiget }            from '@/lib/api/get';
+import InvestmentBankClient from '@/components/posts/investment-bank-client'
+import { API_URL } from '@/lib/config';
+import { Apiget }  from '@/lib/api/get';
 
-export async function generateStaticParams() {
-  // 1. fetch all posts (or however many slugs you have)
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const allPosts: any[] = await Apiget(
-    API_URL + '/api/posts',
+    `${API_URL}/api/posts`,
     { sort: 'createdAt', limit: 1000, locale: 'en' }
   );
-
-  // 2. return an array of { slug } objects
-  return allPosts.map(post => ({
-    slug: post.route   // whatever field holds your slug
-  }));
+  return allPosts.map(post => ({ slug: post.route as string }));
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  // just forward the slug into your client component
+// no type annotation here—Next will supply { params, searchParams }
+export default function Page({ params }: any) {
   return <InvestmentBankClient slug={params.slug} />;
 }

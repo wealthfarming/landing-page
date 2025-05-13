@@ -9,9 +9,9 @@ import { API_URL } from '@/lib/config';
 import Image from 'next/image';
 import FooterFull from '@/components/footer/footer-full';
 import HeaderDesktopFull from '@/components/header/header-desktop';
-import LessThanBase from '../../../public/images/investment-bank/less.svg';
-import Quest from '../../../public/images/investment-bank/quest.avif';
-import Background_Slug from '../../../public/images/investment-bank/background_slug.avif';
+import LessThanBase from '../../public/images/investment-bank/less.svg';
+import Quest from '../../public/images/investment-bank/quest.png';
+import Background_Slug from '../../public/images/investment-bank/background_slug.png';
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import { getCustomRichTextConverters } from '@/components/rich-text/custom-rich-text-converters';
 
