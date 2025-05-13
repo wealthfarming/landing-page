@@ -78,7 +78,7 @@ export default function InvestmentBank() {
     <div>
       <HeaderDesktopFull changeAt={190} />
 
-      <div className="w-full h-[260px] relative">
+      <div className="w-full h-[260px] relative z-[30]">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         {post?.image && (
           <Image
@@ -91,13 +91,13 @@ export default function InvestmentBank() {
         )}
       </div>
 
-      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} flex justify-center bg-[var(--canvas-bg)]`}>
+      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
         <div className="max-w-[1200px] w-full">
           {post?.title && <p className="title-invest">{post.title}</p>}
         </div>
       </div>
 
-      <div className={`${!isDesktop ? isMobile ? 'p-[20px]' : 'py-[40px] px-[40px]' : 'py-[80px] px-[40px]'}  flex justify-center bg-[var(--base-bg)] relative ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''}`}>
+      <div className={`${!isDesktop ? isMobile ? 'p-[20px]' : 'py-[40px] px-[40px]' : 'py-[80px] px-[40px]'} z-[30] flex justify-center bg-[var(--base-bg)] relative ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px]' : ''}`}>
         <div className="absolute top-0 right-0 bottom-0 left-0">
           <Image src={Background_Slug} alt="Background Slug" width={1200} height={673} className="w-full h-full z-10 object-center object-cover opacity-5" />
         </div>
