@@ -37,7 +37,6 @@ export default function HomeSection2() {
                         >
                             {t('home_section_2_description')}
                         </p>
-
                     </span>
                     <CountdownTimer />
                 </div>

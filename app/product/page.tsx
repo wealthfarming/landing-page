@@ -12,10 +12,10 @@ export default function ProductPage() {
     const { t } = useTranslation();
     const { isDesktop, isTablet } = useInterface();
     return (
-        <div className={`${isDesktop ? 'mb-[505px]' : isTablet ? '' : ''}`}>
+        <div className={`${isDesktop ? 'pb-[605px]' : isTablet ? '' : ''}`}>
             <HeaderDesktopFull changeAt={300} />
             {isDesktop &&
-                <div className="w-full h-[260px] relative">
+                <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
                     <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
@@ -29,7 +29,6 @@ export default function ProductPage() {
                             text={[t('page_product_title')]}
                             delayBetween={0.05}
                             duration={0.3}
-                            
                         />
                     </div>
                     <p className=" w-full max-w-[721px] text-center body !font-geist-display">{t('page_product_description')}</p>

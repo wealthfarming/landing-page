@@ -30,10 +30,8 @@ export default function HomeSection1() {
             <div className={`${!isMobile ? 'gap-4' : 'gap-2'} flex flex-row justify-center max-w-[1200px]`}>
                 <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
                     <ButtonOutLine variant="outline" className={`border button rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] py-0 `}>
-
                         <ChatCenteredDots size={32} className="size-5" />
                         <p className="!font-geist-mono">{t('free_support')}</p>
-
                     </ButtonOutLine>
                 </a>
                 <a href="https://wealthfarming.app/" target="_blank" >
