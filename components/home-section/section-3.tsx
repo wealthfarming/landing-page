@@ -49,7 +49,7 @@ export default function HomeSection3() {
             <div ref={titleRef}>
                 <FadeInSection>
                     <p
-                        className={`${!isMobile ? 'text-center' : 'text-left'} mt-4 body-large !text-[var(--text-medium)] max-w-[800px] mx-auto ${isVisible ? "slide-top" : ""
+                        className={`${!isMobile ? 'text-center' : 'text-left'} mt-4 body-large !text-[var(--text-medium)] max-w-[800px] mx-auto ${isVisible ? "" : ""
                             }`}
                     >
                         {t('home_section_3_title')}

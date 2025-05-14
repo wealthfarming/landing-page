@@ -41,7 +41,9 @@ export default function HomeSection7() {
                             lineHeight: isDesktop ? "52px" : isTablet ? "46.8px" : "40.6px",
                         }}
                     >
-                        Wealth Farming
+                        <FadeInSection >
+                            Wealth Farming
+                        </FadeInSection>
                     </div>
                     <div
                         className={`relative z-10 text-center font-medium text-white ${isDesktop
@@ -54,7 +56,9 @@ export default function HomeSection7() {
                             lineHeight: isDesktop ? "30.6px" : isTablet ? "30.6px" : "28.9px",
                         }}
                     >
-                        {t('home_section_6b_description')}
+                        <FadeInSection>
+                            {t('home_section_6b_description')}
+                        </FadeInSection>
                     </div>
                     <div className={`relative z-10 flex ${isDesktop ? 'mt-10' : isTablet ? 'mt-10' : 'mt-5'} gap-2 justify-center`}>
                         <div className={`flex gap-2 justify-center ${isDesktop ? '' : ''}`}>
