@@ -33,6 +33,15 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                     `}>
                     <FadeInSection>
                         <div
+                            style={
+                                selected === tab.id
+                                    ? {
+                                        backgroundImage: `url(${tab.img})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }
+                                    : undefined
+                            }
                             className={`
                                 border-b-[1px] border-[var(--primary-other)] relative overflow-hidden py-[16px] 
                                 ${selected == tab.id ? 'px-16' : 'px-0'} h-[100px]
@@ -53,27 +62,42 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                             )}
 
                             <div className={`relative z-[2] flex gap-[40px] w-full items-center`}>
+
                                 <p className={`h4 transition-all duration-200 ease-in-out ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveIn_0.2s_ease-in-out]' : 'animate-[moveOut_0.2s_ease-in-out]'}`}>{t(tab.id)}</p>
                                 <p className={`h2 ${selected == tab.id ? '!text-[var(--other-border)] animate-[moveInUp_0.2s_ease-in-out]' : 'animate-[moveOutUp_0.2s_ease-in-out]'}`}>{t(tab.label)}</p>
                                 <Plus width={24} height={24} className={`ml-auto text-[var(--text-bold)] ${selected == tab.id ? 'hidden' : ''}`} />
-                                <p className={` text-[var(--other-border)] ${selected == tab.id ? '' : 'hidden'} ml-auto text-right text-[18px] max-w-[400px]`}>{t(tab.content)}</p>
+                                <p className={` text-[var(--other-border)] ${selected == tab.id ? '' : 'hidden'} ml-auto text-right text-[18px] max-w-[400px] font-[500]`}>{t(tab.content)}</p>
                             </div>
                         </div>
                     </FadeInSection>
                 </div>
             ))}
 
-            {!isDesktop && tabs.map(tab => (
+            {!isDesktop && !isTablet && tabs.map(tab => (
                 <div
                     key={tab.id}
                     className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
                 >
                     <div className={`flex gap-[20px] items-start`}>
-                        <p className={`h4 ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
-                        <p className={`h3 ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
+                        <p className={`h4-raleway !font-[700] ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
+                        <p className={`h3 font-geist-raleway-place-holder ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
                     </div>
-                    <p className={`pl-[41px] ${isTablet ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)]`}>{t(tab.content)}</p>
+                    <p className={`pl-[41px] text-[17px] text-[var(--text-medium)] font-[500]`}>{t(tab.content)}</p>
                 </div>
+            ))}
+            {isTablet && tabs.map(tab => (
+                <FadeInSection >
+                    <div
+                        key={tab.id}
+                        className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
+                    >
+                        <div className={`flex gap-[20px] items-start`}>
+                            <p className={`h4-raleway !font-[700] ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
+                            <p className={`h3 font-geist-raleway-place-holder ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
+                        </div>
+                        <p className={`pl-[41px] text-[18px] text-[var(--text-medium)] font-[500]`}>{t(tab.content)}</p>
+                    </div>
+                </FadeInSection>
             ))}
         </div>
     );
