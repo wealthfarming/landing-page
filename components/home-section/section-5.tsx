@@ -14,6 +14,7 @@ import hand from "../../public/images/home-section-5/hand.png"
 import hand_selected from "../../public/images/home-section-5/hand_selected.png"
 import setting from "../../public/images/home-section-5/setting.png"
 import setting_selected from "../../public/images/home-section-5/setting_selected.png"
+import { useInView } from 'react-intersection-observer';
 
 type Tab = {
     id: string;
@@ -27,6 +28,7 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     const [selected, setSelected] = useState("ai_system");
     const { isDesktop, isTablet, isMobile } = useInterface();
     const { t } = useTranslation();
+    
 
     useEffect(() => {
         if (isTablet) {
@@ -124,15 +126,18 @@ export default function HomeSection5() {
         },
     ];
     const { isDesktop, isMobile } = useInterface();
-
+    const { ref, inView } = useInView({
+        triggerOnce: true, 
+        threshold: 0.1, 
+      });
 
     return (
         <div className={`flex justify-center gap-[10px] w-full ${!isMobile ? 'p-[40px] pt-[80px]' : 'px-[20px] py-[40px]'}`}>
             <div className=" max-w-[1200px] w-full">
                 <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
                     <div className="flex flex-col gap-[16px] max-w-[716px]">
-                        <div className="h2-raleway">
-                            <AnimatedText text={[t('home_section_5_title')]} />
+                        <div className="h1" ref={ref}>
+                            <AnimatedText text={[t('home_section_5_title')]} inView={inView}/>
                         </div>
                         <p className={`max-w-[555px] ${!isMobile ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)] font-[500]`}>
                             {t('home_section_5_description')}

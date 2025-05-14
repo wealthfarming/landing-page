@@ -12,6 +12,7 @@ import eco1 from "../../public/images/img/eco-1.png"
 import eco2 from "../../public/images/img/eco-2.png"
 import eco3 from "../../public/images/img/eco-3.png"
 import eco4 from "../../public/images/img/eco-4.png"
+import { useInView } from "react-intersection-observer";
 
 type ContentItem = string;
 
@@ -25,6 +26,10 @@ export default function EcoPage() {
   const { isDesktop, isTablet } = useInterface();
   const { language } = useLanguage();
   const { t } = useTranslation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+});
   const ecoData  = [
     {
       img: eco1,
@@ -83,7 +88,7 @@ export default function EcoPage() {
           className={`max-w-[1200px] flex flex-col ${isDesktop ? 'p-10 gap-20' : isTablet ? 'p-10 gap-30' : 'pt-12 px-5 gap-10'
             }`}
         >
-          <div className={`flex flex-col gap-6`}>
+          <div className={`flex flex-col gap-6`} ref={ref}>
             <h1
               className={` ${isDesktop ? 'px-[108px] text-[49px]' : isTablet ? 'text-[44px] pt-2' : 'text-[34px]'
                 } font-[600] w-full text-center`}
@@ -93,6 +98,7 @@ export default function EcoPage() {
                 delayBetween={0.05}
                 duration={0.3}
                 customClass={[`${isDesktop ? 'text-[49px] leading-[58.8px] font-[500] flex flex-wrap' : isTablet ? 'text-[44px] leading-[52.8px] font-[500] flex flex-wrap' : 'text-[34px]  leading-[40.8px] font-[500] flex flex-wrap'}`]}
+                inView={inView}
               />
             </h1>
             <p

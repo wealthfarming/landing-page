@@ -7,13 +7,18 @@ import { AnimatedText } from "../animation/introduction/Animations";
 import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../context/i18n";
+import { useInView } from "react-intersection-observer";
 
 const IntroSection: React.FC = () => {
   const { language } = useLanguage();
   const { t } = useTranslation();
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.1, 
+  });
   return (
     <SectionContainer borderBottom={false}>
-      <div className="flex flex-col justify-center items-center self-stretch w-full text-center max-md:max-w-full ">
+      <div className="flex flex-col justify-center items-center self-stretch w-full text-center max-md:max-w-full " ref={ref}>
         <h1 className="text-5xl text-zinc-800 max-md:max-w-full max-md:text-[34px] max-w-[1000px] font-geist-raleway">
           {language == "vi" ? (
             <AnimatedText
@@ -22,6 +27,7 @@ const IntroSection: React.FC = () => {
               ]}
               customClass={["font-[600] text-[var(--primary)] font-geist-raleway text-[49px] max-md:text-[34px]", "font-[600] font-geist-raleway text-[49px] max-md:text-[34px]"]}
               delayBetween={0.1}
+              inView={inView}
             />
           ) : (
             <AnimatedText
@@ -34,6 +40,7 @@ const IntroSection: React.FC = () => {
               customClass={["font-[900]", "", "font-[900]", ""]}
               delayBetween={0.05}
               duration={0.3}
+              inView={inView}
             />
           )}
         </h1>
