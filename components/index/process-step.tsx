@@ -88,7 +88,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
       )}
       {isMobile && (
         <div className="flex z-0 flex-col flex-1 shrink self-stretch my-auto basis-0 w-full">
-          <div className="p-5 w-full rounded-lg border border-[var(--other-border)] border-solid min-h-[205px]">
+          <div className="p-5 w-full rounded-lg border border-[var(--other-border)] border-solid min-h-[205px] bg-[var(--base-bg)] border-[var(--other-border)]">
             <div className="flex justify-between items-center">
               {typeof iconSrc === "string" ? (
                 <img src={iconSrc} alt={title} className="w-[26 guère h-[27px]" />
@@ -97,7 +97,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
                   <IconComponent size={27} color={iconFill} weight="fill" />
                 )
               )}
-              <div className="flex justify-center items-center self-center w-10 h-10 text-lg font-medium whitespace-nowrap bg-white border border-[var(--other-border)] border-solid min-h-10 rounded-[100px]">
+              <div className="flex justify-center items-center self-center w-10 h-10 text-lg font-medium whitespace-nowrap bg-white border border-[var(--other-border)] border-solid min-h-10 rounded-[100px] font-geist-mono">
                 {number}
               </div>
             </div>
