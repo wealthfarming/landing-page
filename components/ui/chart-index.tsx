@@ -45,7 +45,7 @@ export default function ChartIndex({
                         </li>
                         <li className="me ml-4">
                             <p className="inline text-[var(--primary-error)] !text-[--text-medium]">
-                                {t('Total NAV ')}
+                                {t('S&P 500 ')}
                             </p>
                             {new Intl.NumberFormat("en-US", {
                                 notation: "compact",

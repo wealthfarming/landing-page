@@ -33,11 +33,13 @@ export function FadeInSection({ children }: Props) {
 }
 
 type AnimatedTextProps = {
-  text: string;
-  customClass?: string;
+  text: string[];
+  customClass?: string[];
   duration?: number;
+  delayBetween?: number;
   charHeight?: number;
   center?: boolean;
+  inView?: boolean; 
 };
 
 
@@ -69,7 +71,15 @@ type AnimatedTextProps = {
  * />
  * ```
  */
-export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], duration?: number, delayBetween?: number, charHeight?: number, center?: boolean }> = ({ text, customClass = '', duration, delayBetween, center = true , charHeight }) => {
+export const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  customClass = [],
+  duration,
+  delayBetween,
+  center = true,
+  charHeight,
+  inView = false, // Mặc định là false
+}) => {
   const [nodes, setNodes] = useState<React.ReactNode[]>([]);
   const { i18n } = useTranslation();
   const [isClient, setIsClient] = useState(false);
@@ -78,10 +88,11 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], du
 
   useEffect(() => {
     setIsClient(true);
-    charIndex = 0; // Reset charIndex when the component mounts
+    charIndex = 0; // Reset charIndex khi component mount
   }, []);
 
   useEffect(() => {
+    if (!inView) return; // Chỉ chạy animation khi inView là true
 
     const renderedText = text.map((phrase, phraseIndex) => {
       const classForPhrase = customClass[phraseIndex] || '';
@@ -89,33 +100,37 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], du
       const renderedWords = words.map((word, wordIndex) => (
         <div key={`word-${phraseIndex}-${wordIndex}`} className="inline-flex mr-[8px]">
           {word.split('').map((char) => {
-            const delay = (delayBetween ? ((delayBetween * charIndex)) : (charIndex / allText.length) * 0.8);
+            const delay = delayBetween
+              ? delayBetween * charIndex
+              : (charIndex / allText.length) * 0.8;
             charIndex++;
             return (
-                <motion.span
+              <motion.span
                 key={`char-${phraseIndex}-${wordIndex}-${charIndex}`}
-                className={`flex flex-wrap ` + (charHeight ? ` !h-[${charHeight}px] !leading-[${charHeight}px]` : '')}
+                className={`flex flex-wrap ${charHeight ? `!h-[${charHeight}px] !leading-[${charHeight}px]` : ''}`}
                 initial={{ opacity: 0.1, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                style={charHeight ? { height: `${charHeight}px !importal`, lineHeight: `${charHeight}px` } : {}}
+                animate={{ opacity: 1, x: 0 }} // Animation chỉ chạy khi inView
+                style={charHeight ? { height: `${charHeight}px !important`, lineHeight: `${charHeight}px` } : {}}
                 transition={{
-                  delay: delay,
+                  delay,
                   type: 'tween',
                   stiffness: 100,
                   duration: duration || 0.4,
                 }}
-                >
+              >
                 {char === ' ' ? '\u00A0' : char}
-                </motion.span>
+              </motion.span>
             );
-
           })}
           {' '}
         </div>
       ));
 
       return (
-        <span key={`phrase-${phraseIndex}`} className={`${classForPhrase} ${center ? "justify-center" : ""} text-justify max-w-[1000px] items-center w-full`}>
+        <span
+          key={`phrase-${phraseIndex}`}
+          className={`${classForPhrase} ${center ? 'justify-center' : ''} text-justify max-w-[1000px] items-center w-full`}
+        >
           {renderedWords}
         </span>
       );
@@ -124,13 +139,13 @@ export const AnimatedText: React.FC<{ text: string[]; customClass?: string[], du
     setTimeout(() => {
       setNodes(renderedText);
     }, 0);
-  }, [text, i18n.language]);
+  }, [text, i18n.language, inView]); // Thêm inView vào dependency array
 
   if (!isClient) {
     return (
       <>
         {text.map((phrase, i) => (
-          <span key={`plain-${i}`} className={customClass[i] + ' opacity-10' || 'opacity-10'}>
+          <span key={`plain-${i}`} className={`${customClass[i] || ''} opacity-10`}>
             {phrase}{' '}
           </span>
         ))}
