@@ -25,7 +25,12 @@ export default function HomeSection9() {
                     {t('home_section_7_title')}
                 </p>
                 <a href="https://wealthfarming.app/" target="_blank" >
-                    <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] py-0">
+                    <ButtonPrimary
+                        className="flex items-center gap-2 py-0 rounded-[4px] !border-t-[4px] !border-l-[4px] !border-[#ECC079] !border-l-[#ECC079] !border-b-0 !border-r-0 box-border"
+                        style={{
+                            backgroundImage: "linear-gradient(to bottom left, #ECC079, #E8B561)"
+                        }}
+                    >
                         <CursorClick size={32} className="size-5 animate-diagonal-2" />
                         <p>{t('header_invest_today_up')}</p>
                     </ButtonPrimary>

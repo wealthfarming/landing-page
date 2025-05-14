@@ -50,7 +50,7 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                         >
                             {selected === tab.id && (
                                 <>
-                                    <Image 
+                                    <Image
                                         src={tab.img}
                                         alt={tab.label}
                                         fill
@@ -72,7 +72,7 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                 </div>
             ))}
 
-            {!isDesktop && tabs.map(tab => (
+            {!isDesktop && !isTablet && tabs.map(tab => (
                 <div
                     key={tab.id}
                     className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
@@ -81,8 +81,22 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                         <p className={`h4-raleway !font-[700] ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
                         <p className={`h3 font-geist-raleway-place-holder ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
                     </div>
-                    <p className={`pl-[41px] ${isTablet ? 'text-[18px]' : 'text-[17px]'} text-[var(--text-medium)] font-[500]`}>{t(tab.content)}</p>
+                    <p className={`pl-[41px] text-[17px] text-[var(--text-medium)] font-[500]`}>{t(tab.content)}</p>
                 </div>
+            ))}
+            {isTablet && tabs.map(tab => (
+                <FadeInSection >
+                    <div
+                        key={tab.id}
+                        className={`gap-[8px] pb-[16px] border-b-[1px] border-[var(--primary-other)]`}
+                    >
+                        <div className={`flex gap-[20px] items-start`}>
+                            <p className={`h4-raleway !font-[700] ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.id)}</p>
+                            <p className={`h3 font-geist-raleway-place-holder ${selected ? '!text-[var(--other-border)]' : ''}`}>{t(tab.label)}</p>
+                        </div>
+                        <p className={`pl-[41px] text-[18px] text-[var(--text-medium)] font-[500]`}>{t(tab.content)}</p>
+                    </div>
+                </FadeInSection>
             ))}
         </div>
     );
@@ -129,7 +143,9 @@ export default function HomeSection8() {
         <div className={`${isMobile ? "px-[20px] py-[40px]" : 'p-[40px] pb-[80px]'} gap-[10px] w-full flex justify-center`}>
             <div className="gap-[40px] w-full flex flex-col max-w-[1200px]">
                 <p className="max-w-[600px] h2-raleway">
-                    {t('home_section_6_title')}
+                    <FadeInSection >
+                        {t('home_section_6_title')}
+                    </FadeInSection>
                 </p>
                 <HomeSection8Tab tabs={tabs} />
             </div>

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
+import Link from 'next/link';
 
 export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
     const defaultTargetDate = new Date();
@@ -23,16 +24,9 @@ export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
         return () => clearInterval(intervalId);
     }, []);
 
-
-    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
     return (
         <div className="flex flex-col items-center justify-center border border-gray-200 h-[124px] w-full">
             <div className=" w-full h-[64px] flex flex-col items-center justify-center canvas-bg">
-                {/* <p>{`${days} : ${hours} : ${minutes} : ${seconds}`}</p> */}
                 <p style={{
                     fontFamily: 'Inter, sans-serif',
                     fontFeatureSettings: '"ss01", "ss02"' ,
@@ -91,12 +85,14 @@ export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
                         animation: move-sideways-2 5s infinite;
                     }
                 `}</style>
-                <Button className="h-[60px] w-full button rounded-none">
-                    {t('countdown_timer_button')}
-                </Button>
+                <Link href="https://wealthfarming.app/" passHref>
+                    <Button
+                        className="h-[60px] w-full button !text-[15px] rounded-none"
+                    >
+                        {t('countdown_timer_button')}
+                    </Button>
+                </Link>
             </div>
-
-
         </div >
     );
 }

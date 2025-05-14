@@ -63,9 +63,10 @@
   "header_eco": "ECOSYSTEM",
   "header_investBank": "INVESTMENT BANK",
   "header_contactUs": "Contact Us",
-  "header_investNow": "Invest Now",
+  "header_investNow": "INVEST NOW",
   "header_investNowup": "INVEST NOW",
   "header_invest_today_up": "INVEST TODAY",
+  "header_license": "License",
 
   "footer_description": "Wealth Farming – The financial ecosystem of BeQ Group Foundation (UK), legally licensed by the government of the United Kingdom (Registration number 14478063, granted on 11/11/2022). Operating under industries 58190, 64205, 64301, 66300, with an approved financial guarantee of up to 30 million GBP.",
   "footer_page": "Page",
@@ -87,7 +88,7 @@
   "page_product_box3_title": "BEQ Web3 Wallet",
   "page_product_box3_description": "Comprehensive digital asset management, integrating transactions, staking, and lending all in one single wallet!",
   "page_product_box3_button": "UPDATING",
-  "index_section_1_title_1": "NFT NEC - You don’t need to be rich to invest",
+  "index_section_1_title_1": "NFT NEC - You don't need to be rich to invest",
   "index_section_1_title_2": " let",
   "index_section_1_title_3": " cash flow help you be free",
   "index_section_1_title_4": " every month",
@@ -197,5 +198,8 @@
   "eco_data_title_4": "Professional, transparent investment reporting and analysis",
   "eco_data_content_4_1": "Automated reporting through Smart Contracts clearly outlines each investment.",
   "eco_data_content_4_2": "Analyzing assets and investment portfolios intelligently, supporting quick decision-making.",
-  "eco_data_content_4_3": "Continuous updates on market fluctuations to keep investors proactive."
+  "eco_data_content_4_3": "Continuous updates on market fluctuations to keep investors proactive.",
+  "submit_contact": "Submit form successfully",
+  "submit_error": "Error submitting form: An unexpected error occurred",
+  "email_invalid": "The following field is invalid: email"
 }

@@ -72,10 +72,13 @@ export default function HomeSection4() {
                     </FadeInSection>
                 </div>
                 <div className={`flex flex-col items-center justify-center w-full p-5 pt-9 relative`}>
-                    <Button className="button !text-[12px] rounded-[4px]">
-                        <ChatCenteredDots size={32} className="size-5" />
-                        <p>{t('free_support')}</p>
-                    </Button>
+                    <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
+                        <Button className="button !text-[12px] rounded-[4px]">
+                            <ChatCenteredDots size={32} className="size-5" />
+                            <p>{t('free_support')}</p>
+                        </Button>
+                    </a>
+
                 </div>
             </div>
 

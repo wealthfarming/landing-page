@@ -1,10 +1,14 @@
 import { XAxis, YAxis, Tooltip, CartesianGrid, Area, AreaChart, ResponsiveContainer } from "recharts";
 import { ChartContainer } from "@/components/ui/chart";
 import { useTranslation } from "react-i18next";
-
+import Image from "next/image";
+import { useInterface } from '@/components/context/interface-context';
+import { useState } from 'react';
+import { Apiget } from "@/lib/api/get"
+import { API_URL } from "@/lib/config";
+import { useEffect, useMemo } from 'react';
 interface ChartIndexProps {
     chartConfig?: any
-    chartData?: any[]
 }
 
 export default function ChartIndex({
@@ -18,22 +22,7 @@ export default function ChartIndex({
             },
         },
     },
-    chartData = [
-        { timestamp: "T1", NFTPrice: 120, totalAsset: 10000, benchmarkPrice: 45 },
-        { timestamp: "T2", NFTPrice: 130, totalAsset: 10500, benchmarkPrice: 130 },
-        { timestamp: "T3", NFTPrice: 115, totalAsset: 10200, benchmarkPrice: 195 },
-        { timestamp: "T4", NFTPrice: 140, totalAsset: 10800, benchmarkPrice: 140 },
-        { timestamp: "T5", NFTPrice: 160, totalAsset: 11000, benchmarkPrice: 115 },
-        { timestamp: "T6", NFTPrice: 150, totalAsset: 10900, benchmarkPrice: 150 },
-        { timestamp: "T7", NFTPrice: 170, totalAsset: 11500, benchmarkPrice: 180 },
-        { timestamp: "T8", NFTPrice: 180, totalAsset: 11800, benchmarkPrice: 160 },
-        { timestamp: "T9", NFTPrice: 175, totalAsset: 11650, benchmarkPrice: 165 },
-        { timestamp: "T10", NFTPrice: 185, totalAsset: 12000, benchmarkPrice: 170 },
-        { timestamp: "T11", NFTPrice: 190, totalAsset: 12200, benchmarkPrice: 175 },
-        { timestamp: "T12", NFTPrice: 200, totalAsset: 12500, benchmarkPrice: 180 },
-    ],
 }: ChartIndexProps) {
-    const { t } = useTranslation();
 
     const CustomTooltip = ({ active, payload }: any) => {
         if (active && payload && payload.length) {
@@ -46,12 +35,23 @@ export default function ChartIndex({
                     lineHeight: "normal",
                 }}>
                     <ul className="list-disc">
-                        <li className={`me text-[var(--primary-green)] ml-4`}>{t('BEQ Preview Indexes')}</li>
-                        <li className="me ml-4"><p className="inline  !text-[--text-medium]">{t('Total NAV')}</p> {new Intl.NumberFormat("en-US", {
-                            notation: "compact",
-                            compactDisplay: "short",
-                            maximumFractionDigits: 2,
-                        }).format(payload[0].payload.totalAsset)} USDC</li>
+                        <li className={`me ml-4`}>
+                            <p className="inline text-[var(--primary-green)]">{t('BEQ Preview Indexes ')}</p>
+                            {new Intl.NumberFormat("en-US", {
+                                notation: "compact",
+                                compactDisplay: "short",
+                                maximumFractionDigits: 2,
+                            }).format(payload[0].payload['review-index'])}
+                        </li>
+                        <li className="me ml-4">
+                            <p className="inline text-[var(--primary-error)] !text-[--text-medium]">
+                                {t('S&P 500 ')}
+                            </p>
+                            {new Intl.NumberFormat("en-US", {
+                                notation: "compact",
+                                compactDisplay: "short",
+                                maximumFractionDigits: 2,
+                            }).format(payload[0].payload.sp500)}</li>
                     </ul>
                 </div>
             );
@@ -59,13 +59,140 @@ export default function ChartIndex({
         return null;
     };
 
+    const { isDesktop, isTablet } = useInterface();
+    const { t, i18n } = useTranslation();
+
+    const [data, setData] = useState<any>([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const get_data = await Apiget(
+                API_URL + '/api/data-index',
+                {
+                    sort: 'date',
+                    limit: 0,
+                }
+            );
+            const data_tmp = get_data.map((item: any) => ({
+                date: item.date ?? null,
+                "review-index": item["review-index"] ?? null,
+                sp500: item.sp500 ?? null,
+            }));
+
+            console.log(data_tmp)
+
+            setData(data_tmp);
+        };
+        getData();
+    }, []);
+
+    function getFixedTicks(data: any[], min_tick = 5, max_tick = 10) {
+        if (!data || data.length === 0) return [];
+
+        let step = 1;
+        let step_tmp = 1;
+        let count = data.length;
+
+        let step_array = [];
+
+
+        for (let i = max_tick; i > 1; i--) {
+            step_tmp = (data.length - i) / (i - 1) + 1;
+            if (Number.isInteger(step_tmp) && i >= min_tick && step_tmp > 0) {
+                step_array[i] = step_tmp;
+            }
+        }
+
+
+        if (step_array.length == 0) {
+            let min_tick_last = max_tick;
+            let min_tick_last_tmp = max_tick;
+            let max_step_tmp = 1;
+            for (let i = max_tick; i > 1; i--) {
+                step_tmp = Math.floor((data.length - i) / (i - 1)) + 1;
+                if (i >= min_tick && step_tmp > 0) {
+                    let total_ticks = Math.floor((data.length - 1) / step_tmp) + 1
+                    min_tick_last_tmp = Math.abs(data.length - (total_ticks - 2) * step_tmp - 1 - step_tmp);
+                    if (min_tick_last_tmp < min_tick_last || (min_tick_last_tmp == min_tick_last && step_tmp > max_step_tmp)) {
+                        min_tick_last = min_tick_last_tmp;
+                        max_step_tmp = step_tmp;
+
+
+                        step_array = [];
+                        step_array[total_ticks] = step_tmp;
+                    }
+                }
+            }
+        }
+
+        const keys = Object.keys(step_array)
+            .map(Number)
+            .sort((a, b) => b - a);
+
+        for (let i of keys) {
+            if (i <= max_tick) {
+                step = step_array[i];
+                count = i;
+                break;
+            }
+        }
+
+        const ticks: string[] = [];
+        for (let i = 0; i < count; i++) {
+            let index = i * step;
+            if (index >= data.length) break;
+            ticks.push(data[index].date);
+        }
+        if (ticks[ticks.length - 1] !== data[data.length - 1].date) {
+            ticks[ticks.length] = data[data.length - 1].date;
+        }
+
+        return ticks;
+    }
+
+    const ticks: string[] = useMemo(() => {
+        const initial = isDesktop || isTablet
+            ? getFixedTicks(data, 5, 10)
+            : getFixedTicks(data, 3, 4);
+
+        const raw = [...initial];
+        if (raw.length >= 2) {
+            raw.splice(raw.length - 2, 1);
+        }
+
+        const seen = new Set<string>();
+        const unique: string[] = [];
+        raw.forEach(val => {
+            const d = new Date(val);
+            const key = `${d.getMonth()}-${d.getFullYear()}`;
+            if (!seen.has(key)) {
+                seen.add(key);
+                unique.push(val);
+            }
+        });
+
+        const last = raw[raw.length - 1];
+        if (last && unique[unique.length - 1] !== last) {
+            unique.push(last);
+        }
+
+        return unique;
+    }, [data, isDesktop, isTablet]);
+
+
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    if (!isClient) return null;
+
     return (
         <div className="relative h-full w-full max-h-full overflow-hidden">
             <ResponsiveContainer width="100%" height="100%">
                 <ChartContainer config={chartConfig}>
                     <AreaChart
                         accessibilityLayer
-                        data={chartData}
+                        data={data}
                         margin={{
                             left: -5,
                             right: 31,
@@ -73,7 +200,7 @@ export default function ChartIndex({
                         }}
                     >
                         <Area
-                            dataKey="NFTPrice"
+                            dataKey="review-index"
                             type="natural"
                             fill="transparent"
                             fillOpacity={1.0}
@@ -82,7 +209,7 @@ export default function ChartIndex({
                         />
 
                         <Area
-                            dataKey="benchmarkPrice"
+                            dataKey="sp500"
                             type="natural"
                             fill="transparent"
                             fillOpacity={1.0}
@@ -90,14 +217,20 @@ export default function ChartIndex({
                             stroke={"var(--primary-error)"}
                         />
                         <XAxis
-                            dataKey="timestamp"
+                            dataKey="date"
                             axisLine={false}
                             tickLine={false}
                             tickMargin={16}
                             minTickGap={5}
                             interval="preserveStartEnd"
+                            ticks={ticks}
+                            tickFormatter={(value) => {
+                                const date = new Date(value);
+                                return `${date.toLocaleString("en-EN", { month: "short" })}-${date.getFullYear()}`;
+                            }}
                         />
                         <YAxis
+                            tickFormatter={(value) => `${Math.round(value)}`}
                             orientation="left"
                             tickLine={false}
                             axisLine={false}
