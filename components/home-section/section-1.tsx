@@ -6,13 +6,18 @@ import { useTranslation } from "react-i18next";
 import { AnimatedText } from "@/components/animation/introduction/Animations"
 import { useInterface } from "@/components/context/interface-context";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function HomeSection1() {
     const { t } = useTranslation();
     const { isDesktop, isMobile } = useInterface();
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
 
     return (
-        <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background relative z-30 ${isDesktop ? 'pt-10' : ''}`}>
+        <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background relative z-30 ${isDesktop ? 'pt-10' : ''}`} ref={ref}>
 
             <h1 className={`animate-fade-in w-full text-center ${!isMobile ? 'pb-8' : 'pb-5'} max-w-[820px] bigTitle`}>
                 <AnimatedText
@@ -20,6 +25,7 @@ export default function HomeSection1() {
                     customClass={['', 'font-bold', '', 'font-bold']}
                     delayBetween={0.05}
                     duration={0.3}
+                    inView={inView}
                 />
             </h1>
             {!isMobile ?

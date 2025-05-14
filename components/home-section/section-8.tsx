@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react';
 import Image, { StaticImageData } from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { Plus } from 'phosphor-react';
-import { FadeInSection } from "@/components/animation/introduction/Animations"
+import { AnimatedText, FadeInSection } from "@/components/animation/introduction/Animations"
 import section8_1 from "@/public/images/home-section-6/01.png"
 import section8_2 from "@/public/images/home-section-6/02.png"
 import section8_3 from "@/public/images/home-section-6/03.png"
 import section8_4 from "@/public/images/home-section-6/04.png"
 import section8_5 from "@/public/images/home-section-6/05.png"
+import { useInView } from 'react-intersection-observer';
 
 type Tab = {
     id: string;
@@ -41,7 +42,7 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                         >
                             {selected === tab.id && (
                                 <>
-                                    <Image 
+                                    <Image
                                         src={tab.img}
                                         alt={tab.label}
                                         fill
@@ -80,6 +81,10 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
 
 export default function HomeSection8() {
     const { t } = useTranslation();
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
     const tabs = [
         {
             id: '01',
@@ -117,9 +122,16 @@ export default function HomeSection8() {
 
     return (
         <div className={`${isMobile ? "px-[20px] py-[40px]" : 'p-[40px] pb-[80px]'} gap-[10px] w-full flex justify-center`}>
-            <div className="gap-[40px] w-full flex flex-col max-w-[1200px]">
+            <div className="gap-[40px] w-full flex flex-col max-w-[1200px]" ref={ref}>
                 <p className="max-w-[600px] h1">
-                    {t('home_section_6_title')}
+                    <AnimatedText
+                        text={[t('home_section_6_title')]}
+                        customClass={['', 'font-bold', '', 'font-bold']}
+                        delayBetween={0.05}
+                        duration={0.5}
+                        inView={inView}
+                    />
+
                 </p>
                 <HomeSection8Tab tabs={tabs} />
             </div>
