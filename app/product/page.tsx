@@ -45,7 +45,7 @@ export default function ProductPage() {
                         description={t('page_product_box1_description')}
                         buttonText={t('page_product_box1_button')}
                         button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]"
-                        link="https://wealthfarming.app"
+                        link="/nec-landing"
                     />
                     <ProductInfoCard
                         title={t('page_product_box2_title')}
