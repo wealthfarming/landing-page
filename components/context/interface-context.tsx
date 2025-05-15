@@ -18,8 +18,8 @@ export function InterfaceProvider({ children }: { children: React.ReactNode }) {
 
 
     const desktopQuery = useMediaQuery('(min-width: 1200px)');
-    const tabletQuery = useMediaQuery('(min-width: 768px) and (max-width: 1199px)');
-    const mobileQuery = useMediaQuery('(max-width: 767px)');
+    const tabletQuery = useMediaQuery('(min-width: 810px) and (max-width: 1199px)');
+    const mobileQuery = useMediaQuery('(max-width: 809px)');
 
     useEffect(() => {
         setIsDesktop(desktopQuery);
