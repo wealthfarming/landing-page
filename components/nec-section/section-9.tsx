@@ -64,16 +64,16 @@ const Section9: React.FC = () => {
 
   const { t } = useTranslation();
   return (
-    <section className="flex justify-center py-20 px-10 max-md:py-10 max-md:px-5">
-      <div className="flex flex-wrap gap-10 justify-center items-start max-w-[960px] max-md:max-w-full">
-        <div className="flex flex-1 justify-start text-base w-[368px] text-zinc-800 max-md:max-w-full">
-          <div className="self-start text-[40px] text-center max-md:text-[29px] font-semibold">
+    <section className="flex justify-center py-15 px-10 max-md:py-10 max-md:px-5">
+      <div className="flex grow gap-10 justify-center items-start max-w-[960px] max-md:max-w-full max-md:flex-col">
+        <div className="flex grow justify-start text-base w-[368px] max-md:max-w-full">
+          <div className="self-start text-[40px] max-md:text-[29px] font-semibold">
             {t("contact_section_title")}
           </div>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-[20px] h-[336px] text-sm w-[552px] max-md:w-full"
+          className="flex flex-col grow gap-5 h-[336px] text-sm max-w-[552px] w-full"
         >
           <div className="w-full flex flex-col gap-[10px]">
             <label htmlFor="fullName" className="">

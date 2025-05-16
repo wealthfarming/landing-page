@@ -20,7 +20,7 @@ const Section8: React.FC = () => {
 
             <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-            <div className={`absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] ${!isMobile ? 'px-[40px]' : 'px-[20px]'}`}>
+            <div className={`absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] py-15 px-10 max-md:py-10 max-md:px-5`}>
                 <p className={`${isMobile ? 'h2' : 'h1'} !text-white text-center`}>
                     {t("nec_section_8_title_1")}
                 </p>
