@@ -102,7 +102,9 @@ export default function InvestmentBank() {
         const itemFr = data_fr.find((itemFr: any) => itemFr.id === itemEn.id);
         return {
           id: itemEn.id,
-          route: itemEn.route,
+          slug_en: itemEn?.slug?.en ?? '',
+          slug_vi: itemVi?.slug?.vi ?? '',
+          slug_fr: itemFr?.slug?.fr ?? '',
           title_vi: itemVi.title,
           title_en: itemEn.title,
           title_fr: itemFr.title,
@@ -110,6 +112,7 @@ export default function InvestmentBank() {
         };
       });
       setContents(posts);
+      console.log(posts);
     };
     getPosts();
   }, [selected]);
@@ -166,7 +169,7 @@ export default function InvestmentBank() {
               <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <a href={`/investment-bank/${content.route}`}>
+                    <a href={`/investment-bank/${content[`slug_${i18n.language}`]}`}>
                       <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[`title_${i18n.language}`]}</p>
                     </a>
                     <p className="text-light text-[13px]">

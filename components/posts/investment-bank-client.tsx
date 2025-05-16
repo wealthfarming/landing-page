@@ -37,12 +37,12 @@ export default function InvestmentBankClient({ slug }: Props) {
     async function getPosts() {
       // fetch ID by route
       const get_data_id = await Apiget(
-        `${API_URL}/api/posts`,
+        API_URL + '/api/posts',
         {
-          'where[route][equals]': slug,
+          [`where[slug][${i18n.language}][equals]`]: slug,
           sort: 'createdAt',
           limit: 1,
-          locale: 'en',
+          locale: i18n.language,
         }
       );
       const data_id = get_data_id[0]?.id;
@@ -88,19 +88,19 @@ export default function InvestmentBankClient({ slug }: Props) {
         />
       </div>
 
-      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}> 
+      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
         <div className="max-w-[1200px] w-full">
           {post?.title && <p className="title-invest">{post.title}</p>}
         </div>
       </div>
 
       <div className={`${!isDesktop
-          ? isMobile
-            ? 'p-[20px]'
-            : 'py-[40px] px-[40px]'
-          : 'py-[80px] px-[40px]'}
+        ? isMobile
+          ? 'p-[20px]'
+          : 'py-[40px] px-[40px]'
+        : 'py-[80px] px-[40px]'}
         z-[30] flex justify-center bg-[var(--base-bg)] relative
-        ${isDesktop || isTablet ? 'mb-[505px]' : ''}`}> 
+        ${isDesktop || isTablet ? 'mb-[505px]' : ''}`}>
         <div className="absolute inset-0">
           <Image
             src={Background_Slug}
