@@ -27,7 +27,7 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
               {t('footer_description')}
             </p>
           </div>
-          <div className={`flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : isTablet ? 'gap-10' : 'flex-col gap-10'} items-start justify-end basis-0`}>
+          <div className={` flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : 'gap-10'} items-start ${isDesktop ? 'justify-end' : 'justify-start'} basis-0`}>
             <nav className={`flex flex-col text-[var(--other-border)] ${isDesktop ? 'w-[103px] gap-6' : isTablet ? '' : ''}`}>
               <div className="text-[20px] font-medium">{t('footer_page')}</div>
               <ul className="w-full text-[12px] font-normal flex flex-col opacity-80">
@@ -52,9 +52,9 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
                   </a>
                 </li>
                 <li className="mt-2">
-                  <a 
-                    href="https://find-and-update.company-information.service.gov.uk/company/14478063" 
-                    target="_blank" 
+                  <a
+                    href="https://find-and-update.company-information.service.gov.uk/company/14478063"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[var(--primary)]"
                   >
@@ -67,14 +67,14 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
               <div className="text-[var(--other-border)] opacity-80">
                 <h3 className="text-[20px] font-semibold">{t('footer_contact')}</h3>
                 <div className="mt-5 w-full text-xs font-medium flex flex-col gap-3">
-                <div className="flex gap-2 items-start mt-2 w-full">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/267db18b07327e7c2de43ca1549adc0184cd6b75?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540"
-                        alt="Email icon"
-                        className="object-contain shrink-0 w-4 aspect-square"
-                      />
-                      <p className="flex-1 shrink basis-0">contact@wealthfarming.org</p>
-                    </div>
+                  <div className="flex gap-2 items-start mt-2 w-full">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/267db18b07327e7c2de43ca1549adc0184cd6b75?placeholderIfAbsent=true&apiKey=29da101503f047abb81734f632fb9540"
+                      alt="Email icon"
+                      className="object-contain shrink-0 w-4 aspect-square"
+                    />
+                    <p className="flex-1 shrink basis-0">contact@wealthfarming.org</p>
+                  </div>
                   <address className="not-italic">
                     <div className="flex gap-2 items-start mt-2 w-full">
                       <img
@@ -146,7 +146,7 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
       <div className="flex flex-col justify-center items-center px-10 py-4 w-full text-sm font-medium border-b border-gray-200">
         <div className="flex gap-10 justify-center w-full max-w-[1200px] max-md:max-w-full">
           <p className="flex-1 shrink opacity-50 basis-0 max-md:max-w-full">
-          {t('footer_copyright')}
+            {t('footer_copyright')}
           </p>
         </div>
       </div>
