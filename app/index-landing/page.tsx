@@ -45,7 +45,7 @@ const IndexLandingPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <HeaderDesktopFull changeAt={190} />
       {isDesktop &&
         <div className="w-full h-[260px] relative">
