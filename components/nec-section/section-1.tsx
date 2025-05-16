@@ -6,9 +6,16 @@ import { AnimatedText } from '../animation/introduction/Animations';
 import { useInView } from "react-intersection-observer";
 import Image from 'next/image';
 import Jar from '../animation/nec_section_1/jar';
-import { Button } from '../ui/button';
 import ButtonPrimary from '../custom-button/button-primary';
 import { CursorClick } from '@phosphor-icons/react';
+
+import charUp from '../../public/images/nec_nft/nec_section_1_charUp.avif';
+import charDown from '../../public/images/nec_nft/nec_section_1_charDown.avif';
+import jar from '../../public/images/nec_nft/nec-section-1-main.webp'
+import hocphi from '../../public/images/nec_nft/nec_section_1_1.avif';
+import anuong from '../../public/images/nec_nft/nec_section_1_2.avif';
+import suckhoe from '../../public/images/nec_nft/nec_section_1_3.avif';
+import hoadon from '../../public/images/nec_nft/nec_section_1_4.avif';
 
 const Section1: React.FC = () => {
     const { ref, inView } = useInView({
@@ -102,15 +109,15 @@ const Section1: React.FC = () => {
                             width={448}
                             height={448}
                             className='object-cover z-10'
-                            src={'/images/nec_nft/nec-section-1-main.webp'}
+                            src={jar}
                         />
                         <p className='absolute text-[30px] font-geist-raleway font-[600] z-20' style={{ top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                             NEC
                         </p>
-                        <Jar text='Học phí' x={10} y={15} src='/images/nec_nft/nec_section_1_1.avif' />
-                        <Jar text='Học phí' x={85} y={20} src='/images/nec_nft/nec_section_1_2.avif' />
-                        <Jar text='Học phí' x={5} y={70} src='/images/nec_nft/nec_section_1_3.avif' />
-                        <Jar text='Học phí' x={95} y={75} src='/images/nec_nft/nec_section_1_4.avif' />
+                        <Jar text='Học phí' x={10} y={15} delay={0.5} src={hocphi} />
+                        <Jar text='Học phí' x={85} y={20} delay={1} src={anuong} />
+                        <Jar text='Học phí' x={5} y={70} delay={1.5} src={suckhoe} />
+                        <Jar text='Học phí' x={95} y={75} delay={2} src={hoadon} />
                     </div>
 
                 </div>
@@ -132,7 +139,7 @@ const Section1: React.FC = () => {
                                     width={279}
                                     height={232.5}
                                     className='object-cover'
-                                    src={'/images/nec_nft/nec_section_1_charUp.avif'}
+                                    src={charUp}
                                 />
                                 <p className='font-geist-raleway text-[18px] font-[600]'>
                                     {t("nec_section_1_char_decs_1")}
@@ -155,7 +162,7 @@ const Section1: React.FC = () => {
                                     width={279}
                                     height={232.5}
                                     className='object-cover'
-                                    src={'/images/nec_nft/nec_section_1_charDown.avif'}
+                                    src={charDown}
                                 />
                                 <p className='font-geist-raleway text-[18px] font-[600]'>
                                     {t("nec_section_1_char_decs_2")}

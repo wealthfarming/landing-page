@@ -1,20 +1,21 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 const getRandomPosition = () => ({
     top: Math.random() * 80, // percent, adjust as needed
     left: Math.random() * 80, // percent, adjust as needed
 });
 interface JarProps {
-    src?: string;
+    src?: string | StaticImageData;
     text: string;
+    delay?: number;
     x?: number;
     y?: number;
 }
 const DEFAULT_JAR_IMAGE_SRC = "/images/nec_nft/nec_section_1_1.avif";
-export default function Jar({ src , text , x , y  }: JarProps & { x?: number; y?: number }) {
+export default function Jar({ src, text, delay, x, y }: JarProps & { x?: number; y?: number }) {
     const [rotateKey, setRotateKey] = useState(0);
 
     useEffect(() => {
@@ -32,13 +33,16 @@ export default function Jar({ src , text , x , y  }: JarProps & { x?: number; y?
                 left: `50%`,
                 transform: 'translate(-50%, -50%)', // Start at center
             }}
+            initial={{ opacity: 0 }}
             animate={{
                 top: `${y || 50}%`,
                 left: `${x || 50}%`,
-            }}  
+                opacity: 1,
+            }}
             transition={{
-                top: { type: 'spring', stiffness: 100, damping: 20, delay: 0.5 },
-                left: { type: 'spring', stiffness: 100, damping: 20, delay: 0.5 },
+                top: { type: 'spring', stiffness: 100, damping: 20, delay: delay || 0.5 },
+                left: { type: 'spring', stiffness: 100, damping: 20, delay: delay || 0.5 },
+                opacity: { duration: 0.6, delay: delay || 0.5 },
             }}
         >
             <motion.div
