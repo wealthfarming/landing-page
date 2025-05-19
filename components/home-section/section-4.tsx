@@ -7,6 +7,7 @@ import { useInterface } from '../context/interface-context';
 import { FadeInSection } from "@/components/animation/introduction/Animations"
 import section4 from "../../public/images/img/section_4.jpg"
 import section4_2 from "../../public/images/img/section_4_2.png"
+import ButtonPrimary from '../custom-button/button-primary';
 
 export default function HomeSection4() {
     const { t } = useTranslation();
@@ -73,10 +74,10 @@ export default function HomeSection4() {
                 </div>
                 <div className={`flex flex-col items-center justify-center w-full p-5 pt-9 relative`}>
                     <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
-                        <Button className="button !text-[12px] rounded-[4px]">
+                        <ButtonPrimary className="button !text-[12px] rounded-[4px]">
                             <ChatCenteredDots size={32} className="size-5" />
                             <p>{t('free_support')}</p>
-                        </Button>
+                        </ButtonPrimary>
                     </a>
 
                 </div>

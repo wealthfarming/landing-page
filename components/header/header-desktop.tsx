@@ -16,6 +16,7 @@ import { useInterface } from '@/components/context/interface-context';
 import logoFullDark from "../../public/images/img/logo_full_dark.svg";
 import logoFull from "../../public/images/img/logo-full.svg";
 import { useLanguage } from "../context/i18n";
+import ButtonPrimary from "../custom-button/button-primary";
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
   const { t, i18n } = useTranslation();
@@ -88,10 +89,10 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
                 </Button>
               </a>
               <a href="https://wealthfarming.app/" target="_blank" >
-                <Button variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} h-[40px] transition-transform duration-300 ease-in-out`}>
+                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} h-[40px] transition-transform duration-300 ease-in-out`}>
                   <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                   <p>{t('header_investNowup')}</p>
-                </Button>
+                </ButtonPrimary>
               </a>
             </>
           )}

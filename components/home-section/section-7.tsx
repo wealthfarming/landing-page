@@ -6,6 +6,7 @@ import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from 'react-i18next';
 import section6 from "../../public/images/img/section6.webp"
+import ButtonPrimary from "../custom-button/button-primary";
 export default function HomeSection7() {
     const { t } = useTranslation();
     const [mounted, setMounted] = useState(false);
@@ -73,14 +74,14 @@ export default function HomeSection7() {
                                 </div>
                             </a>
                             <a href="https://wealthfarming.app/" target="_blank" >
-                                <div className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
+                                <ButtonPrimary className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
                                     <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
                                         <CursorClick size={20} className="animate-diagonal-2" />
                                     </div>
                                     <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
                                         {t('header_investNowup')}
                                     </div>
-                                </div>
+                                </ButtonPrimary>
                             </a>
                         </div>
                     </div>
