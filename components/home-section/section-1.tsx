@@ -5,7 +5,6 @@ import ButtonOutLine from "../custom-button/button-outline";
 import { useTranslation } from "react-i18next";
 import { AnimatedText } from "@/components/animation/introduction/Animations"
 import { useInterface } from "@/components/context/interface-context";
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function HomeSection1() {

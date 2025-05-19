@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image'
-import { Button } from '../ui/button'
 import { useTranslation } from 'react-i18next';
 import { ChatCenteredDots } from '@phosphor-icons/react';
 import { useInterface } from '../context/interface-context';

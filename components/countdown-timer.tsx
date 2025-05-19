@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
 import Link from 'next/link';
+import ButtonPrimary from "./custom-button/button-primary";
 
 export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
     const defaultTargetDate = new Date();
@@ -76,11 +76,11 @@ export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
                     }
                 `}</style>
                 <Link href="https://wealthfarming.app/" passHref>
-                    <Button
+                    <ButtonPrimary
                         className="h-[60px] w-full button !text-[15px] rounded-none"
                     >
                         {t('countdown_timer_button')}
-                    </Button>
+                    </ButtonPrimary>
                 </Link>
             </div>
         </div >

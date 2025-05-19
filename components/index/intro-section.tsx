@@ -2,7 +2,6 @@
 import React from "react";
 import Button from "./button";
 import SectionContainer from "./section-container";
-import { Separator } from "../ui/separator";
 import { AnimatedText } from "../animation/introduction/Animations";
 import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
