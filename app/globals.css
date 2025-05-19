@@ -289,7 +289,10 @@
   font-family: var(--font-geist-button);
 }
 .font-geist-raleway {
-  font-family: var(--font-geist-raleway);
+  font-family: var(--font-geist-raleway) !important;
+}
+.font-geist-raleway-place-holder {
+  font-family: var(--font-geist-raleway-place-holder) !important;
 }
 
 .bigTitle {
