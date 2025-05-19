@@ -35,34 +35,28 @@ export default function InvestmentBankClient({ slug }: Props) {
   // fetch post data when client and slug or language changes
   useEffect(() => {
     if (!isClient) return;
-    console.log(slug);
 
     async function getPosts() {
       // fetch ID by route
-      const get_slugs_id = await Apiget(
-        API_URL + '/api/posts',
-        {
-          sort: 'createdAt',
-          limit: 0,
-        }
+      const locales = ['en', 'fr', 'vi'];
+
+      const allResponses = await Promise.all(
+        locales.map((locale) =>
+          Apiget(API_URL + '/api/posts', {
+            sort: 'createdAt',
+            limit: 0,
+            locale,
+          })
+        )
       );
 
-      const slugMap: Record<string, any> = {};
+      const allPosts = allResponses.flat();
 
-      get_slugs_id.forEach((post: any) => {
-        if (post.id && post.slug) {
-          slugMap[post.id] = post.slug;
-        }
-      });
 
-      let data_id = null;
+      const find_data_id = allPosts.find((p: any) => p.slug === slug);
+      const data_id = find_data_id?.id ?? null;
 
-      for (const [id, slugObj] of Object.entries(slugMap)) {
-        if (Object.values(slugObj).includes(slug)) {
-          data_id = id;
-          break;
-        }
-      }
+
       if (!data_id) return;
 
       // fetch localized content by ID

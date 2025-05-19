@@ -102,9 +102,9 @@ export default function InvestmentBank() {
         const itemFr = data_fr.find((itemFr: any) => itemFr.id === itemEn.id);
         return {
           id: itemEn.id,
-          slug_en: itemEn?.slug?.en ?? '',
-          slug_vi: itemVi?.slug?.vi ?? '',
-          slug_fr: itemFr?.slug?.fr ?? '',
+          slug_en: itemEn?.slug ?? '',
+          slug_vi: itemVi?.slug ?? '',
+          slug_fr: itemFr?.slug ?? '',
           title_vi: itemVi.title,
           title_en: itemEn.title,
           title_fr: itemFr.title,
