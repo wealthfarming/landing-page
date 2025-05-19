@@ -243,5 +243,18 @@
   "eco_data_content_4_3": "Continuous updates on market fluctuations to keep investors proactive.",
   "submit_contact": "Submit form successfully",
   "submit_error": "Error submitting form: An unexpected error occurred",
-  "email_invalid": "The following field is invalid: email"
+  "email_invalid": "The following field is invalid: email",
+
+  "nec_section2_title": "NFT - When money is power",
+  "nec_section2_label_1": "Minimum profit of 5% per month from price difference trading.",
+  "nec_section2_label_2": "The investment strategy is advised and operated by experts from Euronext & NYSE",
+  "nec_section2_label_3": "No need for financial knowledge, no need for management.",
+  "nec_section2_label_4": "Applying NFT blockchain technology to ensure absolute transparency & capital safety",
+
+  "nec_section3_title": "One-time investment - Stable long-term cash flow",
+  "nec_section3_description": "NFTs are not just a digital asset. They are a certificate of cash flow – where passive income is clearly defined, tied to a practical investment strategy, and backed by transparent liquidity.",
+  "nec_section3_label_1": "Only from 100 USD / NFT",
+  "nec_section3_label_2": "Currently, 725 NFTs have been minted."
+
+
 }
