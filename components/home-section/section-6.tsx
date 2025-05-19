@@ -32,7 +32,7 @@ export default function HomeSection6() {
                         </div>
                         <div className={`flex gap-2 ${isDesktop ? 'justify-start pb-8' : 'justify-center'}`}>
                             <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
-                                <div className={`${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} flex bg-[var(--base-bg)] shadow-sm rounded-[4px] border border-[var(--primary-other)] button items-center hover:bg-[var(--canvas-bg)] hover:cursor-pointer`}>
+                                <div className={`${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} flex bg-[var(--base-bg)] shadow-sm rounded-[4px] h-[48px] border border-[var(--primary-other)] button items-center hover:bg-[var(--canvas-bg)] hover:cursor-pointer`}>
                                     <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
                                         <ChatCenteredDots size={20} />
                                     </div>
