@@ -33,7 +33,8 @@
     "recharts": "^2.15.3",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",
-    "tw-animate-css": "^1.2.5"
+    "tw-animate-css": "^1.2.5",
+    "sass": "^1.77.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
