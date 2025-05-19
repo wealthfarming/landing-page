@@ -72,7 +72,7 @@ export default function EcoPage() {
   const selectedEcoData = ecoData;
 
   return (
-    <div className="flex flex-col pb-[100px]" >
+    <div className={`flex flex-col ${isDesktop ? 'pb-[100px]' : isTablet ? '' : ''}`}>
         <HeaderDesktopFull changeAt={300} />
       {isDesktop &&
         <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
