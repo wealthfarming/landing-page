@@ -42,7 +42,7 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     }, [isMobile]);
 
     return (
-        <div className={`${isDesktop ? 'w-[1200px] flex flex-[0_0_auto] h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
+        <div className={`${isDesktop ? 'max-w-[1200px] flex flex-[0_0_auto] h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
             {tabs.map(tab => (
                 <div key={tab.id} className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
                     <div
@@ -62,7 +62,7 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
                     >
                         <div>
                             <Image src={selected === tab.id ? tab.icon_selected : tab.icon} alt="" width={45} height={45} />
-                            <p className="pt-[8px] no-anim h4-raleway">{t(tab.label)}</p>
+                            <p className="pt-[8px] no-anim h4-raleway text-[20px] font-[500]">{t(tab.label)}</p>
                         </div>
                         <div
                             className={`
@@ -132,7 +132,7 @@ export default function HomeSection5() {
       });
 
     return (
-        <div className={`flex justify-center gap-[10px] w-full ${!isMobile ? 'p-[40px] pt-[80px]' : 'px-[20px] py-[40px]'}`}>
+        <div className={`overflow-hidden flex justify-center gap-[10px] w-full ${!isMobile ? 'p-[40px] pt-[80px]' : 'px-[20px] py-[40px]'}`}>
             <div className=" max-w-[1200px] w-full">
                 <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
                     <div className="flex flex-col gap-[16px] max-w-[716px]">

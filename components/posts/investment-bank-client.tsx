@@ -30,22 +30,33 @@ export default function InvestmentBankClient({ slug }: Props) {
     setIsClient(true);
   }, []);
 
+
+
   // fetch post data when client and slug or language changes
   useEffect(() => {
     if (!isClient) return;
 
     async function getPosts() {
       // fetch ID by route
-      const get_data_id = await Apiget(
-        `${API_URL}/api/posts`,
-        {
-          'where[route][equals]': slug,
-          sort: 'createdAt',
-          limit: 1,
-          locale: 'en',
-        }
+      const locales = ['en', 'fr', 'vi'];
+
+      const allResponses = await Promise.all(
+        locales.map((locale) =>
+          Apiget(API_URL + '/api/posts', {
+            sort: 'createdAt',
+            limit: 0,
+            locale,
+          })
+        )
       );
-      const data_id = get_data_id[0]?.id;
+
+      const allPosts = allResponses.flat();
+
+
+      const find_data_id = allPosts.find((p: any) => p.slug === slug);
+      const data_id = find_data_id?.id ?? null;
+
+
       if (!data_id) return;
 
       // fetch localized content by ID
@@ -81,26 +92,26 @@ export default function InvestmentBankClient({ slug }: Props) {
         <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
           src={post?.image ? `${API_URL}${post.image.url}` : Quest}
-          alt={post?.image?.alt || 'Default image'}
+          alt={post?.image?.alt || 'Default alt'}
           width={735}
           height={260}
           className="w-full h-[260px] object-cover"
         />
       </div>
 
-      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}> 
+      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
         <div className="max-w-[1200px] w-full">
           {post?.title && <p className="title-invest">{post.title}</p>}
         </div>
       </div>
 
       <div className={`${!isDesktop
-          ? isMobile
-            ? 'p-[20px]'
-            : 'py-[40px] px-[40px]'
-          : 'py-[80px] px-[40px]'}
+        ? isMobile
+          ? 'p-[20px]'
+          : 'py-[40px] px-[40px]'
+        : 'py-[80px] px-[40px]'}
         z-[30] flex justify-center bg-[var(--base-bg)] relative
-        ${isDesktop || isTablet ? 'mb-[505px]' : ''}`}> 
+        ${isDesktop || isTablet ? 'mb-[505px]' : ''}`}>
         <div className="absolute inset-0">
           <Image
             src={Background_Slug}

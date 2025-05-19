@@ -4,11 +4,25 @@ import { API_URL } from '@/lib/config';
 import { Apiget }  from '@/lib/api/get';
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const allPosts: any[] = await Apiget(
-    `${API_URL}/api/posts`,
-    { sort: 'createdAt', limit: 1000, locale: 'en' }
+  const locales = ['en', 'vi', 'fr'];
+
+  const results = await Promise.all(
+    locales.map(locale =>
+      Apiget(`${API_URL}/api/posts`, {
+        sort: 'createdAt',
+        limit: 1000,
+        locale
+      }).then(posts =>
+        posts.map((post: any) => ({
+          slug: post?.slug
+        }))
+      )
+    )
   );
-  return allPosts.map(post => ({ slug: post.route as string }));
+
+  const allSlugs = results.flat().filter(post => post.slug);
+
+  return allSlugs;
 }
 
 // no type annotation here—Next will supply { params, searchParams }

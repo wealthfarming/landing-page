@@ -102,7 +102,9 @@ export default function InvestmentBank() {
         const itemFr = data_fr.find((itemFr: any) => itemFr.id === itemEn.id);
         return {
           id: itemEn.id,
-          route: itemEn.route,
+          slug_en: itemEn?.slug ?? '',
+          slug_vi: itemVi?.slug ?? '',
+          slug_fr: itemFr?.slug ?? '',
           title_vi: itemVi.title,
           title_en: itemEn.title,
           title_fr: itemFr.title,
@@ -166,8 +168,11 @@ export default function InvestmentBank() {
               <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <a href={`/investment-bank/${content.route}`}>
-                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[`title_${i18n.language}`]}</p>
+                    <a href={`/investment-bank/${content[`slug_${i18n.language}`] || content[`slug_en`] || content[`slug_vi`] || content[`slug_fr`] || '#'
+                      }`}>
+                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">
+                        {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
+                      </p>
                     </a>
                     <p className="text-light text-[13px]">
                       {
