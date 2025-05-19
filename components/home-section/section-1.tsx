@@ -29,9 +29,9 @@ export default function HomeSection1() {
                 />
             </h1>
             {!isMobile ?
-                <p className={`${!isMobile ? 'pb-8' : 'pb-5'} w-10/12 md:w-7/12 text-center max-w-[600px] body-large !text-[var(--text-medium)]`}>{t('home_section_1_description')}</p>
+                <p className={`${!isMobile ? 'pb-8' : 'pb-5'} w-10/12 md:w-7/12 text-center max-w-[608px] body-large !text-[var(--text-medium)]`}>{t('home_section_1_description')}</p>
                 :
-                <p className={`${!isMobile ? 'pb-8' : 'pb-5'} w-10/12 md:w-7/12 text-center max-w-[600px] body-large !text-[var(--text-medium)]`}>{t('home_section_1_description_mobile')}</p>
+                <p className={`${!isMobile ? 'pb-8' : 'pb-5'} w-10/12 md:w-7/12 text-center max-w-[608px] body-large !text-[var(--text-medium)]`}>{t('home_section_1_description_mobile')}</p>
             }
             <div className={`${!isMobile ? 'gap-4' : 'gap-2'} flex flex-row justify-center max-w-[1200px]`}>
                 <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
