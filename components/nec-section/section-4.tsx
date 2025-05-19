@@ -21,7 +21,6 @@ import { useRef } from "react"
 
 const Section4: React.FC = () => {
     const { t } = useTranslation();
-    const [current, setCurrent] = useState(0);
     const { isDesktop, isTablet, isMobile } = useInterface();
     const slides = [
         {
