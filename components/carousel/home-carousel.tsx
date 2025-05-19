@@ -9,6 +9,7 @@ import {
 import Autoplay from "embla-carousel-autoplay"
 import { useTranslation } from 'react-i18next';
 import Image from "next/image"
+import './home-carousel.scss'
 import { useEffect, useRef, useState } from "react";
 import slide1 from "../../public/images/img/slide_1.jpg"
 import slide2 from "../../public/images/img/slide_2.jpg"
@@ -57,23 +58,20 @@ export const SliderDesktop = () => {
 
     return (
         <div
-            className={`w-full mx-auto mt-22 flex justify-center items-center max-w-screen  carousel_desktop`}
+            className={`w-full mx-auto mt-2 flex justify-center items-center max-w-screen  carousel_desktop`}
         >
             <Carousel
                 plugins={[Autoplay({ delay: 8000 })]}
                 opts={{ align: "center", loop: true }}
-                className="w-full flex items-center justify-center h-[300px] relative group"
+                className="w-[1050] items-center justify-center relative group relative"
             >
-                <CarouselContent visible={true} className="gap-8 w-[1200px] ">
+                <CarouselContent visible={true} className="gap-80px w-full ">
                     {images.map((image, index) => (
                         <CarouselItem key={index} >
-                            <div className="w-full flex justify-center items-center gap-8">
+                            <div className="w-full flex justify-center items-center gap-80px">
                                 <Image
                                     src={image}
                                     alt={`Slide ${index + 1}`}
-                                    width={400}
-                                    height={300}
-                                    className="object-cover w-[400px] h-[300px]"
                                 />
                                 <div className="w-2/3 flex flex-col justify-center items-start">
                                     <h1 className="text-lg h1">{content[index]}</h1>
@@ -84,10 +82,10 @@ export const SliderDesktop = () => {
 
                 </CarouselContent>
                 <div
-                    className="absolute -bottom-10 flex-row items-center px-4 flex opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute -bottom-10 flex-row items-center px-4 flex opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 t-ctrl-arrow"
 
                 >
-                    <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] -left-2 h-[40px] rounded-full shadow-md">
+                    <CarouselPrevious className="bg-gray-800 text-white p-2 w-[40px] -left-[20px] h-[40px] rounded-full shadow-md">
                         Previous
                     </CarouselPrevious>
                     <CarouselNext className="bg-gray-800 text-white p-2 w-[40px] h-[40px] rounded-full shadow-md">

@@ -13,6 +13,8 @@ export default function HomeSection3() {
 
 
     useEffect(() => {
+        console.log(isDesktop);
+        
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -45,7 +47,7 @@ export default function HomeSection3() {
     }, []);
 
     return (
-        <div className={`w-full flex flex-col gap-[20px] body-large ${isDesktop ? 'px-10 py-20' : 'px-5 py-10'}`}>
+        <div className={`w-full flex flex-col gap-[40px] body-large ${isDesktop ? 'px-10 py-20' : 'px-5 py-10'}`}>
             <div ref={titleRef}>
                 <FadeInSection>
                     <p
@@ -86,9 +88,9 @@ export default function HomeSection3() {
                 className={`overflow-hidden ${isDesktop ? 'h-[450px] w-screen -ml-10 -mr-10' : 'h-[408px] w-full'}`}
             >
                 {
-                    width > 1200 ? (
+                    width > 1130 ? (
                         <SliderDesktop />
-                    ) : width > 768 ? (
+                    ) : width > 767 ? (
                         <SlideTablet />
                     ) : (
                         <SliderMobile />
