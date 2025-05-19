@@ -13,8 +13,6 @@ export default function HomeSection3() {
 
 
     useEffect(() => {
-        console.log(isDesktop);
-        
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
