@@ -56,8 +56,8 @@ const Section6: React.FC = () => {
             className="relative z-10 text-center font-medium text-white text-xl max-sm:text-lg"
           >
             <div className="flex flex-col justify-center items-center">
-              {contents.map((content) => (
-                <div className="flex items-center border-b-[1px] border-solid border-[#ebebeb33] gap-10 py-4">
+              {contents.map((content, index) => (
+                <div key={index} className="flex items-center border-b-[1px] border-solid border-[#ebebeb33] gap-10 py-4">
                   <p className="font-medium">
                     {content.num}
                   </p>
