@@ -13,7 +13,7 @@ import brain_selected from "../../public/images/nec-section-2/brain_selected.png
 import lightcorner from "../../public/images/nec-section-2/lightcorner.png"
 import lightcorner_selected from "../../public/images/nec-section-2/lightcorner_selected.png"
 import { useInView } from 'react-intersection-observer';
-import { Button } from '../ui/button';
+import ButtonPrimary from '../custom-button/button-primary';
 import { ChatCenteredDots } from '@phosphor-icons/react';
 
 type Tab = {
@@ -117,10 +117,10 @@ export default function HomeSection5() {
                     <HomeSection5Tab tabs={tabs} />
                     <div className={`flex flex-col items-center justify-center w-full relative`}>
                         <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
-                            <Button className="button rounded-[4px] !h-[48px]">
+                            <ButtonPrimary className="button rounded-[4px] !h-[48px]">
                                 <ChatCenteredDots size={32} className="size-5" />
                                 <p>{t('free_support')}</p>
-                            </Button>
+                            </ButtonPrimary>
                         </a>
                     </div>
                 </div>

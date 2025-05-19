@@ -24,7 +24,7 @@ const Section3: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background relative z-30 gap-10 ${isDesktop ? 'pt-10 ' : 'py-10 px-5'}`} ref={ref}>
+        <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background relative z-30 gap-10 ${isDesktop ? 'pt-10 pb-10' : 'py-10 px-5'}`} ref={ref}>
             <div className='flex flex-col w-full justify-center items-center'>
                 <h1 className={`animate-fade-in w-full text-center ${!isMobile ? 'pb-5 w-full' : 'pb-5 max-md:max-w-[390px]'}`}>
                     <AnimatedText

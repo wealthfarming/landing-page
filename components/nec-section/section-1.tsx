@@ -6,7 +6,6 @@ import { AnimatedText } from '../animation/introduction/Animations';
 import { useInView } from "react-intersection-observer";
 import Image from 'next/image';
 import Jar from '../animation/nec_section_1/jar';
-import { Button } from '../ui/button';
 import ButtonPrimary from '../custom-button/button-primary';
 import { CursorClick } from '@phosphor-icons/react';
 import necSection1 from '../../public/images/nec_nft/nec-section-1-main.webp';

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Button } from '@/components/ui/button'; // Adjust the import path as necessary
 import { CursorClick } from '@phosphor-icons/react';
 import Link from 'next/link'; // Import Link from next/link
 import ButtonPrimary from "../custom-button/button-primary";

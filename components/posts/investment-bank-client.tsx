@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useInterface } from '@/components/context/interface-context';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
 import { Apiget } from '@/lib/api/get';
 import { API_URL } from '@/lib/config';
 import Image from 'next/image';
@@ -14,6 +13,7 @@ import Quest from '../../public/images/investment-bank/quest.png';
 import Background_Slug from '../../public/images/investment-bank/background_slug.png';
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import { getCustomRichTextConverters } from '@/components/rich-text/custom-rich-text-converters';
+import ButtonPrimary from '../custom-button/button-primary';
 
 interface Props {
   slug: string;
@@ -125,7 +125,7 @@ export default function InvestmentBankClient({ slug }: Props) {
             ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'}  justify-center z-20`}
         >
           <a href="/investment-bank">
-            <Button
+            <ButtonPrimary
               variant="outline"
               className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
             >
@@ -137,7 +137,7 @@ export default function InvestmentBankClient({ slug }: Props) {
                 className="min-w-[20px] min-h-[20px]"
               />
               <p>{t('back')}</p>
-            </Button>
+            </ButtonPrimary>
           </a>
 
           {post?.description && (
