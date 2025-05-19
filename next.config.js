@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export',
   basePath: '',
   assetPrefix: '',
   trailingSlash: true,
