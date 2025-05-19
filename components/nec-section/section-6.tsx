@@ -32,7 +32,7 @@ const Section6: React.FC = () => {
   ];
   return (
     <div
-      className={`flex w-full md:h-[668px] justify-center items-center relative bg-cover bg-center bg-no-repeat`}
+      className={`flex w-full justify-center items-center relative bg-cover bg-center bg-no-repeat`}
       style={{ backgroundImage: `url(${section6.src})` }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full py-20 px-10 max-md:py-10 max-md:px-5">

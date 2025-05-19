@@ -101,6 +101,18 @@
   "index_section_3_title": "Le Problème des Fonds </br> d'Index Traditionnels",
   "index_section_3_description": "Pourquoi 90 % des investisseurs en fonds d'index traditionnels manquent-ils l'opportunité ?",
 
+  "nec_section_8_title_1": "Vous dépensez de l'argent, d'autres s'enrichissent. Avec les NFT NEC, vous dépensez de l'argent et… devenez riche grâce à lui.",
+  "nec_section_6_title_1": "Agissez maintenant – Ne laissez pas le temps vous priver de vos opportunités.",
+  "nec_section_6_description_1": "Allez-vous continuer à dépenser 1,000 USD par mois et disparaître, ou laisserez-vous cet argent générer des intérêts et vous restituer ce flux de trésorerie chaque mois ?",
+  "nec_section_6_description_2": "Vous pouvez continuer à travailler toute votre vie pour payer les factures... ou investir une fois pour que les factures soient payées automatiquement pour toujours ?",
+  "nec_section_6_description_3": "Le certificat NFT NEC n’est pas un investissement extravagant ; c’est un investissement INCONTOURNABLE si vous voulez la liberté financière !",
+  "nec_section_7_title_1": "Le processus de propriété du NFT NEC ne prend que 3 minutes",
+  "nec_section_7_description_1": "Téléchargez l'application de portefeuille MetaMask, créez et vérifiez votre compte.",
+  "nec_section_7_description_2": "Déposez des BNB sur votre portefeuille MetaMask via Remitano, Binance ou directement sur MetaMask avec une carte bancaire ou internationale. Échangez ensuite des BNB contre des USDC.",
+  "nec_section_7_description_3": "Cliquez sur le lien du site Web NFT NEC, connectez votre portefeuille MetaMask.",
+  "nec_section_7_description_4": "Sélectionnez Fonds > Acheter NFT NEC > Montant de l'investissement (le nombre de NFT que vous souhaitez posséder), cliquez sur \"Acheter NFT\" et confirmez la transaction.",
+  "nec_section_7_description_5": "Félicitations ! Vous avez officiellement créé une source de revenus stable, sûre et durable.",
+
   "annual_report": "Rapport annuel",
   "nft_report": "Rapport d'allocation d'actifs NFT",
   "wealth_farming_information_disclosure": "Divulgation d'informations Wealth Farming",
@@ -170,6 +182,9 @@
   "process_section_disclaimer": "Les performances passées ne garantissent pas les résultats futurs. Investir comporte des risques.",
 
   "capital": "Capital",
+  "step": "Étape",
+  "download": "TÉLÉCHARGER",
+  "access": "ACCÈS",
   "index_partner_section_title": "Fiable et utilisé par les partenaires",
   "contact_section_title": "Contact",
   "contact_section_question": "Des questions ?",
@@ -183,6 +198,8 @@
   "enter_number": "Entrez votre numéro de téléphone",
   "enter_email": "Entrez votre e-mail",
   "submit_information": "SOUMETTRE LES INFORMATIONS",
+  "send_information": "ENVOYER DES INFORMATIONS",
+
 
   "faq_section_title": "Questions fréquemment posées",
   "faq_section_question_1": "Comment BEQ prédit-il avec précision les changements d'indices ?",
