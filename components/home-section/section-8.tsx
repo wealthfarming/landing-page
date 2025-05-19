@@ -42,9 +42,9 @@ export function HomeSection8Tab({ tabs }: { tabs: Tab[] }) {
                                     }
                                     : undefined
                             }
-                            className={`
-                                border-b-[1px] border-[var(--primary-other)] relative overflow-hidden py-[16px] 
-                                ${selected == tab.id ? 'px-16' : 'px-0'} h-[100px]
+                            className={`flex items-center
+                                border-b-[1px] border-[var(--primary-other)] relative overflow-hidden py-[0px] 
+                                ${selected == tab.id ? 'px-[32px]' : 'px-0'} h-[100px]
                             `}
                             onMouseEnter={() => setSelected(tab.id)}
                             onMouseLeave={() => setSelected(null)}

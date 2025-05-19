@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
 import {
   Select,
@@ -16,6 +15,7 @@ import { useInterface } from '@/components/context/interface-context';
 import logoFullDark from "../../public/images/img/logo_full_dark.svg";
 import logoFull from "../../public/images/img/logo-full.svg";
 import { useLanguage } from "../context/i18n";
+import ButtonPrimary from "../custom-button/button-primary";
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
   const { t, i18n } = useTranslation();
@@ -82,16 +82,16 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
           {!isMobile && (
             <>
               <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank" >
-                <Button variant="outline" className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out ">
+                <ButtonPrimary variant="outline" className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out ">
                   <ChatCenteredDots size={24} className="min-w-[20px] min-h-[20px]" />
                   <p>{t('free_support')}</p>
-                </Button>
+                </ButtonPrimary>
               </a>
               <a href="https://wealthfarming.app/" target="_blank" >
-                <Button variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} h-[40px] transition-transform duration-300 ease-in-out`}>
+                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} h-[40px] transition-transform duration-300 ease-in-out`}>
                   <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                   <p>{t('header_investNowup')}</p>
-                </Button>
+                </ButtonPrimary>
               </a>
             </>
           )}
@@ -145,24 +145,24 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             <div className="flex w-full justify-between gap-4 mb-2">
             {/* Free Support Button */}
             <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank" className="w-[48%]">
-                <Button
+                <ButtonPrimary
                 variant="outline"
                 className="w-full !bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] flex items-center justify-center gap-2 transition-transform duration-300 ease-in-out text-[11px]"
                 >
                 <ChatCenteredDots size={24} className="min-w-[20px] min-h-[20px]" />
                 <p>{t('free_support')}</p>
-                </Button>
+                </ButtonPrimary>
             </a>
 
             {/* Invest Now Button */}
             <a href="https://wealthfarming.app/" target="_blank" className="w-[48%]">
-                <Button
+                <ButtonPrimary
                 variant="outline"
                 className="w-full !bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none h-[40px] flex items-center justify-center gap-2 transition-transform duration-300 ease-in-out text-[11px]"
                 >
                 <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                 <p>{t('header_investNowup')}</p>
-                </Button>
+                </ButtonPrimary>
             </a>
             </div>
         </div>

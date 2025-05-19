@@ -11,7 +11,10 @@ export default function ButtonPrimary({
     }) {
     return (
         <Button
-            className={cn(buttonVariants({ className }), "bg-[var(--color-primary)] button hover:brightness-[1.1] cursor-pointer rounded-none")}
+            className={cn(buttonVariants({ className }), "bg-[var(--color-primary)] button hover:brightness-[1.1] cursor-pointer rounded-none border-none")}
+            style={{
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 1px 2px 0px, rgba(255, 255, 255, 0.7) 1px 1px 2px 0px inset, rgba(179, 120, 25, 0.28) -1px -1px 4px 0px inset"
+            }}
             {...props}
         >
             {children}

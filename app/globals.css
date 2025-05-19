@@ -289,18 +289,23 @@
   font-family: var(--font-geist-button);
 }
 .font-geist-raleway {
-  font-family: var(--font-geist-raleway);
+  font-family: var(--font-geist-raleway) !important;
+}
+.font-geist-raleway-place-holder {
+  font-family: var(--font-geist-raleway-place-holder) !important;
 }
 
 .bigTitle {
   color: var(--text-bold); 
-  font-family: var(--font-geist-display);
-  font-style: bold;
-  font-weight: 500; 
+  /* font-family: "Inter Regular"; */
+  font-family:var(--font-geist-display);
+  /* font-style: bold; */
+  font-weight: 400; 
   font-size: 50px; 
-  letter-spacing: 0em; 
-  line-height: 1.2em; 
+  line-height: 1.2em;
+  letter-spacing: 0;
 }
+
 .h1-index {
   color: var(--text-bold); 
   font-family: var(--font-geist-raleway-place-holder);
@@ -717,4 +722,8 @@
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;    /* Firefox */
+}
+
+.bigTitle .inline-flex span {
+  letter-spacing: -0.02em;
 }

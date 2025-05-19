@@ -6,6 +6,7 @@ import { FadeInSection } from "@/components/animation/introduction/Animations"
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from 'react-i18next';
 import section6 from "../../public/images/img/section6.webp"
+import ButtonPrimary from "../custom-button/button-primary";
 export default function HomeSection7() {
     const { t } = useTranslation();
     const [mounted, setMounted] = useState(false);
@@ -63,7 +64,7 @@ export default function HomeSection7() {
                     <div className={`relative z-10 flex ${isDesktop ? 'mt-10' : isTablet ? 'mt-10' : 'mt-5'} gap-2 justify-center`}>
                         <div className={`flex gap-2 justify-center ${isDesktop ? '' : ''}`}>
                             <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
-                                <div className={`${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} flex bg-[var(--base-bg)] shadow-sm rounded-[4px] border border-[var(--primary-other)] button items-center hover:bg-[var(--canvas-bg)] hover:cursor-pointer`}>
+                                <div className={`${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} flex bg-[var(--base-bg)] shadow-sm rounded-[4px] h-[48px] border border-[var(--primary-other)] button items-center hover:bg-[var(--canvas-bg)] hover:cursor-pointer`}>
                                     <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
                                         <ChatCenteredDots size={20} />
                                     </div>
@@ -73,14 +74,14 @@ export default function HomeSection7() {
                                 </div>
                             </a>
                             <a href="https://wealthfarming.app/" target="_blank" >
-                                <div className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
+                                <ButtonPrimary className={`flex ${(isDesktop || isTablet) ? 'gap-2' : 'gap-1'} bg-[var(--primary)] shadow-sm rounded-[4px] button items-center hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
                                     <div className={`${(isDesktop || isTablet) ? 'py-[10px] pl-6' : 'pl-4 py-2'}`}>
                                         <CursorClick size={20} className="animate-diagonal-2" />
                                     </div>
                                     <div className={`${(isDesktop || isTablet) ? 'py-[13px] pr-6' : 'pr-4 py-3'} font-geist-mono`}>
                                         {t('header_investNowup')}
                                     </div>
-                                </div>
+                                </ButtonPrimary>
                             </a>
                         </div>
                     </div>

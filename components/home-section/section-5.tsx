@@ -42,7 +42,7 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
     }, [isMobile]);
 
     return (
-        <div className={`${isDesktop ? 'w-[1200px] flex flex-[0_0_auto] h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
+        <div className={`${isDesktop ? 'max-w-[1200px] flex flex-[0_0_auto] h-[404px]' : 'flex flex-col'} ${isMobile ? 'gap-[20px]' : 'gap-[8px]'}`}>
             {tabs.map(tab => (
                 <div key={tab.id} className={`${selected === tab.id ? 'flex-[1.5_0_0px]' : 'flex-[1_0_0px]'}`}>
                     <div
@@ -51,22 +51,22 @@ export function HomeSection5Tab({ tabs }: { tabs: Tab[] }) {
                             ${isDesktop ? `
                                 p-[20px] h-full  transition-all duration-300 ease-in-out
                                 flex flex-col justify-between border-[1px] rounded-[5px]
-                                ${selected === tab.id ? 'bg-[var(--primary)]' : 'bg-[var(--base-bg)]'}
+                                ${selected === tab.id ? 'bg-gradient-to-r from-[rgb(236,192,121)] to-[rgb(232,181,97)]' : 'bg-[var(--base-bg)]'}
                                 ` : `
                                 p-[20px] transition-all duration-500 ease-in-out w-full gap-[8px]
                                 flex flex-col justify-between border-[1px]
-                                ${selected === tab.id && isTablet ? 'bg-[var(--primary)] h-[255px]' : 'bg-[var(--base-bg)]'}
+                                ${selected === tab.id && isTablet ? 'bg-gradient-to-r from-[rgb(236,192,121)] to-[rgb(232,181,97)] h-[255px]' : 'bg-[var(--base-bg)]'}
                                 `}
                             `}
                         onMouseEnter={isDesktop ? () => setSelected(tab.id) : undefined}
                     >
                         <div>
                             <Image src={selected === tab.id ? tab.icon_selected : tab.icon} alt="" width={45} height={45} />
-                            <p className="pt-[8px] no-anim h4-raleway">{t(tab.label)}</p>
+                            <p className="pt-[8px] text-xl font-geist-raleway font-medium text-bold" >{t(tab.label)}</p>
                         </div>
                         <div
                             className={`
-                                transition-all duration-300 ease-in-out overflow-hidden text-[15px] flex gap-[8px] w-full
+                                transition-all duration-300 ease-in-out text-[15px] flex gap-[8px] w-full font-geist-display
                                 ${selected === tab.id || !isDesktop ? '' : 'hidden'}
                             `}
                         >
@@ -132,7 +132,7 @@ export default function HomeSection5() {
       });
 
     return (
-        <div className={`flex justify-center gap-[10px] w-full ${!isMobile ? 'p-[40px] pt-[80px]' : 'px-[20px] py-[40px]'}`}>
+        <div className={`overflow-hidden flex justify-center gap-[10px] w-full ${!isMobile ? 'p-[40px] pt-[80px]' : 'px-[20px] py-[40px]'}`}>
             <div className=" max-w-[1200px] w-full">
                 <div className={`flex flex-col ${isDesktop ? 'gap-[80px]' : 'gap-[40px]'} `}>
                     <div className="flex flex-col gap-[16px] max-w-[716px]">

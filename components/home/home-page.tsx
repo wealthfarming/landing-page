@@ -36,7 +36,7 @@ export default function HomePage() {
                     <HomeSection8 />
                     <HomeSection9 />
                 </main>
-                <FooterFull active={'introduction'} />
+                <FooterFull active={'index-landing'} fixed={false} />
             </div>
         </>
     );
