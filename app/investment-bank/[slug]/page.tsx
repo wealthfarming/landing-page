@@ -10,14 +10,21 @@ interface Post {
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const allPosts: Post[] = await Apiget(
-    `${API_URL}/api/posts`,
-    { sort: 'createdAt', limit: 1000, locale: 'en' }
-  );
+  const allPosts: Post[] = await Apiget(`${API_URL}/api/posts`, {
+    sort: 'createdAt',
+    limit: 1000,
+    locale: 'en',
+  });
 
-  return allPosts.map(post => ({ slug: post.slug as string }));
+  return allPosts.map((post) => ({ slug: post.slug }));
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function Page({ params }: PageProps) {
   return <InvestmentBankClient slug={params.slug} />;
 }
