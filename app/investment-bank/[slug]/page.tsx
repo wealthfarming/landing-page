@@ -4,13 +4,18 @@ import { Apiget } from '@/lib/api/get';
 
 export const dynamicParams = false;
 
+interface Post {
+  slug: string;
+  id: string;
+}
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const allPosts: any[] = await Apiget(
+  const allPosts: Post[] = await Apiget(
     `${API_URL}/api/posts`,
     { sort: 'createdAt', limit: 1000, locale: 'en' }
   );
 
-  return allPosts.map(post => ({ slug: post.route as string }));
+  return allPosts.map(post => ({ slug: post.slug as string }));
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
