@@ -210,5 +210,16 @@
   "eco_data_content_4_3": "Mises à jour continues des fluctuations du marché pour garder les investisseurs proactifs.",
   "submit_contact": "Soumettre le formulaire avec succès",
   "submit_error": "Erreur lors de l'envoi du formulaire : une erreur inattendue s'est produite",
-  "email_invalid": "Le champ suivant est invalide : e-mail"
+  "email_invalid": "Le champ suivant est invalide : email",
+
+  "nec_section2_title": "NFT - Quand l'argent devient pouvoir",
+  "nec_section2_label_1": "Profit minimum de 5 % par mois grâce au trading sur les écarts de prix.",
+  "nec_section2_label_2": "La stratégie d'investissement est conseillée et gérée par des experts d'Euronext et du NYSE.",
+  "nec_section2_label_3": "Aucune connaissance financière ni gestion requise.",
+  "nec_section2_label_4": "Application de la technologie blockchain NFT pour garantir une transparence absolue et la sécurité du capital.",
+
+  "nec_section3_title": "Investissement unique - Flux de trésorerie stable à long terme",
+  "nec_section3_description": "Les NFT ne sont pas seulement des actifs numériques. Ce sont des certificats de flux de trésorerie – où le revenu passif est clairement défini, lié à une stratégie d’investissement concrète et soutenu par une liquidité transparente.",
+  "nec_section3_label_1": "À partir de seulement 100 USD / NFT",
+  "nec_section3_label_2": "Actuellement, 725 NFT ont été créés."
 }
