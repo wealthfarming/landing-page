@@ -2,7 +2,7 @@
 import React from 'react';
 import HeadderDesktopFull from "@/components/header/header-desktop";
 import FooterFull from '@/components/footer/footer-full';
-import indexBanner from "../../public/images/img/index_banner.webp";
+import indexBanner from "../../public/images/nec_nft/nec_bg.jpg";
 import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
 import Section1 from "@/components/nec-section/section-1";
