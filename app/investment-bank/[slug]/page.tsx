@@ -4,27 +4,15 @@ import { Apiget } from '@/lib/api/get';
 
 export const dynamicParams = false;
 
-export async function generateStaticParams(): Promise<{ slug: string; locale: string }[]> {
-  const locales = ['en', 'vi', 'fr'];
-
-  const results = await Promise.all(
-    locales.map(locale =>
-      Apiget(`${API_URL}/api/posts`, {
-        sort: 'createdAt',
-        limit: 1000,
-        locale
-      }).then(posts =>
-        posts.map((post: any) => ({
-          slug: post.route,  // use route or slug, whichever is correct
-          locale: locale
-        }))
-      )
-    )
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const allPosts: any[] = await Apiget(
+    `${API_URL}/api/posts`,
+    { sort: 'createdAt', limit: 1000, locale: 'en' }
   );
 
-  return results.flat().filter(post => post.slug);
+  return allPosts.map(post => ({ slug: post.route as string }));
 }
 
-export default function Page({ params }: { params: { slug: string; locale: string } }) {
+export default function Page({ params }: { params: { slug: string } }) {
   return <InvestmentBankClient slug={params.slug} />;
 }
