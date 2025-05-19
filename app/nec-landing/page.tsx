@@ -35,7 +35,7 @@ const NecLandingPage: React.FC = () => {
             <Section7 />
             <Section8 />
             <Section9 />
-            {/* <FooterFull/> */}
+            <FooterFull fixed={false} />
         </div>
     );
 };
