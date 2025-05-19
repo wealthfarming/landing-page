@@ -30,22 +30,39 @@ export default function InvestmentBankClient({ slug }: Props) {
     setIsClient(true);
   }, []);
 
+
+
   // fetch post data when client and slug or language changes
   useEffect(() => {
     if (!isClient) return;
+    console.log(slug);
 
     async function getPosts() {
       // fetch ID by route
-      const get_data_id = await Apiget(
+      const get_slugs_id = await Apiget(
         API_URL + '/api/posts',
         {
-          [`where[slug][${i18n.language}][equals]`]: slug,
           sort: 'createdAt',
-          limit: 1,
-          locale: i18n.language,
+          limit: 0,
         }
       );
-      const data_id = get_data_id[0]?.id;
+
+      const slugMap: Record<string, any> = {};
+
+      get_slugs_id.forEach((post: any) => {
+        if (post.id && post.slug) {
+          slugMap[post.id] = post.slug;
+        }
+      });
+
+      let data_id = null;
+
+      for (const [id, slugObj] of Object.entries(slugMap)) {
+        if (Object.values(slugObj).includes(slug)) {
+          data_id = id;
+          break;
+        }
+      }
       if (!data_id) return;
 
       // fetch localized content by ID
@@ -81,7 +98,7 @@ export default function InvestmentBankClient({ slug }: Props) {
         <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
           src={post?.image ? `${API_URL}${post.image.url}` : Quest}
-          alt={post?.image?.alt || 'Default image'}
+          alt={post?.image?.alt || 'Default alt'}
           width={735}
           height={260}
           className="w-full h-[260px] object-cover"

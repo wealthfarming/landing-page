@@ -112,7 +112,6 @@ export default function InvestmentBank() {
         };
       });
       setContents(posts);
-      console.log(posts);
     };
     getPosts();
   }, [selected]);
@@ -169,8 +168,11 @@ export default function InvestmentBank() {
               <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <a href={`/investment-bank/${content[`slug_${i18n.language}`]}`}>
-                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">{content[`title_${i18n.language}`]}</p>
+                    <a href={`/investment-bank/${content[`slug_${i18n.language}`] || content[`slug_en`] || content[`slug_vi`] || content[`slug_fr`] || '#'
+                      }`}>
+                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">
+                        {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
+                      </p>
                     </a>
                     <p className="text-light text-[13px]">
                       {
