@@ -13,12 +13,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - 
-        name: Checkout 🛎️
+      - name: Checkout 🛎️
         uses: actions/checkout@v4.1.7
-      - 
-        name: Setup Node
+
+      - name: Setup Node
         uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 18
 
       - name: Installing packages
         run: yarn install
@@ -26,8 +27,12 @@ jobs:
       - name: Extract repository name
         run: echo "BASE_PATH=/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)" >> $GITHUB_ENV
 
-      - name: Build page
-        run: yarn run build && touch ./out/.nojekyll
+      - name: Build and Export Static Site
+        run: |
+          yarn build
+          yarn export
+          mkdir -p ./out
+          touch ./out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.6.0
