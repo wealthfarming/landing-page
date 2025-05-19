@@ -5,7 +5,6 @@ import ButtonOutLine from "../custom-button/button-outline";
 import { useTranslation } from "react-i18next";
 import { AnimatedText } from "@/components/animation/introduction/Animations"
 import { useInterface } from "@/components/context/interface-context";
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function HomeSection1() {
@@ -41,7 +40,9 @@ export default function HomeSection1() {
                     </ButtonOutLine>
                 </a>
                 <a href="https://wealthfarming.app/" target="_blank" >
-                    <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] py-0">
+                    <ButtonPrimary
+                        className="flex items-center gap-2 button rounded-[4px] py-0"
+                    >
                         <CursorClick size={32} className="size-5 animate-diagonal-2" />
                         <p>{t('header_investNow')}</p>
                     </ButtonPrimary>

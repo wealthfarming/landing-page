@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
 import Link from 'next/link';
+import ButtonPrimary from "./custom-button/button-primary";
 
 export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
     const defaultTargetDate = new Date();
@@ -25,18 +25,8 @@ export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center border border-gray-200 h-[124px] w-full">
-            <div className=" w-full h-[64px] flex flex-col items-center justify-center canvas-bg">
-                <p style={{
-                    fontFamily: 'Inter, sans-serif',
-                    fontFeatureSettings: '"ss01", "ss02"' ,
-                    fontWeight: 500,
-                    fontSize: '24px',
-                    lineHeight: '1em',
-                    fontStyle: 'normal',
-                    letterSpacing: '0em',
-                }}>{`00:00:00:00`}</p>
-            </div>
+        <div className="flex flex-col items-center justify-center h-[124px] w-full">
+            
             <div className="w-full relative overflow-hidden">
                 <div
                     className="h-[10px] bg-white absolute z-20 animate-move-sideways-1"
@@ -86,11 +76,11 @@ export default function CountdownTimer({ targetDate }: { targetDate?: Date }) {
                     }
                 `}</style>
                 <Link href="https://wealthfarming.app/" passHref>
-                    <Button
+                    <ButtonPrimary
                         className="h-[60px] w-full button !text-[15px] rounded-none"
                     >
                         {t('countdown_timer_button')}
-                    </Button>
+                    </ButtonPrimary>
                 </Link>
             </div>
         </div >
