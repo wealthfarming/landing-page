@@ -14,7 +14,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
         locale
       }).then(posts =>
         posts.map((post: any) => ({
-          slug: post?.slug?.[locale]
+          slug: post?.slug
         }))
       )
     )
