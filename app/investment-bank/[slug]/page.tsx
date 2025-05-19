@@ -3,6 +3,8 @@ import InvestmentBankClient from '@/components/posts/investment-bank-client'
 import { API_URL } from '@/lib/config';
 import { Apiget }  from '@/lib/api/get';
 
+export const dynamicParams = false;
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const locales = ['en', 'vi', 'fr'];
 
