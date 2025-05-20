@@ -74,8 +74,8 @@ const Section4: React.FC = () => {
                 <Carousel className='w-full h-full' setApi={(api) => (carouselApiRef.current = api)} opts={{ loop: true }}>
                     <CarouselContent>
                         {slides.map((slide, index) => (
-                            <CarouselItem key={index} className={`h-full flex flex-col gap-[10px] justify-between bg-[var(--base-bg)] p-[40px] mr-2`}>
-                                <div className="flex gap-[10px] justify-between">
+                            <CarouselItem key={index} className={`h-full flex flex-col gap-[10px] justify-between bg-[var(--base-bg)] ${isMobile ? 'py-[40px] px-[20px]' : 'p-[40px]'} mr-2`}>
+                                <div className="flex gap-[10px] justify-between items-center">
                                     <div className="flex gap-[16px] items-center">
                                         <div className='w-[60px] rounded-full h-[60px]'>
                                             <Image
