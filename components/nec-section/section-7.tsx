@@ -4,6 +4,7 @@ import { NecCarousel } from "../carousel/nec-carousel";
 import { useInterface } from "../context/interface-context";
 import { ChatCenteredDots } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
+import ButtonPrimary from "../custom-button/button-primary";
 
 const Section7: React.FC = () => {
   const { isDesktop, isTablet, isMobile } = useInterface();
@@ -22,15 +23,13 @@ const Section7: React.FC = () => {
         <NecCarousel />
         <div className="h-[48px]">
           <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
-            <div className={`flex items-center h-full gap-2 px-6 shadow-sm rounded-sm button bg-[var(--primary)] hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
-              <div
-              >
+              <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] py-0">
                 <ChatCenteredDots size={20} className="animate-diagonal-2" />
-              </div>
+              
               <div>
                 {t('free_support')}
               </div>
-            </div>
+            </ButtonPrimary>
           </a>
         </div>
       </div>
