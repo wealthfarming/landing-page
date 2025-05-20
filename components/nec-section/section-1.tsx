@@ -25,13 +25,13 @@ const Section1: React.FC = () => {
     const { language } = useLanguage();
     const { t } = useTranslation();
     return (
-        <section className="nec-section nec-section-1 w-full py-[80px] px-[20px] md:px-[40px] relative" ref={ref}>
+        <section className="nec-section nec-section-1 w-full pt-[120px] pb-[80px] md:py-[80px] px-[20px] md:px-[40px] relative" ref={ref}>
             <div className='absolute bg-[#fffbf7] h-1/3 w-full left-0 top-0 z-0'></div>
             <div className='flex flex-col justify-center items-center self-stretch w-full text-center gap-5'>
 
                 <div
-                    className='title-nec-section-1 w-full text-center flex justify-center md:max-w-[1000px] z-[5]'
-                    style={{ lineHeight: '2.75em' }}
+                    className='title-nec-section-1 w-full text-center flex justify-center md:max-w-[1000px] z-[5] md:leading-[2.75em] leading-[1.75em]'
+                    
                 >
                     {language == "vi" ? (
                         <AnimatedText
