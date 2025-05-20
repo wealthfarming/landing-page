@@ -60,7 +60,7 @@ const Section1: React.FC = () => {
                     )}
                 </div>
                 <div className='w-full flex flex-col justify-center items-center md:max-w-[800px]  z-[5]'>
-                    <h1 className='text-[30px] font-geist-raleway font-[600]'>
+                    <h1 className='text-[26px] md:text-[30px] font-geist-raleway font-[600] leading-[31.2px]'>
                         {t("nec_section_1_title_5")}
                     </h1>
                     <p className='text-[18px] text-medium font-geist-raleway font-[500]'>
@@ -114,9 +114,9 @@ const Section1: React.FC = () => {
                         <p className='absolute text-[30px] font-geist-raleway font-[600] z-20' style={{ top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                             NEC
                         </p>
-                        <Jar text='Học phí' x={10} y={15} src={necSection1_1} />
+                        <Jar text='Học phí' x={13} y={15} src={necSection1_1} />
                         <Jar text='Học phí' x={85} y={20} src={necSection1_2} />
-                        <Jar text='Học phí' x={5} y={70} src={necSection1_3} />
+                        <Jar text='Học phí' x={7} y={70} src={necSection1_3} />
                         <Jar text='Học phí' x={95} y={75} src={necSection1_4} />
                     </div>
                 </div>
