@@ -25,7 +25,7 @@ const Section1: React.FC = () => {
     const { language } = useLanguage();
     const { t } = useTranslation();
     return (
-        <section className="nec-section nec-section-1 w-full py-[80px] px-[40px] relative" ref={ref}>
+        <section className="nec-section nec-section-1 w-full py-[80px] px-[20px] md:px-[40px] relative" ref={ref}>
             <div className='absolute bg-[#fffbf7] h-1/3 w-full left-0 top-0 z-0'></div>
             <div className='flex flex-col justify-center items-center self-stretch w-full text-center gap-5'>
 
@@ -120,17 +120,18 @@ const Section1: React.FC = () => {
                         <Jar text='Học phí' x={95} y={75} src={necSection1_4} />
                     </div>
                 </div>
-                <div className='w-full flex justify-center'>
-                    <div className='w-full max-w-[1200px] h-[483px] flex justify-center items-center z-[5] flex-row gap-[10px]'>
-                        <div className='w-1/2 h-full flex justify-between items-center flex-col p-10'>
+                <div className='w-full h-[349px] md:h-[452px] flex justify-center'>
+                    <div className='w-full max-w-[1200px] h-full flex justify-center items-start z-[5] flex-row gap-[10px]'>
+                        <div className='w-1/2 h-full justify-between flex items-center flex-col p-0 md:p-10'>
                             <AnimatedText
                                 text={[
                                     t("nec_section_1_char_title_1"),
                                 ]}
-                                customClass={["font-[600] font-geist-raleway text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
+                                center={true}
                             />
                             <div className='w-full flex flex-col justify-center items-center gap-[16px]'>
                                 <Image
@@ -140,20 +141,21 @@ const Section1: React.FC = () => {
                                     className='object-cover'
                                     src={necSectinChartUp}
                                 />
-                                <p className='font-geist-raleway text-[18px] font-[600]'>
+                                <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
                                     {t("nec_section_1_char_decs_1")}
                                 </p>
                             </div>
                         </div>
-                        <div className='w-1/2 h-full flex justify-between items-center flex-col p-10'>
+                        <div className='w-1/2 h-full justify-between flex items-center flex-col  p-0 md:p-10'>
                             <AnimatedText
                                 text={[
                                     t("nec_section_1_char_title_2"),
                                 ]}
-                                customClass={["font-[600] font-geist-raleway text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
+                                center={true}
                             />
                             <div className='w-full flex flex-col justify-center items-center gap-[16px]'>
                                 <Image
@@ -163,7 +165,7 @@ const Section1: React.FC = () => {
                                     className='object-cover'
                                     src={necSectinChartDown}
                                 />
-                                <p className='font-geist-raleway text-[18px] font-[600]'>
+                               <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
                                     {t("nec_section_1_char_decs_2")}
                                 </p>
                             </div>
@@ -178,7 +180,7 @@ const Section1: React.FC = () => {
                             {t("nec_section_1_button_title")}
                         </p>
                         <a href="https://wealthfarming.app/" target="_blank" >
-                            <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] py-0">
+                            <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] py-0">
                                 <CursorClick size={32} className="size-5 animate-diagonal-2" />
                                 <p>{t('header_investNow')}</p>
                             </ButtonPrimary>
