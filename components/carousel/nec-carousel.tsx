@@ -151,8 +151,8 @@ export function NecCarousel() {
                     <span className="text-white font-medium">{step.id}</span>
                   </div>
                   <div className="flex flex-col gap-2 justify-center items-start">
-                    <h3 className="text-xl font-medium mb-2">{step.title}</h3>
-                    <p className="text-[15px] text-[#4d4d4d] font-normal">
+                    <h3 className="text-xl max-lg:text-[19px] max-md:text-lg font-medium mb-2 font-geist-raleway-place-holder">{step.title}</h3>
+                    <p className="text-[15px] text-[#4d4d4d] font-normal font-geist-body">
                       {step.description}
                     </p>
                   </div>
@@ -174,7 +174,7 @@ export function NecCarousel() {
           ))}
         </CarouselContent>
 
-        {canScrollPrev && isDesktop &&(
+        {canScrollPrev && !isTablet &&(
           <button
             onClick={() => api?.scrollPrev()}
             className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-[#00000033] z-20 h-10 w-10 rounded-full flex items-center justify-center hover:cursor-pointer"
@@ -184,7 +184,7 @@ export function NecCarousel() {
           </button>
         )}
 
-        {canScrollNext && isDesktop &&(
+        {canScrollNext && !isTablet &&(
           <button
             onClick={() => api?.scrollNext()}
             className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#00000033] z-20 h-10 w-10 rounded-full flex items-center justify-center hover:cursor-pointer"

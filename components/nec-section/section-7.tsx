@@ -14,7 +14,7 @@ const Section7: React.FC = () => {
     <section className="flex justify-center items-center py-20 px-10 max-lg:py-15 max-md:py-10 max-md:px-5 relative bg-[#f6f8fd]">
       <div className="flex flex-col justify-center items-center w-full grow max-w-[1200px] gap-10">
         <div
-          className={`text-center font-semibold ${
+          className={`text-center font-semibold font-geist-raleway-place-holder ${
             isDesktop ? "text-[40px]" : isTablet ? "text-[36px]" : "text-[29px]"
           }`}
         >
