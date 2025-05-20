@@ -147,7 +147,7 @@ export default function HomeSection8() {
     return (
         <div className={`${isMobile ? "px-[20px] py-[40px]" : 'p-[40px] pb-[80px]'} gap-[10px] w-full flex justify-center`}>
             <div className="gap-[40px] w-full flex flex-col max-w-[1200px]" ref={ref}>
-                <p className="max-w-[600px] h1">
+                <div className="max-w-[600px] h1">
                     <AnimatedText
                         text={[t('home_section_6_title')]}
                         customClass={['', 'font-bold', '', 'font-bold']}
@@ -156,7 +156,7 @@ export default function HomeSection8() {
                         inView={inView}
                     />
 
-                </p>
+                </div>
                 <HomeSection8Tab tabs={tabs} />
             </div>
         </div >
