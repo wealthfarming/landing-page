@@ -34,7 +34,7 @@ export default function Jar({ src, text, x = 50, y = 50 }: JarProps) {
           },
         }}
       >
-        <div style={{ width: 80, height: 80 }}>
+        <div className='w-[60px] h-[60px] md:w-[80px] md:h-[80px]'>
           <Image
             src={src}
             alt={text}
