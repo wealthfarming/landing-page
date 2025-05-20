@@ -289,5 +289,10 @@
   "nec_section3_title": "Investissement unique - Flux de trésorerie stable à long terme",
   "nec_section3_description": "Les NFT ne sont pas seulement des actifs numériques. Ce sont des certificats de flux de trésorerie – où le revenu passif est clairement défini, lié à une stratégie d’investissement concrète et soutenu par une liquidité transparente.",
   "nec_section3_label_1": "À partir de seulement 100 USD / NFT",
-  "nec_section3_label_2": "Actuellement, 725 NFT ont été créés."
+  "nec_section3_label_2": "Actuellement, 725 NFT ont été créés.",
+
+  "tuition_fees": "Frais de scolarité",
+  "eating": "Alimentation",
+  "invoice": "Facture",
+  "health": "Santé"
 }

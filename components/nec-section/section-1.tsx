@@ -113,10 +113,10 @@ const Section1: React.FC = () => {
                         <p className='absolute text-[30px] font-geist-raleway font-[600] z-20' style={{ top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                             NEC
                         </p>
-                        <Jar text='Học phí' x={10} y={15} src={necSection1_1} />
-                        <Jar text='Học phí' x={85} y={20} src={necSection1_2} />
-                        <Jar text='Học phí' x={5} y={70} src={necSection1_3} />
-                        <Jar text='Học phí' x={95} y={75} src={necSection1_4} />
+                        <Jar text={t('tuition_fees')} x={10} y={15} src={necSection1_1} />
+                        <Jar text={t('eating')} x={85} y={20} src={necSection1_2} />
+                        <Jar text={t('health')} x={5} y={70} src={necSection1_3} />
+                        <Jar text={t('invoice')} x={95} y={75} src={necSection1_4} />
                     </div>
                 </div>
                 <div className='w-full flex justify-center'>
