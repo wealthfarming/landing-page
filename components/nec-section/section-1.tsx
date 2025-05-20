@@ -24,13 +24,13 @@ const Section1: React.FC = () => {
     const { language } = useLanguage();
     const { t } = useTranslation();
     return (
-        <section className="nec-section nec-section-1 w-full py-[80px] px-[40px] relative" ref={ref}>
+        <section className="nec-section nec-section-1 w-full pt-[120px] pb-[80px] md:py-[80px]  relative" ref={ref}>
             <div className='absolute bg-[#fffbf7] h-1/3 w-full left-0 top-0 z-0'></div>
-            <div className='flex flex-col justify-center items-center self-stretch w-full text-center gap-5'>
+            <div className='flex flex-col justify-center items-center self-stretch w-full text-center gap-10 md:gap-5 '>
 
                 <div
-                    className='title-nec-section-1 w-full text-center flex justify-center md:max-w-[1000px] z-[5]'
-                    style={{ lineHeight: '2.75em' }}
+                    className='title-nec-section-1 w-full text-center flex justify-center md:max-w-[1000px] z-[5] md:leading-[58.8px] leading-[40.8px] px-[20px] md:px-[40px]'
+                    
                 >
                     {language == "vi" ? (
                         <AnimatedText
@@ -58,14 +58,14 @@ const Section1: React.FC = () => {
                         />
                     )}
                 </div>
-                <div className='w-full flex flex-col justify-center items-center md:max-w-[800px]  z-[5]'>
-                    <h1 className='text-[30px] font-geist-raleway font-[600]'>
+                <div className='w-full flex flex-col justify-center items-center md:max-w-[800px]  z-[5] bg-[#fffbf7] '>
+                    <h1 className='text-[26px] md:text-[30px] font-geist-raleway font-[600] leading-[36px] md:leading-[31.2px] mb-2 px-[20px] md:px-[40px]'>
                         {t("nec_section_1_title_5")}
                     </h1>
-                    <p className='text-[18px] text-medium font-geist-raleway font-[500]'>
+                    <p className='text-[17px] md:text-[18px] text-medium font-geist-raleway font-[500] px-[20px] md:px-[40px]'>
                         {t("nec_section_1_description_1")}
                     </p>
-                    <span className='text-[18px] text-medium font-geist-raleway font-[500]'>
+                    <span className='text-[17px]  md:text-[18px] text-medium font-geist-raleway font-[500] px-[20px] md:px-[40px] leading-[28.9px]'>
                         <span>
                             {t("nec_section_1_description_2_1")}
                         </span>
@@ -101,7 +101,7 @@ const Section1: React.FC = () => {
                         </span>
                     </span>
                 </div>
-                <div className='w-full flex justify-center items-center z-[5] relative overflow-visible'>
+                <div className='w-full flex justify-center items-center z-[5] relative overflow-visible px-[20px] md:px-[40px]'>
                     <div className='w-fit flex justify-center relative overflow-visible'>
                         <Image
                             alt='nec-section-1'
@@ -113,23 +113,24 @@ const Section1: React.FC = () => {
                         <p className='absolute text-[30px] font-geist-raleway font-[600] z-20' style={{ top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                             NEC
                         </p>
-                        <Jar text={t('tuition_fees')} x={10} y={15} src={necSection1_1} />
+                        <Jar text={t('tuition_fees')} x={13} y={15} src={necSection1_1} />
                         <Jar text={t('eating')} x={85} y={20} src={necSection1_2} />
-                        <Jar text={t('health')} x={5} y={70} src={necSection1_3} />
+                        <Jar text={t('health')} x={7} y={70} src={necSection1_3} />
                         <Jar text={t('invoice')} x={95} y={75} src={necSection1_4} />
                     </div>
                 </div>
-                <div className='w-full flex justify-center'>
-                    <div className='w-full max-w-[1200px] h-[483px] flex justify-center items-center z-[5] flex-row gap-[10px]'>
-                        <div className='w-1/2 h-full flex justify-between items-center flex-col p-10'>
+                <div className='w-full h-[349px] md:h-[452px] flex justify-center px-[20px] md:px-[40px]'>
+                    <div className='w-full max-w-[1200px] h-full flex justify-center items-start z-[5] flex-row gap-[10px]'>
+                        <div className='w-1/2 h-full justify-between flex items-center flex-col p-0 md:p-10'>
                             <AnimatedText
                                 text={[
                                     t("nec_section_1_char_title_1"),
                                 ]}
-                                customClass={["font-[600] font-geist-raleway text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
+                                center={true}
                             />
                             <div className='w-full flex flex-col justify-center items-center gap-[16px]'>
                                 <Image
@@ -139,20 +140,21 @@ const Section1: React.FC = () => {
                                     className='object-cover'
                                     src={necSectinChartUp}
                                 />
-                                <p className='font-geist-raleway text-[18px] font-[600]'>
+                                <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
                                     {t("nec_section_1_char_decs_1")}
                                 </p>
                             </div>
                         </div>
-                        <div className='w-1/2 h-full flex justify-between items-center flex-col p-10'>
+                        <div className='w-1/2 h-full justify-between flex items-center flex-col  p-0 md:p-10'>
                             <AnimatedText
                                 text={[
                                     t("nec_section_1_char_title_2"),
                                 ]}
-                                customClass={["font-[600] font-geist-raleway text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
+                                center={true}
                             />
                             <div className='w-full flex flex-col justify-center items-center gap-[16px]'>
                                 <Image
@@ -162,7 +164,7 @@ const Section1: React.FC = () => {
                                     className='object-cover'
                                     src={necSectinChartDown}
                                 />
-                                <p className='font-geist-raleway text-[18px] font-[600]'>
+                               <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
                                     {t("nec_section_1_char_decs_2")}
                                 </p>
                             </div>
@@ -171,7 +173,7 @@ const Section1: React.FC = () => {
                     </div>
 
                 </div>
-                <div className='w-full flex flex-col justify-center items-center z-[5]'>
+                <div className='w-full flex flex-col justify-center items-center z-[5] px-[20px] md:px-[40px]'>
                     <div className='w-full max-w-[1200px] flex justify-center items-center z-[5] flex-col gap-[10px]'>
                         <p>
                             {t("nec_section_1_button_title")}
