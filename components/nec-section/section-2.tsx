@@ -118,7 +118,7 @@ export default function HomeSection5() {
                     <div className={`flex flex-col items-center justify-center w-full relative`}>
                         <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank">
                             <ButtonPrimary className="button rounded-[4px] !h-[48px]">
-                                <ChatCenteredDots size={32} className="size-5" />
+                                <ChatCenteredDots size={32} className="size-5 animate-diagonal-2" />
                                 <p>{t('free_support')}</p>
                             </ButtonPrimary>
                         </a>

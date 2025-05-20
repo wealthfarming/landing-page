@@ -19,7 +19,7 @@ export default function HomePage() {
         <>
             <div className="flex flex-col items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
                 <HeaderDesktopFull changeAt={300} />
-                <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? 'mb-[505px]' : isTablet ? 'mb-[505px] pt-30' : 'pt-30'} top-[-260px] bg-[var(--base-bg)] z-30`}>
+                <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? '' : 'pt-30'} top-[-260px] bg-[var(--base-bg)] z-30`}>
                     {isDesktop &&
                         <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
                             <div className="absolute inset-0 bg-black/50 z-10"></div>

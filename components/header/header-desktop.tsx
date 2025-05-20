@@ -78,17 +78,17 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
           </nav>
         )}
 
-        <div className="flex flex-row gap-2 items-center justify-items-start transition duration-300 ease-in-out opacity-100 text-sm z-[1001]">
+        <div className="flex flex-row gap-2 h-[43px] items-center justify-items-start transition duration-300 ease-in-out opacity-100 text-sm z-[1001]">
           {!isMobile && (
             <>
               <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank" >
-                <ButtonPrimary variant="outline" className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out ">
+                <ButtonPrimary variant="outline" className="!bg-background hover:brightness-[0.95] button border-none rounded-none !h-[43px] transition-transform duration-300 ease-in-out ">
                   <ChatCenteredDots size={24} className="min-w-[20px] min-h-[20px]" />
                   <p>{t('free_support')}</p>
                 </ButtonPrimary>
               </a>
               <a href="https://wealthfarming.app/" target="_blank" >
-                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} h-[40px] transition-transform duration-300 ease-in-out`}>
+                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none ${i18n.language === 'fr' ? 'w-[180px]' : 'w-[148px]'} !h-[43px] transition-transform duration-300 ease-in-out`}>
                   <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                   <p>{t('header_investNowup')}</p>
                 </ButtonPrimary>
@@ -99,7 +99,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
           {/* Language Select */}
           {!isScrolled && isDesktop && (
             <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
-              <SelectTrigger className="!h-[43px] flex flex-row items-center justify-between rounded-none bg-background !rounded-[4px] w-[200px]">
+              <SelectTrigger className="!h-[43px] flex flex-row items-center justify-between bg-background !rounded-[4px] w-[200px]">
                 <GlobeSimple size={18} className="min-w-[18px] min-h-[18px]" />
                 <SelectValue placeholder={changeLanguage} />
               </SelectTrigger>
