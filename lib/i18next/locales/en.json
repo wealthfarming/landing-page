@@ -279,7 +279,10 @@
   "nec_section3_title": "One-time investment - Stable long-term cash flow",
   "nec_section3_description": "NFTs are not just a digital asset. They are a certificate of cash flow – where passive income is clearly defined, tied to a practical investment strategy, and backed by transparent liquidity.",
   "nec_section3_label_1": "Only from 100 USD / NFT",
-  "nec_section3_label_2": "Currently, 725 NFTs have been minted."
+  "nec_section3_label_2": "Currently, 725 NFTs have been minted.",
 
-
+  "tuition_fees": "Tuition fees",
+  "eating": "Eating",
+  "invoice": "Invoice",
+  "health": "Health"
 }
