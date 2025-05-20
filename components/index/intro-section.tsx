@@ -7,13 +7,15 @@ import { ChatCenteredDots, CursorClick } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../context/i18n";
 import { useInView } from "react-intersection-observer";
+import ButtonPrimary from "../custom-button/button-primary";
+import i18n from "@/lib/i18next/i18next";
 
 const IntroSection: React.FC = () => {
   const { language } = useLanguage();
   const { t } = useTranslation();
   const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.1, 
+    triggerOnce: true,
+    threshold: 0.1,
   });
   return (
     <SectionContainer borderBottom={false}>
@@ -59,18 +61,19 @@ const IntroSection: React.FC = () => {
           </div>
           <div>
             {language == 'en' ? (
-              <Button
-                onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-                variant="orange" classname="!font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] max-md:w-[132px] flex justify-center items-center">
-                <CursorClick size={20} className="animate-diagonal-2" />
-                <p>{t("button_secret_documnet")}</p>
-              </Button>) : (
-              <Button
-                onClick={() => window.open("https://wealthfarming.app/", "_blank")}
-                variant="white" classname="px-8 !font-[500] !text-[12px] max-md:px-4 max-md:h-10 flex justify-center items-center !bg-[var(--primary)]">
-                <CursorClick size={20} className="animate-diagonal-2" />
-                <p>{t("button_secret_documnet")}</p>
-              </Button>
+              <a href="https://wealthfarming.app/" target="_blank" className="w-[164px]" >
+                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none w-full h-[60px] transition-transform duration-300 ease-in-out !font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] max-md:w-[132px] flex justify-center items-center`}>
+                  <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
+                  <p>{t("button_secret_documnet")}</p>
+                </ButtonPrimary>  
+              </a>
+            ) : (
+              <a href="https://wealthfarming.app/" target="_blank" className="w-[243.2px]" >
+                <ButtonPrimary variant="outline" className={` hover:brightness-[1.1] border-none button rounded-none w-full h-[60px] transition-transform duration-300 ease-in-out !font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] max-md:w-[132px] flex justify-center items-center`}>
+                  <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
+                  <p>{t("button_secret_documnet")}</p>
+                </ButtonPrimary>  
+              </a>
             )}
           </div>
         </div>
@@ -127,13 +130,13 @@ const IntroSection: React.FC = () => {
                   {t('liquidity')}
                 </div>
                 <div className="flex flex-col md:flex-row-reverse items-center text-center h-2/3 md:h-1/2 w-full">
-                <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#E8B561] text-[16px] md:text-[18px] font-[700]">
+                  <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#E8B561] text-[16px] md:text-[18px] font-[700]">
                     <p>{t('continuity')}</p>
                   </div>
                   <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#E8B561] text-[18px] md:text-[24px] text-white font-[700] rounded-b-[6px]">
                     <p>24/7</p>
                   </div>
-                  
+
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { CursorClick } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from "react-i18next";
+import ButtonPrimary from "../custom-button/button-primary";
 
 const Section6: React.FC = () => {
   const { t } = useTranslation();
@@ -40,13 +41,12 @@ const Section6: React.FC = () => {
 
         <div className="flex flex-col gap-10 max-w-[700px]">
           <div
-            className={`relative z-10 font-semibold text-center text-white mb-2 ${
-              isDesktop
+            className={`relative z-10 font-semibold text-center text-white mb-2 ${isDesktop
                 ? "text-[40px]"
                 : isTablet
-                ? "text-[36px]"
-                : "text-[29px] "
-            }`}
+                  ? "text-[36px]"
+                  : "text-[29px] "
+              }`}
           >
             <div className="self-start">
               {t('nec_section_6_title_1')}
@@ -75,15 +75,10 @@ const Section6: React.FC = () => {
           >
             <div className="h-[48px]">
               <a href="https://wealthfarming.app/" target="_blank">
-                <div className={`flex items-center h-full gap-2 px-6 shadow-sm rounded-sm button bg-[var(--primary)] hover:bg-[var(--primary-gradient)] hover:cursor-pointer`}>
-                  <div
-                  >
-                    <CursorClick size={20} className="animate-diagonal-2" />
-                  </div>
-                  <div>
-                    {t("header_investNow")}
-                  </div>
-                </div>
+                <ButtonPrimary className="flex items-center gap-2 button rounded-[4px] py-0">
+                  <CursorClick size={32} className="size-5 animate-diagonal-2" />
+                  <p>{t('header_investNow')}</p>
+                </ButtonPrimary>
               </a>
             </div>
           </div>
