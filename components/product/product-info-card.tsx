@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { CursorClick } from '@phosphor-icons/react';
-import Link from 'next/link'; // Import Link from next/link
+import Link from 'next/link';
 import ButtonPrimary from "../custom-button/button-primary";
 
 interface ProductInfoCardProps {
@@ -29,7 +29,10 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({ title, description, b
             <Link href={link || "/"} passHref className='w-full'>
                 <ButtonPrimary
                     variant="outline"
-                    className={"hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end border-none cursor-pointer " + (button_color ? button_color : " bg-base")}
+                    className={
+                        "hover:bg-gray-100 rounded-none w-full h-[40px] mt-4 content-end border-none cursor-pointer " +
+                        (button_color ? button_color : " !bg-white")
+                    }
                 >
                     {button_icon ? button_icon : <CursorClick size={32} className='animate-diagonal-2' />}
                     <p className='button body'>{buttonText}</p>
