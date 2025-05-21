@@ -26,25 +26,25 @@ const Section4: React.FC = () => {
         {
             name: 'nec_section_4_slide_1_name',
             role: 'nec_section_4_slide_1_role',
-            content1: t('nec_section_4_slide_1_content_1'),
-            content2: t('nec_section_4_slide_1_content_2'),
-            content3: t('nec_section_4_slide_1_content_3'),
+            content1: !isMobile ? t('nec_section_4_slide_1_content_1') : t('nec_section_4_slide_1_content_1_mobile'),
+            content2: !isMobile ? t('nec_section_4_slide_1_content_2') : t('nec_section_4_slide_1_content_2_mobile'),
+            content3: !isMobile ? t('nec_section_4_slide_1_content_3') : t('nec_section_4_slide_1_content_3_mobile'),
             image: Slide_Dung,
         },
         {
             name: 'nec_section_4_slide_2_name',
             role: 'nec_section_4_slide_2_role',
-            content1: t('nec_section_4_slide_2_content_1'),
-            content2: t('nec_section_4_slide_2_content_2'),
-            content3: t('nec_section_4_slide_2_content_3'),
+            content1: !isMobile ? t('nec_section_4_slide_2_content_1') : t('nec_section_4_slide_2_content_1_mobile'),
+            content2: !isMobile ? t('nec_section_4_slide_2_content_2') : t('nec_section_4_slide_2_content_2_mobile'),
+            content3: !isMobile ? t('nec_section_4_slide_2_content_3') : t('nec_section_4_slide_2_content_3_mobile'),
             image: Slide_Huong_Lucky,
         },
         {
             name: 'nec_section_4_slide_3_name',
             role: 'nec_section_4_slide_3_role',
-            content1: t('nec_section_4_slide_3_content_1'),
-            content2: t('nec_section_4_slide_3_content_2'),
-            content3: t('nec_section_4_slide_3_content_3'),
+            content1: !isMobile ? t('nec_section_4_slide_3_content_1') : t('nec_section_4_slide_3_content_1_mobile'),
+            content2: !isMobile ? t('nec_section_4_slide_3_content_2') : t('nec_section_4_slide_3_content_2_mobile'),
+            content3: !isMobile ? t('nec_section_4_slide_3_content_3') : t('nec_section_4_slide_3_content_3_mobile'),
             image: Slide_Ven,
         },
     ];
@@ -74,8 +74,8 @@ const Section4: React.FC = () => {
                 <Carousel className='w-full h-full' setApi={(api) => (carouselApiRef.current = api)} opts={{ loop: true }}>
                     <CarouselContent>
                         {slides.map((slide, index) => (
-                            <CarouselItem key={index} className={`h-full flex flex-col gap-[10px] justify-between bg-[var(--base-bg)] p-[40px] mr-2`}>
-                                <div className="flex gap-[10px] justify-between">
+                            <CarouselItem key={index} className={`h-full flex flex-col gap-[10px] justify-between bg-[var(--base-bg)] ${isMobile ? 'py-[40px] px-[20px]' : 'p-[40px]'} mr-2`}>
+                                <div className="flex gap-[10px] justify-between items-center">
                                     <div className="flex gap-[16px] items-center">
                                         <div className='w-[60px] rounded-full h-[60px]'>
                                             <Image
@@ -100,8 +100,10 @@ const Section4: React.FC = () => {
                                 <div className='flex flex-col gap-[20px]'>
                                     <p className='h3 !font-[600] flex text-center font-geist-raleway-place-holder'>{t(slide.content1)}</p>
                                     <div>
-                                        <p className='!text-[12px] flex text-center font-geist-display'>{t(slide.content2)}</p>
-                                        <p className='!text-[12px] flex text-center mt-[8px] font-geist-display'>{t(slide.content3)}</p>
+                                        <p className='!text-[12px] flex text-center font-geist-display whitespace-pre-wrap break-words'
+                                        style={{ letterSpacing: '0.01em' }}>{t(slide.content2)}</p>
+                                        <p className='!text-[12px] flex text-center mt-[8px] font-geist-display whitespace-pre-wrap break-words'
+                                        style={{ letterSpacing: '0.01em' }}>{t(slide.content3)}</p>
                                     </div>
                                 </div>
                             </CarouselItem>
