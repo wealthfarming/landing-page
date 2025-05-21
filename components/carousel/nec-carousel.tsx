@@ -19,6 +19,7 @@ import step5 from "@/public/images/nec-section-7/step-5.avif";
 import overlay from "@/public/images/nec-section-7/overlay.avif";
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from "react-i18next";
+import ButtonPrimary from "../custom-button/button-primary";
 
 interface Step {
   id: number;
@@ -97,10 +98,10 @@ export function NecCarousel() {
   }, [api]);
 
   return (
-    <div className="relative w-full h-[740px] bg-inherit">
+    <div className="relative w-full h-[740px] bg-inherit max-md:w-[400px] max-md:overflow-visible">
       {/* Blur fade effect on left side */}
       { canScrollPrev && !isMobile &&
-        <div className="absolute left-0 top-0 bottom-0 w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-r from-[#f6f8fd] to-transparent"></div>
+        <div className="absolute left-0 top-0 bottom-0 h-[760px] w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-r from-[#f6f8fd] to-transparent"></div>
       }
       <Carousel
         setApi={setApi}
@@ -151,22 +152,22 @@ export function NecCarousel() {
                     <span className="text-white font-medium">{step.id}</span>
                   </div>
                   <div className="flex flex-col gap-2 justify-center items-start">
-                    <h3 className="text-xl font-medium mb-2">{step.title}</h3>
-                    <p className="text-[15px] text-[#4d4d4d] font-normal">
+                    <h3 className="text-xl max-lg:text-[19px] max-md:text-lg font-medium mb-2 font-geist-raleway-place-holder">{step.title}</h3>
+                    <p className="text-[15px] text-[#4d4d4d] font-normal font-geist-body">
                       {step.description}
                     </p>
                   </div>
                   
                   {step.label != "" &&
-                  <div className="h-10">
-                    <a href={step.href} target="_blank" className="h-10 px-6 flex justify-center items-center rounded-sm shadow-sm gap-2 bg-[var(--primary)] hover:bg-[var(--primary-gradient)] hover:cursor-pointer">
+                  <a href={step.href} target="_blank">
+                    <ButtonPrimary className="max-h-10 px-6 py-0 flex justify-center items-center rounded-sm shadow-sm gap-2 hover:cursor-pointer">
                       <div
-                        className="font-geist-mono button font-medium"
+                        className="font-geist-mono font-medium"
                       >
                         {step.label}
                       </div>
-                    </a>
-                  </div>
+                    </ButtonPrimary>
+                  </a>
                   }
                 </div>
               </div>
@@ -174,7 +175,7 @@ export function NecCarousel() {
           ))}
         </CarouselContent>
 
-        {canScrollPrev && isDesktop &&(
+        {canScrollPrev && !isTablet &&(
           <button
             onClick={() => api?.scrollPrev()}
             className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-[#00000033] z-20 h-10 w-10 rounded-full flex items-center justify-center hover:cursor-pointer"
@@ -184,7 +185,7 @@ export function NecCarousel() {
           </button>
         )}
 
-        {canScrollNext && isDesktop &&(
+        {canScrollNext && !isTablet &&(
           <button
             onClick={() => api?.scrollNext()}
             className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#00000033] z-20 h-10 w-10 rounded-full flex items-center justify-center hover:cursor-pointer"
@@ -198,7 +199,7 @@ export function NecCarousel() {
       {/* Blur fade effect on right side */}
       {
         canScrollNext && !isMobile &&
-      <div className="absolute right-0 top-0 bottom-0 w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-l from-[#f6f8fd] to-transparent"></div>
+      <div className="absolute right-0 top-0 bottom-0 h-[760px] w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-l from-[#f6f8fd] to-transparent"></div>
       }
     </div>
   );

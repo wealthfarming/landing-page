@@ -21,7 +21,7 @@ const Section5: React.FC = () => {
         <section className="nec-section nec-section-5 bg-[var(--canvas-bg)]">
             <div className={`${!isMobile ? 'py-[80px] px-[40px]' : 'py-[40px] px-[20px]'} flex items-center justify-center`}>
                 <div className="flex justify-center items-center flex-col gap-[80px] max-w-[1200px] w-full">
-                    <div className='max-w-[600px]'>
+                    <div className='max-w-[600px] pb-[20px] flex items-center justify-center'>
                         <div className="h1-index text-center" ref={ref}>
                             <AnimatedText text={[t('nec_section_5_title')]} inView={inView} />
                         </div>
@@ -30,7 +30,7 @@ const Section5: React.FC = () => {
                     <div className={`${!isMobile ? 'gap-[8px]' : 'flex-col gap-[60px]'} flex flex-[0_0_auto]`}
                     >
 
-                        <div className='h-[154px] relative w-full p-[32px] border border-[var(--primary-other)]'
+                        <div className={`${!isMobile ? 'h-[154px]' : ''} relative w-full p-[32px] border border-[var(--primary-other)]`}
                             style={{
                                 filter: 'drop-shadow(rgba(0, 0, 0, 0.08) 0px 4px 6px)',
                             }}>
@@ -38,10 +38,10 @@ const Section5: React.FC = () => {
 
                             <p className='!text-[var(--text-light)] h4 font-geist-raleway-place-holder z-10 relative text-center whitespace-pre-wrap w-full break-words'>{t('nec_section_5_content_1')}</p>
 
-                            <Image src={Coin1} alt='Coin1' width={60} height={60} className='-translate-x-1/2 absolute left-1/2 w-[60px] h-[60px] -top-[40px] z-10' />
+                            <Image src={Coin1} alt='Coin1' width={60} height={60} className={`-translate-x-1/2 absolute left-1/2 w-[60px] h-[60px]  z-10 ${!isMobile ? '-top-[40px]' : '-top-[31px]'}`}/>
                         </div>
 
-                        <div className='h-[154px] relative w-full p-[32px] border border-[var(--primary-other)]'
+                        <div className={`${!isMobile ? 'h-[154px]' : ''} relative w-full p-[32px] border border-[var(--primary-other)]`}
                             style={{
                                 filter: 'drop-shadow(rgba(0, 0, 0, 0.08) 0px 4px 6px)',
                             }}>
@@ -53,10 +53,10 @@ const Section5: React.FC = () => {
                                 <span>{t('nec_section_5_content_2_3')}</span>
                             </p>
 
-                            <Image src={Coin2} alt='Coin1' width={60} height={60} className='-translate-x-1/2 absolute left-1/2 w-[60px] h-[60px] -top-[40px] z-10' />
+                            <Image src={Coin2} alt='Coin1' width={60} height={60} className={`-translate-x-1/2 absolute left-1/2 w-[60px] h-[60px]  z-10 ${!isMobile ? '-top-[40px]' : '-top-[31px]'}`}/>
                         </div>
 
-                        <div className='h-[154px] relative w-full p-[32px] border border-[var(--primary-other)]'
+                        <div className={`${!isMobile ? 'h-[154px]' : ''} relative w-full p-[32px] border border-[var(--primary-other)]`}
                             style={{
                                 filter: 'drop-shadow(rgba(0, 0, 0, 0.08) 0px 4px 6px)',
                             }}>
@@ -68,7 +68,7 @@ const Section5: React.FC = () => {
                                 <span>{t('nec_section_5_content_3_3')}</span>
                             </p>
 
-                            <Image src={Coin3} alt='Coin1' width={60} height={60} className='-translate-x-1/2 absolute left-1/2 w-[60px] h-[60px] -top-[40px] z-10' />
+                            <Image src={Coin3} alt='Coin1' width={60} height={60} className={`-translate-x-1/2 absolute left-1/2 w-[60px] h-[60px]  z-10 ${!isMobile ? '-top-[40px]' : '-top-[31px]'}`}/>
                         </div>
 
 

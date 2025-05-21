@@ -39,7 +39,7 @@ const Section6: React.FC = () => {
       <div className="flex flex-col justify-center items-center w-full h-full py-20 px-10 max-md:py-10 max-md:px-5">
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        <div className="flex flex-col gap-10 max-w-[700px]">
+        <div className="flex flex-col gap-10 max-w-[700px] font-geist-raleway-place-holder ">
           <div
             className={`relative z-10 font-semibold text-center text-white mb-2 ${isDesktop
                 ? "text-[40px]"
@@ -48,21 +48,21 @@ const Section6: React.FC = () => {
                   : "text-[29px] "
               }`}
           >
-            <div className="self-start">
+            <div className="self-start max-md:break-all">
               {t('nec_section_6_title_1')}
             </div>
           </div>
           <div
-            className="relative z-10 text-center font-medium text-white text-xl max-sm:text-lg"
+            className="relative z-10 text-center font-medium text-white text-xl max-lg:text-[19px] max-sm:text-lg"
           >
             <div className="flex flex-col justify-center items-center">
               {contents.map((content, index) => (
                 <div key={index} className="flex items-center border-b-[1px] border-solid border-[#ebebeb33] gap-10 py-4">
-                  <p className="font-medium">
+                  <p className="font-bold">
                     {content.num}
                   </p>
                   <h4
-                    className="font-medium font-geist-raleway text-start"
+                    className="font-medium text-start"
                   >
                     {content.text}
                   </h4>

@@ -316,6 +316,19 @@
   line-height: 1.3em; 
 }
 
+@media (min-width: 810px) and (max-width: 1199px) {
+  .h1-index {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 809px) {
+  .h1-index {
+    font-size: 29px;
+    line-height: 1.4em;
+  }
+}
+
 .h1 {
   color: var(--text-bold); 
   font-family:var(--font-geist-display);
