@@ -19,6 +19,7 @@ import step5 from "@/public/images/nec-section-7/step-5.avif";
 import overlay from "@/public/images/nec-section-7/overlay.avif";
 import { useInterface } from "../context/interface-context";
 import { useTranslation } from "react-i18next";
+import ButtonPrimary from "../custom-button/button-primary";
 
 interface Step {
   id: number;
@@ -97,10 +98,10 @@ export function NecCarousel() {
   }, [api]);
 
   return (
-    <div className="relative w-full h-[740px] bg-inherit">
+    <div className="relative w-full h-[740px] bg-inherit max-md:w-[400px] max-md:overflow-visible">
       {/* Blur fade effect on left side */}
       { canScrollPrev && !isMobile &&
-        <div className="absolute left-0 top-0 bottom-0 w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-r from-[#f6f8fd] to-transparent"></div>
+        <div className="absolute left-0 top-0 bottom-0 h-[760px] w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-r from-[#f6f8fd] to-transparent"></div>
       }
       <Carousel
         setApi={setApi}
@@ -158,15 +159,15 @@ export function NecCarousel() {
                   </div>
                   
                   {step.label != "" &&
-                  <div className="h-10">
-                    <a href={step.href} target="_blank" className="h-10 px-6 flex justify-center items-center rounded-sm shadow-sm gap-2 bg-[var(--primary)] hover:bg-[var(--primary-gradient)] hover:cursor-pointer">
+                  <a href={step.href} target="_blank">
+                    <ButtonPrimary className="max-h-10 px-6 py-0 flex justify-center items-center rounded-sm shadow-sm gap-2 hover:cursor-pointer">
                       <div
-                        className="font-geist-mono button font-medium"
+                        className="font-geist-mono font-medium"
                       >
                         {step.label}
                       </div>
-                    </a>
-                  </div>
+                    </ButtonPrimary>
+                  </a>
                   }
                 </div>
               </div>
@@ -198,7 +199,7 @@ export function NecCarousel() {
       {/* Blur fade effect on right side */}
       {
         canScrollNext && !isMobile &&
-      <div className="absolute right-0 top-0 bottom-0 w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-l from-[#f6f8fd] to-transparent"></div>
+      <div className="absolute right-0 top-0 bottom-0 h-[760px] w-40 max-lg:w-20 z-10 pointer-events-none bg-gradient-to-l from-[#f6f8fd] to-transparent"></div>
       }
     </div>
   );

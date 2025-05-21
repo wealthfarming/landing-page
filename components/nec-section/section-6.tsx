@@ -48,7 +48,7 @@ const Section6: React.FC = () => {
                   : "text-[29px] "
               }`}
           >
-            <div className="self-start">
+            <div className="self-start max-md:break-all">
               {t('nec_section_6_title_1')}
             </div>
           </div>
