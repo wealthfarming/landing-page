@@ -12,6 +12,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 }
 
 // no type annotation here—Next will supply { params, searchParams }
-export default function Page({ params }: any) {
-  return <InvestmentBankClient slug={params.slug} />;
+export default async function Page({ params }: any) {
+  const { slug } = await params;
+  return <InvestmentBankClient slug={slug} />;
 }
