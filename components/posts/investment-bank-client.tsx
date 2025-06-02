@@ -14,6 +14,7 @@ import Background_Slug from '../../public/images/investment-bank/background_slug
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import { getCustomRichTextConverters } from '@/components/rich-text/custom-rich-text-converters';
 import ButtonPrimary from '../custom-button/button-primary';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   slug: string;
@@ -25,6 +26,7 @@ export default function InvestmentBankClient({ slug }: Props) {
   const [post, setPost] = useState<any>(null);
   const [isClient, setIsClient] = useState(false);
 
+  const router = useRouter()
   // mark as client
   useEffect(() => {
     setIsClient(true);
@@ -124,10 +126,11 @@ export default function InvestmentBankClient({ slug }: Props) {
         <div className={`max-w-[1200px] w-full flex
             ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'}  justify-center z-20`}
         >
-          <a href="/investment-bank">
+        
             <ButtonPrimary
               variant="outline"
               className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
+              onClick={() => router.push('/investment-bank')}
             >
               <Image
                 src={LessThanBase}
@@ -138,7 +141,6 @@ export default function InvestmentBankClient({ slug }: Props) {
               />
               <p>{t('back')}</p>
             </ButtonPrimary>
-          </a>
 
           {post?.description && (
             <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)]`}>

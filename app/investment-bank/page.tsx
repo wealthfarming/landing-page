@@ -10,6 +10,7 @@ import { Apiget } from "@/lib/api/get";
 import { API_URL } from "@/lib/config";
 import productBase from "../../public/images/img/product_base.jpg";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
 
 export default function InvestmentBank() {
   const { isDesktop, isMobile, isTablet } = useInterface();
@@ -21,6 +22,7 @@ export default function InvestmentBank() {
     triggerOnce: true,
     threshold: 0.1,
   });
+  const router = useRouter()
 
   useEffect(() => {
     const getPostCategories = async () => {
@@ -146,11 +148,9 @@ export default function InvestmentBank() {
               <div key={content.id}>
                 <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                   <div className="flex flex-col gap-[10px] justify-center">
-                    <a href={`/investment-bank/${content.slug_en}`}>
-                      <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors">
-                        {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
-                      </p>
-                    </a>
+                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors" onClick={() => router.push(`/investment-bank/${content.slug_en}`)} >
+                      {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
+                    </p>
                     <p className="text-light text-[13px]">
                       {i18n.language === 'vi'
                         ? new Intl.DateTimeFormat('vi-VN', {
