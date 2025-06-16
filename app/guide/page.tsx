@@ -7,7 +7,7 @@ import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import VideoBox from '@/components/footer/video_box';
-import VideoGuildPage from '@/components/footer/video_guild_page';
+import VideoGuidePage from '@/components/footer/video_guild_page';
 
 const NecLandingPage: React.FC = () => {
     const { t } = useTranslation();
@@ -23,7 +23,7 @@ const NecLandingPage: React.FC = () => {
                     <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
             }
-            <VideoGuildPage 
+            <VideoGuidePage 
                 modalActive={modalActive}
                 setModalActive={setModalActive}
             />

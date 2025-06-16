@@ -306,6 +306,6 @@
   "eating": "Alimentation",
   "invoice": "Facture",
   "health": "Santé",
-  "guild_video": "Vidéo tutoriel",
-  "guild_video_src": "https://www.youtube-nocookie.com/embed/V6uJQ9GSe7s?si=z8pDKil7CY78zjdA"
+  "guide_video": "Vidéo tutoriel",
+  "guide_video_src": "https://www.youtube-nocookie.com/embed/V6uJQ9GSe7s?si=z8pDKil7CY78zjdA"
 }

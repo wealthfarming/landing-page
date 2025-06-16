@@ -20,7 +20,7 @@ const VideoBox: React.FC<VideoBoxProps> = ({ modalActive, setModalActive }) => {
                         onClick={e => e.stopPropagation()}
                     >
                         <span className="flex flex-row items-center justify-between mb-4 relative w-full">
-                            <h2 className="text-xl font-bold">{t('guild_video')}</h2>
+                            <h2 className="text-xl font-bold">{t('guide_video')}</h2>
                             <X
                                 size={20}
                                 onClick={() => setModalActive(false)}
@@ -32,7 +32,7 @@ const VideoBox: React.FC<VideoBoxProps> = ({ modalActive, setModalActive }) => {
                             <iframe
                                 width="760"
                                 height="500"
-                                src={t('guild_video_src')}
+                                src={t('guide_video_src')}
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -61,7 +61,7 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true, classname, se
                         {t('footer_tutorial_video')}
                       </a>
                     ) : (
-                      <a href="/guild" className="hover:text-[var(--primary)] cursor-pointer">
+                      <a href="/guide" className="hover:text-[var(--primary)] cursor-pointer">
                         {t('footer_tutorial_video')}
                       </a>
                     )
