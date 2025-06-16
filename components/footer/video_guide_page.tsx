@@ -1,6 +1,5 @@
-import { CaretLeft } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
-
+import { CaretLeft } from "@phosphor-icons/react";
 interface VideoGuidePageProps {
     modalActive: boolean;
     setModalActive: (active: boolean) => void;

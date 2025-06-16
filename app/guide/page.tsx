@@ -7,7 +7,7 @@ import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import VideoBox from '@/components/footer/video_box';
-import VideoGuidePage from '@/components/footer/video_guild_page';
+import VideoGuidePage from '@/components/footer/video_guide_page';
 
 const NecLandingPage: React.FC = () => {
     const { t } = useTranslation();
