@@ -88,6 +88,7 @@
   "footer_invest": "Ngân hàng đầu tư",
   "footer_contact": "Liên hệ",
   "footer_contact_decsription": "Mọi thắc mắc xin liên hệ:",
+  "footer_tutorial_video": "Hướng dẫn mua NFT",
 
   "index_section_1_title_1": "NFT NEC - Bạn không cần phải giàu có để đầu tư",
   "index_section_1_title_2": " để",
@@ -291,5 +292,7 @@
   "tuition_fees": "Học phí",
   "eating": "Ăn uống",
   "invoice": "Hóa đơn",
-  "health": "Sức khỏe"
+  "health": "Sức khỏe",
+  "guide_video": "Video hướng dẫn",
+  "guide_video_src": "https://www.youtube-nocookie.com/embed/UP_lHwqVuaE?si=TTzWsz-tcMJ7pMU9"
 }

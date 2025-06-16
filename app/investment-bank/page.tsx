@@ -11,6 +11,8 @@ import { API_URL } from "@/lib/config";
 import productBase from "../../public/images/img/product_base.jpg";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
+import { X } from "@phosphor-icons/react";
+import VideoBox from "@/components/footer/video_box";
 
 export default function InvestmentBank() {
   const { isDesktop, isMobile, isTablet } = useInterface();
@@ -18,6 +20,7 @@ export default function InvestmentBank() {
   const [selected, setSelected] = useState('');
   const [tabs, setTabs] = useState<any[]>([]);
   const [contents, setContents] = useState<any[]>([]);
+  const [modalActive, setModalActive] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -99,7 +102,8 @@ export default function InvestmentBank() {
   return (
     <div className={`${isDesktop ? 'pb-[100px]' : isTablet ? '' : ''}`}>
       <HeaderDesktopFull changeAt={190} />
-      <div className="w-full h-[260px] relative" style={{ zIndex: 100 }}>
+      <VideoBox modalActive={modalActive} setModalActive={setModalActive} />
+      <div className="w-full h-[260px] relative z-[1]" >
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
       </div>
@@ -178,7 +182,8 @@ export default function InvestmentBank() {
           </div>
         </div>
       </div>
-      <FooterFull active={'investment-bank'} />
+      <FooterFull active={'investment-bank'} setModalActive={setModalActive}
+        modalActive={modalActive} />
     </div>
   );
 }

@@ -8,6 +8,9 @@ import Image from "next/image";
 import productBase from "../../public/images/img/product_base.jpg"
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import { X } from "@phosphor-icons/react";
+import VideoBox from "@/components/footer/video_box";
 
 export default function ProductPage() {
     const { t } = useTranslation();
@@ -16,11 +19,14 @@ export default function ProductPage() {
         triggerOnce: true,
         threshold: 0.1,
     });
+
+    const [modalActive, setModalActive] = useState(false);
     return (
         <div className={`${isDesktop ? 'pb-[605px]' : isTablet ? '' : ''}`}>
             <HeaderDesktopFull changeAt={300} />
+            <VideoBox modalActive={modalActive} setModalActive={setModalActive} />
             {isDesktop &&
-                <div className="w-full h-[260px] relative" style={{ zIndex: 100 }}>
+                <div className="w-full h-[260px] relative z-[1]" >
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
                     <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
@@ -61,11 +67,11 @@ export default function ProductPage() {
                     />
                 </div>
                 <div className={`w-full  ${isDesktop ? 'hidden' : 'block'}`}>
-                    <FooterFull active={'product'} fixed={false} />
+                    <FooterFull active={'product'} fixed={false} setModalActive={setModalActive} modalActive={modalActive} />
                 </div>
             </div>
             <div className={`w-full  ${isDesktop ? 'fixed' : 'hidden'}`}>
-                <FooterFull active={'product'} />
+                <FooterFull active={'product'} setModalActive={setModalActive} modalActive={modalActive} />
             </div>
         </div>
     );

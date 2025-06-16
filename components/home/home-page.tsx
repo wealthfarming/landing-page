@@ -13,15 +13,22 @@ import HomeSection7 from "@/components/home-section/section-7"
 import FooterFull from "@/components/footer/footer-full";
 import { useInterface } from "@/components/context/interface-context";
 import productBase from "../../public/images/img/product_base.jpg"
+import { useTranslation } from "react-i18next";
+import React from "react";
+import { X } from "@phosphor-icons/react";
+import VideoBox from "../footer/video_box";
 export default function HomePage() {
+    const { t } = useTranslation();
     const { isDesktop, isTablet } = useInterface();
+    const [modalActive, setModalActive] = React.useState(false);
     return (
         <>
+            <VideoBox modalActive={modalActive} setModalActive={setModalActive} />
             <div className="flex flex-col items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
                 <HeaderDesktopFull changeAt={300} />
                 <main className={`flex flex-col body row-start-2 justify-center items-center sm:items-start w-full ${isDesktop ? 'mb-[505px]' : isTablet ? 'pt-30' : 'pt-30'} top-[-260px] bg-[var(--base-bg)] z-30`}>
                     {isDesktop &&
-                        <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
+                        <div className="w-full h-[260px] relative z-[1]" >
                             <div className="absolute inset-0 bg-black/50 z-10"></div>
                             <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                         </div>
@@ -36,7 +43,10 @@ export default function HomePage() {
                     <HomeSection8 />
                     <HomeSection9 />
                 </main>
-                <FooterFull active={'introduction'} fixed={isDesktop ? true : false}/>
+                <FooterFull active={'introduction'} fixed={isDesktop ? true : false}
+                    setModalActive={setModalActive}
+                    modalActive={modalActive}
+                />
             </div>
         </>
     );
