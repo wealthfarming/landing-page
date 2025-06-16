@@ -13,6 +13,7 @@ import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import FooterFull from "@/components/footer/footer-full";
 import indexBanner from "../../public/images/img/index_banner.webp"
+import { useTranslation } from "react-i18next";
 
 const steps = [
   { number: "01", title: "Crawl dữ liệu số" },
@@ -22,11 +23,15 @@ const steps = [
 ];
 import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
+import { X } from "@phosphor-icons/react";
+import VideoBox from "@/components/footer/video_box";
 const IndexLandingPage: React.FC = () => {
   const processRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState(0);
   const [sticky, setSticky] = useState(false);
 
+  const [modalActive, setModalActive] = React.useState(false);
   const { isDesktop, isMobile, isTablet } = useInterface();
   useEffect(() => {
     const ref = processRef.current;
@@ -47,8 +52,9 @@ const IndexLandingPage: React.FC = () => {
   return (
     <div>
       <HeaderDesktopFull changeAt={190} />
+      <VideoBox modalActive={modalActive} setModalActive={setModalActive} />
       {isDesktop &&
-        <div className="w-full h-[260px] relative">
+        <div className="w-full h-[260px] relative z-[1]" >
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
@@ -84,7 +90,8 @@ const IndexLandingPage: React.FC = () => {
 
         </div>
       </div>
-      <FooterFull active={'index-landing'} fixed={false} />
+      <FooterFull active={'index-landing'} fixed={false} setModalActive={setModalActive}
+        modalActive={modalActive} />
 
     </div>
   );

@@ -76,6 +76,7 @@
   "footer_invest": "Investment Bank",
   "footer_contact": "Contact Us",
   "footer_contact_decsription" : "For any inquiries, please contact:",
+  "footer_tutorial_video": "NFT Purchase Tutorial",
 
   "page_product_title": "Wealth Farming Decentralized Financial Products & Services",
   "page_product_description": "From NFT fund certificates providing lifelong passive income, the top-notch Review Indexes investment strategy, to decentralized lending services (DeFi Lending) utilizing AI technology for automated valuation and risk management, BeQ Holdings' Wealth Farming ecosystem fully meets every individual investment goal – safe, transparent, and optimally efficient.",
@@ -293,5 +294,7 @@
   "tuition_fees": "Tuition fees",
   "eating": "Eating",
   "invoice": "Invoice",
-  "health": "Health"
+  "health": "Health",
+  "guide_video": "Tutorial Video",
+  "guide_video_src": "https://www.youtube-nocookie.com/embed/V6uJQ9GSe7s?si=z8pDKil7CY78zjdA"
 }

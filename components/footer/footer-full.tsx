@@ -7,14 +7,17 @@ type FooterProps = {
   active?: "introduction" | "product" | "ecosystem" | "investment-bank" | "index-landing";
   fixed?: boolean;
   classname?: string;
+  setModalActive: (active: boolean) => void;
+  modalActive: boolean;
 };
 
-const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) => {
+const FooterFull: React.FC<FooterProps> = ({ active, fixed = true, classname, setModalActive, modalActive }) => {
   const activeClassName = "text-[var(--primary)] font-semibold";
   const { isDesktop, isTablet, isMobile } = useInterface();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
-    <footer className={`text-white bg-[#003048] bottom-0 w-full ${classname} ${isMobile || !fixed? '' : 'fixed'} `}>
+    <footer className={`text-white bg-[#003048] bottom-0 w-full ${classname} ${isMobile || !fixed ? '' : 'fixed'} `}>
+
       <div className={`flex flex-col justify-center items-center ${isDesktop ? 'px-10 py-20 ' : isTablet ? 'px-10 py-20 ' : 'px-5 py-10'} w-full border-b border-cyan-900`}>
         <div className={`flex flex-wrap justify-center items-start w-full ${isDesktop ? 'max-w-[1200px] gap-10' : isTablet ? 'gap-10' : 'flex-col gap-10'}`}>
           <div className={`flex-1 shrink leading-6 basis-0 ${isDesktop ? 'gap-10 flex flex-col' : isTablet ? 'gap-10 flex flex-col maw-w-[299px]' : 'flex flex-col gap-5'}`}>
@@ -28,7 +31,7 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
             </p>
           </div>
           <div className={` flex flex-wrap flex-1 shrink ${isDesktop ? 'gap-20' : 'gap-10'} items-start ${isDesktop ? 'justify-end' : 'justify-start'} basis-0`}>
-            <nav className={`flex flex-col text-[var(--other-border)] ${isDesktop ? 'w-[103px] gap-6' : isTablet ? '' : ''}`}>
+            <nav className={`flex flex-col text-[var(--other-border)] ${isDesktop ? ' gap-6' : isTablet ? '' : ''}`}>
               <div className="text-[20px] font-medium">{t('footer_page')}</div>
               <ul className="w-full text-[12px] font-normal flex flex-col opacity-80">
                 <li className={(active == "introduction") ? activeClassName : ""}>
@@ -50,6 +53,19 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
                   <a href="/investment-bank" className="hover:text-[var(--primary)]">
                     {t('footer_invest')}
                   </a>
+                </li>
+                <li className="mt-2" onClick={() => setModalActive(true)}>
+                  {
+                    isDesktop || isTablet ? (
+                      <a className="hover:text-[var(--primary)] cursor-pointer">
+                        {t('footer_tutorial_video')}
+                      </a>
+                    ) : (
+                      <a href="/guide" className="hover:text-[var(--primary)] cursor-pointer">
+                        {t('footer_tutorial_video')}
+                      </a>
+                    )
+                  }
                 </li>
                 <li className="mt-2">
                   <a
@@ -133,10 +149,10 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true , classname}) 
               </div>
               <div className="flex mt-5 gap-4 opacity-80">
                 <a href="https://www.facebook.com/profile.php?id=61574682066111" target="_blank" rel="noopener noreferrer">
-                  <FacebookLogo size={24} weight="fill"/>
+                  <FacebookLogo size={24} weight="fill" />
                 </a>
                 <a href="https://www.linkedin.com/company/106157693/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-                  <LinkedinLogo size={24} weight="fill"/>
+                  <LinkedinLogo size={24} weight="fill" />
                 </a>
               </div>
             </div>
