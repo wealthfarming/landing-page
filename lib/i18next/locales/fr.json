@@ -79,6 +79,7 @@
   "footer_invest": "Banque d'investissement",
   "footer_contact": "Contactez-nous",
   "footer_contact_decsription": "Pour toute question, veuillez contacter :",
+  "footer_tutorial_video": "Tutoriel d'achat de NFT",
   "page_product_title": "Produits et services financiers décentralisés de Wealth Farming",
   "page_product_description": "Des certificats de fonds NFT offrant un revenu passif à vie, à la stratégie d'investissement Review Indexes de premier ordre, aux services de prêt décentralisés (DeFi Lending) utilisant la technologie IA pour l'évaluation automatisée et la gestion des risques, l'écosystème Wealth Farming de BeQ Holdings répond pleinement à chaque objectif d'investissement individuel – sûr, transparent et optimal.",
   "page_product_box1_title": "NFT NEC",
@@ -304,5 +305,7 @@
   "tuition_fees": "Frais de scolarité",
   "eating": "Alimentation",
   "invoice": "Facture",
-  "health": "Santé"
+  "health": "Santé",
+  "guild_video": "Vidéo tutoriel",
+  "guild_video_src": "https://www.youtube-nocookie.com/embed/V6uJQ9GSe7s?si=z8pDKil7CY78zjdA"
 }

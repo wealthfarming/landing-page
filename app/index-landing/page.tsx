@@ -13,6 +13,7 @@ import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import FooterFull from "@/components/footer/footer-full";
 import indexBanner from "../../public/images/img/index_banner.webp"
+import { useTranslation } from "react-i18next";
 
 const steps = [
   { number: "01", title: "Crawl dữ liệu số" },
@@ -22,11 +23,14 @@ const steps = [
 ];
 import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
+import { X } from "@phosphor-icons/react";
 const IndexLandingPage: React.FC = () => {
   const processRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState(0);
   const [sticky, setSticky] = useState(false);
 
+  const [modalActive, setModalActive] = React.useState(false);
   const { isDesktop, isMobile, isTablet } = useInterface();
   useEffect(() => {
     const ref = processRef.current;
@@ -47,6 +51,40 @@ const IndexLandingPage: React.FC = () => {
   return (
     <div>
       <HeaderDesktopFull changeAt={190} />
+      {
+        modalActive &&
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
+          onClick={() => setModalActive(false)}
+        >
+          <div
+            className="bg-white p-5 rounded-lg shadow-lg"
+            onClick={e => e.stopPropagation()}
+          >
+            <span className="flex flex-row items-center justify-between mb-4 relative w-full">
+              <h2 className="text-xl font-bold">{t('guild_video')}</h2>
+              <X
+                size={20}
+                onClick={() => setModalActive(false)}
+                className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                style={{ zIndex: 1000 }}
+              />
+            </span>
+            <div className="aspect-video w-full mb-4">
+              <iframe
+                width="760"
+                height="500"
+                src={t('guild_video_src')}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      }
       {isDesktop &&
         <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
@@ -84,7 +122,8 @@ const IndexLandingPage: React.FC = () => {
 
         </div>
       </div>
-      <FooterFull active={'index-landing'} fixed={false} />
+      <FooterFull active={'index-landing'} fixed={false} setModalActive={setModalActive}
+        modalActive={modalActive} />
 
     </div>
   );

@@ -13,6 +13,8 @@ import eco2 from "../../public/images/img/eco-2.png"
 import eco3 from "../../public/images/img/eco-3.png"
 import eco4 from "../../public/images/img/eco-4.png"
 import { useInView } from "react-intersection-observer";
+import React from "react";
+import { X } from "@phosphor-icons/react";
 
 type ContentItem = string;
 
@@ -29,8 +31,8 @@ export default function EcoPage() {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
-});
-  const ecoData  = [
+  });
+  const ecoData = [
     {
       img: eco1,
       title: t('eco_data_title_1'),
@@ -70,12 +72,46 @@ export default function EcoPage() {
   ]
 
   const selectedEcoData = ecoData;
-
+  const [modalActive, setModalActive] = React.useState(false);
   return (
     <div className={`flex flex-col ${isDesktop ? 'pb-[100px]' : isTablet ? '' : ''}`}>
-        <HeaderDesktopFull changeAt={300} />
+      {
+        modalActive &&
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
+          onClick={() => setModalActive(false)}
+        >
+          <div
+            className="bg-white p-5 rounded-lg shadow-lg"
+            onClick={e => e.stopPropagation()}
+          >
+            <span className="flex flex-row items-center justify-between mb-4 relative w-full">
+              <h2 className="text-xl font-bold">{t('guild_video')}</h2>
+              <X
+                size={20}
+                onClick={() => setModalActive(false)}
+                className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                style={{ zIndex: 1000 }}
+              />
+            </span>
+            <div className="aspect-video w-full mb-4">
+              <iframe
+                width="760"
+                height="500"
+                src={t('guild_video_src')}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      }
+      <HeaderDesktopFull changeAt={300} />
       {isDesktop &&
-        <div className="w-full h-[260px] relative" style={{zIndex: 100}}>
+        <div className="w-full h-[260px] relative">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
@@ -122,7 +158,8 @@ export default function EcoPage() {
           </div>
         </div>
       </div>
-      <FooterFull active={"ecosystem"} />
+      <FooterFull active={"ecosystem"} setModalActive={setModalActive}
+        modalActive={modalActive} />
     </div>
   );
 }

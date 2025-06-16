@@ -15,6 +15,7 @@ import { RichText } from '@payloadcms/richtext-lexical/react';
 import { getCustomRichTextConverters } from '@/components/rich-text/custom-rich-text-converters';
 import ButtonPrimary from '../custom-button/button-primary';
 import { useRouter } from 'next/navigation';
+import { X } from '@phosphor-icons/react';
 
 interface Props {
   slug: string;
@@ -25,12 +26,12 @@ export default function InvestmentBankClient({ slug }: Props) {
   const { t, i18n } = useTranslation();
   const [post, setPost] = useState<any>(null);
   const [isClient, setIsClient] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
   const router = useRouter()
   // mark as client
   useEffect(() => {
     setIsClient(true);
   }, []);
-
   // fetch post data when client and slug or language changes
   useEffect(() => {
     if (!isClient) return;
@@ -83,6 +84,40 @@ export default function InvestmentBankClient({ slug }: Props) {
   return (
     <div className="pb-[100px]">
       <HeaderDesktopFull changeAt={190} />
+      {
+        modalActive &&
+        <div
+          className="fixed inset-0 bg-black/50 z-[200] flex items-center justify-center"
+          onClick={() => setModalActive(false)}
+        >
+          <div
+            className="bg-white p-5 rounded-lg shadow-lg"
+            onClick={e => e.stopPropagation()}
+          >
+            <span className="flex flex-row items-center justify-between mb-4 relative w-full">
+              <h2 className="text-xl font-bold">{t('guild_video')}</h2>
+              <X
+                size={20}
+                onClick={() => setModalActive(false)}
+                className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                style={{ zIndex: 1000 }}
+              />
+            </span>
+            <div className="aspect-video w-full mb-4">
+              <iframe
+                width="760"
+                height="500"
+                src={t('guild_video_src')}
+                title="YouTube video player"
+                style={{ border: 0 }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      }
       <div className="w-full h-[260px] relative z-[30]">
         <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
@@ -120,24 +155,24 @@ export default function InvestmentBankClient({ slug }: Props) {
             className="w-full h-full z-10 object-center object-cover opacity-5"
           />
         </div>
-        <div 
+        <div
           className={`max-w-[1200px] w-full flex
             ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'} justify-center z-20`}
         >
-            <ButtonPrimary
-              variant="outline"
-              className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
-              onClick={() => router.push('/investment-bank')}
-            >
-              <Image
-                src={LessThanBase}
-                width={20}
-                height={20}
-                alt="LessThanBase"
-                className="min-w-[20px] min-h-[20px]"
-              />
-              <p>{t('back')}</p>
-            </ButtonPrimary>
+          <ButtonPrimary
+            variant="outline"
+            className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
+            onClick={() => router.push('/investment-bank')}
+          >
+            <Image
+              src={LessThanBase}
+              width={20}
+              height={20}
+              alt="LessThanBase"
+              className="min-w-[20px] min-h-[20px]"
+            />
+            <p>{t('back')}</p>
+          </ButtonPrimary>
           {post?.description && (
             <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}>
               <RichText
@@ -150,7 +185,7 @@ export default function InvestmentBankClient({ slug }: Props) {
           )}
         </div>
       </div>
-      <FooterFull />
+      <FooterFull setModalActive={setModalActive} modalActive={modalActive} />
     </div>
   );
 }
