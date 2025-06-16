@@ -24,6 +24,7 @@ const steps = [
 import { useInterface } from '@/components/context/interface-context';
 import Image from "next/image";
 import { X } from "@phosphor-icons/react";
+import VideoBox from "@/components/footer/video_box";
 const IndexLandingPage: React.FC = () => {
   const processRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
@@ -51,42 +52,9 @@ const IndexLandingPage: React.FC = () => {
   return (
     <div>
       <HeaderDesktopFull changeAt={190} />
-      {
-        modalActive &&
-        <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
-          onClick={() => setModalActive(false)}
-        >
-          <div
-            className="bg-white p-5 rounded-lg shadow-lg"
-            onClick={e => e.stopPropagation()}
-          >
-            <span className="flex flex-row items-center justify-between mb-4 relative w-full">
-              <h2 className="text-xl font-bold">{t('guild_video')}</h2>
-              <X
-                size={20}
-                onClick={() => setModalActive(false)}
-                className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors duration-200"
-                style={{ zIndex: 1000 }}
-              />
-            </span>
-            <div className="aspect-video w-full mb-4">
-              <iframe
-                width="760"
-                height="500"
-                src={t('guild_video_src')}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      }
+      <VideoBox modalActive={modalActive} setModalActive={setModalActive} />
       {isDesktop &&
-        <div className="w-full h-[260px] relative">
+        <div className="w-full h-[260px] relative z-[1]" >
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
