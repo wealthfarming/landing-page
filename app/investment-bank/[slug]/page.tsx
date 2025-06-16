@@ -8,7 +8,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
     `${API_URL}/api/posts`,
     { sort: 'createdAt', limit: 1000, locale: 'en' }
   );
-  return allPosts.map(post => ({ slug: post.route as string }));
+  return allPosts.map(post => ({ slug: post.slug as string }));
 }
 
 // no type annotation here—Next will supply { params, searchParams }

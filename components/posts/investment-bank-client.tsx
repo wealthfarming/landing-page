@@ -25,19 +25,15 @@ export default function InvestmentBankClient({ slug }: Props) {
   const { t, i18n } = useTranslation();
   const [post, setPost] = useState<any>(null);
   const [isClient, setIsClient] = useState(false);
-
   const router = useRouter()
   // mark as client
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-
-
   // fetch post data when client and slug or language changes
   useEffect(() => {
     if (!isClient) return;
-
     async function getPosts() {
       // fetch ID by route
       const locales = ['en', 'fr', 'vi'];
@@ -53,11 +49,8 @@ export default function InvestmentBankClient({ slug }: Props) {
       );
 
       const allPosts = allResponses.flat();
-
-
       const find_data_id = allPosts.find((p: any) => p.slug === slug);
       const data_id = find_data_id?.id ?? null;
-
 
       if (!data_id) return;
 
@@ -103,7 +96,11 @@ export default function InvestmentBankClient({ slug }: Props) {
 
       <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
         <div className="max-w-[1200px] w-full">
-          {post?.title && <p className="title-invest">{post.title}</p>}
+          {post?.title && (
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+              {post.title}
+            </h1>
+          )}
         </div>
       </div>
 
@@ -123,10 +120,10 @@ export default function InvestmentBankClient({ slug }: Props) {
             className="w-full h-full z-10 object-center object-cover opacity-5"
           />
         </div>
-        <div className={`max-w-[1200px] w-full flex
-            ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'}  justify-center z-20`}
+        <div 
+          className={`max-w-[1200px] w-full flex
+            ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'} justify-center z-20`}
         >
-        
             <ButtonPrimary
               variant="outline"
               className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
@@ -141,9 +138,8 @@ export default function InvestmentBankClient({ slug }: Props) {
               />
               <p>{t('back')}</p>
             </ButtonPrimary>
-
           {post?.description && (
-            <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)]`}>
+            <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}>
               <RichText
                 data={post.description}
                 converters={({ defaultConverters }) =>
