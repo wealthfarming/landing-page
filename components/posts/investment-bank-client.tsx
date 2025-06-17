@@ -110,8 +110,8 @@ export default function InvestmentBankClient({ slug }: Props) {
         />
       </div>
       {
-         !post ? (
-          <div className={`flex flex-col items-center justify-center h-[600px] relative z-[30]  bg-[var(--canvas-bg)] ${isDesktop || isTablet ? ' mb-[505px] ' : ''} ` }>
+        !post ? (
+          <div className={`flex flex-col items-center justify-center h-[600px] relative z-[30]  bg-[var(--canvas-bg)] ${isDesktop || isTablet ? ' mb-[505px] ' : ''} `}>
             <LoadingComponent className="h-[200px] mt-10" />
           </div>
         ) : (
@@ -143,46 +143,16 @@ export default function InvestmentBankClient({ slug }: Props) {
                 />
               </div>
 
-              <div
-                className={`max-w-[1200px] w-full flex
-            ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'} justify-center z-20`}
-              >
-                <div className={(!isDesktop ? 'w-full' : '') + ` flex flex-col items-center gap-[10px] `}>
-                  <ButtonPrimary
-                    variant="outline"
-                    className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
-                    onClick={() => router.push('/investment-bank')}
-                  >
-                    <Image
-                      src={LessThanBase}
-                      width={20}
-                      height={20}
-                      alt="LessThanBase"
-                      className="min-w-[20px] min-h-[20px]"
-                    />
-                    <p>{t('back')}</p>
-                  </ButtonPrimary>
-                  <ButtonPrimary
-                    variant="outline"
-                    className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
-                  >
-                    <ArrowsClockwise size={20} />
-                    <p onClick={() => router.refresh()}>{t('RELOAD')}</p>
-                  </ButtonPrimary>
-                </div>
-                <div
-                  className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}
-                >
-                  {post?.description && (
-                    <PostDescription
-                      post={post}
-                      loading={!loadingContent || !loadingPage}
-                    />
-                  )}
 
-                </div>
 
-              </div>
+              {post?.description && (
+                <PostDescription
+                  post={post}
+                  loading={!loadingContent || !loadingPage}
+                  isDesktop={isDesktop}
+                />
+              )}
+
             </div>
           </div>
         )
@@ -213,24 +183,56 @@ interface PostDescriptionProps {
     description?: any;
   };
   loading: boolean;
+  isDesktop: boolean | null;
 }
 
-const PostDescription: React.FC<PostDescriptionProps> = ({ post, loading }) => {
+const PostDescription: React.FC<PostDescriptionProps> = ({ post, loading, isDesktop }) => {
+  const router = useRouter()
+  const { t } = useTranslation();
   if (!post?.description) return null;
-
   if (loading) {
     return (
       <LoadingComponent className="h-[200px]" />
     )
-
   }
-
   return (
-    <RichText
-      data={post.description}
-      converters={({ defaultConverters }) =>
-        getCustomRichTextConverters(defaultConverters)
-      }
-    />
+    <div
+      className={`max-w-[1200px] w-full flex
+            ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'} justify-center z-20`}
+    >
+      <div className={(!isDesktop ? 'w-full' : '') + ` flex flex-col items-center gap-[10px] `}>
+        <ButtonPrimary
+          variant="outline"
+          className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
+          onClick={() => router.push('/investment-bank')}
+        >
+          <Image
+            src={LessThanBase}
+            width={20}
+            height={20}
+            alt="LessThanBase"
+            className="min-w-[20px] min-h-[20px]"
+          />
+          <p>{t('back')}</p>
+        </ButtonPrimary>
+        <ButtonPrimary
+          variant="outline"
+          className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
+        >
+          <ArrowsClockwise size={20} />
+          <p onClick={() => router.refresh()}>{t('RELOAD')}</p>
+        </ButtonPrimary>
+      </div>
+      <div
+        className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}
+      >
+        <RichText
+          data={post.description}
+          converters={({ defaultConverters }) =>
+            getCustomRichTextConverters(defaultConverters)
+          }
+        />
+      </div>
+    </div>
   );
 };
