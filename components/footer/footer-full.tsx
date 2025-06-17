@@ -54,12 +54,12 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true, classname, se
                     {t('footer_invest')}
                   </a>
                 </li>
-                <li className="mt-2" onClick={() => setModalActive(true)}>
+                <li className="mt-2" >
                   {
                     isDesktop || isTablet ? (
-                      <a className="hover:text-[var(--primary)] cursor-pointer">
+                      <p className="hover:text-[var(--primary)] cursor-pointer" onClick={() => setModalActive(true)}>
                         {t('footer_tutorial_video')}
-                      </a>
+                      </p>
                     ) : (
                       <a href="/guide" className="hover:text-[var(--primary)] cursor-pointer">
                         {t('footer_tutorial_video')}
