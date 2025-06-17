@@ -220,7 +220,7 @@ const PostDescription: React.FC<PostDescriptionProps> = ({ post, loading, isDesk
           className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
         >
           <ArrowsClockwise size={20} />
-          <p onClick={() => router.refresh()}>{t('RELOAD')}</p>
+          <p onClick={() => window.location.reload()}>{t('RELOAD')}</p>
         </ButtonPrimary>
       </div>
       <div
