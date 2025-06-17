@@ -28,27 +28,16 @@ export default function InvestmentBankClient({ slug }: Props) {
   const [post, setPost] = useState<any>(null);
   const [isClient, setIsClient] = useState(false);
   const [modalActive, setModalActive] = useState(false);
-  const [loadingPage, setLoadingPage] = useState(false);
-  const [loadingContent, setLoadingContent] = useState(false);
 
   const router = useRouter()
   // mark as client
   useEffect(() => {
     setIsClient(true);
   }, []);
-  useEffect(() => {
-    if (post?.description) {
-      const timer = setTimeout(() => {
-        setLoadingContent(true);
-      }, 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [post?.description]);
   // fetch post data when client and slug or language changes
   useEffect(() => {
     if (!isClient) return;
     async function getPosts() {
-      setLoadingPage(true);
       // fetch ID by route
       const locales = ['en', 'fr', 'vi'];
 
@@ -90,7 +79,6 @@ export default function InvestmentBankClient({ slug }: Props) {
     }
 
     getPosts();
-    setLoadingPage(true);
   }, [isClient, slug, i18n.language]);
 
   if (!isClient) return null;
