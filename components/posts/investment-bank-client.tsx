@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useInterface } from '@/components/context/interface-context';
 import { useTranslation } from 'react-i18next';
 import { Apiget } from '@/lib/api/get';
@@ -130,9 +130,6 @@ export default function InvestmentBankClient({ slug }: Props) {
                   className="w-full h-full z-10 object-center object-cover opacity-5"
                 />
               </div>
-
-
-
               {post?.description && (
                 <div
                   className={`max-w-[1200px] w-full flex
@@ -153,13 +150,6 @@ export default function InvestmentBankClient({ slug }: Props) {
                       />
                       <p>{t('back')}</p>
                     </ButtonPrimary>
-                    <ButtonPrimary
-                      variant="outline"
-                      className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
-                    >
-                      <ArrowsClockwise size={20} />
-                      <p onClick={() => window.location.reload()}>{t('RELOAD')}</p>
-                    </ButtonPrimary>
                   </div>
                   <div
                     className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}
@@ -173,14 +163,10 @@ export default function InvestmentBankClient({ slug }: Props) {
                   </div>
                 </div>
               )}
-
             </div>
           </div>
         )
       }
-
-
-
       <FooterFull setModalActive={setModalActive} modalActive={modalActive} />
     </div>
   );
