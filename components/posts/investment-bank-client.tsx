@@ -15,7 +15,7 @@ import { RichText } from '@payloadcms/richtext-lexical/react';
 import { getCustomRichTextConverters } from '@/components/rich-text/custom-rich-text-converters';
 import ButtonPrimary from '../custom-button/button-primary';
 import { useRouter } from 'next/navigation';
-import { X } from '@phosphor-icons/react';
+import { ArrowsClockwise, X } from '@phosphor-icons/react';
 import VideoBox from '../footer/video_box';
 
 interface Props {
@@ -28,6 +28,7 @@ export default function InvestmentBankClient({ slug }: Props) {
   const [post, setPost] = useState<any>(null);
   const [isClient, setIsClient] = useState(false);
   const [modalActive, setModalActive] = useState(false);
+
   const router = useRouter()
   // mark as client
   useEffect(() => {
@@ -96,64 +97,90 @@ export default function InvestmentBankClient({ slug }: Props) {
           className="w-full h-[260px] object-cover"
         />
       </div>
+      {
+        !post ? (
+          <div className={`flex flex-col items-center justify-center h-[600px] relative z-[30]  bg-[var(--canvas-bg)] ${isDesktop || isTablet ? ' mb-[505px] ' : ''} `}>
+            <LoadingComponent className="h-[200px] mt-10" />
+          </div>
+        ) : (
+          <div >
+            <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
+              <div className="max-w-[1200px] w-full">
+                {post?.title && (
+                  <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                    {post.title}
+                  </h1>
+                )}
+              </div>
+            </div>
 
-      <div className={`${!isMobile ? 'p-[40px]' : 'p-[20px]'} relative z-[30] flex justify-center bg-[var(--canvas-bg)]`}>
-        <div className="max-w-[1200px] w-full">
-          {post?.title && (
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-              {post.title}
-            </h1>
-          )}
-        </div>
-      </div>
-
-      <div className={`${!isDesktop
-        ? isMobile
-          ? 'p-[20px]'
-          : 'py-[40px] px-[40px]'
-        : 'py-[80px] px-[40px]'}
+            <div className={`${!isDesktop
+              ? isMobile
+                ? 'p-[20px]'
+                : 'py-[40px] px-[40px]'
+              : 'py-[80px] px-[40px]'}
         z-[30] flex justify-center bg-[var(--base-bg)] relative
         ${isDesktop || isTablet ? 'mb-[505px]' : ''}`}>
-        <div className="absolute inset-0">
-          <Image
-            src={Background_Slug}
-            alt="Background Slug"
-            width={1200}
-            height={673}
-            className="w-full h-full z-10 object-center object-cover opacity-5"
-          />
-        </div>
-        <div
-          className={`max-w-[1200px] w-full flex
+              <div className="absolute inset-0">
+                <Image
+                  src={Background_Slug}
+                  alt="Background Slug"
+                  width={1200}
+                  height={673}
+                  className="w-full h-full z-10 object-center object-cover opacity-5"
+                />
+              </div>
+              {post?.description && (
+                <div
+                  className={`max-w-[1200px] w-full flex
             ${!isDesktop ? 'flex-col gap-[40px]' : 'gap-[80px]'} justify-center z-20`}
-        >
-          <ButtonPrimary
-            variant="outline"
-            className="!bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
-            onClick={() => router.push('/investment-bank')}
-          >
-            <Image
-              src={LessThanBase}
-              width={20}
-              height={20}
-              alt="LessThanBase"
-              className="min-w-[20px] min-h-[20px]"
-            />
-            <p>{t('back')}</p>
-          </ButtonPrimary>
-          {post?.description && (
-            <div className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}>
-              <RichText
-                data={post.description}
-                converters={({ defaultConverters }) =>
-                  getCustomRichTextConverters(defaultConverters)
-                }
-              />
+                >
+                  <div className={(!isDesktop ? 'w-full' : '') + ` flex flex-col items-center gap-[10px] `}>
+                    <ButtonPrimary
+                      variant="outline"
+                      className="!bg-background hover:brightness-[0.95] w-full button border-none rounded-none h-[40px] transition-transform duration-300 ease-in-out"
+                      onClick={() => router.push('/investment-bank')}
+                    >
+                      <Image
+                        src={LessThanBase}
+                        width={20}
+                        height={20}
+                        alt="LessThanBase"
+                        className="min-w-[20px] min-h-[20px]"
+                      />
+                      <p>{t('back')}</p>
+                    </ButtonPrimary>
+                  </div>
+                  <div
+                    className={`${isDesktop ? 'min-w-[900px]' : ''} border-b border-[var(--other-border)] mt-[-40px]`}
+                  >
+                    <RichText
+                      data={post.description}
+                      converters={({ defaultConverters }) =>
+                        getCustomRichTextConverters(defaultConverters)
+                      }
+                    />
+                  </div>
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      </div>
+          </div>
+        )
+      }
       <FooterFull setModalActive={setModalActive} modalActive={modalActive} />
     </div>
   );
+}
+
+interface LoadingComponentProps {
+  className?: string;
+}
+const LoadingComponent: React.FC<LoadingComponentProps> = ({ className }) => {
+  const { t } = useTranslation();
+  return (
+    <div className={"flex flex-col justify-center items-center w-full " + className} >
+      <ArrowsClockwise size={32} className="animate-spin text-[var(--primary)] mb-4" />
+      <p className="text-[var(--primary)] text-lg">{t('Loading')}</p>
+    </div>
+  )
 }

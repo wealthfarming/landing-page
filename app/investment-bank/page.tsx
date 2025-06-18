@@ -11,7 +11,7 @@ import { API_URL } from "@/lib/config";
 import productBase from "../../public/images/img/product_base.jpg";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
-import { X } from "@phosphor-icons/react";
+import { ArrowsClockwise, X } from "@phosphor-icons/react";
 import VideoBox from "@/components/footer/video_box";
 
 export default function InvestmentBank() {
@@ -21,6 +21,8 @@ export default function InvestmentBank() {
   const [tabs, setTabs] = useState<any[]>([]);
   const [contents, setContents] = useState<any[]>([]);
   const [modalActive, setModalActive] = useState(false);
+  const [loadingPage, setLoadingPage] = useState(false);
+  const [loadingContent, setLoadingContent] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -29,6 +31,8 @@ export default function InvestmentBank() {
 
   useEffect(() => {
     const getPostCategories = async () => {
+      setLoadingPage(false);
+      setLoadingContent(false);
       const data_en = await Apiget(API_URL + '/api/posts-categories', {
         sort: 'createdAt',
         limit: 0,
@@ -56,12 +60,14 @@ export default function InvestmentBank() {
       });
       setTabs(postscategories);
       setSelected(postscategories[0]['id']);
+      setLoadingPage(true);
     };
     getPostCategories();
   }, []);
 
   useEffect(() => {
     const getPosts = async () => {
+      setLoadingContent(false);
       const data_en = await Apiget(API_URL + '/api/posts', {
         'where[category][equals]': selected,
         sort: 'createdAt',
@@ -95,6 +101,7 @@ export default function InvestmentBank() {
         };
       });
       setContents(posts);
+      setLoadingContent(true);
     };
     getPosts();
   }, [selected]);
@@ -126,64 +133,93 @@ export default function InvestmentBank() {
         <div className="absolute inset-0 bg-black/50 z-0" style={{ "filter": "brightness(1.31)", "WebkitFilter": "brightness(1.31)", "opacity": "0.05" }}>
           <Image src="/images/img/section_4_2.png" alt="Background Image" layout="fill" objectFit="cover" />
         </div>
-        <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] z-10`}>
-          <div className="gap-[40px] flex-col items-center lg:w-[336px] w-full min-w-[336px] ">
-            {tabs.map((tab) => (
-              <div
-                key={tab.id}
-                className={`min-h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
-                  ? 'bg-[var(--primary)]'
-                  : 'bg-[var(--canvas-bg)] hover:bg-[#C5C6CA]'
-                  }`}
-                onClick={() => setSelected(tab.id)}
-              >
-                <p className="text-[15px]">{tab[`title_${i18n.language}`]}</p>
+        {
+          loadingPage ? (
+            <div className={`flex ${!isMobile ? 'flex-row' : 'flex-col'} gap-[40px] w-[1200px] z-10`}>
+              <div className="gap-[40px] flex-col items-center lg:w-[336px] w-full min-w-[336px] ">
+                {tabs.map((tab) => (
+                  <div
+                    key={tab.id}
+                    className={`min-h-[51px] py-[12px] px-[16px] cursor-pointer transition-colors ${selected === tab.id
+                      ? 'bg-[var(--primary)]'
+                      : 'bg-[var(--canvas-bg)] hover:bg-[#C5C6CA]'
+                      }`}
+                    onClick={() => setSelected(tab.id)}
+                  >
+                    <p className="text-[15px]">{tab[`title_${i18n.language}`]}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="w-full">
-            <div className="h-[34px] border-b border-[var(--primary-other)] ">
-              <div className="h-[22px] text-error font-bold">
-                <p>{t('new_articles')}</p>
-              </div>
-            </div>
-
-            {contents.map((content: any) => (
-              <div key={content.id}>
-                <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
-                  <div className="flex flex-col gap-[10px] justify-center">
-                    <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors" onClick={() => router.push(`/investment-bank/${content.slug_en}`)} >
-                      {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
-                    </p>
-                    <p className="text-light text-[13px]">
-                      {i18n.language === 'vi'
-                        ? new Intl.DateTimeFormat('vi-VN', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        }).format(new Date(content.date))
-                        : i18n.language === 'fr'
-                          ? new Intl.DateTimeFormat('fr-FR', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          }).format(new Date(content.date))
-                          : new Intl.DateTimeFormat('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          }).format(new Date(content.date))
-                      }
-                    </p>
+              <div className="w-full">
+                <div className="h-[34px] border-b border-[var(--primary-other)] ">
+                  <div className="h-[22px] text-error font-bold">
+                    <p>{t('new_articles')}</p>
                   </div>
                 </div>
+
+                {
+                  loadingContent ? (
+                    contents.map((content: any) => (
+                      <div key={content.id}>
+                        <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
+                          <div className="flex flex-col gap-[10px] justify-center">
+                            <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors" onClick={() => router.push(`/investment-bank/${content.slug_en}`)} >
+                              {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
+                            </p>
+                            <p className="text-light text-[13px]">
+                              {i18n.language === 'vi'
+                                ? new Intl.DateTimeFormat('vi-VN', {
+                                  year: 'numeric',
+                                  month: 'long',
+                                  day: 'numeric',
+                                }).format(new Date(content.date))
+                                : i18n.language === 'fr'
+                                  ? new Intl.DateTimeFormat('fr-FR', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric',
+                                  }).format(new Date(content.date))
+                                  : new Intl.DateTimeFormat('en-US', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric',
+                                  }).format(new Date(content.date))
+                              }
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  ):
+                    (
+                      <LoadingComponent className="w-full h-[100px] flex justify-center items-center" />
+                    )
+                }
+
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          ) :
+            (
+              <LoadingComponent className="h-[400px]" />
+            )
+        }
+
       </div>
       <FooterFull active={'investment-bank'} setModalActive={setModalActive}
         modalActive={modalActive} />
     </div>
   );
+}
+
+interface LoadingComponentProps {
+  className?: string;
+}
+const LoadingComponent: React.FC<LoadingComponentProps> = ({ className }) => {
+  const { t } = useTranslation();
+  return (
+    <div className={"flex flex-col justify-center items-center w-full " + className} >
+      <ArrowsClockwise size={32} className="animate-spin text-[var(--primary)] mb-4" />
+      <p className="text-[var(--primary)] text-lg">{t('Loading')}</p>
+    </div>
+  )
 }
