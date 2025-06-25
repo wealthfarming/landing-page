@@ -24,7 +24,7 @@ const ProblemSection: React.FC = () => {
       <div className="flex gap-6 items-center self-center mt-10 text-sm font-medium text-gray-700">
         <div className="flex gap-2 items-center self-stretch my-auto">
           <div className="flex shrink-0 self-stretch my-auto w-5 h-5 bg-green-500 border border-emerald-200 border-solid rounded-[200px]" />
-          <p className="self-stretch my-auto">BEQ Preview Indexes</p>
+          <p className="self-stretch my-auto">BEQ Review Indexes</p>
         </div>
         <div className="flex gap-2 items-center self-stretch my-auto">
           <div className="flex shrink-0 self-stretch my-auto w-5 h-5 bg-rose-600 border border-red-300 border-solid rounded-[200px]" />
