@@ -78,7 +78,7 @@ const IntroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      {/* <div className="flex flex-col justify-center items-center">
         <div className="mt-10 max-w-full max-md:flex max-md:flex-col max-md:gap-2 text-sm font-medium text-gray-700 md:min-h-[555px] w-[956px] max-md:mt-0">
           <div className="flex flex-wrap flex-row gap-2 items-center w-full max-md:max-w-full">
             <img
@@ -142,7 +142,7 @@ const IntroSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </SectionContainer>
   );
 };
