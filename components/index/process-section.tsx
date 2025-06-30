@@ -100,7 +100,7 @@ const ProcessSection = forwardRef<HTMLDivElement, ProcessSectionProps>(({
           title={t('process_section_title')}
           subtitle={t('process_section_subtitle')}
         />
-        <div className="grid grid-cols-2 gap-4 mt-10">
+        <div className="grid grid-cols-2 gap-4 mt-10 items-stretch">
           {steps.map((step, index) => (
             <ProcessStep
               key={index}
