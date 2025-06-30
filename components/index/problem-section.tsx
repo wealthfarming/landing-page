@@ -8,7 +8,7 @@ const ProblemSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <SectionContainer borderBottom={false} className="max-md:!pt-0" >
+    <SectionContainer borderBottom={false} className="max-md:!pt-0 pt-10" >
       <SectionTitle
         title={t('index_problem_section_title')}
         subtitle={`"${t('index_problem_section_subtitle')}"`}
