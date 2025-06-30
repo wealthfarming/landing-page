@@ -18,7 +18,7 @@ const IntroSection: React.FC = () => {
     threshold: 0.1,
   });
   return (
-    <SectionContainer borderBottom={false}>
+    <SectionContainer borderBottom={false} className="pb-0">
       <div className="flex flex-col justify-center items-center self-stretch w-full text-center max-md:max-w-full " ref={ref}>
         <h1 className="text-5xl text-zinc-800 max-md:max-w-full max-md:text-[34px] max-w-[1000px] font-geist-raleway">
           {language == "vi" ? (
