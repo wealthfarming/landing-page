@@ -62,14 +62,14 @@ const IntroSection: React.FC = () => {
           <div>
             {language == 'en' ? (
               <a href="https://wealthfarming.app/" target="_blank" className="w-[164px]" >
-                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none w-full h-[60px] transition-transform duration-300 ease-in-out !font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] max-md:w-[132px] flex justify-center items-center`}>
+                <ButtonPrimary variant="outline" className={`!bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none w-full h-[60px] transition-transform duration-300 ease-in-out !font-[500] !text-[12px] max-md:h-10 max-md:w-[132px] flex justify-center items-center`}>
                   <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                   <p>{t("button_secret_documnet")}</p>
                 </ButtonPrimary>  
               </a>
             ) : (
-              <a href="https://wealthfarming.app/" target="_blank" className="w-[243.2px]" >
-                <ButtonPrimary variant="outline" className={` hover:brightness-[1.1] border-none button rounded-none w-full h-[60px] transition-transform duration-300 ease-in-out !font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] max-md:w-[132px] flex justify-center items-center`}>
+              <a href="https://wealthfarming.app/" target="_blank" className="w-full" >
+                <ButtonPrimary variant="outline" className={` hover:brightness-[1.1] border-none button rounded-none w-full h-[60px] transition-transform duration-300 ease-in-out !font-[500] !text-[12px] max-md:h-10 !bg-[var(--primary)] flex justify-center items-center`}>
                   <CursorClick size={24} className="min-w-[20px] min-h-[20px] animate-diagonal-2" />
                   <p>{t("button_secret_documnet")}</p>
                 </ButtonPrimary>  
@@ -86,7 +86,7 @@ const IntroSection: React.FC = () => {
               alt="Icon"
               className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
             />
-            <p className="self-stretch my-auto md:w-[768px] max-md:max-w-full max-md:whitespace-nowrap max-md:text-[12px]">
+            <p className="self-stretch my-auto md:w-[768px] max-md:max-w-full max-md:text-[12px]">
               {t("index_section_2_description")}
             </p>
           </div>
