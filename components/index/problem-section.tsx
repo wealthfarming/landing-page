@@ -3,11 +3,9 @@ import SectionContainer from "./section-container";
 import SectionTitle from "./section-title";
 import ChartIndex from "@/components/ui/chart-index";
 import { useTranslation } from "react-i18next";
-import { useInterface } from "../context/interface-context";
 
 const ProblemSection: React.FC = () => {
   const { t } = useTranslation();
-  const { isMobile } = useInterface();
 
   return (
     <SectionContainer borderBottom={false} className={`pt-[20px]`} >
