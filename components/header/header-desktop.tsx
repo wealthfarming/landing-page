@@ -19,6 +19,7 @@ import ButtonPrimary from "../custom-button/button-primary";
 
 export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
   const { t, i18n } = useTranslation();
+  const { language } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDesktop, isMobile } = useInterface();
   const {setLanguage} = useLanguage()
@@ -130,7 +131,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
 
             {/* Language Selector */}
             <Select onValueChange={handleSelectChange} defaultValue={currentLanguage}>
-            <SelectTrigger className="!h-[43px] flex flex-row items-center justify-between rounded-none bg-background !rounded-[4px] w-full mb-4 mt-4 text-[11px]">
+            <SelectTrigger className="!h-[43px] flex flex-row items-center justify-between bg-background !rounded-[4px] w-full mb-4 mt-4 text-[11px]">
                 <GlobeSimple size={18} className="min-w-[18px] min-h-[18px]" />
                 <SelectValue placeholder={changeLanguage} />
             </SelectTrigger>
@@ -142,9 +143,9 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             </Select>
 
             {/* Buttons below menu */}
-            <div className="flex w-full justify-between gap-4 mb-2">
+            <div className={`flex w-full justify-between ${language =='fr' ? 'flex-col gap-2' : 'gap-4'}  mb-2`}>
             {/* Free Support Button */}
-            <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank" className="w-[48%]">
+            <a href="https://www.facebook.com/people/Wealth-Farming/61574682066111/" target="_blank" className={`${language =='fr' ? 'w-full' : 'w-[48%]'}`}>
                 <ButtonPrimary
                 variant="outline"
                 className="w-full !bg-background hover:brightness-[0.95] button border-none rounded-none h-[40px] flex items-center justify-center gap-2 transition-transform duration-300 ease-in-out text-[11px]"
@@ -155,7 +156,7 @@ export default function HeaderDesktopFull({ changeAt }: { changeAt: number }) {
             </a>
 
             {/* Invest Now Button */}
-            <a href="https://wealthfarming.app/" target="_blank" className="w-[48%]">
+            <a href="https://wealthfarming.app/" target="_blank" className={`${language =='fr' ? 'w-full' : 'w-[48%]'}`}>
                 <ButtonPrimary
                 variant="outline"
                 className="w-full !bg-[var(--color-primary)] hover:brightness-[1.1] border-none button rounded-none h-[40px] flex items-center justify-center gap-2 transition-transform duration-300 ease-in-out text-[11px]"
