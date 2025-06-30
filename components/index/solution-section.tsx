@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const SolutionSection: React.FC = () => {
   const { t } = useTranslation()
   return (
-    <SectionContainer className="pt-0">
+    <SectionContainer className="pt-10">
       <SectionTitle
         title={<span dangerouslySetInnerHTML={{ __html: t('solution_section_title') }} />}
         subtitle={t('solution_section_subtitle')}
