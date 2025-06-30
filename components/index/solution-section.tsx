@@ -59,7 +59,7 @@ const SolutionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 shrink basis-4 min-w-60 max-md:max-w-full">
+        {/* <div className="flex-1 shrink basis-4 min-w-60 max-md:max-w-full">
           <div className="relative flex flex-col justify-center items-center px-16 py-28 w-full rounded-2xl min-h-[295px] max-md:px-5 max-md:py-24 max-md:max-w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-[#FDF0BA] to-[#CDFEE4] p-[1px] rounded-2xl">
               <div className="relative h-full rounded-2xl">
@@ -88,7 +88,7 @@ const SolutionSection: React.FC = () => {
               {t('solution_section_strategy_label')}
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </SectionContainer>
   );
