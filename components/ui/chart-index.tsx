@@ -25,6 +25,7 @@ export default function ChartIndex({
 }: ChartIndexProps) {
 
     const CustomTooltip = ({ active, payload }: any) => {
+
         if (active && payload && payload.length) {
             return (
                 <div className="bg-[var(--base-bg)] shadow-md rounded-lg p-4" style={{
@@ -44,14 +45,23 @@ export default function ChartIndex({
                             }).format(payload[0].payload['review-index'])}
                         </li>
                         <li className="me ml-4">
-                            <p className="inline text-[var(--primary-error)] !text-[--text-medium]">
+                            <p className="inline text-[var(--primary-error)]">
                                 {t('S&P 500 ')}
                             </p>
                             {new Intl.NumberFormat("en-US", {
                                 notation: "compact",
                                 compactDisplay: "short",
                                 maximumFractionDigits: 2,
-                            }).format(payload[0].payload.sp500)}</li>
+                            }).format(payload[0].payload.sp500)}
+                        </li>
+                        <li className="me ml-4">
+                            <p className="inline text-[var(--primary-info)]">{t("Date ")}</p>
+                            {new Date(payload[0].payload.date).toLocaleString("en-US", {
+                                month: "2-digit",
+                                day: "2-digit",
+                                year: "numeric",
+                            })}
+                        </li>
                     </ul>
                 </div>
             );
