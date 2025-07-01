@@ -12,7 +12,7 @@ import PartnersSection from "@/components/index/partners-section";
 import ContactSection from "@/components/index/contact-section";
 import FAQSection from "@/components/index/faq-section";
 import FooterFull from "@/components/footer/footer-full";
-import indexBanner from "../../public/images/img/index_banner.webp"
+import indexBanner from "../../public/images/nec_nft/nec_bg.jpg";
 import { useTranslation } from "react-i18next";
 
 const steps = [
