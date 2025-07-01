@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 import ButtonPrimary from "../custom-button/button-primary";
 import Images from 'next/image'
 import chartline_section2 from "../../public/images/img/chartline_section2.png"
-import RiseFade from '../animation/section2/index_grow'
+import RiseFade from '../animation/index-section-2/index_grow'
 import { useInterface } from "@/components/context/interface-context";
 
 const IntroSection: React.FC = () => {
@@ -84,7 +84,7 @@ const IntroSection: React.FC = () => {
       </div>
       <div className="flex flex-col items-center justify-center border-gray-200 p-5 w-full pb-10 relative bg-[var(--base-bg)]">
             <div className={`flex ${isDesktop ? 'flex-row' : 'flex-col'} max-w-[1100px] justify-center ${isDesktop ? 'items-start': 'items-center'} gap-[16px]  bg-[var(--base-bg)]`} style={{ zIndex: 101 }}>
-                <Images src={chartline_section2} alt="Section base 2" width={1200} height={80} className={`absolute w-full -z-10 ${isDesktop ? 'top-0' : 'top-[22%]'}`} />
+                <Images src={chartline_section2} alt="Section base 2" width={1100} height={80} className={`absolute w-full -z-10 ${isDesktop ? 'top-0' : 'top-[22%]'}`} />
                 <div className='-z-10'>
                     <RiseFade num={30} />
                     <RiseFade num={20} />
