@@ -13,12 +13,9 @@ import HomeSection7 from "@/components/home-section/section-7"
 import FooterFull from "@/components/footer/footer-full";
 import { useInterface } from "@/components/context/interface-context";
 import productBase from "../../public/images/img/product_base.jpg"
-import { useTranslation } from "react-i18next";
 import React from "react";
-import { X } from "@phosphor-icons/react";
 import VideoBox from "../footer/video_box";
 export default function HomePage() {
-    const { t } = useTranslation();
     const { isDesktop, isTablet } = useInterface();
     const [modalActive, setModalActive] = React.useState(false);
     return (
