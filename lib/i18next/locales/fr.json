@@ -308,5 +308,6 @@
   "invoice": "Facture",
   "health": "Santé",
   "guide_video": "Vidéo tutoriel",
-  "guide_video_src": "https://www.youtube-nocookie.com/embed/V6uJQ9GSe7s?si=z8pDKil7CY78zjdA"
+  "guide_video_src": "https://www.youtube-nocookie.com/embed/V6uJQ9GSe7s?si=z8pDKil7CY78zjdA",
+  "date": "Date"
 }
