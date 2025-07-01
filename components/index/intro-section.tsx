@@ -96,43 +96,43 @@ const IntroSection: React.FC = () => {
             </div>
       </div>
       <div className="flex flex-col justify-center items-center">
-  <div className="mt-20 max-w-full max-md:flex max-md:flex-row max-md:gap-4 text-sm font-medium text-gray-700 w-[956px] max-md:w-full max-md:px-4 max-md:mt-4">
-  <div className="w-full flex flex-row max-md:flex-row max-md:gap-4 md:gap-[500px] md:mt-5 justify-center px-4 md:px-0">
-    {/* Profit Component */}
-    <div className="w-[140px] md:w-[202px] h-[72px] bg-white rounded-[6px] border-[var(--primary-border)] border">
-      <div className="md:w-[202px] flex flex-col justify-center items-center h-full w-full font-[var(--font-geist-display)]">
-        <div className="flex flex-row items-center justify-center h-1/3 md:h-1/2 w-full border-b-[1px] border-b-gray-300 text-[12px] md:text-[16px] !font-medium">
-          {t('profit')}
-        </div>
-        <div className="flex flex-col md:flex-row items-center text-center h-2/3 md:h-1/2 w-full font-[var(--font-geist-display)]">
-          <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#23CB70] text-[16px] md:text-[24px] text-white font-[700]">
-            <p>82.55%</p>
+        <div className="mt-20 max-w-full max-md:flex max-md:flex-row max-md:gap-4 text-sm font-medium text-gray-700 w-[956px] max-md:w-full max-md:px-4 max-md:mt-4">
+        <div className="w-full flex flex-row max-md:flex-row max-md:gap-4 md:gap-[500px] md:mt-5 justify-center px-4 md:px-0">
+          {/* Profit Component */}
+          <div className="w-[140px] md:w-[202px] h-[72px] bg-white rounded-[6px] border-[var(--primary-border)] border">
+            <div className="md:w-[202px] flex flex-col justify-center items-center h-full w-full font-[var(--font-geist-display)]">
+              <div className="flex flex-row items-center justify-center h-1/3 md:h-1/2 w-full border-b-[1px] border-b-gray-300 text-[12px] md:text-[16px] !font-medium">
+                {t('profit')}
+              </div>
+              <div className="flex flex-col md:flex-row items-center text-center h-2/3 md:h-1/2 w-full font-[var(--font-geist-display)]">
+                <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#23CB70] text-[16px] md:text-[24px] text-white font-[700]">
+                  <p>82.55%</p>
+                </div>
+                <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#23CB70] text-[14px] md:text-[18px] !font-[700]">
+                  <p>{t('year')}</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#23CB70] text-[14px] md:text-[18px] !font-[700]">
-            <p>{t('year')}</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    {/* Liquidity Component */}
-    <div className="w-[140px] md:w-[202px] h-[76px] bg-white rounded-[6px] border-[var(--primary-border)] border">
-      <div className="md:w-[202px] flex flex-col justify-center items-center h-full w-full font-[var(--font-geist-display)]">
-        <div className="flex flex-row items-center justify-center h-1/3 md:h-1/2 w-full border-b-[1px] border-b-gray-300 text-[12px] md:text-[16px] font-[500]">
-          {t('liquidity')}
-        </div>
-        <div className="flex flex-col md:flex-row-reverse items-center text-center h-2/3 md:h-1/2 w-full">
-          <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#E8B561] text-[14px] md:text-[18px] font-[700]">
-            <p>{t('continuity')}</p>
-          </div>
-          <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#E8B561] text-[16px] md:text-[24px] text-white font-[700] rounded-b-[6px]">
-            <p>24/7</p>
+          {/* Liquidity Component */}
+          <div className="w-[140px] md:w-[202px] h-[76px] bg-white rounded-[6px] border-[var(--primary-border)] border">
+            <div className="md:w-[202px] flex flex-col justify-center items-center h-full w-full font-[var(--font-geist-display)]">
+              <div className="flex flex-row items-center justify-center h-1/3 md:h-1/2 w-full border-b-[1px] border-b-gray-300 text-[12px] md:text-[16px] font-[500]">
+                {t('liquidity')}
+              </div>
+              <div className="flex flex-col md:flex-row-reverse items-center text-center h-2/3 md:h-1/2 w-full">
+                <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full text-[#E8B561] text-[14px] md:text-[18px] font-[700]">
+                  <p>{t('continuity')}</p>
+                </div>
+                <div className="flex justify-center items-center w-full md:w-1/2 h-1/2 md:h-full bg-[#E8B561] text-[16px] md:text-[24px] text-white font-[700] rounded-b-[6px]">
+                  <p>24/7</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
     </div>
     </SectionContainer>
   );
