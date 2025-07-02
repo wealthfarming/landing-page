@@ -171,14 +171,15 @@ const Section1: React.FC = () => {
                                         className='object-cover'
                                         src={necSectinChartDown}
                                     />
-                                   <div className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center max-w-[200px] white-space-pre-line'>
-                                    {t('spending_never_returns')}
-                                    </div>
+                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px]'>
+                                        <span>{t('spending')}</span>
+                                        <span className='whitespace-nowrap'>{t('never_returns')}</span>
+                                    </p>
                                 </div>
                                 <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
                                     {t('nec_section_1_char_decs_1')}
                                 </p>
-                                </div>
+                            </div>
                         </div>
                     </div>
 
