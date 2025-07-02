@@ -126,7 +126,7 @@ const Section1: React.FC = () => {
                                 text={[
                                     t("nec_section_1_char_title_1"),
                                 ]}
-                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] "]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
@@ -156,7 +156,7 @@ const Section1: React.FC = () => {
                                 text={[
                                     t("nec_section_1_char_title_2"),
                                 ]}
-                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px]"]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
@@ -182,7 +182,6 @@ const Section1: React.FC = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className='w-full flex flex-col justify-center items-center z-[5] px-[20px] md:px-[40px]'>
                     <div className='w-full max-w-[1200px] flex justify-center items-center z-[5] flex-col gap-[10px]'>
