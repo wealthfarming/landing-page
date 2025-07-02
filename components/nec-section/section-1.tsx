@@ -126,7 +126,7 @@ const Section1: React.FC = () => {
                                 text={[
                                     t("nec_section_1_char_title_1"),
                                 ]}
-                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] "]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
@@ -141,7 +141,7 @@ const Section1: React.FC = () => {
                                         className='object-cover'
                                         src={necSectinChartUp}
                                     />
-                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px]'>
+                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px] max-md:text-xs'>
                                         <span>1000 USD</span>
                                         <span className='whitespace-nowrap'>{t('monthly_passive_income')}</span>
                                     </p>
@@ -156,7 +156,7 @@ const Section1: React.FC = () => {
                                 text={[
                                     t("nec_section_1_char_title_2"),
                                 ]}
-                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px] max-md:text-[24px] "]}
+                                customClass={["font-[500] md:font-[600] font-geist-raleway text-[16px] md:text-[24px]"]}
                                 delayBetween={0.05}
                                 duration={0.3}
                                 inView={inView}
@@ -171,17 +171,17 @@ const Section1: React.FC = () => {
                                         className='object-cover'
                                         src={necSectinChartDown}
                                     />
-                                   <div className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center max-w-[200px] white-space-pre-line'>
-                                    {t('spending_never_returns')}
-                                    </div>
+                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px] max-md:text-xs'>
+                                        <span>{t('spending')}</span>
+                                        <span className='whitespace-nowrap'>{t('never_returns')}</span>
+                                    </p>
                                 </div>
                                 <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
                                     {t('nec_section_1_char_decs_1')}
                                 </p>
-                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
                 <div className='w-full flex flex-col justify-center items-center z-[5] px-[20px] md:px-[40px]'>
                     <div className='w-full max-w-[1200px] flex justify-center items-center z-[5] flex-col gap-[10px]'>
