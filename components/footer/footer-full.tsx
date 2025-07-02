@@ -159,7 +159,7 @@ const FooterFull: React.FC<FooterProps> = ({ active, fixed = true, classname, se
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center px-10 pt-4 pb-1 w-full text-sm font-medium border-b border-gray-200">
+      <div className="flex flex-col justify-center items-center px-10 py-4 w-full text-sm font-medium">
         <div className="flex gap-10 justify-center w-full max-w-[1200px] max-md:max-w-full">
           <p className="flex-1 shrink opacity-50 basis-0 max-md:max-w-full">
             {t('footer_copyright')}
