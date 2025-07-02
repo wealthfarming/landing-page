@@ -141,7 +141,7 @@ const Section1: React.FC = () => {
                                         className='object-cover'
                                         src={necSectinChartUp}
                                     />
-                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px]'>
+                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px] max-md:text-xs'>
                                         <span>1000 USD</span>
                                         <span className='whitespace-nowrap'>{t('monthly_passive_income')}</span>
                                     </p>
@@ -171,7 +171,7 @@ const Section1: React.FC = () => {
                                         className='object-cover'
                                         src={necSectinChartDown}
                                     />
-                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px]'>
+                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px] max-md:text-xs'>
                                         <span>{t('spending')}</span>
                                         <span className='whitespace-nowrap'>{t('never_returns')}</span>
                                     </p>
