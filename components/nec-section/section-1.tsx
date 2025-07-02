@@ -9,8 +9,8 @@ import Jar from '../animation/nec_section_1/jar';
 import ButtonPrimary from '../custom-button/button-primary';
 import { CursorClick } from '@phosphor-icons/react';
 import necSection1 from '../../public/images/nec_nft/nec-section-1-main.webp';
-import necSectinChartUp from '../../public/images/nec_nft/nec_section_1_charUp.avif';
-import necSectinChartDown from '../../public/images/nec_nft/nec_section_1_charDown.avif';
+import necSectinChartUp from '../../public/images/nec_nft/nec_section_1_charUp.png';
+import necSectinChartDown from '../../public/images/nec_nft/nec_section_1_charDown.png';
 import necSection1_1 from '../../public/images/nec_nft/nec_section_1_1.avif';
 import necSection1_2 from '../../public/images/nec_nft/nec_section_1_2.avif';
 import necSection1_3 from '../../public/images/nec_nft/nec_section_1_3.avif';
@@ -133,17 +133,23 @@ const Section1: React.FC = () => {
                                 center={true}
                             />
                             <div className='w-full flex flex-col justify-center items-center gap-[16px]'>
-                                <Image
-                                    alt='nec-section-1_chart_up'
-                                    width={279}
-                                    height={232.5}
-                                    className='object-cover'
-                                    src={necSectinChartUp}
-                                />
+                                <div className='relative'>
+                                    <Image
+                                        alt='nec-section-1_chart_up'
+                                        width={279}
+                                        height={232.5}
+                                        className='object-cover'
+                                        src={necSectinChartUp}
+                                    />
+                                    <p className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center flex flex-col max-w-[200px]'>
+                                        <span>1000 USD</span>
+                                        <span className='whitespace-nowrap'>{t('monthly_passive_income')}</span>
+                                    </p>
+                                </div>
                                 <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
-                                    {t("nec_section_1_char_decs_1")}
+                                    {t('nec_section_1_char_decs_1')}
                                 </p>
-                            </div>
+                                </div>
                         </div>
                         <div className='w-1/2 h-full justify-between flex items-center flex-col  p-0 md:p-10'>
                             <AnimatedText
@@ -157,18 +163,22 @@ const Section1: React.FC = () => {
                                 center={true}
                             />
                             <div className='w-full flex flex-col justify-center items-center gap-[16px]'>
-                                <Image
-                                    alt='nec-section-1_chart_down'
-                                    width={279}
-                                    height={232.5}
-                                    className='object-cover'
-                                    src={necSectinChartDown}
-                                />
-                               <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
-                                    {t("nec_section_1_char_decs_2")}
+                                <div className='relative'>
+                                    <Image
+                                        alt='nec-section-1_chart_up'
+                                        width={279}
+                                        height={232.5}
+                                        className='object-cover'
+                                        src={necSectinChartDown}
+                                    />
+                                   <div className='absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center max-w-[200px] white-space-pre-line'>
+                                    {t('spending_never_returns')}
+                                    </div>
+                                </div>
+                                <p className='font-geist-raleway text-[14px] md:text-[18px] md:font-[600]'>
+                                    {t('nec_section_1_char_decs_1')}
                                 </p>
-                            </div>
-
+                                </div>
                         </div>
                     </div>
 
