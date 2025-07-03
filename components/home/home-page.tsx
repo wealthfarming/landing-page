@@ -27,7 +27,7 @@ export default function HomePage() {
                     {isDesktop &&
                         <div className="w-full h-[260px] relative z-[1]" >
                             <div className="absolute inset-0 bg-black/50 z-10"></div>
-                            <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+                            <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" priority/>
                         </div>
                     }
                     <HomeSection1 />
