@@ -163,7 +163,7 @@ export default function InvestmentBank() {
                       <div key={content.id}>
                         <div className="h-[97px] py-[20px] border-b border-[var(--primary-other)]">
                           <div className="flex flex-col gap-[10px] justify-center">
-                            <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors" onClick={() => router.push(`/investment-bank/${content.slug_en}`)} >
+                            <p className="text-[15px] hover:text-[#f1c204] cursor-pointer transition-colors" onClick={() => router.push(`/investment-bank/${i18n.language}/${content.slug_en}`)} >
                               {content[`title_${i18n.language}`] || content[`title_en`] || content[`title_fr`] || 'No title'}
                             </p>
                             <p className="text-light text-[13px]">
