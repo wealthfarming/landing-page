@@ -15,7 +15,7 @@ import { useInView } from 'react-intersection-observer';
 type Tab = {
     id: string;
     label: string;
-    img: StaticImageData;
+    img: string;
     content: string;
 };
 
