@@ -5,11 +5,10 @@ import HeaderDesktopFull from "@/components/header/header-desktop";
 import ProductInfoCard from "@/components/product/product-info-card";
 import { AnimatedText } from "@/components/animation/introduction/Animations"
 import Image from "next/image";
-import productBase from "../../public/images/img/product_base.jpg"
+// import productBase from "../../public/images/img/product_base.jpg"
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
-import { X } from "@phosphor-icons/react";
 import VideoBox from "@/components/footer/video_box";
 
 export default function ProductPage() {
@@ -28,7 +27,7 @@ export default function ProductPage() {
             {isDesktop &&
                 <div className="w-full h-[260px] relative z-[1]" >
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
-                    <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+                    <Image src="https://res.cloudinary.com/dvtuy0whs/image/upload/v1751790549/product_base_crcdbv.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
             }
             <div className={`w-full flex-grow flex flex-col items-center justify-start bg-background ${isDesktop ? ' mt-0 pb-[40px]' : ' mt-18 '} relative z-30`}>
