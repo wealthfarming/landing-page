@@ -12,7 +12,7 @@ import HomeSection6 from "@/components/home-section/section-6"
 import HomeSection7 from "@/components/home-section/section-7"
 import FooterFull from "@/components/footer/footer-full";
 import { useInterface } from "@/components/context/interface-context";
-import productBase from "../../public/images/img/product_base.jpg"
+// import productBase from "../../public/images/img/product_base.jpg"
 import React from "react";
 import VideoBox from "../footer/video_box";
 export default function HomePage() {
@@ -27,7 +27,7 @@ export default function HomePage() {
                     {isDesktop &&
                         <div className="w-full h-[260px] relative z-[1]" >
                             <div className="absolute inset-0 bg-black/50 z-10"></div>
-                            <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" priority/>
+                            <Image src="https://res.cloudinary.com/dvtuy0whs/image/upload/v1751790549/product_base_crcdbv.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" priority/>
                         </div>
                     }
                     <HomeSection1 />

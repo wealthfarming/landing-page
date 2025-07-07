@@ -14,12 +14,9 @@ import Section6 from "@/components/nec-section/section-6";
 import Section7 from "@/components/nec-section/section-7";
 import Section8 from "@/components/nec-section/section-8";
 import Section9 from "@/components/nec-section/section-9";
-import { X } from '@phosphor-icons/react';
-import { useTranslation } from "react-i18next";
 import VideoBox from '@/components/footer/video_box';
 
 const NecLandingPage: React.FC = () => {
-    const { t } = useTranslation();
     const [modalActive, setModalActive] = useState(false);
     const { isDesktop } = useInterface();
     return (
@@ -29,7 +26,7 @@ const NecLandingPage: React.FC = () => {
             {isDesktop &&
                 <div className="w-full h-[260px] relative z-[1]">
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
-                    <Image src={indexBanner} alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+                    <Image src="https://res.cloudinary.com/dvtuy0whs/image/upload/v1751855448/nec_bg_kwkubx.jpg" alt="Index Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
                 </div>
             }
             <Section1 />

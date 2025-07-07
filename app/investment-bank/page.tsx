@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { AnimatedText } from "@/components/animation/introduction/Animations";
 import { Apiget } from "@/lib/api/get";
 import { API_URL } from "@/lib/config";
-import productBase from "../../public/images/img/product_base.jpg";
+// import productBase from "../../public/images/img/product_base.jpg";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
 import { ArrowsClockwise, X } from "@phosphor-icons/react";
@@ -112,7 +112,7 @@ export default function InvestmentBank() {
       <VideoBox modalActive={modalActive} setModalActive={setModalActive} />
       <div className="w-full h-[260px] relative z-[1]" >
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+        <Image src="https://res.cloudinary.com/dvtuy0whs/image/upload/v1751790549/product_base_crcdbv.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
       </div>
 
       <div className="flex justify-center w-full h-[120px] md:h-[135px] gap-[10px] py-[40px] md:px-[40px] px-[20px] items-center bg-[var(--canvas-bg)] relative" style={{ zIndex: 30 }}>

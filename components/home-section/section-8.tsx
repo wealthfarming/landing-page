@@ -5,13 +5,13 @@ import Image, { StaticImageData } from "next/image";
 import { useInterface } from '@/components/context/interface-context';
 import { Plus } from 'phosphor-react';
 import { AnimatedText, FadeInSection } from "@/components/animation/introduction/Animations"
-import section8_1 from "@/public/images/home-section-6/01.png"
-import section8_2 from "@/public/images/home-section-6/02.png"
-import section8_3 from "@/public/images/home-section-6/03.png"
-import section8_4 from "@/public/images/home-section-6/04.png"
-import section8_5 from "@/public/images/home-section-6/05.png"
+// import section8_1 from "@/public/images/home-section-6/01.png"
+// import section8_2 from "@/public/images/home-section-6/02.png"
+// import section8_3 from "@/public/images/home-section-6/03.png"
+// import section8_4 from "@/public/images/home-section-6/04.png"
+// import section8_5 from "@/public/images/home-section-6/05.png"
 import { useInView } from 'react-intersection-observer';
-
+ 
 type Tab = {
     id: string;
     label: string;
@@ -114,31 +114,31 @@ export default function HomeSection8() {
         {
             id: '01',
             label: t('home_section_6_tab_label_1'),
-            img: section8_1,
+            img: "https://res.cloudinary.com/dvtuy0whs/image/upload/v1751855043/01_aovxu6.png",
             content: t('home_section_6_tab_content_1')
         },
         {
             id: '02',
             label: t('home_section_6_tab_label_2'),
-            img: section8_2,
+            img: "https://res.cloudinary.com/dvtuy0whs/image/upload/v1751855060/02_wlm9np.png",
             content: t('home_section_6_tab_content_2')
         },
         {
             id: '03',
             label: t('home_section_6_tab_label_3'),
-            img: section8_3,
+            img: "https://res.cloudinary.com/dvtuy0whs/image/upload/v1751855076/03_tbjzol.png",
             content: t('home_section_6_tab_content_3')
         },
         {
             id: '04',
             label: t('home_section_6_tab_label_4'),
-            img: section8_4,
+            img: "https://res.cloudinary.com/dvtuy0whs/image/upload/v1751790549/product_base_crcdbv.jpg",
             content: t('home_section_6_tab_content_4')
         },
         {
             id: '05',
             label: t('home_section_6_tab_label_5'),
-            img: section8_5,
+            img: "https://res.cloudinary.com/dvtuy0whs/image/upload/v1751855104/05_ql6756.png",
             content: t('home_section_6_tab_content_5')
         },
     ];

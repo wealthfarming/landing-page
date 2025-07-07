@@ -7,14 +7,13 @@ import FooterFull from "@/components/footer/footer-full";
 import HeaderDesktopFull from "@/components/header/header-desktop";
 import { useTranslation } from "react-i18next";
 import Image, { StaticImageData } from "next/image";
-import productBase from "../../public/images/img/product_base.jpg"
+// import productBase from "../../public/images/img/product_base.jpg"
 import eco1 from "../../public/images/img/eco-1.png"
 import eco2 from "../../public/images/img/eco-2.png"
 import eco3 from "../../public/images/img/eco-3.png"
 import eco4 from "../../public/images/img/eco-4.png"
 import { useInView } from "react-intersection-observer";
 import React from "react";
-import { X } from "@phosphor-icons/react";
 import VideoBox from "@/components/footer/video_box";
 
 type ContentItem = string;
@@ -81,7 +80,7 @@ export default function EcoPage() {
       {isDesktop &&
         <div className="w-full h-[260px] relative z-[1]">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image src={productBase} alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
+          <Image src="https://res.cloudinary.com/dvtuy0whs/image/upload/v1751790549/product_base_crcdbv.jpg" alt="Product Banner" width={735} height={260} className="w-full h-[260px] object-cover" />
         </div>
       }
       <div
