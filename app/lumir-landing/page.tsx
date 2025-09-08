@@ -41,7 +41,7 @@ const lumirContentVi = `
       <span class="badge">Tiện ích thực</span>
     </p>
     <p>👉 Trở thành một trong những Pioneers đầu tiên định hình tương lai behavioral trading cùng BeQ Ops LUMIR.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Mua NFT Ngay</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Mua NFT Ngay</a></p>
   </header>
 
   <section>
@@ -298,7 +298,7 @@ const lumirContentVi = `
       <li>⚡ Nguồn cung giới hạn – hết là không còn</li>
       <li>🚀 Người dùng sớm = Quyền lực sớm – Pioneer Council quyết định nhiều hướng đi chiến lược</li>
     </ul>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Mua Ngay 🚀</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Mua Ngay 🚀</a></p>
   </section>
 
   <section>
@@ -339,7 +339,7 @@ const lumirContentVi = `
 
   <footer style="margin-top:24px;">
     <p><strong>Pioneer NFT</strong> không chỉ là một NFT. Đây là chiếc chìa khóa mở ra vị thế, quyền lực, và hành trình trở thành Elite Trader.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Mua ngay trên Wealthfarming.app</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Mua ngay trên Wealthfarming.app</a></p>
   </footer>
 </section>
 `;
@@ -378,7 +378,7 @@ const lumirContentEn = `
       <span class="badge">Real Utility</span>
     </p>
     <p>👉 Become one of the first Pioneers shaping the future of behavioral trading with BeQ Ops LUMIR.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy NFT Now</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Buy NFT Now</a></p>
   </header>
 
   <section>
@@ -635,7 +635,7 @@ const lumirContentEn = `
       <li>⚡ Limited supply — once it’s gone, it’s gone</li>
       <li>🚀 Early adopters = early power — the Pioneer Council influences strategic directions</li>
     </ul>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy Today 🚀</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Buy Today 🚀</a></p>
   </section>
 
   <section>
@@ -676,7 +676,7 @@ const lumirContentEn = `
 
   <footer style="margin-top:24px;">
     <p><strong>Pioneer NFT</strong> is more than an NFT. It is the key to position, power, and the journey to becoming an Elite Trader.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy now on Wealthfarming.app</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Buy now on Wealthfarming.app</a></p>
   </footer>
 </section>
 `;
@@ -715,7 +715,7 @@ const lumirContentFr = `
       <span class="badge">Utilité réelle</span>
     </p>
     <p>👉 Devenez l’un des premiers Pioneers à façonner l’avenir du behavioral trading avec BeQ Ops LUMIR.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Acheter le NFT maintenant</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Acheter le NFT maintenant</a></p>
   </header>
 
   <section>
@@ -971,7 +971,7 @@ const lumirContentFr = `
       <li>⚡ Offre limitée — une fois épuisée, c’est fini</li>
       <li>🚀 Early adopters = early power — le Pioneer Council influence les orientations stratégiques</li>
     </ul>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Acheter aujourd’hui 🚀</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Acheter aujourd’hui 🚀</a></p>
   </section>
 
   <section>
@@ -1012,7 +1012,7 @@ const lumirContentFr = `
 
   <footer style="margin-top:24px;">
     <p><strong>Pioneer NFT</strong> est plus qu’un NFT. C’est la clé de la position, du pouvoir et du chemin vers l’Elite Trader.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Acheter maintenant sur Wealthfarming.app</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Acheter maintenant sur Wealthfarming.app</a></p>
   </footer>
 </section>
 `;
