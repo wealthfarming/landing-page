@@ -299,5 +299,97 @@
   "date": "Ngày",
   "monthly_passive_income": "Mỗi tháng thu nhập tự động",
   "spending": "Tiêu dùng",
-  "never_returns": "không bao giờ quay lại"
+  "never_returns": "không bao giờ quay lại",
+  "hero": {
+    "badges": ["Limited", "Exclusive Access", "Real Utility"],
+    "title": "Pioneer NFT – Không chỉ là nghệ thuật, mà là quyền lực trong tay bạn",
+    "subtitle": "NFT duy nhất mang đến cả giá trị sử dụng và cơ chế bảo toàn vốn minh bạch.",
+    "or": "Hoặc",
+    "altHeadline": "Pioneer NFT: Cánh cửa vào hành trình Elite Trader, bảo toàn 90% giá trị sau 90 ngày",
+    "imageAlt": "Pioneer NFT cover"
+  },
+  "cta": {
+    "buyNow": "Mua Ngay",
+    "buyNowShort": "Mua ngay",
+    "learnMore": "Tìm hiểu thêm",
+    "activate": "Kích hoạt tiện ích",
+    "bottom": {
+      "title": "Sẵn sàng bắt đầu hành trình Elite Trader?",
+      "desc": "Sở hữu Pioneer NFT để mở toàn bộ đặc quyền và cơ chế bảo toàn giá trị minh bạch."
+    }
+  },
+  "valueProtection": {
+    "title": "🛡 Chính sách Bảo toàn Giá trị – Pioneer NFT",
+    "intro": "Tại LUMIR, niềm tin là vốn quý nhất. Mỗi Pioneer NFT đi kèm cơ chế <strong>Value Protection</strong> giúp bạn an tâm tuyệt đối.",
+    "phase90": {
+      "title": "⏳ 90 Ngày Khởi Đầu – Trải Nghiệm Trọn Vẹn",
+      "p1": "90 ngày đầu: toàn quyền sử dụng SaaS, tham gia Pioneer Council, nhận Loyalty Rewards, vào 13W Challenge.",
+      "p2": "Đồng thời LUMIR triển khai và tái đầu tư để xây dựng reward pool minh bạch & bền vững."
+    },
+    "redemption": {
+      "title": "🔑 Quyền Lợi Quy Đổi – Sau 90 Ngày",
+      "p1": "Từ ngày 91–120, bạn có quyền quy đổi Pioneer NFT lại cho LUMIR.",
+      "p2": "Nhận <strong>tối thiểu 90% giá trị mua ban đầu</strong>, ngay cả khi đã dùng một phần quyền lợi (&lt;10% giá trị).",
+      "p3": "Quy trình <em>on-chain</em>, minh bạch, không phí ẩn, công bằng tuyệt đối."
+    },
+    "meaning": {
+      "title": "🌍 Ý Nghĩa Của Chính Sách",
+      "items": [
+        "<strong>An toàn cho nhà đầu tư:</strong> giữ NFT để nhận lợi ích dài hạn hoặc quy đổi để bảo toàn vốn.",
+        "<strong>Công bằng cho hệ sinh thái:</strong> 90 ngày đầu giúp vận hành vốn, duy trì reward pool, bảo vệ cộng đồng.",
+        "<strong>Cam kết dài hạn:</strong> tuyên bố tầm nhìn LUMIR – cộng đồng Pioneer thịnh vượng, bền vững, minh bạch."
+      ]
+    }
+  },
+  "team": {
+    "title": "👥 Team Access & Quyền lợi Hệ sinh thái",
+    "desc": "Tối ưu hoá 13W Challenge cho đội nhóm & xây dựng xương sống chiến thuật.",
+    "items": [
+      "Bạn có thể quy đổi <strong>50 Pro + 10 Premium SaaS Licenses</strong> thành cơ hội cho <strong>10 thành viên</strong> cùng tham gia <strong>13W Challenge</strong>.",
+      "<strong>Kích hoạt 13W Challenge dạng đội nhóm</strong> → rèn kỷ luật tập thể, nâng hiệu suất & tỷ lệ hoàn thành mục tiêu.",
+      "<strong>Mở quyền lợi hệ sinh thái cho đội Pioneer</strong> (định danh trên leaderboard): ưu tiên DAO/community, đề cử <em>Matching Capital</em>, danh hiệu <em>Founding Trader Team</em>, ưu tiên challenge/pool cho holder.",
+      "<strong>Phân bổ Premium cho “lead” + Pro cho thành viên</strong> → tạo xương sống chiến thuật & <em>Behavioral Protection System™</em> cho cả đội suốt 13 tuần."
+    ]
+  },
+  "trust": {
+    "title": "🛡 Niềm tin & Bảo chứng",
+    "desc": "Các yếu tố bảo chứng minh bạch và chuẩn quốc tế.",
+    "items": [
+      "Backed by BeQ Holdings Group – tập đoàn đầu tư & quản lý quỹ tín thác",
+      "Công nghệ độc quyền TBI – Trader Behavioral Index, khoa học hành vi ứng dụng",
+      "Cộng đồng toàn cầu – VN, Thái Lan, Ấn Độ, Mỹ, EU",
+      "On-chain transparency — Rewards minh bạch, không hứa hẹn lợi nhuận cố định",
+      "<strong>WF 90-Day Buyback</strong> — thu mua lại trong 90 ngày với tối thiểu 90% giá trị mint ban đầu (điều khoản áp dụng)"
+    ]
+  },
+  "faq": {
+    "title": "❓ FAQ – Chính sách Bảo toàn Giá trị",
+    "desc": "Những câu hỏi thường gặp về Value Protection & quy đổi.",
+    "items": [
+      {
+        "q": "Q1. Pioneer NFT có chính sách bảo đảm giá trị không?",
+        "a": "👉 Có. Đi kèm <strong>Value Protection</strong>, quyền quy đổi sau <strong>90 ngày</strong> để nhận <strong>≥ 90%</strong> giá trị mua ban đầu."
+      },
+      {
+        "q": "Q2. Tại sao phải chờ 90 ngày mới có thể quy đổi?",
+        "a": "👉 90 ngày đầu để trải nghiệm quyền lợi (SaaS, Challenge, Loyalty Rewards…) và LUMIR vận hành vốn nhằm đảm bảo minh bạch & bền vững cho reward pool."
+      },
+      {
+        "q": "Q3. Đã dùng một phần quyền lợi thì có được hoàn tiền không?",
+        "a": "👉 Có. Sau 90 ngày vẫn nhận <strong>90%</strong> giá trị ban đầu; phần sử dụng thường &lt;10%."
+      },
+      {
+        "q": "Q4. Khi quy đổi, tôi nhận lại bằng gì?",
+        "a": "👉 <strong>USDT/USDC</strong> qua smart contract hoặc cổng quy đổi của WealthFarming."
+      },
+      {
+        "q": "Q5. Nếu sau 180 ngày mới muốn dừng?",
+        "a": "👉 Không còn bảo đảm refund. Bạn có thể giữ NFT để nhận Loyalty & SaaS chưa dùng, hoặc bán/chuyển nhượng trên marketplace."
+      },
+      {
+        "q": "Q6. Chính sách này có cam kết lợi nhuận không?",
+        "a": "👉 <strong>Không</strong>. Loyalty Rewards theo hiệu suất hệ sinh thái (không cố định). Cơ chế bảo toàn chỉ đảm bảo <strong>≥ 90%</strong> sau 90 ngày."
+      }
+    ]
+  }
 }

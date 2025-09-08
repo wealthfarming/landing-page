@@ -312,5 +312,97 @@
   "date": "Date",
   "monthly_passive_income": "Revenu passif mensuel",
   "spending": "Les dépenses",
-  "never_returns": "ne reviennent jamais"
+  "never_returns": "ne reviennent jamais",
+  "hero": {
+    "badges": ["Limité", "Accès exclusif", "Utilité réelle"],
+    "title": "Pioneer NFT — pas seulement de l’art, mais du pouvoir entre vos mains",
+    "subtitle": "Le seul NFT qui apporte une utilité réelle et un mécanisme transparent de protection du capital.",
+    "or": "Ou",
+    "altHeadline": "Pioneer NFT : votre porte d’entrée vers un parcours de Trader d’élite, avec 90 % de valeur protégée après 90 jours",
+    "imageAlt": "Couverture Pioneer NFT"
+  },
+  "cta": {
+    "buyNow": "Acheter maintenant",
+    "buyNowShort": "Acheter",
+    "learnMore": "En savoir plus",
+    "activate": "Activer l’utilité",
+    "bottom": {
+      "title": "Prêt·e pour le parcours d’Elite Trader ?",
+      "desc": "Possédez un Pioneer NFT pour débloquer tous les privilèges avec une protection de valeur transparente."
+    }
+  },
+  "valueProtection": {
+    "title": "🛡 Politique de Protection de Valeur — Pioneer NFT",
+    "intro": "Chez LUMIR, la confiance est le capital le plus précieux. Chaque Pioneer NFT inclut un mécanisme de <strong>Protection de Valeur</strong> pour une sérénité totale.",
+    "phase90": {
+      "title": "⏳ 90 premiers jours — Expérience complète",
+      "p1": "Licences SaaS, participation au Pioneer Council, Loyalty Rewards, et 13W Challenge.",
+      "p2": "LUMIR déploie et réinvestit le capital afin de constituer un reward pool transparent & durable."
+    },
+    "redemption": {
+      "title": "🔑 Droit de rachat — Après 90 jours",
+      "p1": "Du jour 91 à 120, vous pouvez racheter votre Pioneer NFT auprès de LUMIR.",
+      "p2": "Recevez <strong>au minimum 90 % du prix d’achat initial</strong>, même si une partie des avantages a été utilisée (&lt;10 %).",
+      "p3": "Processus <em>on-chain</em>, transparent, sans frais cachés."
+    },
+    "meaning": {
+      "title": "🌍 Portée de la politique",
+      "items": [
+        "<strong>Sécurité pour les détenteurs :</strong> conserver le NFT pour l’utilité long terme ou le racheter pour préserver le capital.",
+        "<strong>Équité pour l’écosystème :</strong> les 90 premiers jours soutiennent l’opérationnel et le reward pool.",
+        "<strong>Engagement long terme :</strong> la vision de LUMIR — une communauté Pioneer prospère, durable et transparente."
+      ]
+    }
+  },
+  "team": {
+    "title": "👥 Accès Équipe & Avantages Écosystème",
+    "desc": "Optimisez le 13W Challenge en équipe & bâtissez une colonne vertébrale stratégique.",
+    "items": [
+      "Convertissez <strong>50 Pro + 10 Premium SaaS Licenses</strong> en opportunités pour <strong>10 membres</strong> de rejoindre ensemble le <strong>13W Challenge</strong>.",
+      "<strong>Activer le 13W Challenge en mode équipe</strong> → discipline collective, performance supérieure, meilleure atteinte des objectifs.",
+      "<strong>Déverrouiller des avantages pour l’équipe Pioneer</strong> (identité sur le leaderboard) : priorité DAO/communauté, nomination <em>Matching Capital</em>, désignation <em>Founding Trader Team</em>, accès prioritaire aux challenges/pools pour holders.",
+      "<strong>Allouer Premium au « lead » + Pro aux membres</strong> → colonne vertébrale stratégique & <em>Behavioral Protection System™</em> pour 13 semaines."
+    ]
+  },
+  "trust": {
+    "title": "🛡 Confiance & Garanties",
+    "desc": "Des garanties transparentes conformes aux standards internationaux.",
+    "items": [
+      "Soutenu par BeQ Holdings Group",
+      "TBI propriétaire — Trader Behavioral Index",
+      "Communauté mondiale — VN, Thaïlande, Inde, US, UE",
+      "Transparence on-chain — aucune promesse de rendement fixe",
+      "<strong>Rachat WF sous 90 jours</strong> — rachat dans les 90 jours à au moins 90 % du prix de mint (selon conditions)"
+    ]
+  },
+  "faq": {
+    "title": "❓ FAQ — Protection de Valeur",
+    "desc": "Questions fréquentes sur la Protection de Valeur & le rachat.",
+    "items": [
+      {
+        "q": "Q1. Le Pioneer NFT a-t-il une politique de protection de valeur ?",
+        "a": "👉 Oui. Il inclut la <strong>Protection de Valeur</strong>, permettant un rachat après <strong>90 jours</strong> pour recevoir <strong>≥ 90 %</strong> du prix initial."
+      },
+      {
+        "q": "Q2. Pourquoi attendre 90 jours pour racheter ?",
+        "a": "👉 Les 90 premiers jours servent à l’usage des avantages (SaaS, Challenge, Loyalty Rewards…) et au déploiement du capital afin d’assurer un reward pool transparent & durable."
+      },
+      {
+        "q": "Q3. Si j’ai utilisé une partie des avantages, puis-je être remboursé·e ?",
+        "a": "👉 Oui. Après 90 jours vous recevez toujours <strong>90 %</strong> ; l’usage durant cette période est généralement &lt;10 %."
+      },
+      {
+        "q": "Q4. Que reçois-je lors du rachat ?",
+        "a": "👉 <strong>USDT/USDC</strong> via smart contract ou le portail de rachat WealthFarming."
+      },
+      {
+        "q": "Q5. Et si j’arrête après 180 jours ?",
+        "a": "👉 Pas de remboursement garanti. Vous pouvez conserver le NFT pour les Loyalty & SaaS non utilisés, ou le vendre/transférer sur un marketplace."
+      },
+      {
+        "q": "Q6. Cette politique garantit-elle un rendement ?",
+        "a": "👉 <strong>Non</strong>. Les Loyalty Rewards dépendent de la performance de l’écosystème (non fixes). La protection assure seulement <strong>≥ 90 %</strong> après 90 jours."
+      }
+    ]
+  }
 }
