@@ -62,7 +62,9 @@ export default function ProductPage() {
                     <ProductInfoCard
                         title={t('page_product_box3_title')}
                         description={t('page_product_box3_description')}
-                        buttonText={t('page_product_box3_button')}
+                        buttonText={t('page_product_box2_button')}
+                        button_color="bg-[var(--color-primary)] hover:!bg-[var(--primary-gradient)]"
+                        link="/lumir-landing"
                     />
                 </div>
                 <div className={`w-full  ${isDesktop ? 'hidden' : 'block'}`}>
