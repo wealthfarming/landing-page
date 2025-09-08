@@ -476,7 +476,7 @@ export default function PioneerLandingPage() {
                                 <div className="pt-4">
                                     <Button asChild>
                                         <a href={cta.primaryHref} target="_blank" rel="noopener noreferrer">
-                                            Mua Ngay 🚀
+                                            {sections.urgency.cta}
                                         </a>
                                     </Button>
                                 </div>

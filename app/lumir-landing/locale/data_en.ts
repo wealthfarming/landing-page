@@ -226,6 +226,7 @@ export const DATA_EN = {
           "⚡ Limited supply — once sold out, it’s gone",
           "🚀 Early users = early power — Pioneer Council has strategic voice",
         ],
+        cta: "Buy Now 🚀",
       },
       process: {
         title: "🔐 Transparent process",
