@@ -34,14 +34,14 @@ const lumirContentVi = `
 
   <header>
     <h1>Pioneer NFT | Market Wizard Collection</h1>
-    <p class="lead">“Pioneer NFT – Not Just Art, But Power in Your Hands”</p>
+    <p class="lead">“Pioneer NFT – Không chỉ là nghệ thuật, mà là quyền lực trong tay bạn”</p>
     <p>
-      <span class="badge">Limited Supply</span>
-      <span class="badge">Exclusive Access</span>
-      <span class="badge">Real Utility</span>
+      <span class="badge">Số lượng giới hạn</span>
+      <span class="badge">Quyền truy cập độc quyền</span>
+      <span class="badge">Tiện ích thực</span>
     </p>
     <p>👉 Trở thành một trong những Pioneers đầu tiên định hình tương lai behavioral trading cùng BeQ Ops LUMIR.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy NFT Now</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Mua NFT Ngay</a></p>
   </header>
 
   <section>
@@ -294,19 +294,19 @@ const lumirContentVi = `
   <section>
     <h2>⏳ Tại sao phải hành động ngay?</h2>
     <ul>
-      <li>🔥 One-time Only – chỉ phát hành trong đợt đầu</li>
-      <li>⚡ Limited Supply – hết là không còn</li>
-      <li>🚀 Early Adopter = Early Power – Pioneer Council quyết định nhiều hướng đi chiến lược</li>
+      <li>🔥 Phát hành một lần – chỉ trong đợt đầu</li>
+      <li>⚡ Nguồn cung giới hạn – hết là không còn</li>
+      <li>🚀 Người dùng sớm = Quyền lực sớm – Pioneer Council quyết định nhiều hướng đi chiến lược</li>
     </ul>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy Today 🚀</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Mua Ngay 🚀</a></p>
   </section>
 
   <section>
     <h2>🔐 Quy trình minh bạch</h2>
     <ol>
-      <li>Connect Wallet – MetaMask hoặc WalletConnect</li>
-      <li>Buy NFT – click “Mint Now” và xác nhận</li>
-      <li>Unlock Utility – active license qua dashboard <a href="https://www.lumir.finance" target="_blank" rel="noopener">www.lumir.finance</a></li>
+      <li>Kết nối ví – MetaMask hoặc WalletConnect</li>
+      <li>Mua NFT – bấm “Buy Now” và xác nhận</li>
+      <li>Kích hoạt tiện ích – active license trên <a href="https://www.lumir.finance" target="_blank" rel="noopener">www.lumir.finance</a></li>
       <li>Challenge Accepted – tham gia 13W Challenge &amp; Elite Roadmap</li>
     </ol>
   </section>
@@ -339,7 +339,7 @@ const lumirContentVi = `
 
   <footer style="margin-top:24px;">
     <p><strong>Pioneer NFT</strong> không chỉ là một NFT. Đây là chiếc chìa khóa mở ra vị thế, quyền lực, và hành trình trở thành Elite Trader.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Mint Now on Wealthfarming.app</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Mua ngay trên Wealthfarming.app</a></p>
   </footer>
 </section>
 `;
@@ -371,14 +371,14 @@ const lumirContentEn = `
 
   <header>
     <h1>Pioneer NFT | Market Wizard Collection</h1>
-    <p class="lead">“Pioneer NFT – Not Just Art, But Power in Your Hands”</p>
+    <p class="lead">“Pioneer NFT – Not just art, but power in your hands.”</p>
     <p>
       <span class="badge">Limited Supply</span>
       <span class="badge">Exclusive Access</span>
       <span class="badge">Real Utility</span>
     </p>
     <p>👉 Become one of the first Pioneers shaping the future of behavioral trading with BeQ Ops LUMIR.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy NFT Now</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Buy NFT Now</a></p>
   </header>
 
   <section>
@@ -386,8 +386,8 @@ const lumirContentEn = `
     <p>In finance, every serious trader knows the classic book <em>“Market Wizards”</em> by Jack D. Schwager.</p>
     <p>These are stories of legendary traders — Paul Tudor Jones, Ed Seykota, Bruce Kovner — who conquered markets not just with knowledge, but with mindset, discipline, and exceptional emotional control.</p>
     <p>👉 The <strong>Market Wizard Collection NFT</strong> was born from that inspiration.</p>
-    <p>If “Market Wizards” is the legacy of the legends, then the <strong>Market Wizard NFT</strong> is the pioneer badge for the new generation — those who want to train behavior, build a Trader DNA, and become legends in the digital era.</p>
-    <p>📌 With the Pioneer NFT, you don’t just own a digital asset — you hold the power to write the next chapter of Market Wizards on blockchain.</p>
+    <p>If “Market Wizards” is the knowledge legacy of legends, then the <strong>Market Wizard NFT</strong> is the pioneer badge for a new generation — those who train behavior, build a Trader DNA, and become legends in the digital era.</p>
+    <p>📌 With the Pioneer NFT, you don’t just own a digital asset — you hold the position to write the next chapter of Market Wizards on blockchain.</p>
   </section>
 
   <section>
@@ -397,116 +397,253 @@ const lumirContentEn = `
         <tr><th>Regular Trader</th><th>Market Wizard</th></tr>
       </thead>
       <tbody>
-        <tr><td>Trades emotionally, prone to FOMO/FUD</td><td>Iron discipline, follows the system</td></tr>
-        <tr><td>Focuses on short-term P/L</td><td>Measures behavior, optimizes long-term</td></tr>
-        <tr><td>Relies on luck, lacks planning</td><td>Has strategy, method, and a behavioral map (Trader DNA)</td></tr>
-        <tr><td>Goes alone, burns out easily</td><td>AI Coach 24/7 + supportive community</td></tr>
-        <tr><td>Low survival rate</td><td>Builds legacy, becomes a legend</td></tr>
+        <tr><td>Trades emotionally, prone to FOMO/FUD</td><td>Iron discipline, always follows the system</td></tr>
+        <tr><td>Short-term P/L focus, quits easily</td><td>Measures behavior, optimizes for the long term</td></tr>
+        <tr><td>Lacks planning, relies on luck</td><td>Has strategy, method, and a behavioral map (Trader DNA)</td></tr>
+        <tr><td>Fights alone, burns out easily</td><td>24/7 AI Coach + supportive community</td></tr>
+        <tr><td>Low survival rate, account blow-ups</td><td>Builds legacy, becomes a legend</td></tr>
       </tbody>
     </table>
-    <p>👉 <strong>Pioneer NFT</strong> is your ticket from the left column to the right — from a regular trader to a Market Wizard in the blockchain era.</p>
+    <p>👉 <strong>Pioneer NFT</strong> is your ticket from the left column to the right — from “regular trader” → Market Wizard in the blockchain era.</p>
   </section>
 
   <section>
     <h2>⚡ The Problem &amp; The Solution</h2>
     <p><strong>90% of traders fail.</strong> Not for lack of knowledge, but for lack of discipline, risk control, and behavioral mastery.</p>
-    <p><strong>BeQ Ops LUMIR</strong> — the first behavioral trading training platform — exists to change that:</p>
+    <p><strong>BeQ Ops LUMIR</strong> — the world’s first behavioral trading training platform — exists to change that:</p>
     <ul>
-      <li>AI Coach 24/7 for discipline and mindset.</li>
+      <li>24/7 AI Coach to build discipline and mindset.</li>
       <li>Trader Behavioral Index (TBI) to decode your Trader DNA Map.</li>
-      <li>13W Challenge &amp; Elite Roadmap to upgrade to Elite Trader.</li>
+      <li>13W Challenge &amp; Elite Roadmap to transform regular traders into Elite Traders.</li>
     </ul>
-    <p>👉 <strong>Pioneer NFT</strong> is your access key to this ecosystem with exclusive benefits.</p>
+    <p>👉 <strong>Pioneer NFT</strong> is the access key to this ecosystem with exclusive benefits.</p>
   </section>
 
   <section>
-    <h2>🎁 Tangible Benefits</h2>
+    <h2>🎁 Tangible Benefits for Pioneer NFT Holders</h2>
+
     <div class="card">
       <h3>🎟 50 Pro SaaS Licenses</h3>
-      <p>Equivalent to <strong>50 months</strong> on LUMIR — the all-in-one behavioral training suite for traders.</p>
+      <p>Equivalent to <strong>50 months</strong> on LUMIR — the complete behavioral trading training suite for traders.</p>
       <p><span class="tag">Value:</span> 12,450 USD</p>
       <p><em>You (or your community) get:</em></p>
       <ul>
-        <li>🧬 Trader DNA Map with 12 core behavioral metrics</li>
-        <li>📈 Monthly behavior reports + 2 deep-dive analyses</li>
-        <li>🤖 AI Coaching 24/7 — Growth Protocols, Notes, Planner, KPIs</li>
-        <li>⏰ Timing Alignment Index (TAI) — your precise trading hours</li>
-        <li>🛡 Risk &amp; Money Management Tools</li>
-        <li>🎯 13W Challenge + Mastery Room Access</li>
-        <li>📊 Market Behavior Alerts — sentiment, danger zones, reaction tracker</li>
+        <li>🧬 Trader DNA Map with 12 core behavioral metrics (Emotion Regulation, Discipline, Timing Alignment, Risk Bias…)</li>
+        <li>📈 Monthly behavior reports + 2 deep-dive analyses to surface strengths/weaknesses</li>
+        <li>🤖 24/7 AI Coaching — Growth Protocols, Notes, Daily Planner, personalized KPIs</li>
+        <li>⏰ Timing Alignment Index (TAI) — pinpoints your precise “golden trading hours”</li>
+        <li>🛡 Risk &amp; Money Management Tools — protect against losses caused by poor discipline</li>
+        <li>🎯 13W Challenge + Mastery Room Access — 13-week discipline challenge with an elite community</li>
+        <li>📊 Market Behavior Alerts — sentiment tracking, danger zones, Reaction Tracker</li>
       </ul>
-      <p>👉 For traders who want higher win-rate, discipline, and emotional control.</p>
+      <p>👉 Perfect for traders who want higher win-rate, discipline, and emotional control.</p>
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <h3>🎟 10 Premium SaaS Licenses</h3>
-      <p>Equivalent to <strong>10 months</strong> of LUMIR Premium — elite behavioral systems for professional traders.</p>
+      <h3>🎟 10 Pro SaaS Licenses</h3>
+      <p>Equivalent to <strong>10 months</strong> on LUMIR — premium, exclusive behavioral tooling for elite traders.</p>
       <p><span class="tag">Value:</span> 4,990 USD</p>
       <p><em>Exclusive access:</em></p>
       <ul>
-        <li>🧬 Trader DNA Advanced — 21+ advanced behavioral metrics</li>
-        <li>🏛 Elite Room Access — private space for elites &amp; institutions</li>
-        <li>🚨 Advanced Market &amp; Behavior Alerts — Heatmap, Liquidity Traps…</li>
-        <li>🛡 Behavioral Protection System™ — psychological shield</li>
-        <li>🔥 Risk Drift &amp; Dead Zone Alerts</li>
-        <li>📊 Quarterly Review + Advanced Coaching</li>
+        <li>🧬 Trader DNA Advanced — 21+ advanced behavioral metrics for a complete “psychological map”</li>
+        <li>🏛 Elite Room Access — private space for Elite Traders &amp; institutional partners</li>
+        <li>🚨 Advanced Market &amp; Behavior Alerts — Stoploss Heatmap, Liquidity Traps, Pattern Deviation…</li>
+        <li>🛡 Behavioral Protection System™ — a psychological shield:
+          <ul>
+            <li>Burnout Detector (halts trading when exhausted)</li>
+            <li>Emotional Lock Mode™ (locks behavior when emotions exceed thresholds)</li>
+            <li>Bias Exposure (surfaces active cognitive biases)</li>
+          </ul>
+        </li>
+        <li>🔥 Risk Drift &amp; Dead Zone Alerts — detect behavioral drift and dangerous “dead zones”</li>
+        <li>📊 Quarterly Review + Advanced Coaching — behavioral experts help you reach the summit</li>
       </ul>
-      <p>👉 Elite-only privileges to protect traders from psychological traps.</p>
+      <p>👉 Elite-only privileges to avoid psychological traps and reach global professional standards.</p>
+    </div>
+
+    <div class="two-col" style="margin-top:14px;">
+      <div class="card">
+        <ul>
+          <li>👥 <strong>Team Access (10 Slots)</strong> → Redeemable as passes for 10 members to join the 13W Challenge</li>
+          <li>🏛 <strong>Pioneer Council Membership</strong> → Seat on the Strategic Council</li>
+          <li>⚡ <strong>Early Access &amp; Priority Right</strong> → Experience new releases before public</li>
+          <li>🌟 <strong>Branding Recognition</strong> → Recognition on the LUMIR website &amp; Wealthfarming.app</li>
+          <li>🎮 <strong>Exclusive Gamification Access</strong> → Priority slots in Challenges</li>
+          <li>🤝 <strong>Referral Power (Optional)</strong> → Invite communities to unlock more benefits</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌟 Intangible Benefits</h3>
+        <ul>
+          <li>🏅 Founding Badge — “Pioneer” honor in the LUMIR community</li>
+          <li>🌍 Global Elite Network — Elite Traders, Leaders &amp; Investors worldwide</li>
+          <li>🏛 Influence &amp; Voice in the Roadmap — directly via the Pioneer Council</li>
+          <li>📈 First-Mover Advantage — reserved priority for the Pioneer cohort</li>
+          <li>🔑 Personal &amp; Community Branding — symbol of leadership in behavioral trading</li>
+          <li>🚀 Legacy Positioning — part of the “Genesis Holders” of the Market Wizard Collection</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section>
     <h2>💎 Loyalty Rewards</h2>
     <ul>
-      <li>🔗 On-chain, transparent distribution via smart contracts</li>
-      <li>📊 Performance-based (not fixed returns)</li>
+      <li>🔗 On-chain &amp; transparent: automatic distribution via smart contracts</li>
+      <li>📊 Performance-based: tied to license revenue, challenge pool, or ecosystem activity</li>
       <li>🎁 Flexible: token, credits, or exclusive upgrades</li>
-      <li>🌱 Long-term alignment, no fixed-interest promises</li>
+      <li>🌱 Long-term commitment signal: <em>not a fixed-return promise</em>, but a reward for long-term alignment</li>
     </ul>
   </section>
 
   <section>
-    <h2>📊 Pioneer NFT Value Simulation</h2>
+    <h2>📊 Pioneer NFT Redeemable Value (Illustration)</h2>
     <ol>
       <li>
-        <h3>1) Loyalty Reward Pool (illustrative)</h3>
+        <h3>1) From the Loyalty Reward Pool (illustrative)</h3>
         <p>From ecosystem performance, the <strong>Reward Pool can reach ~756K USD/year</strong>.</p>
-        <p>Assume <strong>30 Pioneer NFTs</strong> (and 30 Titan NFTs at 50,000 USDC) are issued.</p>
-        <p>👉 On average, each Pioneer NFT may get <strong>~2,270 USD/year</strong> from loyalty. <span class="muted">⚠️ Illustrative only, not a profit commitment.</span></p>
+        <p>Assume <strong>30 Pioneer NFTs</strong> (and 30 Titan NFTs worth 50,000 USDC) are issued.</p>
+        <p>👉 On average, each Pioneer NFT may receive <strong>~2,270 USD/year</strong> from Loyalty Rewards. <span class="muted">⚠️ Illustrative only, not a profit commitment.</span></p>
       </li>
       <li>
         <h3>2) Direct value from SaaS Licenses</h3>
-        <p>Includes <strong>50 Pro + 10 Premium</strong> licenses.</p>
+        <p>Pioneer NFT includes <strong>50 Pro + 10 Premium SaaS Licenses</strong>.</p>
+        <p>Reselling on secondary markets (e.g., Pro 249 USD/mo, Premium 499 USD/mo):</p>
         <ul>
           <li>50 Pro × 249 USD/mo = <strong>12,450 USD</strong></li>
           <li>10 Premium × 499 USD/mo = <strong>4,990 USD</strong></li>
         </ul>
         <p>👉 <strong>Total redeemable value = 17,440 USD</strong>.</p>
+        <div class="note">✨ Thus, a Pioneer NFT holder immediately gets ~17,440 USD of practical utility from SaaS Licenses.</div>
       </li>
       <li>
-        <h3>3) Challenge &amp; Incentives</h3>
-        <p>Team of 10 for the 13W Challenge; successful teams may receive additional rewards.</p>
-        <p>Illustration: a successful Pioneer team may earn <strong>1,000–3,000 USD</strong> in credits or token rewards.</p>
+        <h3>3) From Challenge &amp; Incentives</h3>
+        <p>Pioneer NFT enables a 10-member team to join the 13W Challenge. If the team succeeds, it may receive extra rewards.</p>
+        <p>Illustrative scenario: a successful Pioneer team may gain <strong>1,000–3,000 USD</strong> in credits or token rewards.</p>
       </li>
     </ol>
   </section>
 
   <section>
-    <h2>⏳ Why act now?</h2>
-    <ul>
-      <li>🔥 One-time issuance</li>
-      <li>⚡ Limited supply</li>
-      <li>🚀 Early adopters shape strategy via Pioneer Council</li>
-    </ul>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy Today 🚀</a></p>
+    <h2>📊 Value Comparison – Pro vs Premium vs Pioneer NFT</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Benefits</th>
+          <th>Pro Subscription <br>($249/mo)</th>
+          <th>Premium Subscription <br>($499/mo)</th>
+          <th>Pioneer NFT <br>(One-time, Limited)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Trader DNA Map</td>
+          <td>12 core behavioral metrics</td>
+          <td>21+ advanced behavioral metrics</td>
+          <td>Full access to Pro + Premium (50 + 10 licenses)</td>
+        </tr>
+        <tr>
+          <td>AI Coaching 24/7</td>
+          <td>Notes, KPIs, Growth Protocol</td>
+          <td>Advanced + expert coaching</td>
+          <td>Included for you &amp; community via licenses</td>
+        </tr>
+        <tr>
+          <td>Market Behavior Alerts</td>
+          <td>Reaction Tracker, Market Zones</td>
+          <td>Stoploss Heatmap, Liquidity Traps, Bias Exposure</td>
+          <td>All Pro + Premium features</td>
+        </tr>
+        <tr>
+          <td>Behavioral Protection System™</td>
+          <td>❌</td>
+          <td>✔️ Emotional Lock Mode™, Burnout Detector</td>
+          <td>✔️ (via Premium licenses)</td>
+        </tr>
+        <tr>
+          <td>13W Challenge Access</td>
+          <td>Solo / Mastery Room</td>
+          <td>Elite Challenge &amp; Quarterly Review</td>
+          <td>👥 Team Access (10 members) + leadership</td>
+        </tr>
+        <tr>
+          <td>Community Access</td>
+          <td>Trader Room</td>
+          <td>Elite Room</td>
+          <td>Pioneer Council Membership 🏛</td>
+        </tr>
+        <tr>
+          <td>Recognition</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>🏅 Founding Badge — pioneer honor</td>
+        </tr>
+        <tr>
+          <td>Loyalty Rewards</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>💎 Performance-based allocation (non-fixed)</td>
+        </tr>
+        <tr>
+          <td>Total redeemable value</td>
+          <td>~$3,000/year</td>
+          <td>~$6,000/year</td>
+          <td>~$17,440 + strategic power + tradable NFT asset</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section>
-    <h2>🔐 Transparent process</h2>
+    <h2>📊 Illustrative Simulation (5%/week — $10,000 account)</h2>
+    <ul>
+      <li>Week 1: 10,000 → 10,500 USD</li>
+      <li>Week 5: ~12,763 USD</li>
+      <li>Week 10: ~16,285 USD</li>
+      <li>Week 13: ~18,856 USD</li>
+    </ul>
+    <p>👉 Simulated profit: <strong>~8,856 USD</strong> (~+88.5% over 13 weeks).</p>
+    <p class="note"><strong>Meaning:</strong> Not a profit guarantee — it illustrates the power of discipline + correct behavior. The 13W Challenge trains risk control, long-term thinking, and growth potential.</p>
+  </section>
+
+  <section>
+    <h2>🎯 Aggregated Redeemable Value (Illustrative)</h2>
+    <ul>
+      <li>Loyalty Reward Pool: ~2,270 USD/year/NFT.</li>
+      <li>SaaS License Value: ~18,000 USD in the first year.</li>
+      <li>Challenge Incentives: 1,000–3,000 USD/team.</li>
+    </ul>
+    <p>👉 A Pioneer NFT is not just a blockchain collectible; it delivers tangible utility worth tens of thousands of USD, plus long-term upside &amp; Pioneer Council positioning.</p>
+    <p class="muted">⚠️ All figures are illustrative only, based on internal scenarios. Actual value may differ and is not a profit commitment.</p>
+  </section>
+
+  <section>
+    <h2>👤 Who Should Buy a Pioneer NFT?</h2>
+    <ul>
+      <li>Individual traders → raise win rate, discipline, and mindset</li>
+      <li>Leaders/IBs → use the NFT to build &amp; train teams</li>
+      <li>Investors/Blockchain enthusiasts → own scarce, real-utility, tradable assets</li>
+      <li>Collectors/Community builders → seek the Pioneer badge &amp; status in the LUMIR ecosystem</li>
+    </ul>
+    <p>👉 Even if you’re not a trader, the Pioneer NFT is an <em>electronic equity-like asset</em> — redeemable, transferable, and a long-term status symbol.</p>
+  </section>
+
+  <section>
+    <h2>⏳ Why Act Now?</h2>
+    <ul>
+      <li>🔥 One-time issuance — only in the first wave</li>
+      <li>⚡ Limited supply — once it’s gone, it’s gone</li>
+      <li>🚀 Early adopters = early power — the Pioneer Council influences strategic directions</li>
+    </ul>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Buy Today 🚀</a></p>
+  </section>
+
+  <section>
+    <h2>🔐 Transparent Process</h2>
     <ol>
       <li>Connect Wallet — MetaMask or WalletConnect</li>
-      <li>Buy NFT — click “Mint Now” and confirm</li>
-      <li>Unlock Utility — activate license on <a href="https://www.lumir.finance" target="_blank" rel="noopener">www.lumir.finance</a></li>
+      <li>Buy NFT — click “Buy Now” and confirm</li>
+      <li>Unlock Utility — activate license at <a href="https://www.lumir.finance" target="_blank" rel="noopener">www.lumir.finance</a></li>
       <li>Challenge Accepted — join the 13W Challenge &amp; Elite Roadmap</li>
     </ol>
   </section>
@@ -514,32 +651,32 @@ const lumirContentEn = `
   <section>
     <h2>🛡 Trust &amp; Assurance</h2>
     <ul>
-      <li>Backed by BeQ Holdings Group</li>
-      <li>Proprietary TBI — Trader Behavioral Index</li>
-      <li>Global community — VN, Thailand, India, US, EU</li>
-      <li>On-chain transparency — no fixed-interest promises</li>
+      <li>Backed by BeQ Holdings Group — investment &amp; trust management</li>
+      <li>Proprietary TBI — Trader Behavioral Index, applied behavioral science</li>
+      <li>Global community — traders in VN, Thailand, India, US, EU</li>
+      <li>Transparency — on-chain rewards, no fixed-return promises</li>
     </ul>
   </section>
 
   <section>
     <h2>❓ FAQ</h2>
     <dl>
-      <dt>Can I trade Pioneer NFT?</dt>
+      <dt>Can I trade the Pioneer NFT?</dt>
       <dd>✔️ Yes.</dd>
-      <dt>When do I receive benefits?</dt>
+      <dt>When are benefits available?</dt>
       <dd>✔️ Immediately after mint.</dd>
       <dt>Are rewards guaranteed?</dt>
-      <dd>❌ No, performance-based.</dd>
-      <dt>How many NFTs?</dt>
-      <dd>⚠️ Very limited, one-time issue.</dd>
+      <dd>❌ No, they are performance-based.</dd>
+      <dt>How many NFTs will be issued?</dt>
+      <dd>⚠️ Very limited, one-time issuance.</dd>
       <dt>What is the Pioneer Council?</dt>
-      <dd>🏛 A strategic council shaping the roadmap with LUMIR.</dd>
+      <dd>🏛 A strategic council that shapes the roadmap with LUMIR.</dd>
     </dl>
   </section>
 
   <footer style="margin-top:24px;">
-    <p><strong>Pioneer NFT</strong> is more than an NFT — it is your key to position, power, and the journey to becoming an Elite Trader.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Buy Now on Wealthfarming.app</a></p>
+    <p><strong>Pioneer NFT</strong> is more than an NFT. It is the key to position, power, and the journey to becoming an Elite Trader.</p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Buy now on Wealthfarming.app</a></p>
   </footer>
 </section>
 `;
@@ -571,14 +708,14 @@ const lumirContentFr = `
 
   <header>
     <h1>Pioneer NFT | Market Wizard Collection</h1>
-    <p class="lead">« Pioneer NFT – pas seulement de l’art, mais du pouvoir entre vos mains »</p>
+    <p class="lead">« Pioneer NFT – pas seulement de l’art, mais du pouvoir entre vos mains. »</p>
     <p>
       <span class="badge">Édition limitée</span>
       <span class="badge">Accès exclusif</span>
       <span class="badge">Utilité réelle</span>
     </p>
     <p>👉 Devenez l’un des premiers Pioneers à façonner l’avenir du behavioral trading avec BeQ Ops LUMIR.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Minter le Pioneer NFT maintenant 🚀</a></p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Acheter le NFT maintenant</a></p>
   </header>
 
   <section>
@@ -586,8 +723,8 @@ const lumirContentFr = `
     <p>Dans la finance, chaque trader sérieux connaît l’ouvrage classique <em>« Market Wizards »</em> de Jack D. Schwager.</p>
     <p>Ce sont les histoires de traders légendaires — Paul Tudor Jones, Ed Seykota, Bruce Kovner — qui ont conquis les marchés grâce à l’état d’esprit, à la discipline et à une maîtrise émotionnelle exceptionnelle.</p>
     <p>👉 La <strong>Market Wizard Collection NFT</strong> est née de cette inspiration.</p>
-    <p>Si « Market Wizards » est l’héritage des légendes, alors le <strong>Market Wizard NFT</strong> est l’insigne des pionniers de la nouvelle génération — entraîner ses comportements, forger son ADN de Trader et devenir une légende à l’ère numérique.</p>
-    <p>📌 Avec le Pioneer NFT, vous ne possédez pas seulement un actif numérique — vous portez le pouvoir d’écrire le prochain chapitre de Market Wizards sur la blockchain.</p>
+    <p>Si « Market Wizards » est l’héritage du savoir des légendes, alors le <strong>Market Wizard NFT</strong> est l’insigne des pionniers de la nouvelle génération — entraîner ses comportements, construire son ADN de Trader et devenir une légende à l’ère numérique.</p>
+    <p>📌 Avec le Pioneer NFT, vous ne possédez pas seulement un actif numérique — vous avez la position pour écrire le prochain chapitre de Market Wizards sur la blockchain.</p>
   </section>
 
   <section>
@@ -597,61 +734,92 @@ const lumirContentFr = `
         <tr><th>Trader classique</th><th>Market Wizard</th></tr>
       </thead>
       <tbody>
-        <tr><td>Commerce sous l’émotion, FOMO/FUD</td><td>Discipline de fer, suit le système</td></tr>
-        <tr><td>Se concentre sur le P/L court terme</td><td>Mesure le comportement, optimise le long terme</td></tr>
+        <tr><td>Trade sous l’émotion, sensible au FOMO/FUD</td><td>Discipline de fer, suit toujours le système</td></tr>
+        <tr><td>Focalisé sur le P/L court terme, abandonne facilement</td><td>Mesure le comportement, optimise le long terme</td></tr>
         <tr><td>Manque de plan, dépend de la chance</td><td>Stratégie, méthode, carte comportementale (ADN de Trader)</td></tr>
-        <tr><td>Se bat seul, s’épuise facilement</td><td>Coach IA 24/7 + communauté de soutien</td></tr>
-        <tr><td>Faible taux de survie</td><td>Devient une légende, construit un héritage</td></tr>
+        <tr><td>Se bat seul, s’épuise vite</td><td>Coach IA 24/7 + communauté de soutien</td></tr>
+        <tr><td>Faible taux de survie, comptes « brûlés »</td><td>Construit un héritage, devient une légende</td></tr>
       </tbody>
     </table>
-    <p>👉 <strong>Pioneer NFT</strong> est votre billet pour passer de la colonne de gauche à la droite — du trader classique au Market Wizard à l’ère de la blockchain.</p>
+    <p>👉 <strong>Pioneer NFT</strong> est votre billet pour passer de la colonne de gauche à la droite — du « trader classique » au Market Wizard à l’ère de la blockchain.</p>
   </section>
 
   <section>
     <h2>⚡ Problème &amp; Solution</h2>
-    <p><strong>90 % des traders échouent.</strong> Pas par manque de connaissances, mais par manque de discipline, de contrôle du risque et de maîtrise comportementale.</p>
-    <p><strong>BeQ Ops LUMIR</strong> — la première plateforme d’entraînement au trading comportemental — change la donne :</p>
+    <p><strong>90&nbsp;% des traders échouent.</strong> Pas par manque de connaissances, mais par manque de discipline, de contrôle du risque et de maîtrise comportementale.</p>
+    <p><strong>BeQ Ops LUMIR</strong> — la première plateforme mondiale d’entraînement au trading comportemental — change la donne :</p>
     <ul>
       <li>Coach IA 24/7 pour la discipline et l’état d’esprit.</li>
-      <li>Trader Behavioral Index (TBI) pour décoder votre ADN de Trader.</li>
-      <li>13W Challenge &amp; Elite Roadmap pour passer au niveau Elite.</li>
+      <li>Trader Behavioral Index (TBI) pour décoder votre carte ADN de Trader.</li>
+      <li>13W Challenge &amp; Elite Roadmap pour transformer un trader classique en Elite Trader.</li>
     </ul>
     <p>👉 <strong>Pioneer NFT</strong> est votre clé d’accès à cet écosystème et à ses privilèges exclusifs.</p>
   </section>
 
   <section>
-    <h2>🎁 Avantages tangibles</h2>
+    <h2>🎁 Avantages tangibles pour les détenteurs</h2>
+
     <div class="card">
       <h3>🎟 50 licences SaaS Pro</h3>
-      <p>Équivalentes à <strong>50 mois</strong> sur LUMIR — suite complète d’entraînement comportemental.</p>
-      <p><span class="tag">Valeur :</span> 12 450 USD</p>
+      <p>Équivalent à <strong>50 mois</strong> sur LUMIR — suite complète d’entraînement comportemental pour traders.</p>
+      <p><span class="tag">Valeur :</span> 12 450&nbsp;USD</p>
       <p><em>Vous (ou votre communauté) obtenez :</em></p>
       <ul>
-        <li>🧬 Trader DNA Map avec 12 métriques comportementales clés</li>
-        <li>📈 Rapports mensuels + 2 analyses approfondies</li>
-        <li>🤖 Coach IA 24/7 — Protocoles, Notes, Planner, KPIs</li>
-        <li>⏰ Timing Alignment Index (TAI) — heures de trading précises</li>
-        <li>🛡 Outils de gestion du risque et du capital</li>
-        <li>🎯 13W Challenge + Mastery Room</li>
-        <li>📊 Market Behavior Alerts — sentiment, zones de danger, tracker</li>
+        <li>🧬 Trader DNA Map avec 12 métriques comportementales clés (Régulation émotionnelle, Discipline, Timing Alignment, Risk Bias…)</li>
+        <li>📈 Rapports mensuels + 2 analyses approfondies pour révéler forces/faiblesses</li>
+        <li>🤖 Coach IA 24/7 — Protocoles de croissance, Notes, Planificateur quotidien, KPIs personnalisés</li>
+        <li>⏰ Timing Alignment Index (TAI) — identifie vos « heures d’or » de trading</li>
+        <li>🛡 Outils de gestion du risque et du capital — protègent des pertes dues au manque de discipline</li>
+        <li>🎯 13W Challenge + accès Mastery Room — défi de 13 semaines avec communauté d’élite</li>
+        <li>📊 Market Behavior Alerts — suivi du sentiment, zones dangereuses, Reaction Tracker</li>
       </ul>
-      <p>👉 Pour élever win-rate, discipline et maîtrise émotionnelle.</p>
+      <p>👉 Parfait pour augmenter win-rate, discipline et maîtrise émotionnelle.</p>
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <h3>🎟 10 licences SaaS Premium</h3>
-      <p>Équivalentes à <strong>10 mois</strong> de LUMIR Premium — systèmes comportementaux pour traders professionnels.</p>
-      <p><span class="tag">Valeur :</span> 4 990 USD</p>
+      <h3>🎟 10 licences SaaS Pro</h3>
+      <p>Équivalent à <strong>10 mois</strong> sur LUMIR — outils comportementaux exclusifs pour traders d’élite.</p>
+      <p><span class="tag">Valeur :</span> 4 990&nbsp;USD</p>
       <p><em>Accès exclusif :</em></p>
       <ul>
-        <li>🧬 Trader DNA Advanced — 21+ métriques avancées</li>
-        <li>🏛 Accès Elite Room — espace privé pour élites &amp; institutions</li>
-        <li>🚨 Alertes avancées — Heatmap, Pièges de liquidité…</li>
-        <li>🛡 Behavioral Protection System™ — bouclier psychologique</li>
-        <li>🔥 Alertes Risk Drift &amp; Dead Zone</li>
-        <li>📊 Quarterly Review + Coaching avancé</li>
+        <li>🧬 Trader DNA Advanced — 21+ métriques avancées pour une « carte psychologique » complète</li>
+        <li>🏛 Accès Elite Room — espace privé pour Elite Traders &amp; partenaires institutionnels</li>
+        <li>🚨 Alertes avancées Marché &amp; Comportement — Stoploss Heatmap, Pièges de liquidité, Écarts de patterns…</li>
+        <li>🛡 Behavioral Protection System™ — bouclier psychologique :
+          <ul>
+            <li>Burnout Detector (arrête le trading en cas d’épuisement)</li>
+            <li>Emotional Lock Mode™ (verrouille les comportements au-delà des seuils)</li>
+            <li>Bias Exposure (met en évidence les biais cognitifs actifs)</li>
+          </ul>
+        </li>
+        <li>🔥 Alertes Risk Drift &amp; Dead Zone — détecte les dérives et « zones mortes » dangereuses</li>
+        <li>📊 Quarterly Review + Coaching avancé — experts comportementaux pour atteindre l’excellence</li>
       </ul>
-      <p>👉 Des privilèges Elite pour éviter les pièges psychologiques.</p>
+      <p>👉 Des privilèges d’élite pour éviter les pièges psychologiques et atteindre les standards professionnels mondiaux.</p>
+    </div>
+
+    <div class="two-col" style="margin-top:14px;">
+      <div class="card">
+        <ul>
+          <li>👥 <strong>Team Access (10 places)</strong> → Convertibles en 10 passes pour rejoindre le 13W Challenge</li>
+          <li>🏛 <strong>Membre du Pioneer Council</strong> → Siège au Conseil Stratégique</li>
+          <li>⚡ <strong>Early Access &amp; droits prioritaires</strong> → Tester avant le public</li>
+          <li>🌟 <strong>Reconnaissance de marque</strong> → Mise à l’honneur sur LUMIR &amp; Wealthfarming.app</li>
+          <li>🎮 <strong>Accès Gamification exclusif</strong> → Priorité sur les Challenges</li>
+          <li>🤝 <strong>Referral Power (optionnel)</strong> → Inviter des communautés pour débloquer plus d’avantages</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌟 Avantages intangibles</h3>
+        <ul>
+          <li>🏅 Founding Badge — titre « Pioneer » dans la communauté LUMIR</li>
+          <li>🌍 Global Elite Network — Elite Traders, Leaders &amp; Investors dans le monde</li>
+          <li>🏛 Influence sur la feuille de route — via le Pioneer Council</li>
+          <li>📈 First-Mover Advantage — priorité réservée aux Pioneers</li>
+          <li>🔑 Personal &amp; Community Branding — symbole de leadership du trading comportemental</li>
+          <li>🚀 Legacy Positioning — « Genesis Holders » de la Market Wizard Collection</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -659,90 +827,196 @@ const lumirContentFr = `
     <h2>💎 Loyalty Rewards</h2>
     <ul>
       <li>🔗 Distribution on-chain transparente via smart contracts</li>
-      <li>📊 Basée sur la performance (sans rendement fixe)</li>
-      <li>🎁 Flexible : token, crédits, mises à niveau exclusives</li>
-      <li>🌱 Alignement long terme, sans promesse d’intérêt fixe</li>
+      <li>📊 Basée sur la performance (pas de rendement fixe)</li>
+      <li>🎁 Flexible : token, crédits ou mises à niveau exclusives</li>
+      <li>🌱 Signal d’engagement long terme : <em>pas de promesse d’intérêt fixe</em></li>
     </ul>
   </section>
 
   <section>
-    <h2>📊 Simulation de valeur du Pioneer NFT</h2>
+    <h2>📊 Valeur « rachetable » du Pioneer NFT (illustration)</h2>
     <ol>
       <li>
-        <h3>1) Loyalty Reward Pool (illustratif)</h3>
-        <p>La performance de l’écosystème peut porter le <strong>Reward Pool à ~756 K USD/an</strong>.</p>
-        <p>Hypothèse : <strong>30 Pioneer NFTs</strong> (et 30 Titan NFTs à 50 000 USDC) émis.</p>
-        <p>👉 En moyenne, chaque Pioneer NFT peut recevoir <strong>~2 270 USD/an</strong>. <span class="muted">⚠️ Illustratif, non garanti.</span></p>
+        <h3>1) Depuis le Loyalty Reward Pool (illustratif)</h3>
+        <p>La performance de l’écosystème peut porter le <strong>Reward Pool à ~756&nbsp;kUSD/an</strong>.</p>
+        <p>Hypothèse : <strong>30 Pioneer NFTs</strong> (et 30 Titan NFTs à 50 000&nbsp;USDC) émis.</p>
+        <p>👉 En moyenne, chaque Pioneer NFT peut recevoir <strong>~2 270&nbsp;USD/an</strong>. <span class="muted">⚠️ Illustratif, non garanti.</span></p>
       </li>
       <li>
         <h3>2) Valeur directe des licences SaaS</h3>
-        <p>Inclut <strong>50 Pro + 10 Premium</strong>.</p>
+        <p>Inclut <strong>50 Pro + 10 Premium</strong> licences.</p>
         <ul>
-          <li>50 Pro × 249 USD/mois = <strong>12 450 USD</strong></li>
-          <li>10 Premium × 499 USD/mois = <strong>4 990 USD</strong></li>
+          <li>50 Pro × 249 USD/mois = <strong>12 450&nbsp;USD</strong></li>
+          <li>10 Premium × 499 USD/mois = <strong>4 990&nbsp;USD</strong></li>
         </ul>
-        <p>👉 <strong>Valeur totale = 17 440 USD</strong>.</p>
+        <p>👉 <strong>Valeur totale = 17 440&nbsp;USD</strong>.</p>
+        <div class="note">✨ Donc, un détenteur de Pioneer NFT obtient immédiatement ~17 440&nbsp;USD d’utilité concrète grâce aux licences SaaS.</div>
       </li>
       <li>
-        <h3>3) Challenge &amp; Incentives</h3>
-        <p>Équipe de 10 pour le 13W Challenge ; équipes performantes peuvent recevoir des récompenses supplémentaires.</p>
-        <p>Illustration : une équipe Pioneer peut gagner <strong>1 000–3 000 USD</strong> en crédits ou tokens.</p>
+        <h3>3) Depuis le Challenge &amp; les Incentives</h3>
+        <p>Le Pioneer NFT permet de constituer une équipe de 10 pour le 13W Challenge. Si l’équipe réussit, elle peut recevoir des récompenses additionnelles.</p>
+        <p>Scénario illustratif : une équipe Pioneer performante peut gagner <strong>1 000–3 000&nbsp;USD</strong> en crédits ou tokens.</p>
       </li>
     </ol>
   </section>
 
   <section>
-    <h2>⏳ Pourquoi agir maintenant ?</h2>
+    <h2>📊 Comparaison de valeur – Pro vs Premium vs Pioneer NFT</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Avantages</th>
+          <th>Abonnement Pro <br>($249/mois)</th>
+          <th>Abonnement Premium <br>($499/mois)</th>
+          <th>Pioneer NFT <br>(Unique, Limité)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Trader DNA Map</td>
+          <td>12 métriques comportementales clés</td>
+          <td>21+ métriques avancées</td>
+          <td>Accès complet Pro + Premium (50 + 10 licences)</td>
+        </tr>
+        <tr>
+          <td>AI Coaching 24/7</td>
+          <td>Notes, KPIs, Growth Protocol</td>
+          <td>Avancé + coaching expert</td>
+          <td>Inclus pour vous &amp; la communauté via licences</td>
+        </tr>
+        <tr>
+          <td>Market Behavior Alerts</td>
+          <td>Reaction Tracker, Market Zones</td>
+          <td>Stoploss Heatmap, Pièges de liquidité, Bias Exposure</td>
+          <td>Toutes les fonctions Pro + Premium</td>
+        </tr>
+        <tr>
+          <td>Behavioral Protection System™</td>
+          <td>❌</td>
+          <td>✔️ Emotional Lock Mode™, Burnout Detector</td>
+          <td>✔️ (via licences Premium)</td>
+        </tr>
+        <tr>
+          <td>Accès 13W Challenge</td>
+          <td>Solo / Mastery Room</td>
+          <td>Elite Challenge &amp; Quarterly Review</td>
+          <td>👥 Team Access (10 membres) + leadership</td>
+        </tr>
+        <tr>
+          <td>Accès Communauté</td>
+          <td>Trader Room</td>
+          <td>Elite Room</td>
+          <td>Pioneer Council Membership 🏛</td>
+        </tr>
+        <tr>
+          <td>Reconnaissance</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>🏅 Founding Badge — titre pionnier</td>
+        </tr>
+        <tr>
+          <td>Loyalty Rewards</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>💎 Allocation basée sur la performance (non fixe)</td>
+        </tr>
+        <tr>
+          <td>Valeur totale « rachetable »</td>
+          <td>~3 000&nbsp;USD/an</td>
+          <td>~6 000&nbsp;USD/an</td>
+          <td>~17 440&nbsp;USD + pouvoir stratégique + NFT échangeable</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>📊 Simulation illustrative (5&nbsp;%/semaine — compte 10 000&nbsp;USD)</h2>
     <ul>
-      <li>🔥 Émission unique</li>
-      <li>⚡ Offre limitée</li>
-      <li>🚀 Les premiers adoptants influencent la stratégie via le Pioneer Council</li>
+      <li>Semaine 1 : 10 000 → 10 500 USD</li>
+      <li>Semaine 5 : ~12 763 USD</li>
+      <li>Semaine 10 : ~16 285 USD</li>
+      <li>Semaine 13 : ~18 856 USD</li>
     </ul>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Minter aujourd’hui 🚀</a></p>
+    <p>👉 Profit simulé : <strong>~8 856&nbsp;USD</strong> (~+88,5&nbsp;% en 13 semaines).</p>
+    <p class="note"><strong>À retenir :</strong> ce n’est pas une garantie de profit — cela illustre la puissance de la discipline + des bons comportements. Le 13W Challenge entraîne le contrôle du risque, la vision long terme et le potentiel de croissance.</p>
+  </section>
+
+  <section>
+    <h2>🎯 Valeur agrégée « rachetable » (illustrative)</h2>
+    <ul>
+      <li>Loyalty Reward Pool : ~2 270&nbsp;USD/an/NFT.</li>
+      <li>Valeur des licences SaaS : ~18 000&nbsp;USD la première année.</li>
+      <li>Challenge Incentives : 1 000–3 000&nbsp;USD/équipe.</li>
+    </ul>
+    <p>👉 Le Pioneer NFT n’est pas qu’un collectible blockchain ; il apporte une utilité tangible valant des dizaines de milliers de dollars, plus un potentiel long terme &amp; une place au Pioneer Council.</p>
+    <p class="muted">⚠️ Chiffres purement illustratifs, basés sur des scénarios internes. La valeur réelle peut différer ; aucune promesse de rendement.</p>
+  </section>
+
+  <section>
+    <h2>👤 Qui devrait acheter un Pioneer NFT&nbsp;?</h2>
+    <ul>
+      <li>Traders individuels → augmenter win-rate, discipline et mindset</li>
+      <li>Leaders/IB → utiliser le NFT pour construire &amp; former des équipes</li>
+      <li>Investisseurs/enthousiastes blockchain → posséder un actif rare, utile et échangeable</li>
+      <li>Collectionneurs/bâtisseurs de communauté → viser l’insigne Pioneer &amp; le statut dans l’écosystème LUMIR</li>
+    </ul>
+    <p>👉 Même sans trader, le Pioneer NFT est un <em>actif proche d’une « equity » électronique</em> — rachetable, transférable et symbole durable de positionnement.</p>
+  </section>
+
+  <section>
+    <h2>⏳ Pourquoi agir maintenant&nbsp;?</h2>
+    <ul>
+      <li>🔥 Émission unique — seulement lors de la première vague</li>
+      <li>⚡ Offre limitée — une fois épuisée, c’est fini</li>
+      <li>🚀 Early adopters = early power — le Pioneer Council influence les orientations stratégiques</li>
+    </ul>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Acheter aujourd’hui 🚀</a></p>
   </section>
 
   <section>
     <h2>🔐 Processus transparent</h2>
     <ol>
       <li>Connecter le wallet — MetaMask ou WalletConnect</li>
-      <li>Mintez le NFT — cliquez « Mint Now » et confirmez</li>
-      <li>Débloquez l’utilité — activez la licence sur <a href="https://www.lumir.finance" target="_blank" rel="noopener">www.lumir.finance</a></li>
-      <li>Challenge Accepted — rejoignez le 13W Challenge &amp; Elite Roadmap</li>
+      <li>Acheter le NFT — cliquer « Buy Now » puis confirmer</li>
+      <li>Déverrouiller l’utilité — activer la licence sur <a href="https://www.lumir.finance" target="_blank" rel="noopener">www.lumir.finance</a></li>
+      <li>Challenge Accepted — rejoindre le 13W Challenge &amp; l’Elite Roadmap</li>
     </ol>
   </section>
 
   <section>
     <h2>🛡 Confiance &amp; Garanties</h2>
     <ul>
-      <li>Soutenu par BeQ Holdings Group</li>
-      <li>TBI propriétaire — Trader Behavioral Index</li>
-      <li>Communauté mondiale — VN, Thaïlande, Inde, USA, UE</li>
-      <li>Transparence on-chain — sans promesse d’intérêt fixe</li>
+      <li>Soutenu par BeQ Holdings Group — investissement &amp; gestion de trusts</li>
+      <li>TBI propriétaire — Trader Behavioral Index, sciences comportementales appliquées</li>
+      <li>Communauté mondiale — VN, Thaïlande, Inde, US, UE</li>
+      <li>Transparence — récompenses on-chain, sans promesse de rendement fixe</li>
     </ul>
   </section>
 
   <section>
     <h2>❓ FAQ</h2>
     <dl>
-      <dt>Peut-on échanger le Pioneer NFT ?</dt>
+      <dt>Puis-je échanger (revendre) le Pioneer NFT&nbsp;?</dt>
       <dd>✔️ Oui.</dd>
-      <dt>Quand recevoir les avantages ?</dt>
+      <dt>Quand les avantages sont-ils disponibles&nbsp;?</dt>
       <dd>✔️ Immédiatement après le mint.</dd>
-      <dt>Les rewards sont-ils garantis ?</dt>
-      <dd>❌ Non, basés sur la performance.</dd>
-      <dt>Combien de NFTs ?</dt>
+      <dt>Les rewards sont-ils garantis&nbsp;?</dt>
+      <dd>❌ Non, ils dépendent de la performance.</dd>
+      <dt>Combien de NFTs seront émis&nbsp;?</dt>
       <dd>⚠️ Très limité, émission unique.</dd>
-      <dt>Qu’est-ce que le Pioneer Council ?</dt>
-      <dd>🏛 Conseil stratégique qui co-construit la roadmap avec LUMIR.</dd>
+      <dt>Qu’est-ce que le Pioneer Council&nbsp;?</dt>
+      <dd>🏛 Un conseil stratégique qui co-définit la feuille de route avec LUMIR.</dd>
     </dl>
   </section>
 
   <footer style="margin-top:24px;">
-    <p><strong>Pioneer NFT</strong> est plus qu’un NFT — c’est la clé vers la position, le pouvoir et le parcours vers l’Elite Trader.</p>
-    <p><a class="cta" href="https://wealthfarming.app" target="_blank" rel="noopener">Minter maintenant sur Wealthfarming.app</a></p>
+    <p><strong>Pioneer NFT</strong> est plus qu’un NFT. C’est la clé de la position, du pouvoir et du chemin vers l’Elite Trader.</p>
+    <p><a class="cta" href="https://wealthfarming.app/price-list" target="_blank" rel="noopener">Acheter maintenant sur Wealthfarming.app</a></p>
   </footer>
 </section>
 `;
+
 
 const LumirLandingPage: React.FC = () => {
   const [modalActive, setModalActive] = useState(false);
