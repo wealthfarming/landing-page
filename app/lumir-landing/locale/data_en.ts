@@ -52,7 +52,7 @@ export const DATA_EN = {
         desc: "Your ticket to advance from a “normal trader” to the Market Wizard standard.",
       },
       problem: {
-        title: "⚡ Story — Problem & Solution",
+        title: "⚡ Problem & Solution",
         bullets: [
           "→ 90% of traders fail. Not for lack of knowledge, but due to poor discipline and behavior management.",
           "BeQ Ops LUMIR — the world’s first behavioral trading platform: 24/7 AI Coach, Trader Behavioral Index (TBI), 13W Challenge & Elite Roadmap.",

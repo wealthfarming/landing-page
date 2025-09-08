@@ -52,7 +52,7 @@ export const DATA_FR = {
         desc: "Votre billet pour passer d’un « trader ordinaire » au standard Market Wizard.",
       },
       problem: {
-        title: "⚡ Histoire — Problème & Solution",
+        title: "⚡ Problème & Solution",
         bullets: [
           "→ 90 % des traders échouent. Non par manque de connaissance, mais par déficit de discipline et de gestion comportementale.",
           "BeQ Ops LUMIR — première plateforme mondiale d’entraînement comportemental: Coach IA 24/7, Trader Behavioral Index (TBI), 13W Challenge & Elite Roadmap.",

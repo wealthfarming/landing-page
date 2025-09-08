@@ -3,7 +3,7 @@ import {
     Globe,
     ShieldCheck
   } from "lucide-react";
-  
+
 export const DATA_VI = {
     cta: {
       primaryHref: "https://wealthfarming.app/price-list",
@@ -55,7 +55,7 @@ export const DATA_VI = {
         desc: "Tấm vé để bước từ “Trader bình thường” sang chuẩn Market Wizard.",
       },
       problem: {
-        title: "⚡ Câu chuyện – Vấn đề & Giải pháp",
+        title: "⚡ Vấn đề & Giải pháp",
         bullets: [
           "→ 90% trader thất bại. Không phải vì thiếu kiến thức, mà do thiếu kỷ luật và quản trị hành vi.",
           "BeQ Ops LUMIR – nền tảng huấn luyện hành vi giao dịch đầu tiên trên thế giới: AI Coach 24/7, Trader Behavioral Index (TBI), 13W Challenge & Elite Roadmap.",
