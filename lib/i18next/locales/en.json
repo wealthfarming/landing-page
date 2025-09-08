@@ -301,6 +301,97 @@
   "date": "Date",
   "monthly_passive_income": "Monthly passive income",
   "spending": "Spending",
-  "never_returns": "never returns"
-
+  "never_returns": "never returns",
+  "hero": {
+    "badges": ["Limited", "Exclusive Access", "Real Utility"],
+    "title": "Pioneer NFT — Not just art, but power in your hands",
+    "subtitle": "The only NFT that delivers both real utility and a transparent capital-protection mechanism.",
+    "or": "Or",
+    "altHeadline": "Pioneer NFT: Your gateway to the Elite Trader journey, with 90% value protection after 90 days",
+    "imageAlt": "Pioneer NFT cover"
+  },
+  "cta": {
+    "buyNow": "Buy Now",
+    "buyNowShort": "Buy now",
+    "learnMore": "Learn more",
+    "activate": "Activate utility",
+    "bottom": {
+      "title": "Ready to start your Elite Trader journey?",
+      "desc": "Own a Pioneer NFT to unlock full privileges with transparent value protection."
+    }
+  },
+  "valueProtection": {
+    "title": "🛡 Value Protection Policy — Pioneer NFT",
+    "intro": "At LUMIR, trust is the most valuable capital. Each Pioneer NFT includes a <strong>Value Protection</strong> mechanism for complete peace of mind.",
+    "phase90": {
+      "title": "⏳ First 90 Days — Full Experience",
+      "p1": "Use SaaS, join the Pioneer Council, receive Loyalty Rewards, and enter the 13W Challenge.",
+      "p2": "Meanwhile, LUMIR deploys and reinvests capital to build a transparent & sustainable reward pool."
+    },
+    "redemption": {
+      "title": "🔑 Redemption Right — After 90 Days",
+      "p1": "From day 91–120, you may redeem your Pioneer NFT back to LUMIR.",
+      "p2": "Receive <strong>at least 90% of the original purchase price</strong>, even if some benefits were used (&lt;10% of total value).",
+      "p3": "The process is <em>on-chain</em>, transparent, with no hidden fees."
+    },
+    "meaning": {
+      "title": "🌍 What This Policy Means",
+      "items": [
+        "<strong>Safety for holders:</strong> keep the NFT for long-term utility or redeem to preserve capital.",
+        "<strong>Fairness for the ecosystem:</strong> the initial 90 days sustain operations and the reward pool.",
+        "<strong>Long-term commitment:</strong> LUMIR’s vision — a prosperous, sustainable, and transparent Pioneer community."
+      ]
+    }
+  },
+  "team": {
+    "title": "👥 Team Access & Ecosystem Benefits",
+    "desc": "Optimize the 13W Challenge for teams & build a strategic backbone.",
+    "items": [
+      "Redeem <strong>50 Pro + 10 Premium SaaS Licenses</strong> into opportunities for <strong>10 members</strong> to join the <strong>13W Challenge</strong> together.",
+      "<strong>Activate the 13W Challenge in team mode</strong> → collective discipline, superior performance, higher goal-completion.",
+      "<strong>Unlock team-wide ecosystem benefits</strong> (leaderboard identity): DAO/community priority, <em>Matching Capital</em> nomination, <em>Founding Trader Team</em> designation, priority access to holder-only challenges/pools.",
+      "<strong>Allocate Premium for the team “lead” + Pro for members</strong> → a strategic backbone & <em>Behavioral Protection System™</em> for 13 weeks."
+    ]
+  },
+  "trust": {
+    "title": "🛡 Trust & Assurance",
+    "desc": "Transparent factors aligned with international standards.",
+    "items": [
+      "Backed by BeQ Holdings Group",
+      "Proprietary TBI — Trader Behavioral Index",
+      "Global community — VN, Thailand, India, US, EU",
+      "On-chain transparency — no fixed-return promises",
+      "<strong>WF 90-Day Buyback</strong> — buyback within 90 days at a minimum of 90% of the mint price (terms apply)"
+    ]
+  },
+  "faq": {
+    "title": "❓ FAQ — Value Protection",
+    "desc": "Common questions about Value Protection & redemption.",
+    "items": [
+      {
+        "q": "Q1. Does the Pioneer NFT have a value-protection policy?",
+        "a": "👉 Yes. It includes <strong>Value Protection</strong>, allowing redemption after <strong>90 days</strong> to receive <strong>≥ 90%</strong> of the original price."
+      },
+      {
+        "q": "Q2. Why wait 90 days to redeem?",
+        "a": "👉 The first 90 days are for using benefits (SaaS, Challenge, Loyalty Rewards…) and for LUMIR to operate capital for a transparent & sustainable reward pool."
+      },
+      {
+        "q": "Q3. If I used some benefits, can I still be refunded?",
+        "a": "👉 Yes. After 90 days you still receive <strong>90%</strong>; typical usage in the first 90 days is &lt;10%."
+      },
+      {
+        "q": "Q4. What do I receive upon redemption?",
+        "a": "👉 <strong>USDT/USDC</strong> via smart contract or WealthFarming’s redemption portal."
+      },
+      {
+        "q": "Q5. What if I stop after 180 days?",
+        "a": "👉 No guaranteed refund. You may keep the NFT for Loyalty & unused SaaS, or sell/transfer on a marketplace."
+      },
+      {
+        "q": "Q6. Does this policy guarantee returns?",
+        "a": "👉 <strong>No</strong>. Loyalty Rewards depend on ecosystem performance (not fixed). Protection only ensures <strong>≥ 90%</strong> after 90 days."
+      }
+    ]
+  }
 }
