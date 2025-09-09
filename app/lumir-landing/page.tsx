@@ -476,7 +476,7 @@ export default function PioneerLandingPage() {
                                 <div className="pt-4">
                                     <Button asChild>
                                         <a href={cta.primaryHref} target="_blank" rel="noopener noreferrer">
-                                            {sections.urgency.cta}
+                                            {(sections.urgency as any).cta}
                                         </a>
                                     </Button>
                                 </div>
