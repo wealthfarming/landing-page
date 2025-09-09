@@ -10,11 +10,9 @@ export const DATA_VI = {
       secondaryHref: "https://wealthfarming.app/price-list",
     },
     hero: {
-      kicker: "BUY NOW",
-      title:
-        "Pioneer NFT | Market Wizard Collection",
-      subtitle:
-        "“Pioneer NFT – Không chỉ là nghệ thuật, mà là quyền lực trong tay bạn”",
+      kicker: "MUA NGAY",
+      title: "Pioneer NFT | Market Wizard Collection",
+      subtitle: "“Pioneer NFT – Không chỉ là nghệ thuật, mà là quyền lực trong tay bạn”",
       badges: ["Số lượng giới hạn", "Quyền truy cập độc quyền", "Tiện ích thực"],
       blurb:
         "Trở thành một trong những Pioneers đầu tiên định hình tương lai behavioral trading cùng BeQ Ops LUMIR.",
@@ -35,8 +33,8 @@ export const DATA_VI = {
         intro: "NFT duy nhất mang đến cả giá trị sử dụng và cơ chế bảo toàn vốn minh bạch.",
         items: [
           "Bảo toàn tối thiểu 90% sau 90 ngày (áp dụng điều khoản).",
-          "Team Access 10 thành viên – 13W Challenge.",
-          "AI Coaching 24/7 & Trader Behavioral Index.",
+          "Quyền truy cập Đội nhóm 10 thành viên – 13W Challenge.",
+          "Huấn luyện AI 24/7 & Chỉ số Hành vi Trader (TBI).",
         ],
       },
       compare: {
@@ -58,59 +56,58 @@ export const DATA_VI = {
         title: "⚡ Vấn đề & Giải pháp",
         bullets: [
           "→ 90% trader thất bại. Không phải vì thiếu kiến thức, mà do thiếu kỷ luật và quản trị hành vi.",
-          "BeQ Ops LUMIR – nền tảng huấn luyện hành vi giao dịch đầu tiên trên thế giới: AI Coach 24/7, Trader Behavioral Index (TBI), 13W Challenge & Elite Roadmap.",
+          "BeQ Ops LUMIR – nền tảng huấn luyện hành vi giao dịch đầu tiên trên thế giới: AI Coach 24/7, Chỉ số Hành vi Trader (TBI), 13W Challenge & Lộ trình Elite.",
           "Pioneer NFT là tấm vé mở khóa hệ sinh thái này với đặc quyền không thể tìm thấy ở nơi khác.",
         ],
       },
       benefits: {
         title: "🎁 Quyền lợi khi sở hữu Pioneer NFT",
         pro: {
-          title: "🎟 50 Pro SaaS Licenses",
+          title: "🎟 50 giấy phép SaaS Pro",
           value: "Trị giá: 12.450 USD",
           intro:
             "50 tháng sử dụng nền tảng LUMIR – bộ công cụ huấn luyện hành vi giao dịch toàn diện.",
           items: [
-            "🧬 Trader DNA Map – 12 chỉ số hành vi cốt lõi",
+            "🧬 Bản đồ Trader DNA – 12 chỉ số hành vi cốt lõi",
             "📈 Báo cáo hành vi hàng tháng + 2 phân tích chuyên sâu",
-            "🤖 AI Coaching 24/7 – Growth Protocols, Notes, Daily Planner, KPI",
-            "⏰ Timing Alignment Index (TAI) – xác định ‘giờ vàng’ giao dịch",
-            "🛡 Risk & Money Management Tools",
-            "🎯 13W Challenge + Mastery Room Access",
-            "📊 Market Behavior Alerts",
+            "🤖 Huấn luyện AI 24/7 – Giao thức tăng trưởng, Ghi chú, Kế hoạch ngày, KPI",
+            "⏰ Chỉ số Căn chỉnh Thời điểm (TAI) – xác định ‘giờ vàng’ giao dịch",
+            "🛡 Công cụ Quản trị Rủi ro & Vốn",
+            "🎯 13W Challenge + quyền truy cập Phòng Mastery",
+            "📊 Cảnh báo Hành vi Thị trường",
           ],
         },
         premium: {
-          title: "🎟 10 Premium SaaS Licenses",
+          title: "🎟 10 giấy phép SaaS Premium",
           value: "Trị giá: 4.990 USD",
-          intro:
-            "10 tháng sử dụng bộ công cụ độc quyền cao cấp dành cho Elite trader.",
+          intro: "10 tháng sử dụng bộ công cụ độc quyền cao cấp dành cho trader cấp cao.",
           items: [
-            "🧬 Trader DNA Advanced – 21+ chỉ số hành vi nâng cao",
-            "🏛 Elite Room Access",
-            "🚨 Stoploss Heatmap, Liquidity Traps, Pattern Deviation",
-            "🛡 Behavioral Protection System™: Burnout Detector, Emotional Lock Mode™, Bias Exposure",
-            "🔥 Risk Drift & Dead Zone Alerts",
-            "📊 Quarterly Review + Coaching nâng cao",
+            "🧬 Trader DNA Nâng cao – 21+ chỉ số hành vi nâng cao",
+            "🏛 Quyền truy cập Phòng Elite",
+            "🚨 Bản đồ nhiệt điểm dừng lỗ, Bẫy thanh khoản, Độ lệch mô hình",
+            "🛡 Hệ thống Bảo vệ Hành vi™: Phát hiện kiệt sức, Chế độ Khóa Cảm xúc™, Mức độ thiên kiến",
+            "🔥 Cảnh báo trôi rủi ro & Vùng chết",
+            "📊 Đánh giá hàng quý + Huấn luyện nâng cao",
           ],
         },
         team: {
-          title: "👥 Team Access (10 Slots)",
+          title: "👥 Quyền truy cập Đội nhóm (10 suất)",
           items: [
             "Quy đổi 50 Pro + 10 Premium thành cơ hội cho 10 thành viên cùng tham gia 13W Challenge.",
             "Kích hoạt 13W Challenge dạng đội nhóm – nâng hiệu suất & tỉ lệ hoàn thành.",
-            "Ưu tiên DAO/community, đề cử Matching Capital, danh xưng Founding Trader Team.",
+            "Ưu tiên DAO/cộng đồng, đề cử Vốn đối ứng (Matching Capital), danh xưng Đội Trader Sáng lập.",
             "Phân bổ Premium cho ‘lead’ + Pro cho thành viên còn lại – tạo xương sống chiến thuật.",
           ],
         },
         intangible: {
           title: "🌟 Quyền lợi Vô hình",
           items: [
-            "🏅 Founding Badge – danh hiệu ‘Pioneer’",
-            "🌍 Global Elite Network",
-            "🏛 Influence & Voice in Roadmap – Pioneer Council",
-            "📈 First Mover Advantage",
-            "🔑 Personal & Community Branding",
-            "🚀 Legacy Positioning – Genesis Holders",
+            "🏅 Huy hiệu Sáng lập – danh hiệu ‘Pioneer’",
+            "🌍 Mạng lưới Elite toàn cầu",
+            "🏛 Ảnh hưởng & Tiếng nói trong Lộ trình – Pioneer Council",
+            "📈 Lợi thế Người đi trước",
+            "🔑 Xây dựng thương hiệu cá nhân & cộng đồng",
+            "🚀 Định vị di sản – Người nắm giữ Genesis",
           ],
         },
       },
@@ -118,9 +115,9 @@ export const DATA_VI = {
         title: "💎 Loyalty Rewards",
         items: [
           "🔗 On-chain & minh bạch qua smart contract",
-          "📊 Performance-based – gắn với hiệu suất hệ sinh thái",
-          "🎁 Flexible Benefits – token, credits, hoặc nâng cấp độc quyền",
-          "🌱 Long-term Commitment Signal – không phải cam kết lợi nhuận cố định",
+          "📊 Dựa trên hiệu suất – gắn với hiệu suất hệ sinh thái",
+          "🎁 Quyền lợi linh hoạt – token, tín dụng hoặc nâng cấp độc quyền",
+          "🌱 Tín hiệu cam kết dài hạn – không phải cam kết lợi nhuận cố định",
         ],
       },
       valueSim: {
@@ -135,18 +132,15 @@ export const DATA_VI = {
             ],
           },
           {
-            title: "2) Giá trị trực tiếp của SaaS License",
+            title: "2) Giá trị trực tiếp của giấy phép SaaS",
             highlight: "Tổng quy đổi ~17.440 USD",
-            lines: [
-              "50 Pro × $249 = $12.450",
-              "10 Premium × $499 = $4.990",
-            ],
+            lines: ["50 Pro × $249 = $12.450", "10 Premium × $499 = $4.990"],
           },
           {
             title: "3) Challenge & Incentive",
             lines: [
-              "Team 10 người – 13W Challenge.",
-              "Kịch bản: +$1.000–$3.000 bằng credits/token reward.",
+              "Đội 10 người – 13W Challenge.",
+              "Kịch bản: +$1.000–$3.000 bằng token/tín dụng thưởng.",
               "Mục tiêu 13W (minh hoạ): 10.000 → ~18.856 USD (5%/tuần).",
             ],
           },
@@ -156,30 +150,55 @@ export const DATA_VI = {
         title: "📊 So sánh giá trị – Pro vs Premium vs Pioneer NFT",
         header: [
           "Quyền lợi",
-          "Pro Subscription ($249/tháng)",
-          "Premium Subscription ($499/tháng)",
-          "Pioneer NFT (One-time, Limited)",
+          "Gói Pro ($249/tháng)",
+          "Gói Premium ($499/tháng)",
+          "Pioneer NFT (một lần, giới hạn)",
         ],
         rows: [
-          ["Trader DNA Map", "12 chỉ số cốt lõi", "21+ chỉ số nâng cao", "Full access Pro + Premium (50 + 10 licenses)"],
-          ["AI Coaching 24/7", "Notes, KPI, Growth Protocol", "Nâng cao + Coaching chuyên sâu", "Bao gồm toàn bộ Pro + Premium cho bạn & cộng đồng"],
-          ["Market Behavior Alerts", "Reaction Tracker, Market Zones", "Stoploss Heatmap, Liquidity Traps, Bias Exposure", "Toàn bộ Pro + Premium"],
-          ["Behavioral Protection System™", "❌", "✔️ Emotional Lock Mode™, Burnout Detector", "✔️ (qua Premium licenses)"],
-          ["13W Challenge Access", "Solo / Mastery Room", "Elite Challenge & Quarterly Review", "👥 Team Access (10 members) + quyền lãnh đạo"],
-          ["Community Access", "Trader Room", "Elite Room", "Pioneer Council Membership"],
-          ["Recognition", "❌", "❌", "🏅 Founding Badge"],
-          ["Loyalty Rewards", "❌", "❌", "💎 Performance-based (non-fixed)"],
-          ["Tổng giá trị quy đổi", "~$3.000/năm", "~$6.000/năm", "~$17.440 + quyền lực chiến lược + NFT có thể giao dịch"],
+          [
+            "Bản đồ Trader DNA",
+            "12 chỉ số cốt lõi",
+            "21+ chỉ số nâng cao",
+            "Truy cập đầy đủ Pro + Premium (50 + 10 giấy phép)",
+          ],
+          [
+            "Huấn luyện AI 24/7",
+            "Ghi chú, KPI, Giao thức tăng trưởng",
+            "Nâng cao + Huấn luyện chuyên sâu",
+            "Bao gồm toàn bộ Pro + Premium cho bạn & cộng đồng",
+          ],
+          [
+            "Cảnh báo Hành vi Thị trường",
+            "Theo dõi phản ứng, Vùng thị trường",
+            "Bản đồ nhiệt dừng lỗ, Bẫy thanh khoản, Mức độ thiên kiến",
+            "Toàn bộ Pro + Premium",
+          ],
+          [
+            "Hệ thống Bảo vệ Hành vi™",
+            "❌",
+            "✔️ Chế độ Khóa Cảm xúc™, Phát hiện kiệt sức",
+            "✔️ (thông qua giấy phép Premium)",
+          ],
+          [
+            "Truy cập 13W Challenge",
+            "Cá nhân / Phòng Mastery",
+            "Thử thách Elite & Đánh giá hàng quý",
+            "👥 Quyền truy cập Đội nhóm (10 thành viên) + quyền lãnh đạo",
+          ],
+          ["Cộng đồng", "Phòng Trader", "Phòng Elite", "Tư cách thành viên Pioneer Council"],
+          ["Ghi nhận", "❌", "❌", "🏅 Huy hiệu Sáng lập"],
+          ["Loyalty Rewards", "❌", "❌", "💎 Dựa trên hiệu suất (không cố định)"],
+          [
+            "Tổng giá trị quy đổi",
+            "~$3.000/năm",
+            "~$6.000/năm",
+            "~$17.440 + quyền lực chiến lược + NFT có thể giao dịch",
+          ],
         ],
       },
       growthSim: {
         title: "📊 Minh hoạ giả lập (5%/tuần – tài khoản $10.000)",
-        points: [
-          "Tuần 1: 10.000 → 10.500",
-          "Tuần 5: ~12.763",
-          "Tuần 10: ~16.285",
-          "Tuần 13: ~18.856",
-        ],
+        points: ["Tuần 1: 10.000 → 10.500", "Tuần 5: ~12.763", "Tuần 10: ~16.285", "Tuần 13: ~18.856"],
         noticeTitle: "Lưu ý",
         note:
           "Đây không phải cam kết lợi nhuận – chỉ minh hoạ sức mạnh của kỷ luật & hành vi đúng đắn (13W Challenge).",
@@ -212,24 +231,23 @@ export const DATA_VI = {
         },
       },
       headlineCTA: {
-        kicker: "BUY NOW",
-        title:
-          "NFT duy nhất mang đến cả giá trị sử dụng và cơ chế bảo toàn vốn minh bạch.",
+        kicker: "MUA NGAY",
+        title: "NFT duy nhất mang đến cả giá trị sử dụng và cơ chế bảo toàn vốn minh bạch.",
         or: "Hoặc",
         subtitle:
           "Pioneer NFT: Cánh cửa vào hành trình Elite Trader, bảo toàn 90% giá trị sau 90 ngày",
-        cta: "BUY NOW",
+        cta: "MUA NGAY",
       },
       audience: {
         title: "👤 Ai nên mua Pioneer NFT?",
         items: [
           "Trader cá nhân – nâng win rate, kỷ luật, mindset",
           "Leader/IB – dùng NFT để xây dựng & huấn luyện đội nhóm",
-          "Investor/Blockchain Enthusiast – tài sản khan hiếm, utility thật, giao dịch lại",
+          "Investor/Blockchain Enthusiast – tài sản khan hiếm, tiện ích thật, có thể giao dịch",
           "Collector/Community Builder – danh hiệu Pioneer & vị thế trong hệ sinh thái LUMIR",
         ],
         foot:
-          "Ngay cả khi bạn không phải trader, đây vẫn là ‘electronic equity-like’ – có thể quy đổi, chuyển nhượng, và mang lại vị thế lâu dài.",
+          "Ngay cả khi bạn không phải trader, đây vẫn là tài sản điện tử tương tự cổ phần — có thể quy đổi, chuyển nhượng, và mang lại vị thế lâu dài.",
       },
       urgency: {
         title: "⏳ Tại sao phải hành động ngay?",
@@ -238,24 +256,25 @@ export const DATA_VI = {
           "⚡ Nguồn cung giới hạn – hết là không còn",
           "🚀 Người dùng sớm = Quyền lực sớm – Pioneer Council có tiếng nói chiến lược",
         ],
+        cta: "Mua Ngay",
       },
       process: {
         title: "🔐 Quy trình minh bạch",
         steps: [
           "Kết nối ví – MetaMask hoặc WalletConnect",
-          "Mua NFT – bấm ‘Buy Now’ và xác nhận",
-          "Kích hoạt tiện ích – active license trên www.lumir.finance",
-          "Challenge Accepted – tham gia 13W Challenge & Elite Roadmap",
+          "Mua NFT – bấm 'Mua Ngay' và xác nhận",
+          "Kích hoạt tiện ích – kích hoạt giấy phép trên www.lumir.finance",
+          "Thử thách được chấp nhận – tham gia 13W Challenge & Lộ trình Elite",
         ],
       },
       trust: {
         title: "🛡 Niềm tin & Bảo chứng",
         items: [
-          "Backed by BeQ Holdings Group – tập đoàn đầu tư & quản lý quỹ tín thác",
-          "Công nghệ độc quyền TBI – Trader Behavioral Index",
+          "Hậu thuẫn bởi BeQ Holdings Group – tập đoàn đầu tư & quản lý quỹ tín thác",
+          "Công nghệ độc quyền TBI – Chỉ số Hành vi Trader",
           "Cộng đồng toàn cầu – VN, Thái Lan, Ấn Độ, Mỹ, EU",
-          "Transparency – Rewards on-chain, không hứa hẹn lợi nhuận cố định",
-          "WF Buyback 90 ngày – mua lại tối thiểu 90% (áp dụng điều khoản)",
+          "Minh bạch – Phần thưởng on-chain, không hứa hẹn lợi nhuận cố định",
+          "Mua lại WF 90 ngày – tối thiểu 90% (áp dụng điều khoản)",
         ],
       },
       faq: {
@@ -263,7 +282,7 @@ export const DATA_VI = {
         items: [
           {
             q: "Q1. Pioneer NFT có chính sách bảo đảm giá trị không?",
-            a: "Có. Pioneer NFT kèm cơ chế Value Protection – có quyền quy đổi sau 90 ngày để nhận tối thiểu 90% giá trị mint ban đầu.",
+            a: "Có. Pioneer NFT kèm cơ chế Bảo toàn Giá trị – có quyền quy đổi sau 90 ngày để nhận tối thiểu 90% giá trị mint ban đầu.",
           },
           {
             q: "Q2. Tại sao phải chờ 90 ngày mới có thể quy đổi?",
@@ -294,3 +313,4 @@ export const DATA_VI = {
       },
     },
   };
+  

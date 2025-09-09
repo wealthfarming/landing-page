@@ -104,8 +104,8 @@ export const DATA_FR = {
             "🌍 Réseau d’élite mondial",
             "🏛 Influence & voix dans la roadmap — Pioneer Council",
             "📈 Avantage du premier arrivé",
-            "🔑 Personal & Community Branding",
-            "🚀 Positionnement legacy — Genesis Holders",
+            "🔑 Branding personnel & communautaire",
+            "🚀 Positionnement legacy — Détenteurs Genesis",
           ],
         },
       },
@@ -214,14 +214,15 @@ export const DATA_FR = {
           "⚡ Offre limitée — une fois épuisée, c’est fini",
           "🚀 Early users = early power — Pioneer Council a une voix stratégique",
         ],
+        cta: "Acheter maintenant 🚀",
       },
       process: {
         title: "🔐 Processus transparent",
         steps: [
           "Connecter le wallet — MetaMask ou WalletConnect",
-          "Acheter le NFT — cliquer ‘Buy Now’ et confirmer",
+          "Acheter le NFT — cliquer 'Acheter maintenant' et confirmer",
           "Activer l’utilité — activer la licence sur www.lumir.finance",
-          "Challenge Accepted — rejoindre 13W Challenge & Elite Roadmap",
+          "Défi accepté — rejoindre 13W Challenge & Roadmap Elite",
         ],
       },
       trust: {
