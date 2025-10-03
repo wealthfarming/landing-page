@@ -62,9 +62,7 @@ export const DATA_FR = {
       benefits: {
         title: "🎁 Avantages à détenir le Pioneer NFT",
         pro: {
-          title: "🎟 50 licences SaaS Pro",
-          value: "Valeur : 12 450 $",
-          intro: "50 mois de plateforme LUMIR — une suite complète d’outils comportementaux.",
+          title: "🎟 Droits de distribution avec remises allant jusqu’à 30 %",
           items: [
             "🧬 Trader DNA Map — 12 métriques comportementales clés",
             "📈 Rapport mensuel + 2 analyses approfondies",
@@ -73,13 +71,6 @@ export const DATA_FR = {
             "🛡 Outils de gestion du risque & capital",
             "🎯 13W Challenge + accès Mastery Room",
             "📊 Alertes de comportement de marché",
-          ],
-        },
-        premium: {
-          title: "🎟 10 licences SaaS Premium",
-          value: "Valeur : 4 990 $",
-          intro: "10 mois d’outils exclusifs haut de gamme pour traders élites.",
-          items: [
             "🧬 Trader DNA Advanced — 21+ métriques avancées",
             "🏛 Accès Elite Room",
             "🚨 Stoploss Heatmap, Pièges de liquidité, Écarts de pattern",
