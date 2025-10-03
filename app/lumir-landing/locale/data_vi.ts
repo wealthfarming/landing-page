@@ -63,10 +63,7 @@ export const DATA_VI = {
       benefits: {
         title: "🎁 Quyền lợi khi sở hữu Pioneer NFT",
         pro: {
-          title: "🎟 50 giấy phép SaaS Pro",
-          value: "Trị giá: 12.450 USD",
-          intro:
-            "50 tháng sử dụng nền tảng LUMIR – bộ công cụ huấn luyện hành vi giao dịch toàn diện.",
+          title: "🎟 Quyền phân phối chiết khấu lên đến 30%",
           items: [
             "🧬 Bản đồ Trader DNA – 12 chỉ số hành vi cốt lõi",
             "📈 Báo cáo hành vi hàng tháng + 2 phân tích chuyên sâu",
@@ -75,13 +72,6 @@ export const DATA_VI = {
             "🛡 Công cụ Quản trị Rủi ro & Vốn",
             "🎯 13W Challenge + quyền truy cập Phòng Mastery",
             "📊 Cảnh báo Hành vi Thị trường",
-          ],
-        },
-        premium: {
-          title: "🎟 10 giấy phép SaaS Premium",
-          value: "Trị giá: 4.990 USD",
-          intro: "10 tháng sử dụng bộ công cụ độc quyền cao cấp dành cho trader cấp cao.",
-          items: [
             "🧬 Trader DNA Nâng cao – 21+ chỉ số hành vi nâng cao",
             "🏛 Quyền truy cập Phòng Elite",
             "🚨 Bản đồ nhiệt điểm dừng lỗ, Bẫy thanh khoản, Độ lệch mô hình",
