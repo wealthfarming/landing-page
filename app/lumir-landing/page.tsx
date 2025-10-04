@@ -302,6 +302,46 @@ function PioneerTab() {
 
                     <Separator className="my-10" />
 
+                    {/* LOYALTY REWARD POOL */}
+                    <section className="space-y-6">
+                        <SectionHeader title={sections.loyaltyRewardPool.title} />
+                        <div className="grid gap-6 lg:grid-cols-2">
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2 text-base">
+                                        <Coins className="h-5 w-5" /> {sections.loyaltyRewardPool.guarantee.title}
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-3">
+                                    <p className="text-sm text-muted-foreground">{sections.loyaltyRewardPool.guarantee.desc}</p>
+                                    <div className="rounded-lg bg-muted/40 p-3 text-sm font-medium">
+                                        {sections.loyaltyRewardPool.guarantee.minimum}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2 text-base">
+                                        <Trophy className="h-5 w-5" /> {sections.loyaltyRewardPool.performance.title}
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-3">
+                                    <p className="text-sm text-muted-foreground">{sections.loyaltyRewardPool.performance.desc}</p>
+                                    <div className="rounded-lg bg-muted/40 p-3 text-sm font-medium">
+                                        {sections.loyaltyRewardPool.performance.example}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                        <Alert>
+                            <ShieldCheck className="h-4 w-4" />
+                            <AlertTitle className="font-semibold">{sections.loyaltyRewardPool.alert.title}</AlertTitle>
+                            <AlertDescription>{sections.loyaltyRewardPool.alert.desc}</AlertDescription>
+                        </Alert>
+                    </section>
+
+                    <Separator className="my-10" />
+
                     {/* VALUE SIMULATION */}
                     <section className="space-y-6">
                         <SectionHeader title={sections.valueSim.title} />
@@ -562,7 +602,7 @@ function NFT13WTab() {
                 subtitle:
                     "The entry NFT for the first 100 pioneer traders. Discipline • Transparency • Legacy.",
                 badges: ["100 Supply", "500 USDC / NFT", "Voting & Revenue Share"],
-                cta: { primary: "Get Whitelisted", secondary: "Read Council Handbook" },
+                cta: { primary: "Buy NFT Now", secondary: "Learn More" },
             },
             mission: {
                 title: "Mission",
@@ -659,7 +699,7 @@ function NFT13WTab() {
                 subtitle:
                     "NFT d’accès pour les 100 premiers traders pionniers. Discipline • Transparence • Héritage.",
                 badges: ["Limité à 100", "500 USDC / NFT", "Vote & Partage de revenus"],
-                cta: { primary: "S’inscrire à la whitelist", secondary: "Lire le Guide du Council" },
+                cta: { primary: "Acheter NFT Maintenant", secondary: "En savoir plus" },
             },
             mission: {
                 title: "Mission",
@@ -756,7 +796,7 @@ function NFT13WTab() {
                 subtitle:
                     "NFT vào cửa cho 100 trader tiên phong. Kỷ luật • Minh bạch • Di sản.",
                 badges: ["Giới hạn 100", "500 USDC / NFT", "Voting & Revenue Share"],
-                cta: { primary: "Đăng ký whitelist", secondary: "Xem Cẩm nang Council" },
+                cta: { primary: "Mua NFT Ngay", secondary: "Tìm hiểu thêm" },
             },
             mission: {
                 title: "Sứ mệnh",
@@ -865,11 +905,15 @@ function NFT13WTab() {
                         <h2 className="text-3xl font-bold leading-tight sm:text-4xl">{t.hero.title}</h2>
                         <p className="text-base sm:text-lg text-muted-foreground">{t.hero.subtitle}</p>
                         <div className="flex gap-3 pt-1">
-                            <Button size="lg" className="inline-flex items-center gap-2">
-                                <Rocket className="h-4 w-4" /> {t.hero.cta.primary}
+                            <Button asChild size="lg" className="inline-flex items-center gap-2">
+                                <a href="https://wealthfarming.app/price-list" target="_blank" rel="noopener noreferrer">
+                                    <Rocket className="h-4 w-4" /> {t.hero.cta.primary}
+                                </a>
                             </Button>
-                            <Button variant="outline" size="lg" className="inline-flex items-center gap-2">
-                                <ShieldCheck className="h-4 w-4" /> {t.hero.cta.secondary}
+                            <Button asChild variant="outline" size="lg" className="inline-flex items-center gap-2">
+                                <a href="https://wealthfarming.app/price-list" target="_blank" rel="noopener noreferrer">
+                                    <ShieldCheck className="h-4 w-4" /> {t.hero.cta.secondary}
+                                </a>
                             </Button>
                         </div>
                     </div>

@@ -109,6 +109,23 @@ export const DATA_EN = {
           "🌱 Long-term commitment signal — not fixed returns",
         ],
       },
+      loyaltyRewardPool: {
+        title: "💰 Loyalty Reward Pool",
+        guarantee: {
+          title: "Guaranteed Minimum Returns",
+          desc: "Even during early stages when LUMIR revenue is low, NFT holders receive guaranteed minimum returns to ensure consistent value appreciation.",
+          minimum: "Minimum 3% monthly (36% annually) guaranteed returns"
+        },
+        performance: {
+          title: "Performance-Based Scaling",
+          desc: "As LUMIR ecosystem grows and revenue increases, returns scale proportionally, potentially exceeding the minimum threshold significantly.",
+          example: "Example: $300/month for $10K NFT • $1,500/month for $50K NFT"
+        },
+        alert: {
+          title: "Risk Protection",
+          desc: "This guaranteed minimum ensures NFT holders maintain value even during market downturns or early-stage revenue challenges."
+        }
+      },
       valueSim: {
         title: "📊 Pioneer NFT Redemption Value Simulation",
         scenarios: [
