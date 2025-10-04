@@ -104,10 +104,27 @@ export const DATA_FR = {
         title: "💎 Loyalty Rewards",
         items: [
           "🔗 On-chain & transparent via smart contract",
-          "📊 Basées sur la performance — liées à l’écosystème",
+          "📊 Basées sur la performance — liées à l'écosystème",
           "🎁 Avantages flexibles — tokens, crédits, upgrades exclusifs",
-          "🌱 Signal d’engagement long terme — pas de rendement fixe",
+          "🌱 Signal d'engagement long terme — pas de rendement fixe",
         ],
+      },
+      loyaltyRewardPool: {
+        title: "💰 Pool de récompenses de fidélité",
+        guarantee: {
+          title: "Rendements minimums garantis",
+          desc: "Même pendant les premières étapes où les revenus LUMIR sont faibles, les détenteurs de NFT reçoivent des rendements minimums garantis pour assurer une appréciation de valeur constante.",
+          minimum: "Minimum 3% mensuel (36% annuel) de rendements garantis"
+        },
+        performance: {
+          title: "Évolution basée sur la performance",
+          desc: "À mesure que l'écosystème LUMIR grandit et que les revenus augmentent, les rendements évoluent proportionnellement, pouvant dépasser significativement le seuil minimum.",
+          example: "Exemple : $300/mois pour NFT $10K • $1,500/mois pour NFT $50K"
+        },
+        alert: {
+          title: "Protection des risques",
+          desc: "Ce minimum garanti assure que les détenteurs de NFT maintiennent leur valeur même pendant les baisses de marché ou les défis de revenus en phase précoce."
+        }
       },
       valueSim: {
         title: "📊 Simulation de valeur — Pioneer NFT",

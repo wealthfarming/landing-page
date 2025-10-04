@@ -110,6 +110,23 @@ export const DATA_VI = {
           "🌱 Tín hiệu cam kết dài hạn – không phải cam kết lợi nhuận cố định",
         ],
       },
+      loyaltyRewardPool: {
+        title: "💰 Quỹ thưởng trung thành",
+        guarantee: {
+          title: "Lợi nhuận tối thiểu được đảm bảo",
+          desc: "Ngay cả trong giai đoạn đầu khi doanh thu LUMIR thấp, người nắm giữ NFT vẫn nhận được lợi nhuận tối thiểu được đảm bảo để duy trì giá trị tăng trưởng ổn định.",
+          minimum: "Tối thiểu 3% mỗi tháng (36% mỗi năm) được đảm bảo"
+        },
+        performance: {
+          title: "Tăng trưởng dựa trên hiệu suất",
+          desc: "Khi hệ sinh thái LUMIR phát triển và doanh thu tăng, lợi nhuận sẽ tăng tỷ lệ thuận, có thể vượt xa ngưỡng tối thiểu đáng kể.",
+          example: "Ví dụ: $300/tháng cho NFT $10K • $1,500/tháng cho NFT $50K"
+        },
+        alert: {
+          title: "Bảo vệ rủi ro",
+          desc: "Mức tối thiểu được đảm bảo này đảm bảo người nắm giữ NFT duy trì giá trị ngay cả trong thời kỳ suy thoái thị trường hoặc thách thức doanh thu giai đoạn đầu."
+        }
+      },
       valueSim: {
         title: "📊 Giả lập Giá trị Quy đổi Pioneer NFT",
         scenarios: [
