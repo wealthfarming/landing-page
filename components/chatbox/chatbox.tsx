@@ -35,8 +35,8 @@ const Chatbox = () => {
             <iframe
                 id="chat-iframe"
                 src="https://flutter-interflow-wf.vercel.app/"
-                width="400"
-                height="600"
+                width="20%"
+                height="50%"
                 style={{
                     position: 'fixed',
                     bottom: '100px',
