@@ -4,6 +4,7 @@ import "./globals.css";
 import { I18nProvider } from "@/components/context/i18n";
 import { InterfaceProvider } from "@/components/context/interface-context";
 import { Toaster } from "sonner";
+import Chatbox from "@/components/chatbox/chatbox";
 
 export const metadata: Metadata = {
   title: "Landing Page - Wealth Farming",
@@ -24,6 +25,7 @@ export default function RootLayout({
             {children}
           </InterfaceProvider>
         </I18nProvider>
+        <Chatbox />
       </body>
     </html>
   );
